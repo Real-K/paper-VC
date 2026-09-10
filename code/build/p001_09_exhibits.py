@@ -203,7 +203,7 @@ w("table3.md", f"""# Table 3. The stage tilt and its origins
 | | Estimate | 95% CI |
 |---|---|---|
 | FP–early-stage association (firm×year) | {e80['fp_early_assoc'][0]*100:+.2f}pp | {pp(e80['fp_early_assoc'][1])} |
-| — among male-founded deals only | {e81['ma_ff0'][0]*100:+.2f}pp | {pp(e81['ma_ff0'][1])} |
+| — among deals with no observed female founder | {e81['ma_ff0'][0]*100:+.2f}pp | {pp(e81['ma_ff0'][1])} |
 | Mean tenure: female / male partners (yrs) | {e81['tenure_mean_f']} / {e81['tenure_mean_m']} | |
 | Within tenure-bin cells (attenuation {e81['mb_attenuation']*100:.0f}%) | {e81['mb_tenurecell'][0]*100:+.2f}pp | {pp(e81['mb_tenurecell'][1])} |
 | Stage-graduation slope diff (F−M, pp/yr) | {e81['slope_diff'][0]*100:+.2f} | {pp(e81['slope_diff'][1])} |

@@ -36,7 +36,7 @@ EU = {"GBR", "DEU", "FRA", "NLD", "SWE", "ESP", "ITA", "CHE", "BEL", "AUT", "DNK
       "IRL", "PRT", "POL", "CZE", "EST", "LTU", "LVA", "GRC", "HUN", "ROU", "LUX"}
 NAEU = EU | {"USA", "CAN"}
 
-d0 = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+d0 = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
 d0 = d0[d0["country_code"].isin(NAEU)].copy()
 d0["dt"] = pd.to_datetime(d0["dt"])
 

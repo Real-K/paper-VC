@@ -2,332 +2,332 @@
   "id": "P001-44",
   "title": "P4: 부재 스펠 — 동료 ff 비중 ← 파트너 부재(18/24/36m), 여성−남성 차, 기록·규모 위약, 사전추세",
   "status": "PARTIAL",
-  "n": 1567,
+  "n": 1556,
   "estimates": {
     "A_sample": {
-      "n_eligible_partners": 2497,
-      "n_partners_with_gap18": 1575,
+      "n_eligible_partners": 2483,
+      "n_partners_with_gap18": 1564,
       "n_female_with_gap18": 128,
-      "n_gaps18": 2599,
-      "n_gaps24": 1213,
-      "n_gaps36": 395,
+      "n_gaps18": 2575,
+      "n_gaps24": 1200,
+      "n_gaps36": 387,
       "cont_share_of_gaps_with_jobs": 0.866,
-      "jobs_coverage_of_gaps": 0.942,
-      "n_panel_rows": 29441,
-      "n_panel_rows_with_colleague_deals": 21140,
-      "n_spells_in_panel": 1567,
-      "n_absent_rows_18": 8262,
+      "jobs_coverage_of_gaps": 0.941,
+      "n_panel_rows": 29210,
+      "n_panel_rows_with_colleague_deals": 20957,
+      "n_spells_in_panel": 1556,
+      "n_absent_rows_18": 8187,
       "n_female_spells": 124
     },
     "B_colleague_ff_share": {
       "18": {
-        "n": 21140,
-        "n_firms": 788,
+        "n": 20957,
+        "n_firms": 781,
         "b_male": {
-          "coef": -0.00385,
+          "coef": -0.00447,
           "ci95": [
-            -0.0125,
-            0.0046
+            -0.012,
+            0.004
           ],
           "sig": false,
-          "se_boot": 0.00417,
-          "mde80": 0.0117,
+          "se_boot": 0.00433,
+          "mde80": 0.0121,
           "within_pm0.015": true
         },
         "diff_female_minus_male": {
-          "coef": -0.01377,
+          "coef": -0.01275,
           "ci95": [
-            -0.0446,
-            0.0181
+            -0.0461,
+            0.0193
           ],
           "sig": false,
-          "se_boot": 0.01624,
-          "mde80": 0.0455,
+          "se_boot": 0.01666,
+          "mde80": 0.0466,
           "within_pm0.015": false
         },
         "b_female": {
-          "coef": -0.01762,
+          "coef": -0.01722,
           "ci95": [
-            -0.0479,
-            0.0115
+            -0.0495,
+            0.0132
           ],
           "sig": false,
-          "se_boot": 0.01586,
-          "mde80": 0.0444,
+          "se_boot": 0.01638,
+          "mde80": 0.0459,
           "within_pm0.015": false
         }
       },
       "24": {
-        "n": 21140,
-        "n_firms": 788,
+        "n": 20957,
+        "n_firms": 781,
         "b_male": {
-          "coef": -0.00834,
+          "coef": -0.00932,
           "ci95": [
-            -0.019,
-            0.002
+            -0.0198,
+            0.0008
           ],
           "sig": false,
-          "se_boot": 0.00585,
-          "mde80": 0.0164,
+          "se_boot": 0.00556,
+          "mde80": 0.0156,
           "within_pm0.015": false
         },
         "diff_female_minus_male": {
-          "coef": -0.0071,
+          "coef": -0.00506,
           "ci95": [
-            -0.047,
-            0.0346
+            -0.0439,
+            0.0452
           ],
           "sig": false,
-          "se_boot": 0.02165,
-          "mde80": 0.0606,
+          "se_boot": 0.02279,
+          "mde80": 0.0638,
           "within_pm0.015": false
         },
         "b_female": {
-          "coef": -0.01545,
+          "coef": -0.01437,
           "ci95": [
-            -0.0544,
-            0.0231
+            -0.0524,
+            0.0335
           ],
           "sig": false,
-          "se_boot": 0.02111,
-          "mde80": 0.0591,
+          "se_boot": 0.02269,
+          "mde80": 0.0635,
           "within_pm0.015": false
         }
       },
       "36": {
-        "n": 21140,
-        "n_firms": 788,
+        "n": 20957,
+        "n_firms": 781,
         "b_male": {
-          "coef": -0.01357,
+          "coef": -0.01325,
           "ci95": [
-            -0.033,
-            0.0018
+            -0.0292,
+            0.0045
           ],
           "sig": false,
-          "se_boot": 0.00891,
+          "se_boot": 0.00892,
           "mde80": 0.025,
           "within_pm0.015": false
         },
         "diff_female_minus_male": {
-          "coef": 0.00134,
+          "coef": 0.00496,
           "ci95": [
-            -0.0629,
-            0.0707
+            -0.0575,
+            0.0776
           ],
           "sig": false,
-          "se_boot": 0.03469,
-          "mde80": 0.0971,
+          "se_boot": 0.03512,
+          "mde80": 0.0983,
           "within_pm0.015": false
         },
         "b_female": {
-          "coef": -0.01223,
+          "coef": -0.00829,
           "ci95": [
-            -0.0742,
-            0.064
+            -0.0726,
+            0.0665
           ],
           "sig": false,
-          "se_boot": 0.03447,
-          "mde80": 0.0965,
+          "se_boot": 0.03591,
+          "mde80": 0.1006,
           "within_pm0.015": false
         }
       }
     },
     "C_placebos": {
       "ln_colleague_deals_18": {
-        "n": 29441,
-        "n_firms": 878,
+        "n": 29210,
+        "n_firms": 872,
         "b_male": {
-          "coef": -0.168,
+          "coef": -0.16706,
           "ci95": [
-            -0.1902,
-            -0.1442
+            -0.1894,
+            -0.141
           ],
           "sig": true,
-          "se_boot": 0.01238,
-          "mde80": 0.0347,
+          "se_boot": 0.01315,
+          "mde80": 0.0368,
           "within_pm0.015": false
         },
         "diff_female_minus_male": {
-          "coef": 0.0386,
+          "coef": 0.03822,
           "ci95": [
-            -0.0309,
-            0.116
+            -0.0336,
+            0.108
           ],
           "sig": false,
-          "se_boot": 0.03806,
-          "mde80": 0.1066,
+          "se_boot": 0.03772,
+          "mde80": 0.1056,
           "within_pm0.015": false
         },
         "b_female": {
-          "coef": -0.1294,
+          "coef": -0.12884,
           "ci95": [
-            -0.1966,
-            -0.0588
+            -0.1939,
+            -0.0565
           ],
           "sig": true,
-          "se_boot": 0.03622,
-          "mde80": 0.1014,
+          "se_boot": 0.03694,
+          "mde80": 0.1034,
           "within_pm0.015": false
         }
       },
       "cont_only_18": {
-        "n": 18260,
-        "n_firms": 720,
+        "n": 18093,
+        "n_firms": 714,
         "b_male": {
-          "coef": -0.00384,
+          "coef": -0.00451,
           "ci95": [
-            -0.0125,
-            0.0042
+            -0.0136,
+            0.0041
           ],
           "sig": false,
-          "se_boot": 0.00437,
-          "mde80": 0.0122,
+          "se_boot": 0.00445,
+          "mde80": 0.0125,
           "within_pm0.015": true
         },
         "diff_female_minus_male": {
-          "coef": -0.02735,
+          "coef": -0.02723,
           "ci95": [
-            -0.06,
-            0.0043
+            -0.0628,
+            0.0063
           ],
           "sig": false,
-          "se_boot": 0.01605,
-          "mde80": 0.0449,
+          "se_boot": 0.0177,
+          "mde80": 0.0495,
           "within_pm0.015": false
         },
         "b_female": {
-          "coef": -0.03119,
+          "coef": -0.03174,
           "ci95": [
-            -0.063,
-            -0.0017
+            -0.068,
+            0.0023
           ],
-          "sig": true,
-          "se_boot": 0.01612,
-          "mde80": 0.0451,
+          "sig": false,
+          "se_boot": 0.01758,
+          "mde80": 0.0492,
           "within_pm0.015": false
         }
       },
       "attribution_rate_18": {
-        "n": 27249,
-        "n_firms": 878,
+        "n": 27030,
+        "n_firms": 872,
         "b_male": {
-          "coef": -0.20783,
+          "coef": -0.20809,
           "ci95": [
-            -0.232,
-            -0.1868
+            -0.2307,
+            -0.1884
           ],
           "sig": true,
-          "se_boot": 0.01145,
-          "mde80": 0.0321,
+          "se_boot": 0.01097,
+          "mde80": 0.0307,
           "within_pm0.015": false
         },
         "diff_female_minus_male": {
-          "coef": 0.04102,
+          "coef": 0.04107,
           "ci95": [
-            -0.0117,
-            0.0924
+            -0.0153,
+            0.0931
           ],
           "sig": false,
-          "se_boot": 0.02694,
-          "mde80": 0.0754,
+          "se_boot": 0.02602,
+          "mde80": 0.0729,
           "within_pm0.015": false
         },
         "b_female": {
-          "coef": -0.16681,
+          "coef": -0.16702,
           "ci95": [
-            -0.2195,
-            -0.1158
+            -0.2165,
+            -0.1168
           ],
           "sig": true,
-          "se_boot": 0.02649,
-          "mde80": 0.0742,
+          "se_boot": 0.02526,
+          "mde80": 0.0707,
           "within_pm0.015": false
         }
       }
     },
     "B2_all_deals_ff_share": {
       "18": {
-        "n": 24724,
-        "n_firms": 861,
+        "n": 24506,
+        "n_firms": 854,
         "b_male": {
-          "coef": -0.00066,
+          "coef": -0.00042,
           "ci95": [
-            -0.0078,
-            0.0059
+            -0.0064,
+            0.0051
           ],
           "sig": false,
-          "se_boot": 0.00364,
-          "mde80": 0.0102,
+          "se_boot": 0.0031,
+          "mde80": 0.0087,
           "within_pm0.015": true
         },
         "diff_female_minus_male": {
-          "coef": 0.00503,
+          "coef": 0.00344,
           "ci95": [
-            -0.0158,
-            0.0325
-          ],
-          "sig": false,
-          "se_boot": 0.01227,
-          "mde80": 0.0343,
-          "within_pm0.015": false
-        },
-        "b_female": {
-          "coef": 0.00437,
-          "ci95": [
-            -0.0175,
-            0.0314
+            -0.0187,
+            0.0286
           ],
           "sig": false,
           "se_boot": 0.01213,
           "mde80": 0.034,
           "within_pm0.015": false
+        },
+        "b_female": {
+          "coef": 0.00302,
+          "ci95": [
+            -0.0198,
+            0.0279
+          ],
+          "sig": false,
+          "se_boot": 0.01218,
+          "mde80": 0.0341,
+          "within_pm0.015": false
         }
       },
       "24": {
-        "n": 24724,
-        "n_firms": 861,
+        "n": 24506,
+        "n_firms": 854,
         "b_male": {
-          "coef": -0.00149,
+          "coef": -0.00142,
           "ci95": [
-            -0.0105,
-            0.0082
+            -0.0102,
+            0.0081
           ],
           "sig": false,
-          "se_boot": 0.00465,
-          "mde80": 0.013,
+          "se_boot": 0.00474,
+          "mde80": 0.0133,
           "within_pm0.015": true
         },
         "diff_female_minus_male": {
-          "coef": 0.00703,
+          "coef": 0.00582,
           "ci95": [
-            -0.023,
-            0.0394
+            -0.0219,
+            0.0386
           ],
           "sig": false,
-          "se_boot": 0.0162,
+          "se_boot": 0.01623,
           "mde80": 0.0454,
           "within_pm0.015": false
         },
         "b_female": {
-          "coef": 0.00554,
+          "coef": 0.0044,
           "ci95": [
-            -0.0227,
-            0.0363
+            -0.0226,
+            0.0375
           ],
           "sig": false,
-          "se_boot": 0.01552,
-          "mde80": 0.0434,
+          "se_boot": 0.0158,
+          "mde80": 0.0442,
           "within_pm0.015": false
         }
       },
       "36": {
-        "n": 24724,
-        "n_firms": 861,
+        "n": 24506,
+        "n_firms": 854,
         "b_male": {
-          "coef": -0.00963,
+          "coef": -0.00819,
           "ci95": [
-            -0.0234,
-            0.0037
+            -0.0224,
+            0.0063
           ],
           "sig": false,
           "se_boot": 0.0069,
@@ -335,89 +335,89 @@
           "within_pm0.015": false
         },
         "diff_female_minus_male": {
-          "coef": 0.03175,
+          "coef": 0.02954,
           "ci95": [
-            -0.0234,
-            0.0954
+            -0.0225,
+            0.0926
           ],
           "sig": false,
-          "se_boot": 0.03051,
-          "mde80": 0.0854,
+          "se_boot": 0.03047,
+          "mde80": 0.0853,
           "within_pm0.015": false
         },
         "b_female": {
-          "coef": 0.02212,
+          "coef": 0.02134,
           "ci95": [
-            -0.0291,
-            0.0828
+            -0.0317,
+            0.0837
           ],
           "sig": false,
-          "se_boot": 0.02999,
-          "mde80": 0.084,
+          "se_boot": 0.03015,
+          "mde80": 0.0844,
           "within_pm0.015": false
         }
       },
       "cont_only_18": {
-        "n": 21495,
-        "n_firms": 778,
+        "n": 21298,
+        "n_firms": 773,
         "b_male": {
-          "coef": 0.00067,
+          "coef": 0.00101,
           "ci95": [
-            -0.0062,
-            0.008
+            -0.005,
+            0.0081
           ],
           "sig": false,
-          "se_boot": 0.00381,
-          "mde80": 0.0107,
+          "se_boot": 0.00331,
+          "mde80": 0.0093,
           "within_pm0.015": true
         },
         "diff_female_minus_male": {
-          "coef": -0.00187,
+          "coef": -0.00336,
           "ci95": [
-            -0.0282,
-            0.0272
+            -0.0303,
+            0.0258
           ],
           "sig": false,
-          "se_boot": 0.01447,
-          "mde80": 0.0405,
+          "se_boot": 0.01426,
+          "mde80": 0.0399,
           "within_pm0.015": false
         },
         "b_female": {
-          "coef": -0.0012,
+          "coef": -0.00235,
           "ci95": [
-            -0.0267,
-            0.0268
+            -0.0301,
+            0.0255
           ],
           "sig": false,
-          "se_boot": 0.01435,
-          "mde80": 0.0402,
+          "se_boot": 0.01455,
+          "mde80": 0.0407,
           "within_pm0.015": false
         }
       },
-      "n_rows_with_all_deals": 24724
+      "n_rows_with_all_deals": 24506
     },
     "D_pretrend": {
       "pre_coefs": {
         "pre1": {
-          "coef": 0.01416,
-          "t": 1.57
+          "coef": 0.01355,
+          "t": 1.52
         },
         "pre2": {
-          "coef": -0.00468,
-          "t": -0.54
+          "coef": -0.00441,
+          "t": -0.57
         },
         "pre3": {
-          "coef": 0.00893,
-          "t": 0.97
+          "coef": 0.00819,
+          "t": 0.86
         },
         "pre4": {
-          "coef": -0.00637,
-          "t": -0.73
+          "coef": -0.00707,
+          "t": -0.81
         }
       },
-      "max_abs_t_obs": 1.568,
-      "sup_t_crit95": 2.565,
-      "joint_p": 0.3667
+      "max_abs_t_obs": 1.52,
+      "sup_t_crit95": 2.571,
+      "joint_p": 0.43
     },
     "flags": {
       "recording_placebo_failed": true
@@ -438,17 +438,17 @@
     }
   },
   "prediction": "공백 파트너 1,500–1,650(여성 120–140); b_f∈[−0.03,0], b_m≈0, 차 CI 0 포함 MDE 1.5–2.5pp; 위약 |b|<0.02/0.1; 용량 단조; 사전추세 p>0.05",
-  "verdict": "공백 파트너 1,575 (여성 128) · 스펠 1,567 | 18m: 여성 -0.0176 [-0.048,+0.011] · 남성 -0.0039 · 차 -0.0138 [-0.045,+0.018] MDE 0.045 | 24m 여성 -0.0155 · 36m -0.0122 (단조 False) | 위약: 귀속률 -0.1668 · 동료 딜수 -0.129 · 사전추세 결합 p 0.3667 | 전체 딜 기준 18m: 여성 +0.0044 [-0.018,+0.031] · 차 +0.0050 [-0.016,+0.033] MDE 0.034 — 차등 부재 효과 검출도 배제도 안 됨 — MDE 병기 · 기록 위약 실패(귀속률 하락) (예측 적중 8/12)",
+  "verdict": "공백 파트너 1,564 (여성 128) · 스펠 1,556 | 18m: 여성 -0.0172 [-0.050,+0.013] · 남성 -0.0045 · 차 -0.0127 [-0.046,+0.019] MDE 0.047 | 24m 여성 -0.0144 · 36m -0.0083 (단조 False) | 위약: 귀속률 -0.1670 · 동료 딜수 -0.129 · 사전추세 결합 p 0.43 | 전체 딜 기준 18m: 여성 +0.0030 [-0.020,+0.028] · 차 +0.0034 [-0.019,+0.029] MDE 0.034 — 차등 부재 효과 검출도 배제도 안 됨 — MDE 병기 · 기록 위약 실패(귀속률 하락) (예측 적중 8/12)",
   "kill_met": false,
   "code": "p001_44_absence_spells.py",
   "sha256_16": "5bbfca722f49af76",
   "seed": 42,
-  "runtime_s": 231.3,
-  "date": "2026-09-09",
+  "runtime_s": 178.6,
+  "date": "2026-09-10",
   "stage": 7,
   "feeds": "v6 설계 제안 P4 → §5 비대칭 문단 대체 마진",
   "slug": "absence_spells",
   "builds_on": "P001-04b/21b",
-  "common_sha256_16": "a63e7b62854b47c6",
-  "v6_common_sha256_16": "0e382e764d14fdc8"
+  "common_sha256_16": "73d12fb69e9b9b73",
+  "v6_common_sha256_16": "70e0b9a1fa1ae389"
 }

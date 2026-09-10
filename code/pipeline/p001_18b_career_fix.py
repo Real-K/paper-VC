@@ -36,7 +36,7 @@ EU = {"GBR", "DEU", "FRA", "NLD", "SWE", "ESP", "ITA", "CHE", "BEL", "AUT", "DNK
 NAEU = EU | {"USA", "CAN"}
 MIN_DEALS = 5
 
-d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
 d["dt"] = pd.to_datetime(d["dt"])
 dn = d[d["country_code"].isin(NAEU)]
 hist = dn[dn["dt"] <= "2017-10-31"].copy()

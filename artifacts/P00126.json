@@ -2,73 +2,73 @@
   "id": "P001-26",
   "title": "wedge 예측력의 성별 함의 — 원고 프레임 확정 전 필수 검정",
   "status": "GO",
-  "n": 2686,
+  "n": 2680,
   "estimates": {
     "G1_fp_to_wedge": {
-      "coef": -0.04802,
+      "coef": -0.04971,
       "ci95": [
-        -0.075,
-        -0.0254
+        -0.0755,
+        -0.0273
       ],
-      "n": 2686,
-      "n_firms": 1162,
+      "n": 2680,
+      "n_firms": 1160,
       "sig": true
     },
     "G2_fp_to_future_adj": {
-      "coef": -0.00661,
+      "coef": -0.004,
       "ci95": [
-        -0.0482,
-        0.0337
+        -0.0401,
+        0.0339
       ],
-      "n": 2178,
-      "n_firms": 999,
+      "n": 2169,
+      "n_firms": 996,
       "sig": false,
-      "ci_halfwidth": 0.04095
+      "ci_halfwidth": 0.037
     },
     "G3_fp_controlling_wedge": {
-      "coef": -0.0083,
+      "coef": -0.00596,
       "ci95": [
-        -0.0447,
-        0.031
+        -0.0428,
+        0.0357
       ],
-      "n": 2178,
-      "n_firms": 999,
+      "n": 2169,
+      "n_firms": 996,
       "sig": false
     },
-    "terrain_path": 0.00169,
+    "terrain_path": 0.00196,
     "G4_interaction": {
-      "coef": 0.03888,
+      "coef": 0.06178,
       "ci95": [
-        -0.1889,
-        0.264
+        -0.157,
+        0.265
       ],
-      "n": 2178,
-      "n_firms": 999,
+      "n": 2169,
+      "n_firms": 996,
       "sig": false
     },
     "G4_slopes": {
-      "male": -0.0449,
-      "female": -0.00602
+      "male": -0.05153,
+      "female": 0.01025
     },
     "G5_control_fp_to_pre_adj": {
-      "coef": 0.01366,
+      "coef": 0.01294,
       "ci95": [
-        -0.0196,
-        0.0489
+        -0.0195,
+        0.049
       ],
-      "n": 2686,
-      "n_firms": 1162,
+      "n": 2680,
+      "n_firms": 1160,
       "sig": false
     }
   },
   "prediction": "G1 음수 유의 · G2 0 근처(유의 음수면 §4 와 긴장) · G4 미검출",
-  "verdict": "G1_fp_to_wedge: β=-0.04802 [-0.0750,-0.0254] 유의  |  G2_fp_to_future_adj: β=-0.00661 [-0.0482,+0.0337] ns  |  G3_fp_controlling_wedge: β=-0.00830 [-0.0447,+0.0310] ns  |  G4_interaction: β=+0.03888 [-0.1889,+0.2640] ns  |  G5_control_fp_to_pre_adj: β=+0.01366 [-0.0196,+0.0489] ns — **G2 미검출 — 여성 파트너의 사후기 조정성과는 남성과 구분되지 않는다. 재순위 해석 유지 가능. wedge 의 예측력은 성별 중립 신호로 서술한다**",
+  "verdict": "G1_fp_to_wedge: β=-0.04971 [-0.0755,-0.0273] 유의  |  G2_fp_to_future_adj: β=-0.00400 [-0.0401,+0.0339] ns  |  G3_fp_controlling_wedge: β=-0.00596 [-0.0428,+0.0357] ns  |  G4_interaction: β=+0.06178 [-0.1570,+0.2650] ns  |  G5_control_fp_to_pre_adj: β=+0.01294 [-0.0195,+0.0490] ns — **G2 미검출 — 여성 파트너의 사후기 조정성과는 남성과 구분되지 않는다. 재순위 해석 유지 가능. wedge 의 예측력은 성별 중립 신호로 서술한다**",
   "kill_met": false,
   "code": "p001_26_wedge_gender.py",
-  "sha256_16": "8eb8d0a426c1c0ad",
+  "sha256_16": "1f7083c5dea907b4",
   "seed": 42,
-  "runtime_s": 8.4,
-  "date": "2026-09-08",
+  "runtime_s": 8.2,
+  "date": "2026-09-10",
   "stage": 7,
   "feeds": "P001 원고 프레임 확정",
   "slug": "wedge_gender",

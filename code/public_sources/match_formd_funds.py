@@ -19,7 +19,7 @@ import pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.environ.get("P001_PROJECT_ROOT", "/path/to/project-root")   # holds shared/data/processed (derived, not redistributed)
 D = os.path.join(ROOT, "shared", "data", "processed", "formd_v1")
-SAMPLE = os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet")
+SAMPLE = os.environ.get("P001_SAMPLE_V1", "/path/to/sample_v1.parquet")
 INV = os.path.join(ROOT, "..", "data", "crunchbase", "investors.csv")
 rng = np.random.default_rng(20260909)
 ROMAN = r"\b(?:i{1,3}|iv|v|vi{1,3}|ix|x{1,3}|xi{1,3}|xiv|xv|xvi{1,3}|xix|xx)\b"

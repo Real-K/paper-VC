@@ -1,25 +1,27 @@
-# Table 4. Where the exit gap lives: female-founded deals
-## Panel A. Exit by sample end, deals through October 2017: the location ladder
-| Comparison | Global | 95% CI | NA+EU | 95% CI |
-|---|---|---|---|---|
-| Year effects only | -2.73 | [-8.28, +3.01] | -3.35 | [-7.90, +2.16] |
-| Firm × year | +0.21 | [-5.90, +5.34] | -0.50 | [-6.76, +5.42] |
-| Additive firm+year+sector+stage | +0.78 | [-5.75, +7.05] | -0.82 | [-8.20, +5.24] |
-| **Firm × year × sector (peer comparison)** | **-6.25 | [-11.50, -1.38]** | -4.55 | [-10.13, +0.22] |
-| + stage | -1.75 | [-5.29, +1.43] | -1.02 | [-4.49, +2.67] |
+# Table 4. Track-record evaluation: composition accounting and rank changes (NA+EU partners with at least five attributed deals)
+## Panel A. Levels and ranks on one sample: female − male differences and mean percentile ranks (exit by sample end, deals through 2017-10)
+| Benchmark | Δ raw exit rate (pp) 95% CI | Δ benchmark component (pp) | Δ adjusted exit rate (pp) | Female mean percentile, raw → adjusted | Male mean percentile, raw → adjusted | Female shift (percentile points) 95% CI | Partners (women) |
+|---|---|---|---|---|---|---|---|
+| Year | -2.88 [-7.15, +1.31] | -1.91 [-2.78, -0.91] | -0.97 [-4.81, +3.00] | 47.2 → 48.9 | 50.2 → 50.1 | +1.65 [+0.62, +2.46] | 2,680 (191) |
+| Year × stage | -2.88 [-6.97, +1.42] | -3.54 [-5.79, -1.50] | +0.66 [-3.25, +4.45] | 47.2 → 50.9 | 50.2 → 49.9 | +3.68 [+1.62, +5.85] | 2,680 (191) |
+| Year × sector × stage (preferred) | -2.88 [-7.16, +1.23] | -4.09 [-6.39, -1.48] | +1.21 [-1.97, +4.40] | 47.2 → 51.8 | 50.2 → 49.9 | +4.59 [+2.15, +6.84] | 2,680 (191) |
 
+## Panel B. The same accounting at fixed exit horizons
+| Sample and horizon | Δ raw exit rate (pp) 95% CI | Δ benchmark component (pp) | Δ adjusted exit rate (pp) | Female mean percentile, raw → adjusted | Male mean percentile, raw → adjusted | Female shift (percentile points) 95% CI | Partners (women) |
+|---|---|---|---|---|---|---|---|
+| 36-month exit, deals through 2020-10; year × sector × stage | -1.54 [-3.54, +0.27] | -1.60 [-2.45, -0.70] | +0.06 [-1.47, +1.79] | 46.2 → 49.7 | 50.4 → 50.0 | +3.42 [+1.56, +4.89] | 4,120 (392) |
+| &nbsp;&nbsp;year only | -1.54 [-3.19, +0.28] | -0.63 [-0.77, -0.50] | -0.91 [-2.55, +0.90] | 46.2 → 48.0 | 50.4 → 50.2 | +1.80 [+1.33, +2.32] | 4,120 (392) |
+| 72-month exit, deals through 2017-10; year × sector × stage | -0.69 [-4.50, +3.08] | -1.74 [-3.66, +0.11] | +1.05 [-1.93, +4.22] | 48.8 → 51.7 | 50.1 → 49.9 | +2.92 [+0.73, +5.24] | 2,680 (191) |
+| &nbsp;&nbsp;year only | -0.69 [-4.71, +3.04] | -0.62 [-0.97, -0.26] | -0.06 [-3.85, +3.66] | 48.8 → 49.5 | 50.1 → 50.1 | +0.70 [+0.29, +1.14] | 2,680 (191) |
 
-## Panel B. Fixed 36-month exit horizon, deals through 2020-10 (NA+EU): the cross-deal comparisons as the estimator
-| Cell definition | Mixed cells / deals | Multi-round (cross-deal) cells / deals | Cells with exit variation | Share of Σx̃² from single-round cells (d) | β, all cells (pp) | β, cross-deal cells (pp) | 95% CI | MDE80 (pp; sd) | Placebo 95th pct (pp) |
-|---|---|---|---|---|---|---|---|---|---|
-| firm×year×sector | 411 / 1,174 | 174 / 652 | 61 | 0.47 | -1.44 | -2.74 | [-9.41, +2.70] | 8.23; 0.25 | 5.64 |
-| firm×year×sector×stage | 380 / 953 | 78 / 258 | 23 | 0.74 | -0.42 | -1.64 | [-13.20, +6.26] | 13.81; 0.42 | 7.28 |
-| firm×2yr×sector | 399 / 1,338 | 228 / 956 | 82 | 0.31 | -0.28 | -0.40 | [-4.22, +3.04] | 5.47; 0.17 | 4.58 |
-| firm×3yr×sector | 392 / 1,451 | 243 / 1,124 | 84 | 0.25 | -0.87 | -1.17 | [-5.21, +2.44] | 5.61; 0.17 | 3.8 |
-| firm×sector + year FE | 360 / 1,960 | 274 / 1,765 | 111 | 0.12 | -2.93 | -2.26 | [-5.86, +1.52] | 5.20; 0.16 | 3.44 |
-| Deal-level coding, firm × year × sector: female-only vs male-only attributed deals (mixed-attribution deals excluded) | — | 113 cells / 335 deals | 45 | 0 by construction | — | -8.57 | [-20.44, +0.14] | 14.61 | 8.57 |
-| Reference: sample-end horizon, deals through 2017-10, firm × year × sector (canonical run; Appendix Table IA.2, Panel E) | 174 / 430 | 61 / 195 | 30 | 0.58 | -4.55 | -10.71 | [-0.22, +0.02] | 17.51; — | 12.67 |
+## Panel C. What the interval covers, and the benchmark's weights
+| | Female shift (percentile points) | 95% CI | Partners |
+|---|---|---|---|
+| Benchmark held fixed; partners resampled (as in Panels A–B) | +4.59 | [+2.15, +6.84] | 2,680 |
+| Benchmark (market-cell means) and ranks recomputed in every replication | +4.59 | [+2.07, +7.18] (interval width ratio 1.09) | 2,680 |
+| Benchmark from unique rounds (multiply attributed rounds counted once in cell means) | +4.66 | [+2.55, +6.61] | 2,680 |
+| Leave-company-out benchmark | +5.11 | [+3.01, +6.96] | 2,624 |
+| Top-quartile female share, raw → adjusted (P001-05) | 7.2% → 8.2% | [-0.27, +2.52] | 2,680 |
+| Rank correlation, raw vs adjusted (P001-05) | 0.861 | | |
 
-*Panel B: exit within 36 months of the deal; FF deals 13,187, base rate 0.125. Σx̃² is the within-cell estimator's identifying variance and d the share of it contributed by cells whose partner rows all belong to one round (co-attributed pairs), so that the all-cells coefficient equals the cross-deal coefficient times (1 − d). MDE80 = minimum detectable effect at 80 percent power. β on cross-deal cells is the within-cell estimator restricted to mixed cells whose partner rows span at least two rounds; investor-firm cluster bootstrap (500); placebo = 95th percentile of |β| under within-cell reassignment of partner gender (400). The firm × sector row adds additive year effects (two-way demeaning); with additive effects the identity β_all = (1 − d)·β_cross-deal holds only approximately, which is why that row's all-cells and cross-deal coefficients do not satisfy it exactly. The reference row repeats the canonical sample-end estimates of P001-49 so that the same specification carries one set of numbers throughout the paper. Sources: P001-55, P001-49.*
-
-*Deals through 2017-10; exit = acquisition or IPO by sample end. n = 8,058 (global) / 7,103 (NA+EU). The deficit is detected only in the interacted firm–year–sector comparison; the coarser intervals contain both zero and the peer-comparison estimate, and only the + stage row's interval excludes it. All rows are estimated on one sample and one bootstrap draw. Identifying variation of the peer-comparison row (Appendix Table IA.2, Panel D): 174 NA+EU cells contain both a female- and a male-partner female-founded deal (430 deals, 6.0 percent of the sample; global 191 cells, 478 deals). Base exit rate among female-founded deals, global: 46.4 percent (I-78). Sources: P001-10 (ladder), P001-15 (additive row), P001-40 (identifying variation), I-78 (base rate).*
+*Raw exit rate = the partner's mean exit indicator; benchmark component = the deal-weighted mean of her market cells' exit rates (year, year × stage, or year × sector × stage; full cell means); adjusted rate = raw minus component, so the three level differences add up exactly on the same partners (maximum absolute deviation 0.0e+00 in exit-rate units). Percentiles are computed across all partners in the row's sample; the identity does not hold for ranks. Intervals are 500 partner-resampling bootstrap replications (300 for the benchmark-level and fixed-horizon rows); the benchmark is held fixed except in the row that says otherwise. Multiply attributed rounds enter the cell means once per attributed row (47 percent of rounds in the cells are attributed more than once; 1.92 rows per round on average). Sources: P001-62, P001-05.*

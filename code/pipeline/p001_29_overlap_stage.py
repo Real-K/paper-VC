@@ -54,7 +54,7 @@ def is_late(s):
     return (s.startswith("series_") and s not in ("series_a", "series_unknown")) or s == "private_equity"
 
 
-d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
 d["dt"] = pd.to_datetime(d["dt"])
 dn = d[d["country_code"].isin(NAEU)].copy()
 dn["mcell"] = dn["year"] + "|" + dn["cat"] + "|" + dn["stage"]

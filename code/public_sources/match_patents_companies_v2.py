@@ -22,7 +22,7 @@ import pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.environ.get("P001_PROJECT_ROOT", "/path/to/project-root")   # holds shared/data/processed (derived, not redistributed)
 D = os.path.join(ROOT, "shared", "data", "processed", "patents_v1")
-SAMPLE = os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet")
+SAMPLE = os.environ.get("P001_SAMPLE_V1", "/path/to/sample_v1.parquet")
 CB = os.path.join(ROOT, "..", "data", "crunchbase")
 A3 = {"USA": "US", "GBR": "GB", "CAN": "CA", "DEU": "DE", "FRA": "FR", "ISR": "IL", "CHE": "CH", "NLD": "NL", "SWE": "SE", "ESP": "ES", "ITA": "IT", "IRL": "IE", "BEL": "BE", "DNK": "DK", "FIN": "FI", "NOR": "NO",
       "AUT": "AT", "PRT": "PT", "POL": "PL", "AUS": "AU", "IND": "IN", "CHN": "CN", "JPN": "JP", "KOR": "KR", "SGP": "SG", "BRA": "BR", "MEX": "MX", "TUR": "TR", "ARE": "AE", "NZL": "NZ", "RUS": "RU", "TWN": "TW",

@@ -18,7 +18,7 @@ import pandas as pd  # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
 A = H = os.environ.get("P001_ARTIFACTS", os.path.join(REPO, "artifacts"))          # aggregate result artifacts (JSON)
-OUT_T = os.environ.get("P001_TABLES", os.path.join(REPO, "figures", "tables"))      # regenerated tables
+OUT_T = os.environ.get("P001_TABLES", os.path.join(REPO, "figures", "tables", "components"))      # regenerated table components (p001_09d_compose_v9.py writes the final tables next to them)
 OUT_F = os.environ.get("P001_FIGURES", os.path.join(REPO, "figures"))               # regenerated figures
 os.makedirs(OUT_T, exist_ok=True)
 os.makedirs(OUT_F, exist_ok=True)
@@ -57,8 +57,8 @@ e40, e41 = p40["estimates"], p41["estimates"]
 q40n, q40g, q40s = e40["NAEU"]["pluscat"], e40["GLOBAL"]["pluscat"], e40["NAEU"]["plusstage"]
 p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52, p54, p55, p56, p58, p59 = (j(A, f"P001{n}.json") for n in ("42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "54", "55", "56", "58", "59"))
 e42, e43, e44, e45, e46, e47, e48, e49, e50, e51, e52, e54, e55, e56, e58, e59 = (x["estimates"] for x in (p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52, p54, p55, p56, p58, p59))
-p57, p60 = (j(A, f"P001{n}.json") for n in ("57", "60"))
-e57, e60 = p57["estimates"], p60["estimates"]
+p57, p60, p61, p62, p63 = (j(A, f"P001{n}.json") for n in ("57", "60", "61", "62", "63"))
+e57, e60, e61, e62, e63 = p57["estimates"], p60["estimates"], p61["estimates"], p62["estimates"], p63["estimates"]
 p0 = j(A, "P00100.json")["estimates"]  # sample counts fixed by p001_00 (no microdata needed to render the exhibits)
 n_deals, n_naeu = p0["n_deals"], p0["n_naeu"]
 
@@ -78,7 +78,7 @@ w("table1.md", f"""# Table 1. Sample and measurement coverage
 | — early-stage share diff | {r4['early_diff_pp']:+.1f}pp |
 | — mean vintage diff (years) | {r4['year_diff']:+.2f} |
 
-*Sources: sample_v1.parquet (sha256₁₆ 5b83f6785878d867); I-73; P001-08. Population: deals with observable founder gender.*
+*Sources: sample_v2.parquet (sha256₁₆ 3acfb38d12559791; P001-00); I-73; P001-08; P001-63. Population: partner-attributed equity deals, 2010-01 to 2023-10, with observable founder gender, of companies with no acquisition or IPO recorded on or before the round date (Appendix IA.1).*
 """)
 
 L = p2["estimates"]["ladder"]
@@ -126,7 +126,7 @@ w("table4.md", f"""# Table 4. Where the exit gap lives: female-founded deals
 | {e55['A_exit3_2020']['c3']['label']} | {e55['A_exit3_2020']['c3']['n_mixed_cells']:,} / {e55['A_exit3_2020']['c3']['n_deals_mixed']:,} | {e55['A_exit3_2020']['c3']['n_multi_round_cells']:,} / {e55['A_exit3_2020']['c3']['n_deals_multi']:,} | {e55['A_exit3_2020']['c3']['n_cells_var_pos']} | {e55['A_exit3_2020']['c3']['dilution_share_sxx_single_round']:.2f} | {e55['A_exit3_2020']['c3']['beta_full_pp']:+.2f} | {(f"{e55['A_exit3_2020']['c3']['beta_multi_pp']:+.2f}" if e55['A_exit3_2020']['c3'].get('beta_multi_pp') is not None else 'not identified')} | {(raw(e55['A_exit3_2020']['c3']['ci_multi_pp'], 2) if e55['A_exit3_2020']['c3'].get('beta_multi_pp') is not None else '—')} | {(f"{e55['A_exit3_2020']['c3']['mde80_multi_pp']:.2f}; {e55['A_exit3_2020']['c3']['mde80_multi_sd']:.2f}" if e55['A_exit3_2020']['c3'].get('beta_multi_pp') is not None else '—')} | {(e55['A_exit3_2020']['c3']['placebo_p95_multi_pp'] if e55['A_exit3_2020']['c3'].get('beta_multi_pp') is not None else '—')} |
 | {e55['A_exit3_2020']['cfs']['label']} | {e55['A_exit3_2020']['cfs']['n_mixed_cells']:,} / {e55['A_exit3_2020']['cfs']['n_deals_mixed']:,} | {e55['A_exit3_2020']['cfs']['n_multi_round_cells']:,} / {e55['A_exit3_2020']['cfs']['n_deals_multi']:,} | {e55['A_exit3_2020']['cfs']['n_cells_var_pos']} | {e55['A_exit3_2020']['cfs']['dilution_share_sxx_single_round']:.2f} | {e55['A_exit3_2020']['cfs']['beta_full_pp']:+.2f} | {(f"{e55['A_exit3_2020']['cfs']['beta_multi_pp']:+.2f}" if e55['A_exit3_2020']['cfs'].get('beta_multi_pp') is not None else 'not identified')} | {(raw(e55['A_exit3_2020']['cfs']['ci_multi_pp'], 2) if e55['A_exit3_2020']['cfs'].get('beta_multi_pp') is not None else '—')} | {(f"{e55['A_exit3_2020']['cfs']['mde80_multi_pp']:.2f}; {e55['A_exit3_2020']['cfs']['mde80_multi_sd']:.2f}" if e55['A_exit3_2020']['cfs'].get('beta_multi_pp') is not None else '—')} | {(e55['A_exit3_2020']['cfs']['placebo_p95_multi_pp'] if e55['A_exit3_2020']['cfs'].get('beta_multi_pp') is not None else '—')} |
 | Deal-level coding, firm × year × sector: female-only vs male-only attributed deals (mixed-attribution deals excluded) | — | {e55['D_deal_level_coding']['cell_cat']['n_cells_fo_var']:,} cells / {e55['D_deal_level_coding']['cell_cat']['n_deals']:,} deals | {e55['D_deal_level_coding']['cell_cat']['n_cells_exit_var_pos']} | 0 by construction | — | {e55['D_deal_level_coding']['cell_cat']['beta_fo_vs_mo_pp']:+.2f} | {raw(e55['D_deal_level_coding']['cell_cat']['ci_pp'], 2)} | {e55['D_deal_level_coding']['cell_cat']['mde80_pp']:.2f} | {e55['D_deal_level_coding']['cell_cat']['placebo_p95_pp']} |
-| Reference: sample-end horizon, deals through 2017-10, firm × year × sector (canonical run; Appendix Table IA.2, Panel E) | {e49['NAEU']['cell_cat']['n_mixed_cells']:,} / {e49['NAEU']['cell_cat']['n_deals_mixed']:,} | {e49['NAEU']['cell_cat']['n_multi_round_cells']:,} / {e49['NAEU']['cell_cat']['n_deals_multi']:,} | {e49['NAEU']['cell_cat']['n_cells_exit_var_pos']} | {e49['NAEU']['cell_cat']['dilution_share_sxx_single_round']:.2f} | {e49['NAEU']['cell_cat']['beta_full_pp']:+.2f} | {e49['NAEU']['cell_cat']['beta_multi_exit_ever_pp']:+.2f} | {raw([x/100 for x in e49['NAEU']['cell_cat']['ci_multi_exit_ever_pp']], 2)} | {e49['NAEU']['cell_cat']['mde_multi_exit_ever_pp']:.2f}; — | {e49['NAEU']['cell_cat']['placebo_p95_multi_exit_ever_pp']} |
+| Reference: sample-end horizon, deals through 2017-10, firm × year × sector (canonical run; Appendix Table IA.2, Panel E) | {e49['NAEU']['cell_cat']['n_mixed_cells']:,} / {e49['NAEU']['cell_cat']['n_deals_mixed']:,} | {e49['NAEU']['cell_cat']['n_multi_round_cells']:,} / {e49['NAEU']['cell_cat']['n_deals_multi']:,} | {e49['NAEU']['cell_cat']['n_cells_exit_var_pos']} | {e49['NAEU']['cell_cat']['dilution_share_sxx_single_round']:.2f} | {e49['NAEU']['cell_cat']['beta_full_pp']:+.2f} | {e49['NAEU']['cell_cat']['beta_multi_exit_ever_pp']:+.2f} | {raw(e49['NAEU']['cell_cat']['ci_multi_exit_ever_pp'], 2)} | {e49['NAEU']['cell_cat']['mde_multi_exit_ever_pp']:.2f}; — | {e49['NAEU']['cell_cat']['placebo_p95_multi_exit_ever_pp']} |
 
 *Panel B: exit within 36 months of the deal; FF deals {e55['A_exit3_2020']['n_ff_deals']:,}, base rate {e55['A_exit3_2020']['base_y']:.3f}. Σx̃² is the within-cell estimator's identifying variance and d the share of it contributed by cells whose partner rows all belong to one round (co-attributed pairs), so that the all-cells coefficient equals the cross-deal coefficient times (1 − d). MDE80 = minimum detectable effect at 80 percent power. β on cross-deal cells is the within-cell estimator restricted to mixed cells whose partner rows span at least two rounds; investor-firm cluster bootstrap (500); placebo = 95th percentile of |β| under within-cell reassignment of partner gender (400). The firm × sector row adds additive year effects (two-way demeaning); with additive effects the identity β_all = (1 − d)·β_cross-deal holds only approximately, which is why that row's all-cells and cross-deal coefficients do not satisfy it exactly. The reference row repeats the canonical sample-end estimates of P001-49 so that the same specification carries one set of numbers throughout the paper. Sources: P001-55, P001-49.*
 
@@ -175,7 +175,7 @@ w("table5.md", f"""# Table 5. Within-partner outcome test and covariate-adjusted
 | 36-month exit, year × sector × stage × country benchmark | {e59['B_clusters_benchmark']['exit3_country_benchmark']['ffp']['coef']*100:+.2f} | {pp(e59['B_clusters_benchmark']['exit3_country_benchmark']['ffp']['ci95'])} | {e59['B_clusters_benchmark']['exit3_country_benchmark']['ffp']['mde80']*100:.2f} | {e59['B_clusters_benchmark']['exit3_country_benchmark']['ffp']['beta_std']:+.3f} | {'yes' if e59['B_clusters_benchmark']['exit3_country_benchmark']['ffp']['within_pm0.05'] else 'no'} | {e59['B_clusters_benchmark']['exit3_country_benchmark']['ff']['coef']*100:+.2f} | {pp(e59['B_clusters_benchmark']['exit3_country_benchmark']['ff']['ci95'])} | {e59['B_clusters_benchmark']['exit3_country_benchmark']['n']:,} / {e59['B_clusters_benchmark']['exit3_country_benchmark']['n_partners']:,} ({e59['B_clusters_benchmark']['exit3_country_benchmark']['n_female_partners']}) |
 | Same partners and window as eventual exit (deals through 2017-10): 36-month exit | {e57['A_2017']['exit3']['ffp']['coef']*100:+.2f} | {pp(e57['A_2017']['exit3']['ffp']['ci95'])} | {e57['A_2017']['exit3']['ffp']['mde80']*100:.2f} | {e57['A_2017']['exit3']['ffp']['coef']/e57['A_2017']['exit3']['sd_r']:+.3f} | {'yes' if e57['A_2017']['exit3']['ffp']['ci95'][0] >= -0.05 and e57['A_2017']['exit3']['ffp']['ci95'][1] <= 0.05 else 'no'} | {e57['A_2017']['exit3']['ff']['coef']*100:+.2f} | {pp(e57['A_2017']['exit3']['ff']['ci95'])} | {e57['A_2017']['exit3']['n']:,} / {e57['A_2017']['exit3']['n_partners']:,} |
 | &nbsp;&nbsp;72-month exit | {e57['A_2017']['exit6']['ffp']['coef']*100:+.2f} | {pp(e57['A_2017']['exit6']['ffp']['ci95'])} | {e57['A_2017']['exit6']['ffp']['mde80']*100:.2f} | {e57['A_2017']['exit6']['ffp']['coef']/e57['A_2017']['exit6']['sd_r']:+.3f} | {'yes' if e57['A_2017']['exit6']['ffp']['ci95'][0] >= -0.05 and e57['A_2017']['exit6']['ffp']['ci95'][1] <= 0.05 else 'no'} | {e57['A_2017']['exit6']['ff']['coef']*100:+.2f} | {pp(e57['A_2017']['exit6']['ff']['ci95'])} | {e57['A_2017']['exit6']['n']:,} / {e57['A_2017']['exit6']['n_partners']:,} |
-| &nbsp;&nbsp;exit after month 36 (among deals not exited by month 36) | {e57['A_2017']['late_exit']['ffp']['coef']*100:+.2f} | {pp(e57['A_2017']['late_exit']['ffp']['ci95'])} | {e57['A_2017']['late_exit']['ffp']['mde80']*100:.2f} | {e57['A_2017']['late_exit']['ffp']['coef']/e57['A_2017']['late_exit']['sd_r']:+.3f} | {'yes' if e57['A_2017']['late_exit']['ffp']['ci95'][0] >= -0.05 and e57['A_2017']['late_exit']['ffp']['ci95'][1] <= 0.05 else 'no'} | {e57['A_2017']['late_exit']['ff']['coef']*100:+.2f} | {pp(e57['A_2017']['late_exit']['ff']['ci95'])} | {e57['A_2017']['late_exit']['n']:,} / {e57['A_2017']['late_exit']['n_partners']:,} |
+| &nbsp;&nbsp;exit after month 36 (indicator on the full sample: exit by sample end and not by month 36; equals eventual exit minus 36-month exit by construction) | {e57['A_2017']['late_exit']['ffp']['coef']*100:+.2f} | {pp(e57['A_2017']['late_exit']['ffp']['ci95'])} | {e57['A_2017']['late_exit']['ffp']['mde80']*100:.2f} | {e57['A_2017']['late_exit']['ffp']['coef']/e57['A_2017']['late_exit']['sd_r']:+.3f} | {'yes' if e57['A_2017']['late_exit']['ffp']['ci95'][0] >= -0.05 and e57['A_2017']['late_exit']['ffp']['ci95'][1] <= 0.05 else 'no'} | {e57['A_2017']['late_exit']['ff']['coef']*100:+.2f} | {pp(e57['A_2017']['late_exit']['ff']['ci95'])} | {e57['A_2017']['late_exit']['n']:,} / {e57['A_2017']['late_exit']['n_partners']:,} |
 | &nbsp;&nbsp;follow-on financing within 36 months | {e57['A_2017']['fon']['ffp']['coef']*100:+.2f} | {pp(e57['A_2017']['fon']['ffp']['ci95'])} | {e57['A_2017']['fon']['ffp']['mde80']*100:.2f} | {e57['A_2017']['fon']['ffp']['coef']/e57['A_2017']['fon']['sd_r']:+.3f} | {'yes' if e57['A_2017']['fon']['ffp']['ci95'][0] >= -0.05 and e57['A_2017']['fon']['ffp']['ci95'][1] <= 0.05 else 'no'} | {e57['A_2017']['fon']['ff']['coef']*100:+.2f} | {pp(e57['A_2017']['fon']['ff']['ci95'])} | {e57['A_2017']['fon']['n']:,} / {e57['A_2017']['fon']['n_partners']:,} |
 | Female partners' own female-founded − other gap (β_FF + β_int), 36-month exit, deals through 2020-10, 2,000 draws | {e60['A_female_own_gap']['exit3']['female_own_gap_ff_plus_ffp']['coef']*100:+.2f} | {pp(e60['A_female_own_gap']['exit3']['female_own_gap_ff_plus_ffp']['ci95'])} | {2.8*e60['A_female_own_gap']['exit3']['female_own_gap_ff_plus_ffp']['se_boot']*100:.2f} | {e60['A_female_own_gap']['exit3']['female_own_gap_ff_plus_ffp']['coef']/e60['A_female_own_gap']['exit3']['sd_r']:+.3f} | {'yes' if e60['A_female_own_gap']['exit3']['female_own_gap_ff_plus_ffp']['ci95'][0] >= -0.05 and e60['A_female_own_gap']['exit3']['female_own_gap_ff_plus_ffp']['ci95'][1] <= 0.05 else 'no'} | — | — | — |
 | &nbsp;&nbsp;same, follow-on financing | {e60['A_female_own_gap']['fon']['female_own_gap_ff_plus_ffp']['coef']*100:+.2f} | {pp(e60['A_female_own_gap']['fon']['female_own_gap_ff_plus_ffp']['ci95'])} | {2.8*e60['A_female_own_gap']['fon']['female_own_gap_ff_plus_ffp']['se_boot']*100:.2f} | {e60['A_female_own_gap']['fon']['female_own_gap_ff_plus_ffp']['coef']/e60['A_female_own_gap']['fon']['sd_r']:+.3f} | {'yes' if e60['A_female_own_gap']['fon']['female_own_gap_ff_plus_ffp']['ci95'][0] >= -0.05 and e60['A_female_own_gap']['fon']['female_own_gap_ff_plus_ffp']['ci95'][1] <= 0.05 else 'no'} | — | — | — |
@@ -406,7 +406,7 @@ w("tableIA2.md", f"""# Appendix Table IA.2. Robustness and measurement diagnosti
 |---|---|
 | Firm attribution rate ~ female-partner share (correlation) | {e8['r2_attr_fp_corr'][0]} {raw(e8['r2_attr_fp_corr'][1])} |
 | Attribution × gender drift correlation (annual) | {e8['drift_corr']} |
-| Deal-level salience fingerprint: FF × firm FP-share → P(attributed) | {e16['attr_ff_x_fpshare'][0]*100:+.2f}pp {pp(e16['attr_ff_x_fpshare'][1])} (≈0.4pp per sd; absorbed by firm FE) |
+| Deal-level salience fingerprint: FF × firm FP-share → P(attributed) | {e16['attr_ff_x_fpshare'][0]*100:+.2f}pp {pp(e16['attr_ff_x_fpshare'][1])} (varies within firms with the deal's founder gender, so it is not absorbed by firm fixed effects; Appendix IA.2) |
 | Generic stage-label share: FP / MP deals | {e16['generic_share_fp']*100:.1f}% / {e16['generic_share_mp']*100:.1f}% |
 | Founder-gender determinable vs not: US / early / vintage | {r4['us_diff_pp']:+.1f}pp / {r4['early_diff_pp']:+.1f}pp / {r4['year_diff']:+.2f}y |
 
@@ -659,27 +659,183 @@ open(os.path.join(OUT_T, "tableIA1.md"), "w", encoding="utf-8").write("# Appendi
                                                                      "\n*Same construction, samples, and sources as Table 7; see its note.*\n")
 print("table: table7.md (slimmed) · tableIA1.md")
 
-# ---- Figures ----
-plt.rcParams.update({"figure.dpi": 150, "font.size": 9})
-fig, ax = plt.subplots(figsize=(5, 3.2))
-names = ["Firm x year", "+ sector", "+ stage"]
-vals = [L["L0_invyear"][0] * 100, L["L1_pluscat"][0] * 100, L["L2_plusstage"][0] * 100]
-los = [L[k][1][0] * 100 for k in ("L0_invyear", "L1_pluscat", "L2_plusstage")]
-his = [L[k][1][1] * 100 for k in ("L0_invyear", "L1_pluscat", "L2_plusstage")]
-ax.bar(names, vals, color=["#4C72B0", "#55A868", "#C44E52"], width=0.55)
-ax.errorbar(names, vals, yerr=[np.array(vals) - los, np.array(his) - vals],
-            fmt="none", ecolor="black", capsize=4, lw=1)
-ax.axhline(0, color="grey", lw=0.8)
-ax.set_ylabel("FP coefficient on FF (pp)")
-ax.set_title("Figure 1. Matching decomposition ladder (NA+EU)")
-fig.tight_layout()
-fig.savefig(os.path.join(OUT_F, "figure1_ladder.png"))
 
+# ════════════════════════════ v9 blocks (2026-09-10; comments c1/c2/c3) ════════════════════════════
+def ci_pp(v, d=2):
+    return f"[{v['ci95'][0]*100:+.{d}f}, {v['ci95'][1]*100:+.{d}f}]"
+
+
+def ci_pt(v, d=2):
+    return f"[{v['ci95'][0]:+.{d}f}, {v['ci95'][1]:+.{d}f}]"
+
+
+# ── Table 1 extra rows: population rule, unique units, investor types, titles ─────────────────────────────────────────────
+_t63a, _t63b = e63["A_investor_types"], e63["B_partner_titles"]
+w("t1_extra.md", f"""| Unique funding rounds / companies / investor firms / attributed partners | {p0['unique_rounds']:,} / {p0['unique_companies']:,} / {p0['unique_investor_firms']:,} / {p0['unique_partners']:,} |
+| Attributed rows on companies with an acquisition or IPO recorded on or before the round date (excluded from the analysis file; global / NA+EU) | {p0['excluded_pre_exit_rows']:,} / {p0['excluded_pre_exit_rows_naeu']:,} |
+| Deals at investors whose Crunchbase type includes venture capital, micro VC, or corporate VC (NA+EU); partners at such firms | {_t63a['share_deals_vc_type_naeu']*100:.1f}% ; {_t63a['share_partners_at_vc_type_firms']*100:.1f}% |
+| Attributed partners with a job title at the firm containing "partner" (share of partner–firm pairs; deal-weighted) | {_t63b['share_any_partner_title_pairs']*100:.1f}% ; {(_t63b['share_by_bucket_deal_weighted']['general/managing/founding partner'] + _t63b['share_by_bucket_deal_weighted']['partner (other)'])*100:.1f}% |
+| Attributed partners with no job record at the firm (share of pairs) | {_t63b['share_by_bucket_pairs']['no job record at the firm']*100:.1f}% |
+""")
+
+# ── Table 2 Panel B: co-attribution diagnostics and common-support ladder (P001-61) ───────────────────────────────────────
+_A61, _B61, _C61 = e61["A_diagnostics_by_cell"], e61["B_original_ladder"], e61["C_common_support_ladder"]
+_lab = {"L0_invyear": "Firm × year", "L1_pluscat": "+ sector", "L2_plusstage": "+ stage"}
+_rows = "\n".join(f"| {_lab[k]} | {_A61[k]['n_mixed_cells']:,} / {_A61[k]['n_unique_rounds_mixed']:,} | {_A61[k]['share_single_round_cells']:.2f} | {_A61[k]['d_share_sxx_single_round']:.2f} | {_A61[k]['beta_all_pp']:+.2f} | {_A61[k]['beta_multi_pp']:+.2f} | {_C61[k]['coef_pp']:+.2f} [{_C61[k]['ci95_pp'][0]:+.2f}, {_C61[k]['ci95_pp'][1]:+.2f}] |" for k in ("L0_invyear", "L1_pluscat", "L2_plusstage"))
+w("t2_panelB.md", f"""## Panel B. What each layer compares: co-attribution and the common-support ladder (NA+EU, all deals)
+| Cell | Mixed cells / unique rounds in them | Share of mixed cells that are a single round | d: share of identifying variance from single-round cells | β, all rows (pp) | β, multi-round cells only (pp) | β on the common support (rows in cells mixed at the finest level; pp) 95% CI |
+|---|---|---|---|---|---|---|
+{_rows}
+| Drop from firm × year to + stage (pp): original sample / common support | | | | {_B61['drop_L0_to_L2_pp']['coef_pp']:+.2f} [{_B61['drop_L0_to_L2_pp']['ci95_pp'][0]:+.2f}, {_B61['drop_L0_to_L2_pp']['ci95_pp'][1]:+.2f}] | | {_C61['drop_L0_to_L2_pp']['coef_pp']:+.2f} [{_C61['drop_L0_to_L2_pp']['ci95_pp'][0]:+.2f}, {_C61['drop_L0_to_L2_pp']['ci95_pp'][1]:+.2f}] |
+
+*Panel B: the dependent variable (female-founded) is identical for the partners of a co-attributed pair, so the all-rows coefficient equals the multi-round coefficient times (1 − d), exactly as for the exit estimator. Common support = the {_C61['support']['rows']:,} rows ({_C61['support']['share_of_rows']*100:.1f} percent of the sample; {_C61['support']['unique_rounds']:,} unique rounds, {_C61['support']['unique_companies']:,} companies) that lie in firm × year × sector × stage cells containing both a female- and a male-partner deal; the three layers are re-estimated on those rows, so the observations are held fixed while the cells change — the implicit weights of the fixed-effects estimator still differ across layers, so this is a comparison-set diagnostic, not a decomposition of a pure composition effect. Investor-firm cluster bootstrap (500), shared across layers so that the drop is estimated from the same draws. Source: P001-61.*
+""")
+
+# ── Table 4: composition accounting, ranks, benchmark uncertainty (P001-62, P001-05) ──────────────────────────────────────
+_A62 = e62["A_accounting_sample_end"]; _B62 = e62["B_benchmark_levels_sample_end"]; _C62 = e62["C_fixed_horizon"]; _D62 = e62["D_benchmark_uncertainty"]; _E62 = e62["E_benchmark_variants"]
+
+
+def acc_row(lab, v):
+    return f"| {lab} | {v['gap_raw']['coef']*100:+.2f} {ci_pp(v['gap_raw'])} | {v['gap_comp']['coef']*100:+.2f} {ci_pp(v['gap_comp'])} | {v['gap_adj']['coef']*100:+.2f} {ci_pp(v['gap_adj'])} | {v['female_raw_pct']['coef']:.1f} → {v['female_adj_pct']['coef']:.1f} | {v['male_raw_pct']['coef']:.1f} → {v['male_adj_pct']['coef']:.1f} | {v['female_shift']['coef']:+.2f} {ci_pt(v['female_shift'])} | {v['n_partners']:,} ({v['n_female']}) |"
+
+
+w("t4_rank.md", f"""# Table 4. Track-record evaluation: composition accounting and rank changes (NA+EU partners with at least five attributed deals)
+## Panel A. Levels and ranks on one sample: female − male differences and mean percentile ranks (exit by sample end, deals through 2017-10)
+| Benchmark | Δ raw exit rate (pp) 95% CI | Δ benchmark component (pp) | Δ adjusted exit rate (pp) | Female mean percentile, raw → adjusted | Male mean percentile, raw → adjusted | Female shift (percentile points) 95% CI | Partners (women) |
+|---|---|---|---|---|---|---|---|
+{acc_row("Year", _B62["year"])}
+{acc_row("Year × stage", _B62["year_stage"])}
+{acc_row("Year × sector × stage (preferred)", _A62)}
+
+## Panel B. The same accounting at fixed exit horizons
+| Sample and horizon | Δ raw exit rate (pp) 95% CI | Δ benchmark component (pp) | Δ adjusted exit rate (pp) | Female mean percentile, raw → adjusted | Male mean percentile, raw → adjusted | Female shift (percentile points) 95% CI | Partners (women) |
+|---|---|---|---|---|---|---|---|
+{acc_row("36-month exit, deals through 2020-10; year × sector × stage", _C62["exit3_deals_to_2020_10"]["year_sector_stage"])}
+{acc_row("&nbsp;&nbsp;year only", _C62["exit3_deals_to_2020_10"]["year"])}
+{acc_row("72-month exit, deals through 2017-10; year × sector × stage", _C62["exit6_deals_to_2017_10"]["year_sector_stage"])}
+{acc_row("&nbsp;&nbsp;year only", _C62["exit6_deals_to_2017_10"]["year"])}
+
+## Panel C. What the interval covers, and the benchmark's weights
+| | Female shift (percentile points) | 95% CI | Partners |
+|---|---|---|---|
+| Benchmark held fixed; partners resampled (as in Panels A–B) | {_D62['D1_fixed_benchmark_partner_resampling']['coef']:+.2f} | {ci_pt(_D62['D1_fixed_benchmark_partner_resampling'])} | {_A62['n_partners']:,} |
+| Benchmark (market-cell means) and ranks recomputed in every replication | {_D62['D2_benchmark_recomputed_each_replication']['coef']:+.2f} | {ci_pt(_D62['D2_benchmark_recomputed_each_replication'])} (interval width ratio {_D62['width_ratio_D2_over_D1']:.2f}) | {_A62['n_partners']:,} |
+| Benchmark from unique rounds (multiply attributed rounds counted once in cell means) | {_E62['unique_round']['female_shift']['coef']:+.2f} | {ci_pt(_E62['unique_round']['female_shift'])} | {_E62['unique_round']['n_partners']:,} |
+| Leave-company-out benchmark | {_E62['leave_company_out']['female_shift']['coef']:+.2f} | {ci_pt(_E62['leave_company_out']['female_shift'])} | {_E62['leave_company_out']['n_partners']:,} |
+| Top-quartile female share, raw → adjusted (P001-05) | {e5['topq_female_share_raw']*100:.1f}% → {e5['topq_female_share_adj']*100:.1f}% | {pp(e5['topq_change'][1]) if isinstance(e5['topq_change'], list) and isinstance(e5['topq_change'][1], list) else '—'} | {e5['n_partners']:,} |
+| Rank correlation, raw vs adjusted (P001-05) | {e5['spearman_raw_adj']:.3f} | | |
+
+*Raw exit rate = the partner's mean exit indicator; benchmark component = the deal-weighted mean of her market cells' exit rates (year, year × stage, or year × sector × stage; full cell means); adjusted rate = raw minus component, so the three level differences add up exactly on the same partners (maximum absolute deviation {e62['A_identity_check_max_abs']:.1e} in exit-rate units). Percentiles are computed across all partners in the row's sample; the identity does not hold for ranks. Intervals are 500 partner-resampling bootstrap replications (300 for the benchmark-level and fixed-horizon rows); the benchmark is held fixed except in the row that says otherwise. Multiply attributed rounds enter the cell means once per attributed row ({e62['E_rows_per_round_in_cells']['share_rounds_multiply_attributed']*100:.0f} percent of rounds in the cells are attributed more than once; {e62['E_rows_per_round_in_cells']['mean_rows_per_round']:.2f} rows per round on average). Sources: P001-62, P001-05.*
+""")
+
+# ── Table 7 extra: horizon differences from the same draws; two-way FE ────────────────────────────────────────────────────
+_H = e57["A_horizon_differences_same_draws"]; _T = e57["C_twoway_FE"]
+w("t7_horizon.md", f"""| Same partners and window (deals through 2017-10): 60-month exit | {e57['A_2017']['exit5']['ffp']['coef']*100:+.2f} | {pp(e57['A_2017']['exit5']['ffp']['ci95'])} | {e57['A_2017']['exit5']['ffp']['mde80']*100:.2f} | {e57['A_2017']['exit5']['ffp']['beta_std']:+.3f} | {'yes' if e57['A_2017']['exit5']['ffp']['within_pm0.05'] else 'no'} | {e57['A_2017']['exit5']['ff']['coef']*100:+.2f} | {pp(e57['A_2017']['exit5']['ff']['ci95'])} | {e57['A_2017']['exit5']['n']:,} / {e57['A_2017']['exit5']['n_partners']:,} |
+| &nbsp;&nbsp;96-month exit | {e57['A_2017']['exit8']['ffp']['coef']*100:+.2f} | {pp(e57['A_2017']['exit8']['ffp']['ci95'])} | {e57['A_2017']['exit8']['ffp']['mde80']*100:.2f} | {e57['A_2017']['exit8']['ffp']['beta_std']:+.3f} | {'yes' if e57['A_2017']['exit8']['ffp']['within_pm0.05'] else 'no'} | {e57['A_2017']['exit8']['ff']['coef']*100:+.2f} | {pp(e57['A_2017']['exit8']['ff']['ci95'])} | {e57['A_2017']['exit8']['n']:,} / {e57['A_2017']['exit8']['n_partners']:,} |
+| Horizon differences from the same bootstrap draws (deals through 2017-10): 60 − 36 months | {_H['exit5_minus_exit3']['coef']*100:+.2f} | {pp(_H['exit5_minus_exit3']['ci95'])} | — | — | — | — | — | paired draws {_H['exit5_minus_exit3']['paired_draws']} |
+| &nbsp;&nbsp;72 − 36 months | {_H['exit6_minus_exit3']['coef']*100:+.2f} | {pp(_H['exit6_minus_exit3']['ci95'])} | — | — | — | — | — | |
+| &nbsp;&nbsp;96 − 36 months | {_H['exit8_minus_exit3']['coef']*100:+.2f} | {pp(_H['exit8_minus_exit3']['ci95'])} | — | — | — | — | — | |
+| &nbsp;&nbsp;eventual − 36 months | {_H['exit_ever_minus_exit3']['coef']*100:+.2f} | {pp(_H['exit_ever_minus_exit3']['ci95'])} | — | — | — | — | — | |
+| &nbsp;&nbsp;eventual − 96 months | {_H['exit_ever_minus_exit8']['coef']*100:+.2f} | {pp(_H['exit_ever_minus_exit8']['ci95'])} | — | — | — | — | — | |
+| Partner and year × sector × stage fixed effects entered jointly on the raw outcome: 36-month exit, deals through 2020-10 | {_T['exit3_2020']['ffp']['coef']*100:+.2f} | {pp(_T['exit3_2020']['ffp']['ci95'])} | {_T['exit3_2020']['ffp']['mde80']*100:.2f} | — | {'yes' if _T['exit3_2020']['ffp']['ci95'][0] >= -0.05 and _T['exit3_2020']['ffp']['ci95'][1] <= 0.05 else 'no'} | {_T['exit3_2020']['ff']['coef']*100:+.2f} | {pp(_T['exit3_2020']['ff']['ci95'])} | {_T['exit3_2020']['n']:,} / {_T['exit3_2020']['n_partners']:,} |
+| &nbsp;&nbsp;eventual exit, deals through 2017-10 | {_T['exit_ever_2017']['ffp']['coef']*100:+.2f} | {pp(_T['exit_ever_2017']['ffp']['ci95'])} | {_T['exit_ever_2017']['ffp']['mde80']*100:.2f} | — | {'yes' if _T['exit_ever_2017']['ffp']['ci95'][0] >= -0.05 and _T['exit_ever_2017']['ffp']['ci95'][1] <= 0.05 else 'no'} | {_T['exit_ever_2017']['ff']['coef']*100:+.2f} | {pp(_T['exit_ever_2017']['ff']['ci95'])} | {_T['exit_ever_2017']['n']:,} / {_T['exit_ever_2017']['n_partners']:,} |
+""")
+
+
+# ── Table 7 extra: split-sample vintage difference (P001-60 B2) vs pooled interaction ──────────────────────────────────────
+_S = e60["B_vintage_contrast"]["exit_ever_2017"]["split_sample"]
+w("t7_vintage_split.md", f"""| Vintage difference from separate regressions per vintage, eventual exit (deals through 2017-10): β_int(2015–17) − β_int(2010–14), independent draws | {_S['difference_2015_17_minus_2010_14_independent_draws']['coef']*100:+.2f} | {pp(_S['difference_2015_17_minus_2010_14_independent_draws']['ci95'])} | — | — | — | — | — | {_S['n_2010_14']:,} + {_S['n_2015_17']:,} / — |""")
+
+# ── Table 8 Mundlak rows (P001-60 D) ──────────────────────────────────────────────────────────────────────────────────────
+_D60 = e60["D_mundlak_extended"]
+def mrow(lab, v):
+    return f"| {lab} | {v['dev_terrain']['coef']:+.3f} {ci_pt(v['dev_terrain'], 3)} | {v['fm_terrain']['coef']:+.3f} {ci_pt(v['fm_terrain'], 3)} | {v['contrast_dev_minus_fm']['coef']:+.3f} {ci_pt(v['contrast_dev_minus_fm'], 3)} | {v['n']:,} |"
+w("t8_mundlak.md", f"""## Panel B. Where the association sits: within-firm and between-firm coefficients on the composition component (fixed 36-month horizon; Mundlak decomposition)
+| Specification | Within firm (deviation from firm mean) 95% CI | Between firms (firm mean) 95% CI | Within − between 95% CI | Partners |
+|---|---|---|---|---|
+{mrow("Component split into within and between; adjusted rate, log deal count, gender and tenure as levels (partial decomposition)", _D60["baseline_partial_mundlak"])}
+{mrow("+ adjusted rate and log deal count also split into within and between", _D60["full_mundlak_adj_lnn"])}
+{mrow("Every regressor split into within and between", _D60["full_mundlak_all_within_between"])}
+
+*Dependent variable: the partner's post-period (2017-11 to 2020-10) mean benchmarked 36-month exit. Home-firm cluster bootstrap (400). In the second row the firm mean of the adjusted rate carries {_D60['full_mundlak_adj_lnn']['fm_adj']['coef']:+.3f} {ci_pt(_D60['full_mundlak_adj_lnn']['fm_adj'], 3)} and its within-firm deviation {_D60['full_mundlak_adj_lnn']['dev_adj']['coef']:+.3f} {ci_pt(_D60['full_mundlak_adj_lnn']['dev_adj'], 3)}; the firm means of the component and of the adjusted rate correlate at {_D60['corr_fm_terrain_fm_adj']:+.2f}. Source: P001-60.*
+""")
+
+# ── Appendix Table IA.8: population check (P001-63) ───────────────────────────────────────────────────────────────────────
+_C63 = e63["C_vc_only_key_results"]
+_tb = e63["B_partner_titles"]["share_by_bucket_pairs"]
+w("tableIA8.md", f"""# Appendix Table IA.8. Population check: investor types, attributed partners' titles, and key results on venture-capital-type firms only
+## Panel A. Composition of the attributed records (NA+EU)
+| | Share |
+|---|---|
+| Deals at investors whose Crunchbase type includes venture capital, micro VC, or corporate VC | {e63['A_investor_types']['share_deals_vc_type_naeu']*100:.1f}% |
+| Deals at investors with no recorded type | {e63['A_investor_types']['share_deals_missing_type_naeu']*100:.1f}% |
+| Most common first-listed investor types (share of deals) | {"; ".join(f"{k} {v*100:.1f}%" for k, v in list(e63['A_investor_types']['first_type_shares_naeu'].items())[:6])} |
+| Attributed partner–firm pairs by job title at the firm: general/managing/founding partner; other partner; principal; director/MD/VP; founder/CEO/chief; associate/analyst; other; no job record | {"; ".join(f"{_tb[k]*100:.1f}%" for k in ("general/managing/founding partner", "partner (other)", "principal", "director/managing director/VP", "founder/CEO/chief", "associate/analyst", "other title", "no job record at the firm"))} |
+
+## Panel B. Key results restricted to venture-capital-type investors
+| | Estimate | 95% CI | n / cells or partners |
+|---|---|---|---|
+| Matching coefficient, firm × year cells (pp) | {_C63['matching_cell0']['coef_pp']:+.2f} | [{_C63['matching_cell0']['ci95_pp'][0]:+.2f}, {_C63['matching_cell0']['ci95_pp'][1]:+.2f}] | {_C63['matching_cell0']['n']:,} / {_C63['matching_cell0']['n_cells']:,} |
+| Matching coefficient, firm × year × sector × stage cells (pp) | {_C63['matching_cell_stage']['coef_pp']:+.2f} | [{_C63['matching_cell_stage']['ci95_pp'][0]:+.2f}, {_C63['matching_cell_stage']['ci95_pp'][1]:+.2f}] | {_C63['matching_cell_stage']['n']:,} / {_C63['matching_cell_stage']['n_cells']:,} |
+| Peer comparison, exit by sample end, female-founded deals through 2017-10, firm × year × sector: NA+EU (pp) | {_C63['peer_exit_ever_2017_cell_cat_NAEU']['coef_pp']:+.2f} | [{_C63['peer_exit_ever_2017_cell_cat_NAEU']['ci95_pp'][0]:+.2f}, {_C63['peer_exit_ever_2017_cell_cat_NAEU']['ci95_pp'][1]:+.2f}] | {_C63['peer_exit_ever_2017_cell_cat_NAEU']['n']:,} / {_C63['peer_exit_ever_2017_cell_cat_NAEU']['n_cells']:,} |
+| &nbsp;&nbsp;global (pp) | {_C63['peer_exit_ever_2017_cell_cat_GLOBAL']['coef_pp']:+.2f} | [{_C63['peer_exit_ever_2017_cell_cat_GLOBAL']['ci95_pp'][0]:+.2f}, {_C63['peer_exit_ever_2017_cell_cat_GLOBAL']['ci95_pp'][1]:+.2f}] | {_C63['peer_exit_ever_2017_cell_cat_GLOBAL']['n']:,} / {_C63['peer_exit_ever_2017_cell_cat_GLOBAL']['n_cells']:,} |
+| Within-partner β_int, 36-month exit, deals through 2020-10 (partner effects; no deal controls; pp) | {_C63['within_partner_exit3_2020_no_controls']['ffp']['coef']*100:+.2f} | {pp(_C63['within_partner_exit3_2020_no_controls']['ffp']['ci95'])} | {_C63['within_partner_exit3_2020_no_controls']['n']:,} / {_C63['within_partner_exit3_2020_no_controls']['n_partners']:,} ({_C63['within_partner_exit3_2020_no_controls']['n_female_partners']}) |
+| Female mean percentile shift, raw → adjusted (exit by sample end; percentile points) | {_C63['rank_shift_female_sample_end']['coef']:+.2f} | [{_C63['rank_shift_female_sample_end']['ci95'][0]:+.2f}, {_C63['rank_shift_female_sample_end']['ci95'][1]:+.2f}] | {_C63['rank_shift_female_sample_end']['n_partners']:,} ({_C63['rank_shift_female_sample_end']['n_female']}) |
+
+*Investor types are Crunchbase's investor_types field (a firm may list several); "partner" titles are read from the people–organization job records of the attributed partner at the investing firm. Investor-firm cluster bootstrap (500) for the cell estimators, partner cluster (400) for the within-partner row, partner resampling (500) for the rank shift. Source: P001-63.*
+""")
+
+# ---- Figures ----
+# Figure 1: matching ladder — coefficients (original sample and common support) with the cross-deal information each layer keeps
+fig, ax = plt.subplots(figsize=(6.4, 3.6))
+names = ["Firm x year", "+ sector", "+ stage"]; keys61 = ["L0_invyear", "L1_pluscat", "L2_plusstage"]
+vo = [e61["B_original_ladder"][k]["coef_pp"] for k in keys61]; lo_o = [e61["B_original_ladder"][k]["ci95_pp"][0] for k in keys61]; hi_o = [e61["B_original_ladder"][k]["ci95_pp"][1] for k in keys61]
+vc = [e61["C_common_support_ladder"][k]["coef_pp"] for k in keys61]; lo_c = [e61["C_common_support_ladder"][k]["ci95_pp"][0] for k in keys61]; hi_c = [e61["C_common_support_ladder"][k]["ci95_pp"][1] for k in keys61]
+x = np.arange(3)
+ax.bar(x - 0.18, vo, 0.36, color="#4C72B0", label="Original sample at each layer")
+ax.bar(x + 0.18, vc, 0.36, color="#DD8452", label="Common support (rows in cells mixed at the finest level)")
+ax.errorbar(x - 0.18, vo, yerr=[np.array(vo) - lo_o, np.array(hi_o) - vo], fmt="none", ecolor="black", capsize=3, lw=1)
+ax.errorbar(x + 0.18, vc, yerr=[np.array(vc) - lo_c, np.array(hi_c) - vc], fmt="none", ecolor="black", capsize=3, lw=1)
+for k_, xi in zip(keys61, x):
+    dg = e61["A_diagnostics_by_cell"][k_]
+    ax.text(xi, max(hi_o[xi], hi_c[xi]) + 0.35, f"d = {dg['d_share_sxx_single_round']:.2f}\n{dg['n_unique_rounds_mixed']:,} rounds", ha="center", va="bottom", fontsize=7)
+ax.axhline(0, color="grey", lw=0.8); ax.set_xticks(x, names); ax.set_ylabel("Female-partner coefficient on female-founded (pp)")
+ax.set_ylim(top=max(hi_o + hi_c) + 2.2); ax.set_title("Figure 1. Matching ladder and cross-deal information (NA+EU)"); ax.legend(fontsize=7, loc="upper right")
+fig.tight_layout(); fig.savefig(os.path.join(OUT_F, "figure1_ladder.png"))
+
+# Figure 2: rank change — mean percentile by gender, raw vs adjusted, at three benchmark levels (sample end) and at the fixed horizons
+fig, ax = plt.subplots(figsize=(6.4, 3.6))
+levels = [("Year", e62["B_benchmark_levels_sample_end"]["year"]), ("Year x stage", e62["B_benchmark_levels_sample_end"]["year_stage"]), ("Year x sector x stage", e62["A_accounting_sample_end"]),
+          ("36-month exit\n(deals to 2020-10)", e62["C_fixed_horizon"]["exit3_deals_to_2020_10"]["year_sector_stage"]), ("72-month exit\n(deals to 2017-10)", e62["C_fixed_horizon"]["exit6_deals_to_2017_10"]["year_sector_stage"])]
+x = np.arange(len(levels))
+fr = [v["female_raw_pct"]["coef"] for _, v in levels]; fa = [v["female_adj_pct"]["coef"] for _, v in levels]; mr = [v["male_raw_pct"]["coef"] for _, v in levels]; ma = [v["male_adj_pct"]["coef"] for _, v in levels]
+ax.plot(x, fr, "o", color="#C44E52", label="Women, raw rank"); ax.plot(x, fa, "s", color="#C44E52", mfc="white", label="Women, adjusted rank")
+ax.plot(x, mr, "o", color="#4C72B0", label="Men, raw rank"); ax.plot(x, ma, "s", color="#4C72B0", mfc="white", label="Men, adjusted rank")
+for xi in x: ax.annotate("", xy=(xi, fa[xi]), xytext=(xi, fr[xi]), arrowprops=dict(arrowstyle="->", color="#C44E52", lw=1))
+for xi, (_, v) in enumerate(levels): ax.text(xi + 0.08, (fr[xi] + fa[xi]) / 2, f"{v['female_shift']['coef']:+.1f}\n[{v['female_shift']['ci95'][0]:+.1f}, {v['female_shift']['ci95'][1]:+.1f}]", fontsize=7, va="center")
+ax.set_xticks(x, [l for l, _ in levels], fontsize=7); ax.set_ylabel("Mean percentile rank"); ax.axhline(50, color="grey", lw=0.8, ls=":")
+ax.set_title("Figure 2. Benchmark adjustment and mean percentile ranks, by gender"); ax.legend(fontsize=7, ncol=2, loc="lower left")
+fig.tight_layout(); fig.savefig(os.path.join(OUT_F, "figure2_rank_change.png"))
+
+# Figure 3: horizon dependence on one sample (deals through 2017-10), with differences from the same draws
+fig, ax = plt.subplots(figsize=(6.4, 3.6))
+hz = [("36", "exit3"), ("60", "exit5"), ("72", "exit6"), ("96", "exit8"), ("eventual", "exit_ever")]
+x = np.arange(len(hz)); vals = [e57["A_2017"][k]["ffp"]["coef"] * 100 for _, k in hz]; lo = [e57["A_2017"][k]["ffp"]["ci95"][0] * 100 for _, k in hz]; hi = [e57["A_2017"][k]["ffp"]["ci95"][1] * 100 for _, k in hz]
+ax.errorbar(x, vals, yerr=[np.array(vals) - lo, np.array(hi) - vals], fmt="o-", color="#4C72B0", capsize=4, lw=1, label="β_int (female partners' additional female-founded − other gap)")
+v20 = e57["B_2020"]["exit3"]["ffp"]; ax.errorbar([0], [v20["coef"] * 100], yerr=[[v20["coef"] * 100 - v20["ci95"][0] * 100], [v20["ci95"][1] * 100 - v20["coef"] * 100]], fmt="D", color="#DD8452", capsize=4, lw=1, label="36 months, deals through 2020-10")
+ax.axhline(0, color="grey", lw=0.8); ax.axhspan(-5, 5, color="grey", alpha=0.07, label="±5-point reference band")
+_H = e57["A_horizon_differences_same_draws"]
+for xi, (_, k) in enumerate(hz[1:], start=1):
+    dk = _H[f"{k}_minus_exit3"]; ax.text(xi, hi[xi] + 0.6, f"Δ vs 36m {dk['coef']*100:+.1f}\n[{dk['ci95'][0]*100:+.1f}, {dk['ci95'][1]*100:+.1f}]", ha="center", fontsize=7)
+ax.set_xticks(x, [f"{h} months" if h != "eventual" else "exit by\nsample end" for h, _ in hz], fontsize=8); ax.set_ylabel("Percentage points"); ax.set_ylim(top=max(hi) + 4)
+ax.set_title("Figure 3. Within-partner differential across exit horizons (deals to 2017-10)"); ax.legend(fontsize=7, loc="lower left")
+fig.tight_layout(); fig.savefig(os.path.join(OUT_F, "figure3_horizon.png"))
+
+# Supplementary figures (Internet Appendix): event study (former Figure 2) and the financing-ladder channel (former Figure 3)
 fig, ax = plt.subplots(figsize=(5.5, 3.2))
 pj_ = e11["path_join"]
 ks = sorted(int(k) for k in pj_)
 ys = [pj_[str(k)] for k in ks]
-ks_f = ks[:2] + [-1] + ks[2:] if -1 not in ks else ks
 ax.plot([k for k in ks], ys, "o-", color="#4C72B0", label="Arrival stack (deal-level, k=-1 ref)")
 pci = e11.get("path_join_ci", {})
 if pci:
@@ -690,16 +846,16 @@ ax.axhline(0, color="grey", lw=0.8)
 ax.fill_between([-0.5, 3.5], e11["join"][1][0] * 100, e11["join"][1][1] * 100, color="#4C72B0", alpha=0.10, label="Pooled post-period 95% CI (deal-weighted)")
 ax.set_xlabel("Half-years relative to arrival")
 ax.set_ylabel("FF share effect (pp)")
-ax.set_title("Figure 2. Female-partner arrivals and new-deal composition")
+ax.set_title("Figure A1. Female-partner arrivals and new-deal composition")
 ax.legend(fontsize=7)
 fig.tight_layout()
-fig.savefig(os.path.join(OUT_F, "figure2_eventstudy.png"))
+fig.savefig(os.path.join(OUT_F, "figureA1_eventstudy.png"))
 
 fig, ax = plt.subplots(figsize=(6.2, 3.4))
 x = np.arange(3)
 cf = [c for c in e6["p_fp_given_ff"][1]]
 ax.bar(x - 0.18, pf, 0.36, label="Female-founded deals", color="#4C72B0")
-ax.bar(x + 0.18, pm, 0.36, label="Other deals", color="#BBBBBB")
+ax.bar(x + 0.18, pm, 0.36, label="Deals with no observed female founder", color="#BBBBBB")
 ax.errorbar(x - 0.18, pf, yerr=[[pf[i] - cf[i][0] * 100 for i in range(3)],
                                 [cf[i][1] * 100 - pf[i] for i in range(3)]],
             fmt="none", ecolor="black", capsize=4, lw=1)
@@ -707,8 +863,8 @@ cm = [c for c in e6["p_fp_given_mf"][1]]
 ax.errorbar(x + 0.18, pm, yerr=[[pm[i] - cm[i][0] * 100 for i in range(3)], [cm[i][1] * 100 - pm[i] for i in range(3)]], fmt="none", ecolor="black", capsize=4, lw=1)
 ax.set_xticks(x, ["Early", "Series A", "Series B+"])
 ax.set_ylabel("P(female partner | deal) %")
-ax.set_title("Figure 3. Female-partner share by stage")
+ax.set_title("Figure A2. Female-partner share by stage")
 ax.legend(fontsize=8)
 fig.tight_layout()
-fig.savefig(os.path.join(OUT_F, "figure3_channel.png"))
-print("figures: figure1-3 saved")
+fig.savefig(os.path.join(OUT_F, "figureA2_channel.png"))
+print("figures: figure1-3 + IA.1-2 saved")

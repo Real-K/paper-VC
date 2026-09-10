@@ -24,7 +24,7 @@ rng = np.random.default_rng(20260940)
 NB, NPL = 500, 400
 import os
 HERE = os.path.dirname(os.path.abspath(__file__))
-d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
 d["dt"] = pd.to_datetime(d["dt"])
 d = d[(d["ff"] == 1.0) & (d["dt"] <= "2017-10-31")].copy()
 d["cell_year"] = d["year"]
@@ -96,7 +96,7 @@ for scope in ("GLOBAL", "NAEU"):
     OUT[scope] = res
 
 # 참고: 전 딜(ff 무관)에서 여성 파트너 딜의 동료 가용 (NAEU, cell_cat)
-d_all = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+d_all = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
 d_all["dt"] = pd.to_datetime(d_all["dt"])
 d_all = d_all[(d_all["dt"] <= "2017-10-31") & d_all["country_code"].isin(NAEU)]
 g = d_all.groupby("cell_cat")["fp"].mean()

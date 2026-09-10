@@ -1,0 +1,183 @@
+{
+  "id": "P001-61",
+  "title": "Table 2 비교정보 진단: 매칭 사다리의 공동 귀속 분해(d·β_multi)와 공통 support 재추정",
+  "status": "OK",
+  "n": 126128,
+  "estimates": {
+    "A_diagnostics_by_cell": {
+      "L0_invyear": {
+        "n_rows_mixed": 38219,
+        "n_mixed_cells": 3686,
+        "n_unique_rounds_mixed": 25666,
+        "n_single_round_cells": 217,
+        "share_single_round_cells": 0.0589,
+        "d_share_sxx_single_round": 0.0204,
+        "beta_all_pp": 7.019,
+        "beta_multi_pp": 7.165,
+        "identity_check_pp": 7.019,
+        "n_multi_round_cells": 3469,
+        "n_rows_multi": 37753
+      },
+      "L1_pluscat": {
+        "n_rows_mixed": 15666,
+        "n_mixed_cells": 3871,
+        "n_unique_rounds_mixed": 10515,
+        "n_single_round_cells": 1098,
+        "share_single_round_cells": 0.2836,
+        "d_share_sxx_single_round": 0.1912,
+        "beta_all_pp": 3.222,
+        "beta_multi_pp": 3.984,
+        "identity_check_pp": 3.222,
+        "n_multi_round_cells": 2773,
+        "n_rows_multi": 13223
+      },
+      "L2_plusstage": {
+        "n_rows_mixed": 9256,
+        "n_mixed_cells": 3206,
+        "n_unique_rounds_mixed": 5801,
+        "n_single_round_cells": 1697,
+        "share_single_round_cells": 0.5293,
+        "d_share_sxx_single_round": 0.4445,
+        "beta_all_pp": 0.63,
+        "beta_multi_pp": 1.134,
+        "identity_check_pp": 0.63,
+        "n_multi_round_cells": 1509,
+        "n_rows_multi": 5425
+      }
+    },
+    "B_original_ladder": {
+      "L0_invyear": {
+        "coef_pp": 7.019,
+        "ci95_pp": [
+          5.81,
+          8.37
+        ],
+        "n": 126128
+      },
+      "L1_pluscat": {
+        "coef_pp": 3.222,
+        "ci95_pp": [
+          1.91,
+          4.64
+        ],
+        "n": 126128
+      },
+      "L2_plusstage": {
+        "coef_pp": 0.63,
+        "ci95_pp": [
+          -0.49,
+          1.92
+        ],
+        "n": 126128
+      },
+      "drop_L0_to_L2_pp": {
+        "coef_pp": 6.389,
+        "ci95_pp": [
+          4.97,
+          7.93
+        ]
+      }
+    },
+    "C_common_support_ladder": {
+      "L0_invyear": {
+        "coef_pp": 1.625,
+        "ci95_pp": [
+          0.49,
+          2.82
+        ],
+        "n": 9256
+      },
+      "L1_pluscat": {
+        "coef_pp": 0.873,
+        "ci95_pp": [
+          -0.34,
+          2.09
+        ],
+        "n": 9256
+      },
+      "L2_plusstage": {
+        "coef_pp": 0.63,
+        "ci95_pp": [
+          -0.62,
+          1.83
+        ],
+        "n": 9256
+      },
+      "drop_L0_to_L2_pp": {
+        "coef_pp": 0.994,
+        "ci95_pp": [
+          0.41,
+          1.51
+        ]
+      },
+      "support": {
+        "rows": 9256,
+        "share_of_rows": 0.0734,
+        "cells_stage_mixed": 3206,
+        "unique_rounds": 5801,
+        "unique_companies": 4495
+      },
+      "multi_round_only": {
+        "L0_invyear": {
+          "n_rows_mixed": 9256,
+          "n_mixed_cells": 1810,
+          "n_unique_rounds_mixed": 5801,
+          "n_single_round_cells": 740,
+          "share_single_round_cells": 0.4088,
+          "d_share_sxx_single_round": 0.1863,
+          "beta_all_pp": 1.625,
+          "beta_multi_pp": 1.997,
+          "identity_check_pp": 1.625,
+          "n_multi_round_cells": 1070,
+          "n_rows_multi": 7650
+        },
+        "L1_pluscat": {
+          "n_rows_mixed": 9256,
+          "n_mixed_cells": 2823,
+          "n_unique_rounds_mixed": 5801,
+          "n_single_round_cells": 1405,
+          "share_single_round_cells": 0.4977,
+          "d_share_sxx_single_round": 0.3632,
+          "beta_all_pp": 0.873,
+          "beta_multi_pp": 1.371,
+          "identity_check_pp": 0.873,
+          "n_multi_round_cells": 1418,
+          "n_rows_multi": 6129
+        },
+        "L2_plusstage": {
+          "n_rows_mixed": 9256,
+          "n_mixed_cells": 3206,
+          "n_unique_rounds_mixed": 5801,
+          "n_single_round_cells": 1697,
+          "share_single_round_cells": 0.5293,
+          "d_share_sxx_single_round": 0.4445,
+          "beta_all_pp": 0.63,
+          "beta_multi_pp": 1.134,
+          "identity_check_pp": 0.63,
+          "n_multi_round_cells": 1509,
+          "n_rows_multi": 5425
+        }
+      }
+    },
+    "prediction_check": {
+      "d_increases": true,
+      "d_ranges": false,
+      "beta_multi_gt_all_all_levels": true,
+      "common_support_drop_le_half": true
+    }
+  },
+  "prediction": "d 단조 증가(<0.3, 0.3–0.5, 0.5–0.8); β_multi > β_all; 공통 support 감소 ≤ 원 감소의 절반",
+  "verdict": "d: 0.02/0.19/0.44 · β_all +7.02/+3.22/+0.63 · β_multi +7.17/+3.98/+1.13 | 공통 support(9,256행, 7.3%) 사다리 +1.62 → +0.87 → +0.63 (L0→L2 감소 +0.99 vs 원 +6.39) — 예측 적중 3/4",
+  "kill_met": false,
+  "code": "p001_61_matching_coattribution.py",
+  "sha256_16": "5dccce2cca695fed",
+  "seed": 42,
+  "runtime_s": 279.8,
+  "date": "2026-09-10",
+  "stage": 8,
+  "feeds": "Table 2 Panel B · §3/§4 · Figure 1",
+  "slug": "matching_coattribution",
+  "builds_on": "P001-02/49",
+  "rng_seed": 20260961,
+  "sample": "sample_v2"
+}

@@ -72,6 +72,7 @@ ip = CTX.ipos.dropna(subset=["org_uuid", "went_public_on"]).copy()
 ip["idt"] = pd.to_datetime(ip["went_public_on"], errors="coerce")
 first_ipo = ip.groupby("org_uuid")["idt"].min()
 exit_any = pd.concat([acq.groupby("acquiree_uuid")["adt"].min(), first_ipo], axis=1).min(axis=1)
+_ex = d["org_uuid"].map(exit_any); d = d[~(_ex.notna() & (_ex <= d["dt"]))].copy()   # D067 population rule: no exit on/before the round
 d["exit_ever"] = d["org_uuid"].map(exit_any).notna().astype(float)
 d["ipo6"] = ((d["org_uuid"].map(first_ipo) - d["dt"]).dt.days <= 365 * 6).fillna(False).astype(float)
 r_org = rounds[["org_uuid", "dt"]].sort_values(["org_uuid", "dt"]).copy()

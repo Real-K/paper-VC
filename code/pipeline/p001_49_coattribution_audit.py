@@ -23,7 +23,7 @@ from p001_rescue_common import COMMON_SHA, CUT, NAEU, emit, load_deals, log, qci
 rng = np.random.default_rng(20260949)
 NB, NPL = 500, 400
 OUT = {}
-dn_all = load_deals.__globals__["pd"].read_parquet(__import__("os").environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+dn_all = load_deals.__globals__["pd"].read_parquet(__import__("os").environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
 dn_all["dt"] = pd.to_datetime(dn_all["dt"])
 ffd_all = dn_all[(dn_all["ff"] == 1) & (dn_all["dt"] <= CUT)].copy()
 

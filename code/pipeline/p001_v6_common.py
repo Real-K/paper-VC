@@ -23,7 +23,7 @@ LATE = {"series_b", "series_c", "series_d", "series_e", "series_f", "series_g", 
 
 
 def load_sample():
-    d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+    d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
     d["dt"] = pd.to_datetime(d["dt"])
     return d[d["country_code"].isin(NAEU)].copy()
 
@@ -33,12 +33,21 @@ def org_maps(d):
     return {"ff": g["ff"].first().to_dict(), "ffm": g["ffm"].first().to_dict(), "cat": g["cat"].first().to_dict()}
 
 
+def _first_exit():
+    """회사별 첫 인수·IPO 일자 (D067 모집단 규칙용)."""
+    acq = CTX.acq.dropna(subset=["acquiree_uuid", "acquired_on"]); ip = CTX.ipos.dropna(subset=["org_uuid", "went_public_on"])
+    fa = pd.to_datetime(acq["acquired_on"], errors="coerce").groupby(acq["acquiree_uuid"]).min(); fi = pd.to_datetime(ip["went_public_on"], errors="coerce").groupby(ip["org_uuid"]).min()
+    return pd.concat([fa, fi], axis=1).min(axis=1)
+
+
 def equity_rounds(org_set):
     """표본 기업의 지분형 라운드 시퀀스: seq · prev/next uuid·일자."""
     r = CTX.rounds
     r = r[r["org_uuid"].isin(org_set) & ~r["investment_type"].isin(EQ_EXCL)].dropna(subset=["uuid", "announced_on"]).copy()
     r["rdt"] = pd.to_datetime(r["announced_on"], errors="coerce")
-    r = r.dropna(subset=["rdt"]).sort_values(["org_uuid", "rdt", "uuid"]).reset_index(drop=True)
+    r = r.dropna(subset=["rdt"])
+    _ex = r["org_uuid"].map(_first_exit()); r = r[~(_ex.notna() & (_ex <= r["rdt"]))]   # D067 population rule (sample_v2): no exit on/before the round
+    r = r.sort_values(["org_uuid", "rdt", "uuid"]).reset_index(drop=True)
     r["seq"] = r.groupby("org_uuid").cumcount()
     r["next_uuid"] = r.groupby("org_uuid")["uuid"].shift(-1)
     r["next_dt"] = r.groupby("org_uuid")["rdt"].shift(-1)

@@ -83,13 +83,13 @@
   "verdict": "해저드 패널 fp 변동 셀 814 중 단일 라운드(공동귀속) 89% · 결과 변이>0 10 (1%) · Σx̃² 희석 87% | 전체 -0.244 [-1.00,+0.31] (±25% True) → 다중 라운드 셀만 -1.699 [-11.83,+2.87] MDE 11.31 (±25%=1.55pp; 등가 False) — Table 4 의 ±25% 경계는 희석 추정량의 경계 — 교차 딜 셀만으로는 등가 미성립(MDE 병기) (예측 적중 6/8)",
   "kill_met": false,
   "code": "p001_50_hazard_identification.py",
-  "sha256_16": "97ce317656b3ad64",
+  "sha256_16": "298834a3562c52ef",
   "seed": 42,
-  "runtime_s": 354.2,
-  "date": "2026-09-09",
+  "runtime_s": 220.2,
+  "date": "2026-09-10",
   "stage": 7,
   "feeds": "§4 Table 4 분업 서술 · Table 9 Panel E",
   "slug": "hazard_identification",
   "builds_on": "P001-12/49",
-  "p001_12_sha256_16": "76ca9e401a2051c5"
+  "p001_12_sha256_16": "c67008ef0d2004a0"
 }

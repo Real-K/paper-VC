@@ -78,7 +78,7 @@ def log(*a):
 
 
 # ── P001-22 의 파트너 모집단을 그대로 재구성 ────────────────────────────────
-d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
 d["dt"] = pd.to_datetime(d["dt"])
 dn = d[d["country_code"].isin(NAEU)]
 hist = dn[dn["dt"] <= CUT].copy()

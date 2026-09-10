@@ -54,8 +54,8 @@
   "code": "p001_21b_succession_fix.py",
   "sha256_16": "2473e3f2a6095215",
   "seed": 42,
-  "runtime_s": 39.2,
-  "date": "2026-09-04",
+  "runtime_s": 52.2,
+  "date": "2026-09-10",
   "stage": 6,
   "feeds": "§5 비대칭의 메커니즘 (논문 최대 novelty 후보)",
   "slug": "succession_fix"

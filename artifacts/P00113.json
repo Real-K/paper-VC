@@ -2,57 +2,57 @@
   "id": "P001-13",
   "title": "판별 배터리 결합 — 지수 등가·IU-TOST·Romano-Wolf (Track D, P-4)",
   "status": "PARTIAL",
-  "n": 7103,
+  "n": 7071,
   "estimates": {
     "index_gap_sigma": [
-      -0.1213,
+      -0.1056,
       [
-        -0.4836,
-        0.2308
+        -0.4374,
+        0.2677
       ]
     ],
     "tost": {
       "fon": {
-        "gap": 1.08,
+        "gap": 1.01,
         "ci90": [
-          -1.26,
-          3.48
+          -0.98,
+          3.09
         ],
-        "sesoi_pp": 17.52,
+        "sesoi_pp": 17.56,
         "pass": true
       },
       "exit_ever": {
-        "gap": -1.02,
+        "gap": -0.82,
         "ci90": [
-          -3.98,
-          1.69
+          -3.61,
+          1.65
         ],
-        "sesoi_pp": 12.1,
+        "sesoi_pp": 12.04,
         "pass": true
       },
       "ipo6": {
-        "gap": -0.51,
+        "gap": -0.31,
         "ci90": [
-          -2.13,
-          1.16
+          -1.82,
+          1.2
         ],
-        "sesoi_pp": 2.1,
-        "pass": false
+        "sesoi_pp": 2.06,
+        "pass": true
       },
       "acqp6": {
         "gap": 0.61,
         "ci90": [
           0.0,
-          1.62
+          1.94
         ],
         "sesoi_pp": 1.95,
         "pass": true
       },
       "closed6": {
-        "gap": 1.42,
+        "gap": 1.43,
         "ci90": [
-          -0.62,
-          3.6
+          -0.73,
+          3.91
         ],
         "sesoi_pp": 2.32,
         "pass": false
@@ -61,21 +61,21 @@
     "iu_pass": false,
     "rw_adjusted_p": {
       "fon": 1.0,
-      "exit_ever": 0.703,
-      "ipo6": 0.91,
-      "acqp6": 0.997,
-      "closed6": 0.64
+      "exit_ever": 0.84,
+      "ipo6": 0.983,
+      "acqp6": 1.0,
+      "closed6": 0.693
     },
-    "n": 7103
+    "n": 7071
   },
   "prediction": "지수 CI ⊂ ±0.10σ; IU-TOST 는 ipo·closed 실패 예상; RW 후 유의 적자 0",
-  "verdict": "지수 gap=-0.1213σ [-0.4836, +0.2308] — ±0.10σ 미배제; IU-TOST 3/5 통과 (ipo·closed 예상대로 실패 — 정직 보고); RW 조정 최소 p=0.640 — 유의 적자 0건",
+  "verdict": "지수 gap=-0.1056σ [-0.4374, +0.2677] — ±0.10σ 미배제; IU-TOST 4/5 통과 (ipo·closed 예상대로 실패 — 정직 보고); RW 조정 최소 p=0.693 — 유의 적자 0건",
   "kill_met": false,
   "code": "p001_13_battery_joint.py",
-  "sha256_16": "2c57a75774253f3c",
+  "sha256_16": "0bf0cfdeb8cf9cab",
   "seed": 42,
-  "runtime_s": 3000.5,
-  "date": "2026-09-03",
+  "runtime_s": 4593.4,
+  "date": "2026-09-10",
   "stage": 5,
   "feeds": "Track D P-4 / §4 배터리 문장 격상",
   "slug": "battery_joint"

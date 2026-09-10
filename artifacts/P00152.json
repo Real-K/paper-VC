@@ -2,350 +2,350 @@
   "id": "P001-52",
   "title": "R5 E-1/E-2 + R5-4: 균형검정 재통계 — max-|t| 결합 순열 · 다중 라운드 셀 위 비희석 균형(sd 단위·MDE) · 희석 항등식 · Table 10 A 희석",
   "status": "OK",
-  "n": 430,
+  "n": 427,
   "estimates": {
     "FF_cell_cat_pre": {
-      "n_mixed_cells": 174,
-      "n_deals": 430,
-      "n_single_round_cells": 113,
+      "n_mixed_cells": 173,
+      "n_deals": 427,
+      "n_single_round_cells": 112,
       "n_multi_round_cells": 61,
-      "n_deals_multi": 195,
+      "n_deals_multi": 194,
       "by_cov": {
         "age": {
-          "coef_all": -0.10181,
-          "t_cluster_all_nodof": -0.67,
-          "sd_all": 3.42208,
-          "std_diff_all": -0.0298,
+          "coef_all": -0.1101,
+          "t_cluster_all_nodof": -0.721,
+          "sd_all": 3.34637,
+          "std_diff_all": -0.0329,
           "ci95_boot_all_p46": [
-            -0.4269,
-            0.1661
+            -0.4056,
+            0.1712
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5752,
-          "n_all": 430,
-          "coef_multi": -0.23965,
+          "dilution_share_sxx_single_round": 0.5733,
+          "n_all": 427,
+          "coef_multi": -0.25803,
           "ci95_multi": [
-            -1.0119,
-            0.3755
+            -1.0198,
+            0.3754
           ],
-          "se_boot_multi": 0.35847,
-          "sd_multi": 2.72898,
-          "std_diff_multi": -0.0878,
+          "se_boot_multi": 0.35884,
+          "sd_multi": 2.73604,
+          "std_diff_multi": -0.0943,
           "ci95_multi_sd_units": [
-            -0.3708,
-            0.1376
+            -0.3727,
+            0.1372
           ],
-          "mde80_multi_sd": 0.3678,
+          "mde80_multi_sd": 0.3672,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 195,
+          "n_multi": 194,
           "n_cells_multi": 61,
           "identity_abs_err": 0.0
         },
         "ln_prior_rounds": {
-          "coef_all": -0.05977,
-          "t_cluster_all_nodof": -1.669,
-          "sd_all": 0.62168,
-          "std_diff_all": -0.0961,
+          "coef_all": -0.05967,
+          "t_cluster_all_nodof": -1.661,
+          "sd_all": 0.6231,
+          "std_diff_all": -0.0958,
           "ci95_boot_all_p46": [
-            -0.1318,
-            0.0067
+            -0.1229,
+            0.0117
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5752,
-          "n_all": 430,
-          "coef_multi": -0.14069,
+          "dilution_share_sxx_single_round": 0.5733,
+          "n_all": 427,
+          "coef_multi": -0.13985,
           "ci95_multi": [
-            -0.283,
-            -0.0032
+            -0.2808,
+            -0.0023
           ],
-          "se_boot_multi": 0.07435,
-          "sd_multi": 0.59573,
-          "std_diff_multi": -0.2362,
+          "se_boot_multi": 0.07427,
+          "sd_multi": 0.59585,
+          "std_diff_multi": -0.2347,
           "ci95_multi_sd_units": [
-            -0.475,
-            -0.0054
+            -0.4713,
+            -0.0039
           ],
-          "mde80_multi_sd": 0.3495,
+          "mde80_multi_sd": 0.349,
           "sig_multi": true,
           "within_pm0.2sd_multi": false,
-          "n_multi": 195,
+          "n_multi": 194,
           "n_cells_multi": 61,
           "identity_abs_err": 0.0
         },
         "ln_prior_capital": {
-          "coef_all": -0.64567,
-          "t_cluster_all_nodof": -1.296,
-          "sd_all": 7.89057,
-          "std_diff_all": -0.0818,
+          "coef_all": -0.64758,
+          "t_cluster_all_nodof": -1.294,
+          "sd_all": 7.89566,
+          "std_diff_all": -0.082,
           "ci95_boot_all_p46": [
-            -1.7433,
-            0.3286
+            -1.7369,
+            0.2718
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5752,
-          "n_all": 430,
-          "coef_multi": -1.51979,
+          "dilution_share_sxx_single_round": 0.5733,
+          "n_all": 427,
+          "coef_multi": -1.51773,
           "ci95_multi": [
-            -3.8949,
+            -3.8956,
             0.5694
           ],
-          "se_boot_multi": 1.1485,
-          "sd_multi": 7.61213,
-          "std_diff_multi": -0.1997,
+          "se_boot_multi": 1.14899,
+          "sd_multi": 7.61537,
+          "std_diff_multi": -0.1993,
           "ci95_multi_sd_units": [
-            -0.5117,
+            -0.5115,
             0.0748
           ],
           "mde80_multi_sd": 0.4225,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 195,
+          "n_multi": 194,
           "n_cells_multi": 61,
           "identity_abs_err": 0.0
         },
         "emp_band": {
-          "coef_all": -0.15222,
-          "t_cluster_all_nodof": -1.935,
-          "sd_all": 1.77991,
-          "std_diff_all": -0.0855,
+          "coef_all": -0.15106,
+          "t_cluster_all_nodof": -1.918,
+          "sd_all": 1.7855,
+          "std_diff_all": -0.0846,
           "ci95_boot_all_p46": [
-            -0.304,
-            -0.0013
+            -0.3075,
+            -0.0085
           ],
           "sig_all_p46": true,
-          "dilution_share_sxx_single_round": 0.5752,
-          "n_all": 430,
-          "coef_multi": -0.35829,
+          "dilution_share_sxx_single_round": 0.5733,
+          "n_all": 427,
+          "coef_multi": -0.35403,
           "ci95_multi": [
-            -0.68,
-            0.0083
+            -0.673,
+            0.0118
           ],
-          "se_boot_multi": 0.18267,
-          "sd_multi": 1.63983,
-          "std_diff_multi": -0.2185,
+          "se_boot_multi": 0.18273,
+          "sd_multi": 1.64355,
+          "std_diff_multi": -0.2154,
           "ci95_multi_sd_units": [
-            -0.4147,
-            0.0051
+            -0.4095,
+            0.0072
           ],
-          "mde80_multi_sd": 0.3119,
+          "mde80_multi_sd": 0.3113,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 195,
+          "n_multi": 194,
           "n_cells_multi": 61,
           "identity_abs_err": 0.0
         },
         "n_founders": {
-          "coef_all": -0.21233,
-          "t_cluster_all_nodof": -2.241,
-          "sd_all": 1.47062,
-          "std_diff_all": -0.1444,
+          "coef_all": -0.2085,
+          "t_cluster_all_nodof": -2.238,
+          "sd_all": 1.46715,
+          "std_diff_all": -0.1421,
           "ci95_boot_all_p46": [
-            -0.4297,
-            -0.0331
+            -0.4231,
+            -0.0068
           ],
           "sig_all_p46": true,
-          "dilution_share_sxx_single_round": 0.5752,
-          "n_all": 430,
-          "coef_multi": -0.49977,
+          "dilution_share_sxx_single_round": 0.5733,
+          "n_all": 427,
+          "coef_multi": -0.48866,
           "ci95_multi": [
-            -0.8561,
-            -0.0945
+            -0.8519,
+            -0.0877
           ],
-          "se_boot_multi": 0.21156,
-          "sd_multi": 1.77199,
-          "std_diff_multi": -0.282,
+          "se_boot_multi": 0.20845,
+          "sd_multi": 1.76836,
+          "std_diff_multi": -0.2763,
           "ci95_multi_sd_units": [
-            -0.4831,
-            -0.0533
+            -0.4817,
+            -0.0496
           ],
-          "mde80_multi_sd": 0.3343,
+          "mde80_multi_sd": 0.33,
           "sig_multi": true,
           "within_pm0.2sd_multi": false,
-          "n_multi": 195,
+          "n_multi": 194,
           "n_cells_multi": 61,
           "identity_abs_err": 0.0
         },
         "n_female_founders": {
-          "coef_all": 0.04656,
+          "coef_all": 0.04682,
           "t_cluster_all_nodof": 2.189,
-          "sd_all": 0.46601,
-          "std_diff_all": 0.0999,
+          "sd_all": 0.46731,
+          "std_diff_all": 0.1002,
           "ci95_boot_all_p46": [
-            0.0097,
-            0.0925
+            0.012,
+            0.0907
           ],
           "sig_all_p46": true,
-          "dilution_share_sxx_single_round": 0.5752,
-          "n_all": 430,
-          "coef_multi": 0.1096,
+          "dilution_share_sxx_single_round": 0.5733,
+          "n_all": 427,
+          "coef_multi": 0.10973,
           "ci95_multi": [
             0.0166,
             0.213
           ],
-          "se_boot_multi": 0.05136,
-          "sd_multi": 0.46084,
-          "std_diff_multi": 0.2378,
+          "se_boot_multi": 0.0514,
+          "sd_multi": 0.4618,
+          "std_diff_multi": 0.2376,
           "ci95_multi_sd_units": [
-            0.036,
-            0.4622
+            0.0359,
+            0.4612
           ],
-          "mde80_multi_sd": 0.3121,
+          "mde80_multi_sd": 0.3116,
           "sig_multi": true,
           "within_pm0.2sd_multi": false,
-          "n_multi": 195,
+          "n_multi": 194,
           "n_cells_multi": 61,
           "identity_abs_err": 0.0
         },
         "founder_degree_share": {
-          "coef_all": -0.00317,
-          "t_cluster_all_nodof": -0.198,
-          "sd_all": 0.29821,
-          "std_diff_all": -0.0106,
+          "coef_all": -0.00326,
+          "t_cluster_all_nodof": -0.201,
+          "sd_all": 0.29893,
+          "std_diff_all": -0.0109,
           "ci95_boot_all_p46": [
             -0.0383,
-            0.0291
+            0.0281
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5752,
-          "n_all": 430,
-          "coef_multi": -0.00747,
+          "dilution_share_sxx_single_round": 0.5733,
+          "n_all": 427,
+          "coef_multi": -0.00764,
           "ci95_multi": [
-            -0.0904,
+            -0.0906,
             0.0579
           ],
-          "se_boot_multi": 0.03845,
-          "sd_multi": 0.27081,
-          "std_diff_multi": -0.0276,
+          "se_boot_multi": 0.03863,
+          "sd_multi": 0.27151,
+          "std_diff_multi": -0.0281,
           "ci95_multi_sd_units": [
-            -0.3338,
-            0.2138
+            -0.3337,
+            0.2133
           ],
-          "mde80_multi_sd": 0.3975,
+          "mde80_multi_sd": 0.3984,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 195,
+          "n_multi": 194,
           "n_cells_multi": 61,
           "identity_abs_err": 0.0
         },
         "serial_share": {
-          "coef_all": -0.03084,
-          "t_cluster_all_nodof": -1.593,
-          "sd_all": 0.39549,
-          "std_diff_all": -0.078,
+          "coef_all": -0.03081,
+          "t_cluster_all_nodof": -1.59,
+          "sd_all": 0.39578,
+          "std_diff_all": -0.0779,
           "ci95_boot_all_p46": [
-            -0.0725,
-            0.0055
+            -0.0741,
+            0.0074
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5752,
-          "n_all": 430,
-          "coef_multi": -0.0726,
+          "dilution_share_sxx_single_round": 0.5733,
+          "n_all": 427,
+          "coef_multi": -0.07221,
           "ci95_multi": [
-            -0.1628,
-            0.0009
+            -0.1623,
+            0.0013
           ],
-          "se_boot_multi": 0.04344,
-          "sd_multi": 0.4073,
-          "std_diff_multi": -0.1782,
+          "se_boot_multi": 0.04332,
+          "sd_multi": 0.40824,
+          "std_diff_multi": -0.1769,
           "ci95_multi_sd_units": [
-            -0.3997,
-            0.0022
+            -0.3976,
+            0.0032
           ],
-          "mde80_multi_sd": 0.2987,
+          "mde80_multi_sd": 0.2971,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 195,
+          "n_multi": 194,
           "n_cells_multi": 61,
           "identity_abs_err": 0.0
         },
         "hq_us": {
-          "coef_all": -0.00927,
+          "coef_all": -0.00932,
           "t_cluster_all_nodof": -0.67,
-          "sd_all": 0.36746,
-          "std_diff_all": -0.0252,
+          "sd_all": 0.36851,
+          "std_diff_all": -0.0253,
           "ci95_boot_all_p46": [
-            -0.0366,
-            0.0168
+            -0.0384,
+            0.0148
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5752,
-          "n_all": 430,
-          "coef_multi": -0.02182,
+          "dilution_share_sxx_single_round": 0.5733,
+          "n_all": 427,
+          "coef_multi": -0.02184,
           "ci95_multi": [
-            -0.08,
+            -0.0801,
             0.0389
           ],
-          "se_boot_multi": 0.0314,
-          "sd_multi": 0.34081,
-          "std_diff_multi": -0.064,
+          "se_boot_multi": 0.03144,
+          "sd_multi": 0.34156,
+          "std_diff_multi": -0.0639,
           "ci95_multi_sd_units": [
-            -0.2347,
-            0.1141
+            -0.2345,
+            0.1139
           ],
-          "mde80_multi_sd": 0.2579,
+          "mde80_multi_sd": 0.2577,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 195,
+          "n_multi": 194,
           "n_cells_multi": 61,
           "identity_abs_err": 0.0
         },
         "prev_investor_count": {
-          "coef_all": -0.50412,
-          "t_cluster_all_nodof": -2.854,
-          "sd_all": 2.88684,
-          "std_diff_all": -0.1746,
+          "coef_all": -0.50461,
+          "t_cluster_all_nodof": -2.846,
+          "sd_all": 2.89812,
+          "std_diff_all": -0.1741,
           "ci95_boot_all_p46": [
-            -0.9139,
-            -0.207
+            -0.9227,
+            -0.2033
           ],
           "sig_all_p46": true,
-          "dilution_share_sxx_single_round": 0.6263,
-          "n_all": 269,
-          "coef_multi": -1.34911,
+          "dilution_share_sxx_single_round": 0.6235,
+          "n_all": 266,
+          "coef_multi": -1.34036,
           "ci95_multi": [
-            -2.4458,
+            -2.438,
             -0.6719
           ],
-          "se_boot_multi": 0.44224,
-          "sd_multi": 2.76542,
-          "std_diff_multi": -0.4878,
+          "se_boot_multi": 0.44122,
+          "sd_multi": 2.77633,
+          "std_diff_multi": -0.4828,
           "ci95_multi_sd_units": [
-            -0.8844,
-            -0.243
+            -0.8781,
+            -0.242
           ],
-          "mde80_multi_sd": 0.4478,
+          "mde80_multi_sd": 0.445,
           "sig_multi": true,
           "within_pm0.2sd_multi": false,
-          "n_multi": 126,
+          "n_multi": 125,
           "n_cells_multi": 57,
           "identity_abs_err": 0.0
         },
         "ln_round_size": {
-          "coef_all": -0.13864,
-          "t_cluster_all_nodof": -2.216,
-          "sd_all": 1.77274,
-          "std_diff_all": -0.0782,
+          "coef_all": -0.13939,
+          "t_cluster_all_nodof": -2.214,
+          "sd_all": 1.77632,
+          "std_diff_all": -0.0785,
           "ci95_boot_all_p46": null,
           "sig_all_p46": null,
-          "dilution_share_sxx_single_round": 0.5435,
-          "n_all": 387,
-          "coef_multi": -0.3037,
+          "dilution_share_sxx_single_round": 0.5412,
+          "n_all": 384,
+          "coef_multi": -0.30385,
           "ci95_multi": [
             -0.5634,
-            -0.0366
+            -0.0362
           ],
-          "se_boot_multi": 0.14048,
-          "sd_multi": 1.64456,
+          "se_boot_multi": 0.14059,
+          "sd_multi": 1.64511,
           "std_diff_multi": -0.1847,
           "ci95_multi_sd_units": [
-            -0.3426,
-            -0.0223
+            -0.3425,
+            -0.022
           ],
-          "mde80_multi_sd": 0.2392,
+          "mde80_multi_sd": 0.2393,
           "sig_multi": true,
           "within_pm0.2sd_multi": false,
-          "n_multi": 189,
+          "n_multi": 188,
           "n_cells_multi": 60,
           "identity_abs_err": 0.0
         }
@@ -362,12 +362,12 @@
           "serial_share",
           "hq_us"
         ],
-        "max_abs_t": 2.241,
+        "max_abs_t": 2.238,
         "argmax": "n_founders",
-        "p_perm": 0.192,
+        "p_perm": 0.177,
         "n_perm": 1000,
-        "null_p95": 2.71,
-        "size_calibration_reject_rate": 0.05,
+        "null_p95": 2.707,
+        "size_calibration_reject_rate": 0.06,
         "n_cal": 100,
         "n_perm_cal": 100,
         "permutation": "shared within-cell permutation on the common frame"
@@ -384,12 +384,12 @@
           "serial_share",
           "hq_us"
         ],
-        "max_abs_t": 2.351,
+        "max_abs_t": 2.34,
         "argmax": "n_founders",
-        "p_perm": 0.172,
+        "p_perm": 0.194,
         "n_perm": 1000,
-        "null_p95": 2.907,
-        "size_calibration_reject_rate": 0.06,
+        "null_p95": 2.912,
+        "size_calibration_reject_rate": 0.05,
         "n_cal": 100,
         "n_perm_cal": 100,
         "permutation": "shared within-cell permutation on the common frame"
@@ -398,7 +398,7 @@
         "n_cov": 9,
         "within_pm0.2sd": 0,
         "n_sig_multi": 3,
-        "max_abs_std_diff_multi": 0.282,
+        "max_abs_std_diff_multi": 0.2763,
         "argmax_abs_std_diff_multi": "n_founders",
         "mde80_sd_range": [
           0.258,
@@ -408,347 +408,347 @@
       "identity_max_abs_err": 0.0
     },
     "FF_cell_stage_pre": {
-      "n_mixed_cells": 155,
-      "n_deals": 336,
-      "n_single_round_cells": 135,
+      "n_mixed_cells": 154,
+      "n_deals": 333,
+      "n_single_round_cells": 134,
       "n_multi_round_cells": 20,
-      "n_deals_multi": 51,
+      "n_deals_multi": 50,
       "by_cov": {
         "age": {
-          "coef_all": 0.08898,
-          "t_cluster_all_nodof": 1.351,
-          "sd_all": 3.55361,
-          "std_diff_all": 0.025,
+          "coef_all": 0.0705,
+          "t_cluster_all_nodof": 1.185,
+          "sd_all": 3.45812,
+          "std_diff_all": 0.0204,
           "ci95_boot_all_p46": [
-            -0.0235,
-            0.2548
+            -0.0267,
+            0.1881
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.8506,
-          "n_all": 336,
-          "coef_multi": 0.59564,
+          "dilution_share_sxx_single_round": 0.8514,
+          "n_all": 333,
+          "coef_multi": 0.47455,
           "ci95_multi": [
-            -0.2089,
-            1.2833
+            -0.2426,
+            1.3195
           ],
-          "se_boot_multi": 0.39967,
-          "sd_multi": 2.695,
-          "std_diff_multi": 0.221,
+          "se_boot_multi": 0.39517,
+          "sd_multi": 2.72139,
+          "std_diff_multi": 0.1744,
           "ci95_multi_sd_units": [
-            -0.0775,
-            0.4762
+            -0.0891,
+            0.4849
           ],
-          "mde80_multi_sd": 0.4152,
+          "mde80_multi_sd": 0.4066,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 51,
+          "n_multi": 50,
           "n_cells_multi": 20,
           "identity_abs_err": 0.0
         },
         "ln_prior_rounds": {
-          "coef_all": 0.00734,
-          "t_cluster_all_nodof": 0.576,
-          "sd_all": 0.62407,
-          "std_diff_all": 0.0118,
+          "coef_all": 0.00799,
+          "t_cluster_all_nodof": 0.626,
+          "sd_all": 0.62579,
+          "std_diff_all": 0.0128,
           "ci95_boot_all_p46": [
-            -0.015,
-            0.0382
+            -0.0152,
+            0.0359
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.8506,
-          "n_all": 336,
-          "coef_multi": 0.04911,
+          "dilution_share_sxx_single_round": 0.8514,
+          "n_all": 333,
+          "coef_multi": 0.05376,
           "ci95_multi": [
-            -0.092,
-            0.2356
+            -0.0844,
+            0.2814
           ],
-          "se_boot_multi": 0.08984,
-          "sd_multi": 0.55097,
-          "std_diff_multi": 0.0891,
+          "se_boot_multi": 0.09229,
+          "sd_multi": 0.54578,
+          "std_diff_multi": 0.0985,
           "ci95_multi_sd_units": [
-            -0.167,
-            0.4276
+            -0.1546,
+            0.5156
           ],
-          "mde80_multi_sd": 0.4566,
+          "mde80_multi_sd": 0.4735,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 51,
+          "n_multi": 50,
           "n_cells_multi": 20,
           "identity_abs_err": 0.0
         },
         "ln_prior_capital": {
-          "coef_all": -0.10204,
-          "t_cluster_all_nodof": -0.461,
-          "sd_all": 7.85857,
-          "std_diff_all": -0.013,
+          "coef_all": -0.09834,
+          "t_cluster_all_nodof": -0.447,
+          "sd_all": 7.85865,
+          "std_diff_all": -0.0125,
           "ci95_boot_all_p46": [
-            -0.569,
-            0.3149
+            -0.6391,
+            0.2913
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.8506,
-          "n_all": 336,
-          "coef_multi": -0.68305,
+          "dilution_share_sxx_single_round": 0.8514,
+          "n_all": 333,
+          "coef_multi": -0.66195,
           "ci95_multi": [
-            -2.9883,
-            2.2391
+            -2.8067,
+            2.3996
           ],
-          "se_boot_multi": 1.43425,
-          "sd_multi": 7.81575,
-          "std_diff_multi": -0.0874,
+          "se_boot_multi": 1.41421,
+          "sd_multi": 7.7941,
+          "std_diff_multi": -0.0849,
           "ci95_multi_sd_units": [
-            -0.3823,
-            0.2865
+            -0.3601,
+            0.3079
           ],
-          "mde80_multi_sd": 0.5138,
+          "mde80_multi_sd": 0.508,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 51,
+          "n_multi": 50,
           "n_cells_multi": 20,
           "identity_abs_err": 0.0
         },
         "emp_band": {
-          "coef_all": 0.03252,
-          "t_cluster_all_nodof": 0.763,
-          "sd_all": 1.82403,
-          "std_diff_all": 0.0178,
+          "coef_all": 0.03893,
+          "t_cluster_all_nodof": 0.914,
+          "sd_all": 1.83134,
+          "std_diff_all": 0.0213,
           "ci95_boot_all_p46": [
-            -0.0371,
-            0.1414
+            -0.0375,
+            0.1302
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.8506,
-          "n_all": 336,
-          "coef_multi": 0.21769,
+          "dilution_share_sxx_single_round": 0.8514,
+          "n_all": 333,
+          "coef_multi": 0.26207,
           "ci95_multi": [
-            -0.275,
-            0.8525
+            -0.2167,
+            0.9108
           ],
-          "se_boot_multi": 0.28129,
-          "sd_multi": 1.50528,
-          "std_diff_multi": 0.1446,
+          "se_boot_multi": 0.29303,
+          "sd_multi": 1.52047,
+          "std_diff_multi": 0.1724,
           "ci95_multi_sd_units": [
-            -0.1827,
-            0.5663
+            -0.1425,
+            0.599
           ],
-          "mde80_multi_sd": 0.5232,
+          "mde80_multi_sd": 0.5396,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 51,
+          "n_multi": 50,
           "n_cells_multi": 20,
           "identity_abs_err": 0.0
         },
         "n_founders": {
-          "coef_all": -0.0122,
-          "t_cluster_all_nodof": -0.232,
-          "sd_all": 1.20423,
-          "std_diff_all": -0.0101,
+          "coef_all": -0.00205,
+          "t_cluster_all_nodof": -0.046,
+          "sd_all": 1.19623,
+          "std_diff_all": -0.0017,
           "ci95_boot_all_p46": [
-            -0.1319,
-            0.0684
+            -0.0995,
+            0.0758
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.8506,
-          "n_all": 336,
-          "coef_multi": -0.08163,
+          "dilution_share_sxx_single_round": 0.8514,
+          "n_all": 333,
+          "coef_multi": -0.01379,
           "ci95_multi": [
-            -0.6958,
-            0.5571
+            -0.5082,
+            0.5399
           ],
-          "se_boot_multi": 0.34021,
-          "sd_multi": 1.13172,
-          "std_diff_multi": -0.0721,
+          "se_boot_multi": 0.2815,
+          "sd_multi": 1.06924,
+          "std_diff_multi": -0.0129,
           "ci95_multi_sd_units": [
-            -0.6148,
-            0.4923
+            -0.4753,
+            0.5049
           ],
-          "mde80_multi_sd": 0.8417,
+          "mde80_multi_sd": 0.7372,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 51,
+          "n_multi": 50,
           "n_cells_multi": 20,
           "identity_abs_err": 0.0
         },
         "n_female_founders": {
           "coef_all": 0.0,
           "t_cluster_all_nodof": 0.0,
-          "sd_all": 0.45982,
+          "sd_all": 0.46148,
           "std_diff_all": 0.0,
           "ci95_boot_all_p46": [
-            -0.0169,
-            0.0196
+            -0.0204,
+            0.0149
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.8506,
-          "n_all": 336,
+          "dilution_share_sxx_single_round": 0.8514,
+          "n_all": 333,
           "coef_multi": 0.0,
           "ci95_multi": [
-            -0.1278,
-            0.1036
+            -0.1047,
+            0.1111
           ],
-          "se_boot_multi": 0.05913,
-          "sd_multi": 0.19604,
+          "se_boot_multi": 0.05447,
+          "sd_multi": 0.19795,
           "std_diff_multi": 0.0,
           "ci95_multi_sd_units": [
-            -0.6519,
-            0.5285
+            -0.5289,
+            0.5613
           ],
-          "mde80_multi_sd": 0.8446,
+          "mde80_multi_sd": 0.7705,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 51,
+          "n_multi": 50,
           "n_cells_multi": 20,
           "identity_abs_err": 0.0
         },
         "founder_degree_share": {
-          "coef_all": -0.00708,
-          "t_cluster_all_nodof": -0.511,
-          "sd_all": 0.30973,
-          "std_diff_all": -0.0228,
+          "coef_all": -0.00659,
+          "t_cluster_all_nodof": -0.489,
+          "sd_all": 0.31068,
+          "std_diff_all": -0.0212,
           "ci95_boot_all_p46": [
-            -0.0375,
-            0.0192
+            -0.0359,
+            0.0147
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.8506,
-          "n_all": 336,
-          "coef_multi": -0.04736,
+          "dilution_share_sxx_single_round": 0.8514,
+          "n_all": 333,
+          "coef_multi": -0.04433,
           "ci95_multi": [
-            -0.2067,
-            0.1072
+            -0.1814,
+            0.1131
           ],
-          "se_boot_multi": 0.08758,
-          "sd_multi": 0.30658,
-          "std_diff_multi": -0.1545,
+          "se_boot_multi": 0.07996,
+          "sd_multi": 0.30969,
+          "std_diff_multi": -0.1432,
           "ci95_multi_sd_units": [
-            -0.6742,
-            0.3497
+            -0.5858,
+            0.3652
           ],
-          "mde80_multi_sd": 0.7998,
+          "mde80_multi_sd": 0.723,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 51,
+          "n_multi": 50,
           "n_cells_multi": 20,
           "identity_abs_err": 0.0
         },
         "serial_share": {
-          "coef_all": -0.00021,
-          "t_cluster_all_nodof": -0.013,
-          "sd_all": 0.39753,
-          "std_diff_all": -0.0005,
+          "coef_all": 0.00156,
+          "t_cluster_all_nodof": 0.106,
+          "sd_all": 0.39796,
+          "std_diff_all": 0.0039,
           "ci95_boot_all_p46": [
-            -0.0414,
-            0.028
+            -0.0332,
+            0.0317
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.8506,
-          "n_all": 336,
-          "coef_multi": -0.00143,
+          "dilution_share_sxx_single_round": 0.8514,
+          "n_all": 333,
+          "coef_multi": 0.01051,
           "ci95_multi": [
-            -0.2111,
-            0.2006
+            -0.1607,
+            0.1954
           ],
-          "se_boot_multi": 0.10555,
-          "sd_multi": 0.4264,
-          "std_diff_multi": -0.0033,
+          "se_boot_multi": 0.093,
+          "sd_multi": 0.43032,
+          "std_diff_multi": 0.0244,
           "ci95_multi_sd_units": [
-            -0.4951,
-            0.4704
+            -0.3734,
+            0.4541
           ],
-          "mde80_multi_sd": 0.6931,
+          "mde80_multi_sd": 0.6051,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 51,
+          "n_multi": 50,
           "n_cells_multi": 20,
           "identity_abs_err": 0.0
         },
         "hq_us": {
-          "coef_all": -0.0122,
-          "t_cluster_all_nodof": -1.44,
-          "sd_all": 0.39089,
-          "std_diff_all": -0.0312,
+          "coef_all": -0.0123,
+          "t_cluster_all_nodof": -1.437,
+          "sd_all": 0.39225,
+          "std_diff_all": -0.0313,
           "ci95_boot_all_p46": [
-            -0.0331,
+            -0.0328,
             0.0
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.8506,
-          "n_all": 336,
-          "coef_multi": -0.08163,
+          "dilution_share_sxx_single_round": 0.8514,
+          "n_all": 333,
+          "coef_multi": -0.08276,
           "ci95_multi": [
-            -0.1936,
+            -0.2014,
             0.0
           ],
-          "se_boot_multi": 0.05,
-          "sd_multi": 0.3254,
-          "std_diff_multi": -0.2509,
+          "se_boot_multi": 0.05403,
+          "sd_multi": 0.32826,
+          "std_diff_multi": -0.2521,
           "ci95_multi_sd_units": [
-            -0.595,
+            -0.6135,
             0.0
           ],
-          "mde80_multi_sd": 0.4302,
+          "mde80_multi_sd": 0.4608,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 51,
+          "n_multi": 50,
           "n_cells_multi": 20,
           "identity_abs_err": 0.0
         },
         "prev_investor_count": {
-          "coef_all": -0.17406,
-          "t_cluster_all_nodof": -1.448,
-          "sd_all": 2.9362,
-          "std_diff_all": -0.0593,
+          "coef_all": -0.15571,
+          "t_cluster_all_nodof": -1.35,
+          "sd_all": 2.95186,
+          "std_diff_all": -0.0527,
           "ci95_boot_all_p46": [
-            -0.4375,
-            0.0289
+            -0.4139,
+            0.0208
           ],
           "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.8737,
-          "n_all": 207,
-          "coef_multi": -1.37838,
+          "dilution_share_sxx_single_round": 0.8754,
+          "n_all": 204,
+          "coef_multi": -1.25,
           "ci95_multi": [
-            -3.4304,
-            0.2
+            -3.3019,
+            0.1431
           ],
-          "se_boot_multi": 0.94137,
-          "sd_multi": 3.63618,
-          "std_diff_multi": -0.3791,
+          "se_boot_multi": 0.97647,
+          "sd_multi": 3.69481,
+          "std_diff_multi": -0.3383,
           "ci95_multi_sd_units": [
-            -0.9434,
-            0.055
+            -0.8937,
+            0.0387
           ],
-          "mde80_multi_sd": 0.7249,
+          "mde80_multi_sd": 0.74,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 32,
+          "n_multi": 31,
           "n_cells_multi": 17,
           "identity_abs_err": 0.0
         },
         "ln_round_size": {
-          "coef_all": 0.03499,
-          "t_cluster_all_nodof": 1.406,
-          "sd_all": 1.81521,
-          "std_diff_all": 0.0193,
+          "coef_all": 0.0352,
+          "t_cluster_all_nodof": 1.402,
+          "sd_all": 1.81892,
+          "std_diff_all": 0.0194,
           "ci95_boot_all_p46": null,
           "sig_all_p46": null,
-          "dilution_share_sxx_single_round": 0.8434,
-          "n_all": 296,
-          "coef_multi": 0.22344,
+          "dilution_share_sxx_single_round": 0.8443,
+          "n_all": 293,
+          "coef_multi": 0.226,
           "ci95_multi": [
-            -0.0443,
-            0.5308
+            -0.0639,
+            0.5385
           ],
-          "se_boot_multi": 0.15502,
-          "sd_multi": 2.08983,
-          "std_diff_multi": 0.1069,
+          "se_boot_multi": 0.15441,
+          "sd_multi": 2.08808,
+          "std_diff_multi": 0.1082,
           "ci95_multi_sd_units": [
-            -0.0212,
-            0.254
+            -0.0306,
+            0.2579
           ],
-          "mde80_multi_sd": 0.2077,
+          "mde80_multi_sd": 0.2071,
           "sig_multi": false,
           "within_pm0.2sd_multi": false,
-          "n_multi": 48,
+          "n_multi": 47,
           "n_cells_multi": 19,
           "identity_abs_err": 0.0
         }
@@ -765,414 +765,11 @@
           "serial_share",
           "hq_us"
         ],
-        "max_abs_t": 1.44,
+        "max_abs_t": 1.437,
         "argmax": "hq_us",
-        "p_perm": 0.811,
+        "p_perm": 0.802,
         "n_perm": 1000,
-        "null_p95": 2.382,
-        "size_calibration_reject_rate": 0.06,
-        "n_cal": 100,
-        "n_perm_cal": 100,
-        "permutation": "shared within-cell permutation on the common frame"
-      },
-      "joint_maxt_multi": {
-        "covariates": [
-          "age",
-          "ln_prior_rounds",
-          "ln_prior_capital",
-          "emp_band",
-          "n_founders",
-          "n_female_founders",
-          "founder_degree_share",
-          "serial_share",
-          "hq_us"
-        ],
-        "max_abs_t": 1.676,
-        "argmax": "hq_us",
-        "p_perm": 0.813,
-        "n_perm": 1000,
-        "null_p95": 3.199,
-        "size_calibration_reject_rate": 0.03,
-        "n_cal": 100,
-        "n_perm_cal": 100,
-        "permutation": "shared within-cell permutation on the common frame"
-      },
-      "equivalence_multi": {
-        "n_cov": 9,
-        "within_pm0.2sd": 0,
-        "n_sig_multi": 0,
-        "max_abs_std_diff_multi": 0.2509,
-        "argmax_abs_std_diff_multi": "hq_us",
-        "mde80_sd_range": [
-          0.415,
-          0.845
-        ]
-      },
-      "identity_max_abs_err": 0.0
-    },
-    "ALL_cell_stage_pre": {
-      "n_mixed_cells": 974,
-      "n_deals": 2532,
-      "n_single_round_cells": 612,
-      "n_multi_round_cells": 362,
-      "n_deals_multi": 1192,
-      "by_cov": {
-        "age": {
-          "coef_all": -0.02006,
-          "t_cluster_all_nodof": -0.239,
-          "sd_all": 3.6911,
-          "std_diff_all": -0.0054,
-          "ci95_boot_all_p46": [
-            -0.1815,
-            0.1471
-          ],
-          "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5542,
-          "n_all": 2530,
-          "coef_multi": -0.045,
-          "ci95_multi": [
-            -0.4351,
-            0.3163
-          ],
-          "se_boot_multi": 0.19395,
-          "sd_multi": 3.31925,
-          "std_diff_multi": -0.0136,
-          "ci95_multi_sd_units": [
-            -0.1311,
-            0.0953
-          ],
-          "mde80_multi_sd": 0.1636,
-          "sig_multi": false,
-          "within_pm0.2sd_multi": true,
-          "n_multi": 1190,
-          "n_cells_multi": 362,
-          "identity_abs_err": 0.0
-        },
-        "ln_prior_rounds": {
-          "coef_all": -0.00598,
-          "t_cluster_all_nodof": -0.587,
-          "sd_all": 0.63648,
-          "std_diff_all": -0.0094,
-          "ci95_boot_all_p46": [
-            -0.0262,
-            0.0136
-          ],
-          "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5532,
-          "n_all": 2532,
-          "coef_multi": -0.01339,
-          "ci95_multi": [
-            -0.0642,
-            0.0323
-          ],
-          "se_boot_multi": 0.02328,
-          "sd_multi": 0.59418,
-          "std_diff_multi": -0.0225,
-          "ci95_multi_sd_units": [
-            -0.108,
-            0.0544
-          ],
-          "mde80_multi_sd": 0.1097,
-          "sig_multi": false,
-          "within_pm0.2sd_multi": true,
-          "n_multi": 1192,
-          "n_cells_multi": 362,
-          "identity_abs_err": 0.0
-        },
-        "ln_prior_capital": {
-          "coef_all": 0.09729,
-          "t_cluster_all_nodof": 0.785,
-          "sd_all": 7.84132,
-          "std_diff_all": 0.0124,
-          "ci95_boot_all_p46": [
-            -0.1472,
-            0.366
-          ],
-          "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5532,
-          "n_all": 2532,
-          "coef_multi": 0.21775,
-          "ci95_multi": [
-            -0.2999,
-            0.7322
-          ],
-          "se_boot_multi": 0.26904,
-          "sd_multi": 7.81975,
-          "std_diff_multi": 0.0278,
-          "ci95_multi_sd_units": [
-            -0.0384,
-            0.0936
-          ],
-          "mde80_multi_sd": 0.0963,
-          "sig_multi": false,
-          "within_pm0.2sd_multi": true,
-          "n_multi": 1192,
-          "n_cells_multi": 362,
-          "identity_abs_err": 0.0
-        },
-        "emp_band": {
-          "coef_all": -0.02724,
-          "t_cluster_all_nodof": -0.849,
-          "sd_all": 1.88409,
-          "std_diff_all": -0.0145,
-          "ci95_boot_all_p46": [
-            -0.0859,
-            0.0393
-          ],
-          "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5546,
-          "n_all": 2529,
-          "coef_multi": -0.06116,
-          "ci95_multi": [
-            -0.194,
-            0.0827
-          ],
-          "se_boot_multi": 0.07185,
-          "sd_multi": 1.67513,
-          "std_diff_multi": -0.0365,
-          "ci95_multi_sd_units": [
-            -0.1158,
-            0.0494
-          ],
-          "mde80_multi_sd": 0.1201,
-          "sig_multi": false,
-          "within_pm0.2sd_multi": true,
-          "n_multi": 1189,
-          "n_cells_multi": 362,
-          "identity_abs_err": 0.0
-        },
-        "n_founders": {
-          "coef_all": 0.00429,
-          "t_cluster_all_nodof": 0.156,
-          "sd_all": 1.10478,
-          "std_diff_all": 0.0039,
-          "ci95_boot_all_p46": [
-            -0.051,
-            0.0652
-          ],
-          "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5532,
-          "n_all": 2532,
-          "coef_multi": 0.00959,
-          "ci95_multi": [
-            -0.1069,
-            0.1255
-          ],
-          "se_boot_multi": 0.06085,
-          "sd_multi": 1.08612,
-          "std_diff_multi": 0.0088,
-          "ci95_multi_sd_units": [
-            -0.0984,
-            0.1155
-          ],
-          "mde80_multi_sd": 0.1569,
-          "sig_multi": false,
-          "within_pm0.2sd_multi": true,
-          "n_multi": 1192,
-          "n_cells_multi": 362,
-          "identity_abs_err": 0.0
-        },
-        "n_female_founders": {
-          "coef_all": -0.00453,
-          "t_cluster_all_nodof": -0.401,
-          "sd_all": 0.50035,
-          "std_diff_all": -0.0091,
-          "ci95_boot_all_p46": [
-            -0.0263,
-            0.0174
-          ],
-          "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5532,
-          "n_all": 2532,
-          "coef_multi": -0.01014,
-          "ci95_multi": [
-            -0.0609,
-            0.0362
-          ],
-          "se_boot_multi": 0.02637,
-          "sd_multi": 0.46922,
-          "std_diff_multi": -0.0216,
-          "ci95_multi_sd_units": [
-            -0.1298,
-            0.0771
-          ],
-          "mde80_multi_sd": 0.1574,
-          "sig_multi": false,
-          "within_pm0.2sd_multi": true,
-          "n_multi": 1192,
-          "n_cells_multi": 362,
-          "identity_abs_err": 0.0
-        },
-        "founder_degree_share": {
-          "coef_all": -0.00934,
-          "t_cluster_all_nodof": -1.08,
-          "sd_all": 0.38472,
-          "std_diff_all": -0.0243,
-          "ci95_boot_all_p46": [
-            -0.0277,
-            0.0055
-          ],
-          "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5532,
-          "n_all": 2532,
-          "coef_multi": -0.0209,
-          "ci95_multi": [
-            -0.0677,
-            0.0151
-          ],
-          "se_boot_multi": 0.01987,
-          "sd_multi": 0.38167,
-          "std_diff_multi": -0.0548,
-          "ci95_multi_sd_units": [
-            -0.1774,
-            0.0396
-          ],
-          "mde80_multi_sd": 0.1458,
-          "sig_multi": false,
-          "within_pm0.2sd_multi": true,
-          "n_multi": 1192,
-          "n_cells_multi": 362,
-          "identity_abs_err": 0.0
-        },
-        "serial_share": {
-          "coef_all": -0.01493,
-          "t_cluster_all_nodof": -1.447,
-          "sd_all": 0.40651,
-          "std_diff_all": -0.0367,
-          "ci95_boot_all_p46": [
-            -0.0363,
-            0.0061
-          ],
-          "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5532,
-          "n_all": 2532,
-          "coef_multi": -0.03341,
-          "ci95_multi": [
-            -0.0812,
-            0.0141
-          ],
-          "se_boot_multi": 0.02464,
-          "sd_multi": 0.4015,
-          "std_diff_multi": -0.0832,
-          "ci95_multi_sd_units": [
-            -0.2022,
-            0.0351
-          ],
-          "mde80_multi_sd": 0.1719,
-          "sig_multi": false,
-          "within_pm0.2sd_multi": false,
-          "n_multi": 1192,
-          "n_cells_multi": 362,
-          "identity_abs_err": 0.0
-        },
-        "hq_us": {
-          "coef_all": -0.00995,
-          "t_cluster_all_nodof": -1.426,
-          "sd_all": 0.39847,
-          "std_diff_all": -0.025,
-          "ci95_boot_all_p46": [
-            -0.0247,
-            0.0016
-          ],
-          "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5532,
-          "n_all": 2532,
-          "coef_multi": -0.02228,
-          "ci95_multi": [
-            -0.0582,
-            0.0073
-          ],
-          "se_boot_multi": 0.01676,
-          "sd_multi": 0.38674,
-          "std_diff_multi": -0.0576,
-          "ci95_multi_sd_units": [
-            -0.1505,
-            0.0189
-          ],
-          "mde80_multi_sd": 0.1213,
-          "sig_multi": false,
-          "within_pm0.2sd_multi": true,
-          "n_multi": 1192,
-          "n_cells_multi": 362,
-          "identity_abs_err": 0.0
-        },
-        "prev_investor_count": {
-          "coef_all": 0.10041,
-          "t_cluster_all_nodof": 1.253,
-          "sd_all": 3.46823,
-          "std_diff_all": 0.029,
-          "ci95_boot_all_p46": [
-            -0.0442,
-            0.2513
-          ],
-          "sig_all_p46": false,
-          "dilution_share_sxx_single_round": 0.5936,
-          "n_all": 1568,
-          "coef_multi": 0.24705,
-          "ci95_multi": [
-            -0.1648,
-            0.6574
-          ],
-          "se_boot_multi": 0.20624,
-          "sd_multi": 3.22214,
-          "std_diff_multi": 0.0767,
-          "ci95_multi_sd_units": [
-            -0.0511,
-            0.204
-          ],
-          "mde80_multi_sd": 0.1792,
-          "sig_multi": false,
-          "within_pm0.2sd_multi": false,
-          "n_multi": 726,
-          "n_cells_multi": 304,
-          "identity_abs_err": 0.0
-        },
-        "ln_round_size": {
-          "coef_all": 0.00375,
-          "t_cluster_all_nodof": 0.146,
-          "sd_all": 1.84549,
-          "std_diff_all": 0.002,
-          "ci95_boot_all_p46": null,
-          "sig_all_p46": null,
-          "dilution_share_sxx_single_round": 0.5608,
-          "n_all": 2184,
-          "coef_multi": 0.00853,
-          "ci95_multi": [
-            -0.1126,
-            0.1163
-          ],
-          "se_boot_multi": 0.05827,
-          "sd_multi": 1.87344,
-          "std_diff_multi": 0.0046,
-          "ci95_multi_sd_units": [
-            -0.0601,
-            0.0621
-          ],
-          "mde80_multi_sd": 0.0871,
-          "sig_multi": false,
-          "within_pm0.2sd_multi": true,
-          "n_multi": 1027,
-          "n_cells_multi": 345,
-          "identity_abs_err": 0.0
-        }
-      },
-      "joint_maxt_all": {
-        "covariates": [
-          "age",
-          "ln_prior_rounds",
-          "ln_prior_capital",
-          "emp_band",
-          "n_founders",
-          "n_female_founders",
-          "founder_degree_share",
-          "serial_share",
-          "hq_us"
-        ],
-        "max_abs_t": 1.447,
-        "argmax": "serial_share",
-        "p_perm": 0.761,
-        "n_perm": 1000,
-        "null_p95": 2.79,
+        "null_p95": 2.269,
         "size_calibration_reject_rate": 0.09,
         "n_cal": 100,
         "n_perm_cal": 100,
@@ -1190,12 +787,415 @@
           "serial_share",
           "hq_us"
         ],
-        "max_abs_t": 1.432,
-        "argmax": "serial_share",
-        "p_perm": 0.78,
+        "max_abs_t": 1.658,
+        "argmax": "hq_us",
+        "p_perm": 0.808,
         "n_perm": 1000,
-        "null_p95": 2.857,
-        "size_calibration_reject_rate": 0.02,
+        "null_p95": 3.118,
+        "size_calibration_reject_rate": 0.05,
+        "n_cal": 100,
+        "n_perm_cal": 100,
+        "permutation": "shared within-cell permutation on the common frame"
+      },
+      "equivalence_multi": {
+        "n_cov": 9,
+        "within_pm0.2sd": 0,
+        "n_sig_multi": 0,
+        "max_abs_std_diff_multi": 0.2521,
+        "argmax_abs_std_diff_multi": "hq_us",
+        "mde80_sd_range": [
+          0.407,
+          0.77
+        ]
+      },
+      "identity_max_abs_err": 0.0
+    },
+    "ALL_cell_stage_pre": {
+      "n_mixed_cells": 973,
+      "n_deals": 2527,
+      "n_single_round_cells": 611,
+      "n_multi_round_cells": 362,
+      "n_deals_multi": 1189,
+      "by_cov": {
+        "age": {
+          "coef_all": -0.01758,
+          "t_cluster_all_nodof": -0.208,
+          "sd_all": 3.68194,
+          "std_diff_all": -0.0048,
+          "ci95_boot_all_p46": [
+            -0.178,
+            0.1327
+          ],
+          "sig_all_p46": false,
+          "dilution_share_sxx_single_round": 0.5546,
+          "n_all": 2525,
+          "coef_multi": -0.03946,
+          "ci95_multi": [
+            -0.4233,
+            0.3338
+          ],
+          "se_boot_multi": 0.19,
+          "sd_multi": 3.32255,
+          "std_diff_multi": -0.0119,
+          "ci95_multi_sd_units": [
+            -0.1274,
+            0.1005
+          ],
+          "mde80_multi_sd": 0.1601,
+          "sig_multi": false,
+          "within_pm0.2sd_multi": true,
+          "n_multi": 1187,
+          "n_cells_multi": 362,
+          "identity_abs_err": 0.0
+        },
+        "ln_prior_rounds": {
+          "coef_all": -0.00574,
+          "t_cluster_all_nodof": -0.568,
+          "sd_all": 0.63693,
+          "std_diff_all": -0.009,
+          "ci95_boot_all_p46": [
+            -0.0263,
+            0.0144
+          ],
+          "sig_all_p46": false,
+          "dilution_share_sxx_single_round": 0.5536,
+          "n_all": 2527,
+          "coef_multi": -0.01285,
+          "ci95_multi": [
+            -0.0598,
+            0.0303
+          ],
+          "se_boot_multi": 0.02356,
+          "sd_multi": 0.59446,
+          "std_diff_multi": -0.0216,
+          "ci95_multi_sd_units": [
+            -0.1006,
+            0.051
+          ],
+          "mde80_multi_sd": 0.111,
+          "sig_multi": false,
+          "within_pm0.2sd_multi": true,
+          "n_multi": 1189,
+          "n_cells_multi": 362,
+          "identity_abs_err": 0.0
+        },
+        "ln_prior_capital": {
+          "coef_all": 0.0977,
+          "t_cluster_all_nodof": 0.788,
+          "sd_all": 7.84234,
+          "std_diff_all": 0.0125,
+          "ci95_boot_all_p46": [
+            -0.1466,
+            0.3618
+          ],
+          "sig_all_p46": false,
+          "dilution_share_sxx_single_round": 0.5536,
+          "n_all": 2527,
+          "coef_multi": 0.21887,
+          "ci95_multi": [
+            -0.2846,
+            0.8642
+          ],
+          "se_boot_multi": 0.28847,
+          "sd_multi": 7.82006,
+          "std_diff_multi": 0.028,
+          "ci95_multi_sd_units": [
+            -0.0364,
+            0.1105
+          ],
+          "mde80_multi_sd": 0.1033,
+          "sig_multi": false,
+          "within_pm0.2sd_multi": true,
+          "n_multi": 1189,
+          "n_cells_multi": 362,
+          "identity_abs_err": 0.0
+        },
+        "emp_band": {
+          "coef_all": -0.02665,
+          "t_cluster_all_nodof": -0.83,
+          "sd_all": 1.88547,
+          "std_diff_all": -0.0141,
+          "ci95_boot_all_p46": [
+            -0.0962,
+            0.0333
+          ],
+          "sig_all_p46": false,
+          "dilution_share_sxx_single_round": 0.5551,
+          "n_all": 2524,
+          "coef_multi": -0.05988,
+          "ci95_multi": [
+            -0.1928,
+            0.0873
+          ],
+          "se_boot_multi": 0.07319,
+          "sd_multi": 1.67671,
+          "std_diff_multi": -0.0357,
+          "ci95_multi_sd_units": [
+            -0.115,
+            0.0521
+          ],
+          "mde80_multi_sd": 0.1222,
+          "sig_multi": false,
+          "within_pm0.2sd_multi": true,
+          "n_multi": 1186,
+          "n_cells_multi": 362,
+          "identity_abs_err": 0.0
+        },
+        "n_founders": {
+          "coef_all": 0.00428,
+          "t_cluster_all_nodof": 0.157,
+          "sd_all": 1.10394,
+          "std_diff_all": 0.0039,
+          "ci95_boot_all_p46": [
+            -0.0508,
+            0.0601
+          ],
+          "sig_all_p46": false,
+          "dilution_share_sxx_single_round": 0.5536,
+          "n_all": 2527,
+          "coef_multi": 0.00958,
+          "ci95_multi": [
+            -0.106,
+            0.133
+          ],
+          "se_boot_multi": 0.06259,
+          "sd_multi": 1.08434,
+          "std_diff_multi": 0.0088,
+          "ci95_multi_sd_units": [
+            -0.0978,
+            0.1227
+          ],
+          "mde80_multi_sd": 0.1616,
+          "sig_multi": false,
+          "within_pm0.2sd_multi": true,
+          "n_multi": 1189,
+          "n_cells_multi": 362,
+          "identity_abs_err": 0.0
+        },
+        "n_female_founders": {
+          "coef_all": -0.00567,
+          "t_cluster_all_nodof": -0.519,
+          "sd_all": 0.49984,
+          "std_diff_all": -0.0113,
+          "ci95_boot_all_p46": [
+            -0.0296,
+            0.0168
+          ],
+          "sig_all_p46": false,
+          "dilution_share_sxx_single_round": 0.5536,
+          "n_all": 2527,
+          "coef_multi": -0.0127,
+          "ci95_multi": [
+            -0.064,
+            0.0353
+          ],
+          "se_boot_multi": 0.02535,
+          "sd_multi": 0.46858,
+          "std_diff_multi": -0.0271,
+          "ci95_multi_sd_units": [
+            -0.1366,
+            0.0753
+          ],
+          "mde80_multi_sd": 0.1515,
+          "sig_multi": false,
+          "within_pm0.2sd_multi": true,
+          "n_multi": 1189,
+          "n_cells_multi": 362,
+          "identity_abs_err": 0.0
+        },
+        "founder_degree_share": {
+          "coef_all": -0.00902,
+          "t_cluster_all_nodof": -1.042,
+          "sd_all": 0.38496,
+          "std_diff_all": -0.0234,
+          "ci95_boot_all_p46": [
+            -0.0262,
+            0.0078
+          ],
+          "sig_all_p46": false,
+          "dilution_share_sxx_single_round": 0.5536,
+          "n_all": 2527,
+          "coef_multi": -0.02022,
+          "ci95_multi": [
+            -0.0598,
+            0.0153
+          ],
+          "se_boot_multi": 0.01935,
+          "sd_multi": 0.38206,
+          "std_diff_multi": -0.0529,
+          "ci95_multi_sd_units": [
+            -0.1565,
+            0.04
+          ],
+          "mde80_multi_sd": 0.1418,
+          "sig_multi": false,
+          "within_pm0.2sd_multi": true,
+          "n_multi": 1189,
+          "n_cells_multi": 362,
+          "identity_abs_err": 0.0
+        },
+        "serial_share": {
+          "coef_all": -0.01472,
+          "t_cluster_all_nodof": -1.436,
+          "sd_all": 0.40673,
+          "std_diff_all": -0.0362,
+          "ci95_boot_all_p46": [
+            -0.0348,
+            0.0058
+          ],
+          "sig_all_p46": false,
+          "dilution_share_sxx_single_round": 0.5536,
+          "n_all": 2527,
+          "coef_multi": -0.03297,
+          "ci95_multi": [
+            -0.0843,
+            0.0082
+          ],
+          "se_boot_multi": 0.02359,
+          "sd_multi": 0.40196,
+          "std_diff_multi": -0.082,
+          "ci95_multi_sd_units": [
+            -0.2097,
+            0.0204
+          ],
+          "mde80_multi_sd": 0.1643,
+          "sig_multi": false,
+          "within_pm0.2sd_multi": false,
+          "n_multi": 1189,
+          "n_cells_multi": 362,
+          "identity_abs_err": 0.0
+        },
+        "hq_us": {
+          "coef_all": -0.00994,
+          "t_cluster_all_nodof": -1.421,
+          "sd_all": 0.39877,
+          "std_diff_all": -0.0249,
+          "ci95_boot_all_p46": [
+            -0.0278,
+            0.0043
+          ],
+          "sig_all_p46": false,
+          "dilution_share_sxx_single_round": 0.5536,
+          "n_all": 2527,
+          "coef_multi": -0.02226,
+          "ci95_multi": [
+            -0.0574,
+            0.0044
+          ],
+          "se_boot_multi": 0.01584,
+          "sd_multi": 0.38711,
+          "std_diff_multi": -0.0575,
+          "ci95_multi_sd_units": [
+            -0.1483,
+            0.0114
+          ],
+          "mde80_multi_sd": 0.1146,
+          "sig_multi": false,
+          "within_pm0.2sd_multi": true,
+          "n_multi": 1189,
+          "n_cells_multi": 362,
+          "identity_abs_err": 0.0
+        },
+        "prev_investor_count": {
+          "coef_all": 0.10147,
+          "t_cluster_all_nodof": 1.267,
+          "sd_all": 3.47202,
+          "std_diff_all": 0.0292,
+          "ci95_boot_all_p46": [
+            -0.0461,
+            0.267
+          ],
+          "sig_all_p46": false,
+          "dilution_share_sxx_single_round": 0.593,
+          "n_all": 1564,
+          "coef_multi": 0.24933,
+          "ci95_multi": [
+            -0.1488,
+            0.6651
+          ],
+          "se_boot_multi": 0.20084,
+          "sd_multi": 3.22648,
+          "std_diff_multi": 0.0773,
+          "ci95_multi_sd_units": [
+            -0.0461,
+            0.2061
+          ],
+          "mde80_multi_sd": 0.1743,
+          "sig_multi": false,
+          "within_pm0.2sd_multi": false,
+          "n_multi": 724,
+          "n_cells_multi": 304,
+          "identity_abs_err": 0.0
+        },
+        "ln_round_size": {
+          "coef_all": 0.00148,
+          "t_cluster_all_nodof": 0.058,
+          "sd_all": 1.84585,
+          "std_diff_all": 0.0008,
+          "ci95_boot_all_p46": null,
+          "sig_all_p46": null,
+          "dilution_share_sxx_single_round": 0.5613,
+          "n_all": 2179,
+          "coef_multi": 0.00338,
+          "ci95_multi": [
+            -0.1017,
+            0.1193
+          ],
+          "se_boot_multi": 0.05433,
+          "sd_multi": 1.87296,
+          "std_diff_multi": 0.0018,
+          "ci95_multi_sd_units": [
+            -0.0543,
+            0.0637
+          ],
+          "mde80_multi_sd": 0.0812,
+          "sig_multi": false,
+          "within_pm0.2sd_multi": true,
+          "n_multi": 1024,
+          "n_cells_multi": 345,
+          "identity_abs_err": 0.0
+        }
+      },
+      "joint_maxt_all": {
+        "covariates": [
+          "age",
+          "ln_prior_rounds",
+          "ln_prior_capital",
+          "emp_band",
+          "n_founders",
+          "n_female_founders",
+          "founder_degree_share",
+          "serial_share",
+          "hq_us"
+        ],
+        "max_abs_t": 1.436,
+        "argmax": "serial_share",
+        "p_perm": 0.777,
+        "n_perm": 1000,
+        "null_p95": 2.809,
+        "size_calibration_reject_rate": 0.07,
+        "n_cal": 100,
+        "n_perm_cal": 100,
+        "permutation": "shared within-cell permutation on the common frame"
+      },
+      "joint_maxt_multi": {
+        "covariates": [
+          "age",
+          "ln_prior_rounds",
+          "ln_prior_capital",
+          "emp_band",
+          "n_founders",
+          "n_female_founders",
+          "founder_degree_share",
+          "serial_share",
+          "hq_us"
+        ],
+        "max_abs_t": 1.422,
+        "argmax": "serial_share",
+        "p_perm": 0.798,
+        "n_perm": 1000,
+        "null_p95": 2.835,
+        "size_calibration_reject_rate": 0.04,
         "n_cal": 100,
         "n_perm_cal": 100,
         "permutation": "shared within-cell permutation on the common frame"
@@ -1204,35 +1204,35 @@
         "n_cov": 9,
         "within_pm0.2sd": 8,
         "n_sig_multi": 0,
-        "max_abs_std_diff_multi": 0.0832,
+        "max_abs_std_diff_multi": 0.082,
         "argmax_abs_std_diff_multi": "serial_share",
         "mde80_sd_range": [
-          0.096,
-          0.172
+          0.103,
+          0.164
         ]
       },
       "identity_max_abs_err": 0.0
     },
     "Table10A_dilution": {
       "unconditional_y1_FF": {
-        "n_rounds": 734,
-        "n_rounds_outcome_constant": 530,
-        "share_sxx_outcome_constant_rounds": 0.6927
+        "n_rounds": 731,
+        "n_rounds_outcome_constant": 527,
+        "share_sxx_outcome_constant_rounds": 0.6913
       },
       "unconditional_y2_FF": {
-        "n_rounds": 734,
-        "n_rounds_outcome_constant": 528,
-        "share_sxx_outcome_constant_rounds": 0.689
+        "n_rounds": 731,
+        "n_rounds_outcome_constant": 525,
+        "share_sxx_outcome_constant_rounds": 0.6877
       },
       "conditional_y1_FF": {
-        "n_rounds": 535,
-        "n_rounds_outcome_constant": 342,
-        "share_sxx_outcome_constant_rounds": 0.6057
+        "n_rounds": 532,
+        "n_rounds_outcome_constant": 339,
+        "share_sxx_outcome_constant_rounds": 0.6031
       },
       "conditional_y2_FF": {
-        "n_rounds": 535,
-        "n_rounds_outcome_constant": 343,
-        "share_sxx_outcome_constant_rounds": 0.6071
+        "n_rounds": 532,
+        "n_rounds_outcome_constant": 340,
+        "share_sxx_outcome_constant_rounds": 0.6045
       },
       "n_ff_mixed_rounds_no_next36": 199
     },
@@ -1253,17 +1253,17 @@
     }
   },
   "prediction": "FF cat p∈[0.10,0.30] 크기 0.02–0.09; 다중 라운드 prev_ic d −0.40~−0.60 · n_founders −0.20~−0.35 · n_ff +0.15~+0.30 · MDE(sd) 0.25–0.50 · ±0.2sd ≤2/9; FF stage 다중 ≤25 셀(미식별); 항등식 성립; T10A y1u 0.20–0.35",
-  "verdict": "FF cat 결합(전 셀) max|t| 2.24 p 0.192 크기 0.050 | 다중 라운드(61 셀/195 딜) 최대 |d| 0.282 (n_founders), 유의 3/9, ±0.2sd 등가 0/9, MDE(sd) [0.258, 0.422]; 결합(다중) p 0.172 | FF stage 다중 20 셀/51 딜 → {'n_cov': 9, 'within_pm0.2sd': 0, 'n_sig_multi': 0, 'max_abs_std_diff_multi': 0.2509, 'argmax_abs_std_diff_multi': 'hq_us', 'mde80_sd_range': [0.415, 0.845]} · 결합(전 셀) p 0.811 | ALL stage p 0.761 | 항등식 최대 오차 0.0 | Table 10 A 무조건 y1 결과 상수 라운드 Σx̃² 비중 0.6927 · y2 0.689 (예측 적중 10/13)",
+  "verdict": "FF cat 결합(전 셀) max|t| 2.24 p 0.177 크기 0.060 | 다중 라운드(61 셀/194 딜) 최대 |d| 0.2763 (n_founders), 유의 3/9, ±0.2sd 등가 0/9, MDE(sd) [0.258, 0.422]; 결합(다중) p 0.194 | FF stage 다중 20 셀/50 딜 → {'n_cov': 9, 'within_pm0.2sd': 0, 'n_sig_multi': 0, 'max_abs_std_diff_multi': 0.2521, 'argmax_abs_std_diff_multi': 'hq_us', 'mde80_sd_range': [0.407, 0.77]} · 결합(전 셀) p 0.802 | ALL stage p 0.777 | 항등식 최대 오차 0.0 | Table 10 A 무조건 y1 결과 상수 라운드 Σx̃² 비중 0.6913 · y2 0.6877 (예측 적중 10/13)",
   "kill_met": false,
   "code": "p001_52_balance_maxt.py",
   "sha256_16": "8a6da3b569fe28f1",
   "seed": 42,
-  "runtime_s": 296.2,
-  "date": "2026-09-09",
+  "runtime_s": 154.6,
+  "date": "2026-09-10",
   "stage": 7,
   "feeds": "R5 ident E-1/E-2 · design R5-4 → §4 ¶3 균형 문장 · Table 10 B · Table 10 A 각주",
   "slug": "balance_maxt",
   "builds_on": "P001-46/49/42",
-  "common_sha256_16": "a63e7b62854b47c6",
-  "v6_common_sha256_16": "0e382e764d14fdc8"
+  "common_sha256_16": "73d12fb69e9b9b73",
+  "v6_common_sha256_16": "70e0b9a1fa1ae389"
 }

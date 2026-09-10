@@ -13,14 +13,14 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_notebooks import build  # noqa: E402
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
-os.chdir(REPO); os.makedirs("notebooks", exist_ok=True); os.makedirs(os.path.join("figures", "tables"), exist_ok=True)
+os.chdir(REPO); os.makedirs("notebooks", exist_ok=True); os.makedirs(os.path.join("figures", "tables", "components"), exist_ok=True)   # 생성기 블록은 components/, 최종 번호 표는 그 상위
 GEN = os.path.join("code", "build", "p001_09_exhibits.py")
 src = open(GEN, encoding="utf-8").read().split("\n")
 i_first_table = next(i for i, l in enumerate(src) if l.startswith('w("table1.md"'))
 i_fig = next(i for i, l in enumerate(src) if l.startswith("# ---- Figures ----"))
 header = "\n".join(src[:i_first_table])
 header = header[header.index("import json"):]                                         # drop the module docstring
-table_idx = [i for i, l in enumerate(src) if l.startswith('w("table')] + [i_fig]
+table_idx = [i for i, l in enumerate(src) if l.startswith('w("table') or l.startswith('w("t')] + [i_fig]   # v9: component blocks (table*.md and t*_*.md)
 table_blocks = ["\n".join(src[a:b]).rstrip() for a, b in zip(table_idx, table_idx[1:])]
 fig_lines = src[i_fig + 1:]
 fig_idx = [i for i, l in enumerate(fig_lines) if l.startswith("fig, ax = plt.subplots")] + [len(fig_lines)]
@@ -30,50 +30,53 @@ COMMON = ["Every number below is read from an aggregate result artifact in `../a
           "No licensed microdata is used or required (see `../DATA_ACCESS.md`). Outputs are stored in this notebook, so everything renders on GitHub without running anything.",
           "The code cells are cut verbatim from `../code/build/p001_09_exhibits.py`; the last cell checks the result against `../paper_exhibits/`, the exhibits attached to the manuscript."]
 SETUP = ('import os\n__file__ = os.path.abspath("../code/build/p001_09_exhibits.py")        # the generator locates the repository from its own path\n'
-         'os.environ["P001_ARTIFACTS"] = os.path.abspath("../artifacts"); os.environ["P001_TABLES"] = os.path.abspath("../figures/tables"); os.environ["P001_FIGURES"] = os.path.abspath("../figures")\n'
+         'os.environ["P001_ARTIFACTS"] = os.path.abspath("../artifacts"); os.environ["P001_TABLES"] = os.path.abspath("../figures/tables/components"); os.environ["P001_TABLES_FINAL"] = os.path.abspath("../figures/tables"); os.environ["P001_FIGURES"] = os.path.abspath("../figures")\n'
          + header + '\nprint("artifacts loaded from", A)')
 
 
 def tname(b):
-    return re.search(r'w\("(table\w+\.md)"', b).group(1)
+    return re.search(r'w\("(t\w+\.md)"', b).group(1)
 
 
 def ttitle(b):
-    m = re.search(r'# (Table \d+\.[^\n]*)', b); return m.group(1) if m else tname(b)
+    m = re.search(r'# ((?:Appendix )?Table [\w.]+\.[^\n]*)', b); return ("Component block — " + m.group(1)) if m else ("Component block — " + tname(b))
 
 
 # ── 01 tables ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
 cells = [(["## Setup — imports, helpers and every artifact the generator reads (verbatim header of `p001_09_exhibits.py`)"], SETUP)]
 for b in table_blocks:
     cells.append(([f"## {ttitle(b)}"], b + f'\n_md = open(os.path.join(OUT_T, "{tname(b)}"), encoding="utf-8").read()'))
-ASSEMBLE = ('# The build step assembles tables.md: Tables 1–10 and Appendix Tables IA.1–IA.3 (verbatim: p001_09b_assemble_tables.py)\n'
-            'import runpy, sys\nsys.argv = ["p001_09b_assemble_tables.py"]\nrunpy.run_path("../code/build/p001_09b_assemble_tables.py", run_name="__main__")\n'
+ASSEMBLE = ('# The build step composes the final numbered tables from the component blocks (p001_09d_compose_v9.py) and assembles tables.md: Tables 1–8 and Appendix Tables IA.1–IA.9 (p001_09b_assemble_tables.py)\n'
+            'import runpy, sys\nos.environ["P001_TABLES_FINAL"] = os.path.abspath("../figures/tables")\n'
+            'sys.argv = ["p001_09d_compose_v9.py"]\nrunpy.run_path("../code/build/p001_09d_compose_v9.py", run_name="__main__")\n'
+            'sys.argv = ["p001_09b_assemble_tables.py"]\nrunpy.run_path("../code/build/p001_09b_assemble_tables.py", run_name="__main__")\n'
             '_md = open("../figures/tables.md", encoding="utf-8").read()[:1200] + "\\n\\n…(truncated preview; the full file is ../figures/tables.md)"')
-cells.append((["## Assembly — `tables.md` as attached to the manuscript (Unicode minus normalisation)"], ASSEMBLE))
+cells.append((["## Composition and assembly — the final numbered tables and `tables.md` as attached to the manuscript (Unicode minus normalisation)"], ASSEMBLE))
 CHECK_T = '''import glob, os
 fails = 0
-mine = sorted(glob.glob(os.path.join(OUT_T, "table*.md"))); ref_dir = "../paper_exhibits/tables"
+mine = sorted(glob.glob(os.path.join(os.environ["P001_TABLES_FINAL"], "table*.md"))); ref_dir = "../paper_exhibits/tables"   # the composer writes the final numbered tables here; OUT_T holds the generator's component blocks
 for p in mine:
     a = open(p, encoding="utf-8").read(); b = open(os.path.join(ref_dir, os.path.basename(p)), encoding="utf-8").read()
     ok = a == b; fails += (not ok); print(f"{os.path.basename(p):<16} {'IDENTICAL' if ok else 'DIFFERS'}  ({len(a):,} chars)")
 a = open("../figures/tables.md", encoding="utf-8").read(); b = open("../paper_exhibits/tables.md", encoding="utf-8").read()
 ok = a == b; fails += (not ok); print(f"{'tables.md':<16} {'IDENTICAL' if ok else 'DIFFERS'}  ({len(a):,} chars; {a.count(chr(10) + '### ')} exhibits)")
-assert len(mine) == len(glob.glob(os.path.join(ref_dir, "table*.md"))) == 13, "table count"
+assert len(mine) == len(glob.glob(os.path.join(ref_dir, "table*.md"))) == 17, "table count"
 assert fails == 0, f"{fails} file(s) differ from the paper's exhibits"
-print("\\nAll 13 generated table files and the assembled tables.md are byte-identical to the exhibits attached to the manuscript.")'''
+print("\\nAll 17 generated table files and the assembled tables.md are byte-identical to the exhibits attached to the manuscript.")'''
 cells.append((["## Consistency check — regenerated tables versus the paper's exhibits",
                "Byte-for-byte comparison of every generated table file and of the assembled `tables.md` with `../paper_exhibits/`. The cell raises if anything differs."], CHECK_T))
-build("notebooks/01_tables.ipynb", "# Tables 1–10 and Appendix Tables IA.1–IA.3", COMMON, cells)
+build("notebooks/01_tables.ipynb", "# Tables 1–8 and Appendix Tables IA.1–IA.9", COMMON, cells)
 
 # ── 02 figures ─────────────────────────────────────────────────────────────────────────────────────────────────────────────
-FTITLES = {"figure1_ladder": "Figure 1 — Matching decomposition ladder (NA+EU)", "figure2_eventstudy": "Figure 2 — Female-partner arrivals and new-deal composition", "figure3_channel": "Figure 3 — Female-partner share by stage"}
+FTITLES = {"figure1_ladder": "Figure 1 — The matching ladder and the cross-deal information each layer keeps (NA+EU)", "figure2_rank_change": "Figure 2 — Benchmark adjustment and partners' mean percentile ranks, by gender",
+           "figure3_horizon": "Figure 3 — The within-partner differential across exit horizons on one sample", "figureA1_eventstudy": "Appendix Figure A1 — Female-partner arrivals and new-deal composition", "figureA2_channel": "Appendix Figure A2 — Female-partner share by stage"}
 
 
 def fname(b): return re.search(r'"(fig\w+)\.png"', b).group(1)
 
 
 SETUP_F = ('import os\n__file__ = os.path.abspath("../code/build/p001_09_exhibits.py")\n'
-           'os.environ["P001_ARTIFACTS"] = os.path.abspath("../artifacts"); os.environ["P001_TABLES"] = os.path.abspath("../figures/tables"); os.environ["P001_FIGURES"] = os.path.abspath("../figures")\n'
+           'os.environ["P001_ARTIFACTS"] = os.path.abspath("../artifacts"); os.environ["P001_TABLES"] = os.path.abspath("../figures/tables/components"); os.environ["P001_TABLES_FINAL"] = os.path.abspath("../figures/tables"); os.environ["P001_FIGURES"] = os.path.abspath("../figures")\n'
            '# The figures reuse quantities computed while the tables are built, so the generator is executed here up to its figure section (tables are regenerated silently into ../figures/tables).\n'
            '_src = open(__file__, encoding="utf-8").read().split("# ---- Figures ----")[0]\n'
            'import io, contextlib\nwith contextlib.redirect_stdout(io.StringIO()):\n    exec(compile(_src, __file__, "exec"))\n'
@@ -89,9 +92,9 @@ for n in %s:
     a, b = sha(os.path.join(OUT_F, n + ".png")), sha(os.path.join("../paper_exhibits/figures", n + ".png"))
     ok = a == b; fails += (not ok); print(f"{n:<18} {'IDENTICAL' if ok else 'DIFFERS'}  sha256 {a[:16]}")
 assert fails == 0, f"{fails} figure(s) differ from the paper"
-print("\\nAll 3 figures are byte-identical to the paper's figure files.")''' % json.dumps([fname(b) for b in fig_blocks])
+print("\\nAll 5 figures are byte-identical to the paper's figure files.")''' % json.dumps([fname(b) for b in fig_blocks])
 cells.append((["## Consistency check — regenerated figures versus the paper's figure files", "SHA-256 of each PNG just written to `../figures/` against the file attached to the manuscript."], CHECK_F))
-build("notebooks/02_figures.ipynb", "# Figures 1–3", COMMON, cells)
+build("notebooks/02_figures.ipynb", "# Figures 1–3 and Appendix Figures A1–A2", COMMON, cells)
 
 # ── 03 traceability ────────────────────────────────────────────────────────────────────────────────────────────────────────
 C1 = '''import json, os, csv

@@ -1,63 +1,57 @@
-# Table 8. The deal held fixed: within-round comparison of co-investors on female-founded rounds (NA+EU)
-Outcome varies across investors in the same round; company, sector, stage, vintage, founder team, and syndicate are fixed by construction. Round fixed effects; investor experience control; company-cluster bootstrap. β is the female-partner slope in female-founded rounds; "other" is the slope in other rounds; "difference" is female-founded minus other.
-| Outcome | β (female-founded rounds) | 95% CI | β (other rounds) | 95% CI | Difference | 95% CI | n rows / companies |
-|---|---|---|---|---|---|---|---|
-| Firm re-invests in the company's next round (next round within 36 months; conditional) | -0.004 | [-0.042, +0.029] | +0.007 | [-0.010, +0.028] | -0.011 | [-0.055, +0.029] | 7,734 / 1,741 |
-| Same, unconditional (no next round coded as zero) | +0.002 | [-0.025, +0.030] | +0.003 | [-0.013, +0.018] | -0.001 | [-0.030, +0.033] | 10,399 / 2,321 |
-| Same partner attributed on the next round, given the firm re-invests | -0.002 | [-0.045, +0.037] | +0.004 | [-0.018, +0.026] | -0.007 | [-0.055, +0.038] | 3,301 / 886 |
-| Lead-investor flag on the round (recorded on 58 percent of rows) | -0.027 | [-0.088, +0.030] | -0.001 | [-0.032, +0.033] | -0.026 | [-0.097, +0.038] | 4,770 / 1,287 |
-| Reverse placebo: firm invested in the company's previous round | -0.004 | [-0.047, +0.037] | -0.016 | [-0.039, +0.010] | +0.012 | [-0.034, +0.060] | 8,898 / 1,942 |
+# Table 8. Does the composition component carry information about later performance? (NA+EU partners with at least five attributed deals through 2017-10)
 
-*Variants of the re-investment margin, female-founded rounds only (P001-51; β = female-partner slope; company-cluster bootstrap unless stated):*
-| Variant | β | 95% CI | MDE80 | within ±5 pp | n rows / clusters |
-|---|---|---|---|---|---|
-| Any-female attribution — initial run (400 draws) | -0.38 | [-3.96, +3.15] | 5.21 | yes | 1,623 / 390 |
-| Female-only attribution — initial run (400 draws; 127 rows attributed to both a woman and a man dropped, 327 rows in all once rounds left without a female–male contrast fall out) | -1.54 | [-6.94, +2.75] | 6.48 | no | 1,296 / 324 |
-| **Any-female attribution — reference run (2,000 draws)** | -0.38 | [-4.30, +3.12] | 5.32 | yes | 1,623 / 390 |
-| **Female-only attribution — reference run (2,000 draws)** | -1.54 | [-5.88, +3.21] | 6.41 | no | 1,296 / 324 |
-| Three categories: female-only vs male-only | -1.38 | [-5.73, +2.65] | 6.08 | — | 1,623 / — |
-| Three categories: mixed attribution vs male-only | +3.57 | [-4.18, +10.26] | 10.16 | — | 127 mixed rows |
-| Any-female, investor-cluster bootstrap | -0.38 | [-3.46, +2.78] | 4.49 | yes | 1,623 / 760 |
-| Female-only, investor-cluster bootstrap | -1.54 | [-4.91, +2.13] | 4.84 | yes (margin 0.09 pp) | 1,296 / 672 |
-| Any-female + all pre-round investor controls† | -0.67 | [-4.14, +2.83] | 5.16 | yes | 1,623 / 390 |
-| Female-only + all pre-round investor controls† | -1.59 | [-6.09, +2.77] | 6.34 | no | 1,296 / 324 |
-| Any-female + fund-cycle controls (Crunchbase fund age, size, sequence; SEC Form D tier-1 vintages and amounts)‡ | -0.42 | [-4.41, +3.25] | 5.55 | yes | 1,623 / 390 |
-| Female-only + fund-cycle controls‡ | -1.72 | [-6.06, +2.38] | 6.08 | no | 1,296 / 324 |
-| Round + investor fixed effects, all mixed rounds (fp × female-founded; β = female-founded slope) | -0.94 | [-8.31, +5.91] | 10.46 | no | 7,734 / 291 investors with varying attribution |
-
-*Sample and window (P001-56): β, 95% CI, MDE80 and the ±5 pp verdict under the two treatment definitions:*
-| Sample; deals through; next round within | Any-female attribution | Female-only attribution | FF rounds / rows |
+## Panel A. Open horizon (exit by sample end); post window 2017-11 to 2023-10
+Rows are on the percentile scale (β on raw percentile given adjusted percentile) unless marked *levels* (β on the composition component in exit-probability units).
+| Specification | β | 95% CI | n |
 |---|---|---|---|
-| NA+EU companies; 2020-10; 36 months (baseline) | -0.38 [-3.84, +3.18]; MDE 5.33; yes | -1.54 [-5.36, +3.08]; MDE 6.22; no | 535 / 1,623 |
-| All countries; 2020-10; 36 months | -0.10 [-3.44, +3.54]; MDE 5.11; yes | -0.86 [-5.01, +3.37]; MDE 5.93; no | 593 / 1,778 |
-| NA+EU; 2021-10; 24 months | -1.20 [-4.59, +2.21]; MDE 4.93; yes | -2.12 [-6.72, +2.50]; MDE 6.52; no | 586 / 1,785 |
-| All countries; 2021-10; 24 months | -0.45 [-4.06, +2.71]; MDE 4.87; yes | -1.03 [-4.73, +2.90]; MDE 5.63; yes | 665 / 2,010 |
+| Baseline cell benchmark | +0.091 | [+0.026, +0.151] | 2,169 |
+| Leave-one-out cell benchmark | +0.096 | [+0.021, +0.164] | 2,155 |
+| Excluding post-period deals in companies the partner backed pre-period | +0.081 | [+0.014, +0.147] | 1,852 |
+| Composition component, levels, given tenure and first-deal-year effects | +0.075 | [-0.010, +0.160] | 2,155 |
+| Composition component, levels, home-firm fixed effects | +0.088 | [-0.063, +0.270] | 1,616 |
+| Decomposition of the composition component, levels: vintage / stage within year / sector within year–stage | +0.058 / +0.079 / +0.161 | [-0.112, +0.258] / [-0.028, +0.190] / [+0.016, +0.325] | 2,155 |
+| Same decomposition, given tenure and first-deal-year effects | -0.054 / +0.057 / +0.155 | [-0.322, +0.183] / [-0.072, +0.166] / [+0.004, +0.312] | 2,155 |
+| Contrast, levels: adjusted exit rate, same regression as the composition-component levels row | +0.331 | [+0.288, +0.382] | 2,155 |
+| Contrast: adjusted percentile's own coefficient | +0.243 | [+0.207, +0.280] | 2,169 |
+Remaining rows (benchmark variation and additional analyses) are in Internet Appendix Table IA.1.
 
-*Lead status, partner tenure, pseudo-treatment and the exit association (NA+EU baseline sample):*
-| Check | Estimate | 95% CI | n rows / rounds |
+## Panel B. Fixed 36-month exit horizon in both periods (post window 2017-11 to 2020-10); levels
+β on the composition component, or the named part, in 36-month exit-probability units. Partner-level rows include the adjusted rate, log deal count, gender, tenure, tenure², and first-deal-year effects unless noted. Deal-level rows include the partner's prior within-cell residual, log prior deals, gender, tenure at the deal date and its square, and year effects where no firm–year effect is present.
+| Specification | β | 95% CI | n |
 |---|---|---|---|
-| Lead flag recorded (investor-level flag combined with the round-level lead list): coverage | 88 percent (agreement 1.00 where both exist) | — | — |
-| Female-partner investor is lead, within round (pp) | +0.07 | [-5.27, +6.20] | 1,405 / 474 |
-| Partner tenure, female-attributed − male-attributed investor (years) | -1.28 | [-1.83, -0.75] | 1,623 / 535 |
-| Re-investment, any-female, + tenure control (pp) | -0.18 | [-4.34, +3.69] | 1,623 / 535 |
-| Re-investment, female-only, + tenure control (pp) | -1.29 | [-5.64, +2.91] | 1,296 / 436 |
-| Pseudo-treatment: junior-partner investor in all-male female-founded rounds (pp) | +0.00 | [-2.57, +2.69] | 3,046 / 1,175 |
-| Re-investment rate when the company later exits vs not (deals through October 2017; pp) | +2.8 | [-7.51, +12.76] | 800 / — |
+| **Composition component — preferred specification for this question** | **+0.283** | **[+0.070, +0.485]** | 2,009 |
+| Sector-within-year–stage part | +0.289 | [+0.026, +0.538] | 2,009 |
+| Adjusted exit rate's own coefficient, same regression as the preferred row | +0.155 | [+0.073, +0.253] | 2,009 |
+| Home-firm fixed effects (minimum detectable effect 0.41; sector part 0.44) | -0.057 | [-0.318, +0.234] | 1,484 |
+| Pre-period restricted to deals whose 36-month window closes before the ranking date (deals through 2014-10; minimum detectable effect 0.35) | +0.067 | [-0.162, +0.302] | 1,118 |
+| Reweighted for selection out of post-period observation (inverse probability) | +0.265 | [+0.004, +0.508] | 2,009 |
+| Tenure and rank from employment records (join date, title) instead of first-deal tenure; partners with a recorded join date | +0.320 | [+0.122, +0.529] | 1,781 |
+| Follow-on construct instead of exit (follow-on within 36 months, both periods) | +0.044 | [-0.164, +0.233] | 2,009 |
+| Deal level, within firm–year: composition component (minimum detectable effect 0.17) | +0.056 | [-0.065, +0.168] | 25,471 |
+Remaining rows (benchmark variation and additional analyses) are in Internet Appendix Table IA.1.
 
-*Row 2 of the first sub-table (the unconditional outcome) includes 199 rounds with no next round, whose outcome is zero for every investor by construction (69 percent of their identifying variance comes from constant-outcome rounds); its interval is not read as a bound. The reference rows (2,000 draws) are the estimates quoted in the text; the initial 400-draw rows and the investor-cluster variants are shown for transparency and are not counted as separate robustness results. Sources: P001-42, P001-51, P001-52, P001-56, P001-58, P001-59.*
+## Panel C. Where the association sits: within-firm and between-firm coefficients on the composition component (fixed 36-month horizon; Mundlak decomposition)
+| Specification | Within firm (deviation from firm mean) 95% CI | Between firms (firm mean) 95% CI | Within − between 95% CI | Partners |
+|---|---|---|---|---|
+| Component split into within and between; adjusted rate, log deal count, gender and tenure as levels (partial decomposition) | -0.024 [-0.269, +0.228] | +0.447 [+0.193, +0.678] | -0.471 [-0.806, -0.129] | 2,009 |
+| + adjusted rate and log deal count also split into within and between | -0.021 [-0.260, +0.248] | +0.440 [+0.166, +0.687] | -0.461 [-0.766, -0.100] | 2,009 |
+| Every regressor split into within and between | -0.036 [-0.343, +0.218] | +0.460 [+0.166, +0.703] | -0.496 [-0.852, -0.113] | 2,009 |
 
-*Investor-level differences within the same rounds (female-attributed − male-attributed investor; pre-round traits) and positive controls (within-round slope of re-investment on the trait):*
-| Investor trait | Difference | 95% CI | Standardized | Re-investment slope | 95% CI |
-|---|---|---|---|---|---|
-| Pre-round female-founded share of attributed deals | +0.071 | [+0.044, +0.101] | +0.30 | — | — |
-| Pre-round early-stage share of attributed deals | +0.041 | [+0.008, +0.079] | +0.13 | -0.210 | [-0.308, -0.117] |
-| Investor firm age (years) | -3.68 | [-5.84, -1.59] | -0.18 | — | — |
-| Fund age (years since last fund announced; 75 percent coverage) | -0.34 | [-0.58, -0.11] | -0.18 | -0.0211 | [-0.0343, -0.0073] |
-| Log size of the latest fund (Crunchbase; P001-58) | -0.373 | [-0.609, -0.162] | -0.24 | +0.0347 | [+0.0165, +0.0532] |
-| Fund sequence number (Crunchbase; P001-58) | +0.325 | [-0.299, +0.982] | +0.06 | +0.0066 | [+0.0023, +0.0139] |
-| Any SEC Form D tier-1 fund filing before the round (coverage 23 percent) | +0.046 | [-0.013, +0.098] | +0.11 | +0.0262 | [-0.0245, +0.0737] |
-| Investor experience (log prior rounds) | -0.172 | [-0.414, +0.038] | -0.10 | +0.0324 | [+0.0202, +0.0454] |
-| Lead-investor flag (57 percent coverage) | -0.044 | [-0.117, +0.026] | -0.09 | +0.106 | [+0.041, +0.171] |
+*Dependent variable: the partner's post-period (2017-11 to 2020-10) mean benchmarked 36-month exit. Home-firm cluster bootstrap (400). In the second row the firm mean of the adjusted rate carries +0.203 [+0.063, +0.354] and its within-firm deviation +0.081 [-0.055, +0.237]; the firm means of the component and of the adjusted rate correlate at +0.09. Source: P001-60.*
 
-Female-founded rounds with a next round within 36 months: 535 rounds, 1,623 investor rows, 390 companies, 760 investor firms (the pooled regression with other rounds spans 1,741 companies). These rounds are larger than all female-founded equity rounds in the window (median $8.2 million vs $2.5 million; early-stage 62 vs 69 percent); partner attribution covers 45 percent of their investor rows, and attributed co-investors re-invest +18.9 pp [+15.57, +22.09] more often than unattributed ones within the same rounds. † Pre-round controls: female-founded share, early-stage share and log count of the investor's prior attributed deals, investor firm age, fund age (each with a missing indicator). ‡ Fund-cycle controls: Crunchbase fund age, log size and sequence number of the investor's latest fund before the round, and the count, latest vintage and cumulative amount of the investor's SEC Form D tier-1 fund filings before the round (missing indicators included; P001-58). Sources: P001-42, P001-51. Re-investment base rate in those rounds 0.463; raw four-cell double difference -0.0356. Within-round permutation of partner gender (500 draws): two-sided p = 0.846. Minimum detectable effect (80% power) of β in female-founded rounds: 0.053.
+## Panel D. By partner gender (female − male)
+Percentile-scale rows are in fractions of the percentile scale (0.01 = one percentile point); *levels* rows are in exit-probability units (exit by sample end).
+| Outcome | β | 95% CI | n |
+|---|---|---|---|
+| Composition component (raw − adjusted percentile) | -0.050 | [-0.075, -0.027] | 2,680 |
+| Composition component, leave-one-out benchmark | -0.051 | [-0.080, -0.024] | 2,654 |
+| Post-period within-cell performance, levels | -0.004 | [-0.040, +0.034] | 2,169 |
+| Post-period within-cell performance, levels, given composition | -0.006 | [-0.043, +0.036] | 2,169 |
+| Pre-period within-cell performance, levels (adjusted exit rate) | +0.013 | [-0.019, +0.049] | 2,680 |
+| Composition component, levels | -0.041 | [-0.063, -0.018] | 2,654 |
+| Composition component, levels, given tenure and first-deal-year effects | -0.016 | [-0.033, +0.002] | 2,654 |
+| Vintage / stage-within-year / sector-within-year–stage parts, levels | -0.018 / -0.015 / -0.007 | [-0.029, -0.009] / [-0.029, -0.001] / [-0.016, +0.001] | 2,654 |
+| Composition component, levels, given employment-record tenure and rank | -0.020 | [-0.040, +0.000] | 2,327 |
+| Composition component, levels, given rank only | -0.039 | [-0.064, -0.013] | 2,327 |
 
+*Partners with ≥5 attributed deals through 2017-10: 2,680 (191 women). Panels A, B and D: deal-count and gender controls; investor-firm cluster bootstrap. Because the adjusted percentile is the raw percentile net of year–sector–stage cell benchmarks, the raw-percentile coefficient given the adjusted percentile equals the coefficient on their difference, the composition component (percentile correlation 0.8613, VIF 7.3); Appendix Table IA.7, Panel A's negative value is that composition coefficient. Panel A and Panel D percentile-scale rows: β per unit of the raw percentile (0.01 = one percentile point); *levels* rows: β per unit of the composition component in exit-probability units. Panel B's control set is stated in its header; the follow-on-construct row reproduces P001-30 (a separate bootstrap in P001-33 returns the same point). Panel B rows below the preferred row are additional analyses. † Exploratory: identifies off within-partner changes in composition over time rather than off placement across partners; clustered by partner. Sources: P001-05, P001-18b, P001-23, P001-25, P001-26, P001-27, P001-28, P001-29, P001-30, P001-31, P001-33, P001-34, P001-36, P001-38, P001-39.*

@@ -2,235 +2,235 @@
   "id": "P001-31",
   "title": "R2 게이트 검정력 진단 — MDE · within-firm 분산 비중 · 성분 다중성",
   "status": "OK",
-  "n": 2661,
+  "n": 2654,
   "estimates": {
     "A_mde": {
       "R1_decomp": {
-        "n": 2164,
+        "n": 2155,
         "t_v": {
-          "coef": 0.07518,
-          "se": 0.0885,
-          "mde80": 0.2477,
-          "mde_over_R1": 3.29
+          "coef": 0.05814,
+          "se": 0.0945,
+          "mde80": 0.2645,
+          "mde_over_R1": 4.55
         },
         "t_s": {
-          "coef": 0.08149,
-          "se": 0.0607,
-          "mde80": 0.1699,
-          "mde_over_R1": 2.09
+          "coef": 0.07925,
+          "se": 0.0556,
+          "mde80": 0.1556,
+          "mde_over_R1": 1.96
         },
         "t_cs": {
-          "coef": 0.16017,
-          "se": 0.0772,
-          "mde80": 0.2163,
-          "mde_over_R1": 1.35
-        }
-      },
-      "R2_tenure": {
-        "n": 2164,
-        "t_v": {
-          "coef": -0.03706,
-          "se": 0.1226,
-          "mde80": 0.3434,
-          "mde_over_R1": 4.57
-        },
-        "t_s": {
-          "coef": 0.0567,
-          "se": 0.0657,
-          "mde80": 0.1839,
-          "mde_over_R1": 2.26
-        },
-        "t_cs": {
-          "coef": 0.15113,
-          "se": 0.0786,
-          "mde80": 0.2201,
+          "coef": 0.16134,
+          "se": 0.0787,
+          "mde80": 0.2204,
           "mde_over_R1": 1.37
         }
       },
-      "R3_firm_ctrl": {
-        "n": 1737,
+      "R2_tenure": {
+        "n": 2155,
         "t_v": {
-          "coef": 0.0308,
-          "se": 0.1343,
-          "mde80": 0.3761,
-          "mde_over_R1": 5.0
+          "coef": -0.05427,
+          "se": 0.1287,
+          "mde80": 0.3604,
+          "mde_over_R1": 6.2
         },
         "t_s": {
-          "coef": 0.02821,
-          "se": 0.0689,
-          "mde80": 0.1928,
-          "mde_over_R1": 2.37
+          "coef": 0.05736,
+          "se": 0.0607,
+          "mde80": 0.1701,
+          "mde_over_R1": 2.15
         },
         "t_cs": {
-          "coef": 0.18409,
-          "se": 0.0988,
-          "mde80": 0.2767,
-          "mde_over_R1": 1.73
+          "coef": 0.1547,
+          "se": 0.0786,
+          "mde80": 0.2201,
+          "mde_over_R1": 1.36
+        }
+      },
+      "R3_firm_ctrl": {
+        "n": 1729,
+        "t_v": {
+          "coef": 0.00873,
+          "se": 0.1188,
+          "mde80": 0.3326,
+          "mde_over_R1": 5.72
+        },
+        "t_s": {
+          "coef": 0.02518,
+          "se": 0.0678,
+          "mde80": 0.1899,
+          "mde_over_R1": 2.4
+        },
+        "t_cs": {
+          "coef": 0.18564,
+          "se": 0.0895,
+          "mde80": 0.2506,
+          "mde_over_R1": 1.55
         }
       },
       "R4_firm_FE": {
-        "n": 1624,
+        "n": 1616,
         "t_v": {
-          "coef": -0.02543,
-          "se": 0.2162,
-          "mde80": 0.6054,
-          "mde_over_R1": 8.05
+          "coef": -0.07365,
+          "se": 0.1821,
+          "mde80": 0.51,
+          "mde_over_R1": 8.77
         },
         "t_s": {
-          "coef": 0.14642,
-          "se": 0.139,
-          "mde80": 0.3891,
-          "mde_over_R1": 4.77
+          "coef": 0.12586,
+          "se": 0.1529,
+          "mde80": 0.4282,
+          "mde_over_R1": 5.4
         },
         "t_cs": {
-          "coef": 0.11613,
-          "se": 0.123,
-          "mde80": 0.3444,
-          "mde_over_R1": 2.15
+          "coef": 0.1274,
+          "se": 0.1173,
+          "mde80": 0.3284,
+          "mde_over_R1": 2.04
         }
       },
       "R1t_total": {
-        "n": 2164,
+        "n": 2155,
         "terrain": {
-          "coef": 0.09772,
-          "se": 0.037,
-          "mde80": 0.1036,
-          "mde_over_R1": 1.06
+          "coef": 0.09205,
+          "se": 0.0336,
+          "mde80": 0.0942,
+          "mde_over_R1": 1.02
         }
       },
       "R2t_total_tenure": {
-        "n": 2164,
+        "n": 2155,
         "terrain": {
-          "coef": 0.07623,
-          "se": 0.0461,
-          "mde80": 0.129,
+          "coef": 0.07521,
+          "se": 0.0435,
+          "mde80": 0.1217,
           "mde_over_R1": 1.32
         }
       },
       "R4t_total_firmFE": {
-        "n": 1624,
+        "n": 1616,
         "terrain": {
-          "coef": 0.09861,
-          "se": 0.0807,
-          "mde80": 0.226,
-          "mde_over_R1": 2.31
+          "coef": 0.0883,
+          "se": 0.085,
+          "mde80": 0.238,
+          "mde_over_R1": 2.59
         }
       },
       "R5_fixed_horizon": {
-        "n": 2017,
+        "n": 2009,
         "terrain_fon": {
-          "coef": 0.03539,
-          "se": 0.101,
-          "mde80": 0.2829,
-          "mde_over_R1": 2.89
+          "coef": 0.0437,
+          "se": 0.1011,
+          "mde80": 0.2831,
+          "mde_over_R1": 3.08
         }
       }
     },
     "B_port_check": {
       "R1_t_cs_coef_match": true,
       "R1_t_cs_ci_match": true,
-      "R1t_terrain_coef": 0.09772,
-      "R1t_terrain_p30": 0.09772,
+      "R1t_terrain_coef": 0.09205,
+      "R1t_terrain_p30": 0.09205,
       "R1t_match": true,
-      "n_post": 2164,
-      "n_all": 2661
+      "n_post": 2155,
+      "n_all": 2654
     },
     "C_within_share": {
-      "n": 1624,
-      "n_firms": 450,
+      "n": 1616,
+      "n_firms": 448,
       "partners_per_firm_mean": 3.61,
       "t_v": {
-        "var_total": 0.003583,
-        "within_share": 0.4584
+        "var_total": 0.003644,
+        "within_share": 0.4569
       },
       "t_s": {
-        "var_total": 0.006689,
-        "within_share": 0.2251
+        "var_total": 0.006652,
+        "within_share": 0.2259
       },
       "t_cs": {
-        "var_total": 0.003583,
-        "within_share": 0.6195
+        "var_total": 0.003617,
+        "within_share": 0.6208
       },
       "terrain": {
-        "var_total": 0.018009,
-        "within_share": 0.3262
+        "var_total": 0.018047,
+        "within_share": 0.3281
       },
       "adj": {
-        "var_total": 0.044974,
-        "within_share": 0.5996
+        "var_total": 0.04525,
+        "within_share": 0.6011
       },
       "post_adj": {
-        "var_total": 0.055116,
-        "within_share": 0.6939
+        "var_total": 0.054279,
+        "within_share": 0.6955
       },
       "tenure": {
-        "var_total": 22.304123,
-        "within_share": 0.5015
+        "var_total": 22.255729,
+        "within_share": 0.5012
       },
-      "t_cs_var_R1_sample": 0.004249
+      "t_cs_var_R1_sample": 0.004235
     },
     "D_multiplicity_R1": {
       "t_v": {
-        "t": 0.85,
-        "p_two_unadj": 0.4,
-        "p_two_maxT_adj": 0.7725,
-        "p_one_upper_unadj": 0.21
+        "t": 0.643,
+        "p_two_unadj": 0.485,
+        "p_two_maxT_adj": 0.91,
+        "p_one_upper_unadj": 0.2675
       },
       "t_s": {
-        "t": 1.395,
-        "p_two_unadj": 0.1625,
-        "p_two_maxT_adj": 0.4075,
+        "t": 1.339,
+        "p_two_unadj": 0.19,
+        "p_two_maxT_adj": 0.46,
         "p_one_upper_unadj": 0.08
       },
       "t_cs": {
-        "t": 2.015,
-        "p_two_unadj": 0.045,
-        "p_two_maxT_adj": 0.1325,
-        "p_one_upper_unadj": 0.02
+        "t": 1.973,
+        "p_two_unadj": 0.0475,
+        "p_two_maxT_adj": 0.135,
+        "p_one_upper_unadj": 0.03
       }
     },
     "R1_repro": {
-      "n": 2164,
-      "n_firms": 990,
+      "n": 2155,
+      "n_firms": 987,
       "t_v": {
-        "coef": 0.07518,
+        "coef": 0.05814,
         "ci95": [
-          -0.0889,
-          0.2579
+          -0.1121,
+          0.2582
         ],
         "sig": false,
-        "se_boot": 0.08839,
-        "mde80": 0.2475
+        "se_boot": 0.09035,
+        "mde80": 0.253
       },
       "t_s": {
-        "coef": 0.08149,
+        "coef": 0.07925,
         "ci95": [
-          -0.0398,
-          0.1981
+          -0.028,
+          0.1898
         ],
         "sig": false,
-        "se_boot": 0.0584,
-        "mde80": 0.1635
+        "se_boot": 0.05916,
+        "mde80": 0.1657
       },
       "t_cs": {
-        "coef": 0.16017,
+        "coef": 0.16134,
         "ci95": [
-          0.0038,
-          0.3066
+          0.0164,
+          0.3249
         ],
         "sig": true,
-        "se_boot": 0.0795,
-        "mde80": 0.2226
+        "se_boot": 0.08179,
+        "mde80": 0.229
       },
       "adj": {
-        "coef": 0.33385,
+        "coef": 0.32958,
         "ci95": [
-          0.2891,
-          0.3824
+          0.2783,
+          0.3769
         ],
         "sig": true,
-        "se_boot": 0.02456,
-        "mde80": 0.0688
+        "se_boot": 0.02581,
+        "mde80": 0.0723
       }
     },
     "prediction_check": {
@@ -238,20 +238,20 @@
       "A_R4t_terrain_mde_ge_0.20": true,
       "C_tcs_within_share_le_0.35": false,
       "D_tcs_adj_p_in_[0.05,0.15]": true,
-      "D_tcs_one_sided_lt_0.025": true
+      "D_tcs_one_sided_lt_0.025": false
     }
   },
   "prediction": "R4 t_cs MDE≥0.30(R1 의 ≥1.9배) · R4t MDE≥0.20 · t_cs within 비중≤0.35 · R1 t_cs 보정 p∈[0.05,0.15], 단측 p<0.025",
-  "verdict": "R4 t_cs MDE80 0.344 (R1 점추정의 2.1배) · R4t 총 terrain MDE80 0.226 (2.3배) · R4 표본 t_cs within-firm 분산 비중 0.62 (terrain 0.33) · R1 t_cs max-|t| 보정 p 0.133, 단측 미보정 p 0.020 — 예측 적중 4/5",
+  "verdict": "R4 t_cs MDE80 0.328 (R1 점추정의 2.0배) · R4t 총 terrain MDE80 0.238 (2.6배) · R4 표본 t_cs within-firm 분산 비중 0.62 (terrain 0.33) · R1 t_cs max-|t| 보정 p 0.135, 단측 미보정 p 0.030 — 예측 적중 3/5",
   "kill_met": false,
   "code": "p001_31_gate_power.py",
   "sha256_16": "62e41f83f854271a",
   "seed": 42,
-  "runtime_s": 4.7,
-  "date": "2026-09-08",
+  "runtime_s": 5.8,
+  "date": "2026-09-10",
   "stage": 7,
   "feeds": "R2 power-rescue (POWER_RESCUE_R2.md)",
   "slug": "gate_power",
   "builds_on": "P001-30",
-  "common_sha256_16": "a63e7b62854b47c6"
+  "common_sha256_16": "73d12fb69e9b9b73"
 }

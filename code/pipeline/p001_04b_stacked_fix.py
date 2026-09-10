@@ -61,6 +61,9 @@ vc_country = dict(zip(CTX.investors["uuid"], CTX.investors["country_code"]))
 
 pv = inv.merge(rounds[["uuid", "org_uuid", "dt"]], left_on="funding_round_uuid", right_on="uuid")
 fd = pv.groupby(["investor_uuid", "org_uuid"])["dt"].min().rename("fdt").reset_index()
+_acq = CTX.acq.dropna(subset=["acquiree_uuid", "acquired_on"]); _ip = CTX.ipos.dropna(subset=["org_uuid", "went_public_on"])
+_fe = pd.concat([pd.to_datetime(_acq["acquired_on"], errors="coerce").groupby(_acq["acquiree_uuid"]).min(), pd.to_datetime(_ip["went_public_on"], errors="coerce").groupby(_ip["org_uuid"]).min()], axis=1).min(axis=1)
+_ex = fd["org_uuid"].map(_fe); fd = fd[~(_ex.notna() & (_ex <= fd["fdt"]))].copy()   # D067 population rule: no exit on/before the deal
 fj = jobs[jobs["title"].fillna("").str.lower().str.contains("founder", regex=False)][
     ["person_uuid", "org_uuid"]].dropna()
 fj["fg"] = fj["person_uuid"].map(g_map)

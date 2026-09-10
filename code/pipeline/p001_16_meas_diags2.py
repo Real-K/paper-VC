@@ -29,7 +29,7 @@ EU = {"GBR", "DEU", "FRA", "NLD", "SWE", "ESP", "ITA", "CHE", "BEL", "AUT", "DNK
 NAEU = EU | {"USA", "CAN"}
 GENERIC = {"series_unknown", "undisclosed", "NA"}
 
-sv = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+sv = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
 # ④ 딜 수준 귀속 모형 — 표본: NA+EU 투자사의 판정가능 라운드 전체 (귀속 여부 불문)
 people = CTX.people[["uuid", "gender"]]
 g_map = people[people["gender"].isin(["male", "female"])].set_index("uuid")["gender"]

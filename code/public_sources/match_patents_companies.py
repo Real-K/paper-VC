@@ -19,7 +19,7 @@ import pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.environ.get("P001_PROJECT_ROOT", "/path/to/project-root")   # holds shared/data/processed (derived, not redistributed)
 D = os.path.join(ROOT, "shared", "data", "processed", "patents_v1")
-SAMPLE = os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet")
+SAMPLE = os.environ.get("P001_SAMPLE_V1", "/path/to/sample_v1.parquet")
 CB = os.path.join(ROOT, "..", "data", "crunchbase")
 SUF = {"inc", "incorporated", "llc", "l l c", "ltd", "limited", "corp", "corporation", "co", "company", "plc", "gmbh", "ag", "sa", "sas", "bv", "b v", "nv", "oy", "ab", "as", "aps", "kk", "pty", "lp", "llp",
        "the", "holdings", "holding", "group", "technologies", "technology", "tech", "labs", "laboratories", "laboratory", "systems", "solutions", "software", "international", "usa", "us", "america"}

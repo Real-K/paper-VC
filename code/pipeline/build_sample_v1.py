@@ -93,7 +93,7 @@ keep = ["funding_round_uuid", "investor_uuid", "partner_uuid", "org_uuid", "dt",
         "country_code", "cat", "stage", "fp", "ff", "ffm", "solo_attr",
         "cell0", "cell_cat", "cell_stage", "fon", "exit6", "ipo6", "acqp6", "exit_ever", "closed6"]
 out = d[keep].sort_values(["investor_uuid", "dt", "funding_round_uuid", "partner_uuid"]).reset_index(drop=True)
-p = os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet")
+p = os.environ.get("P001_SAMPLE_V1", "/path/to/sample_v1.parquet")
 out.to_parquet(p, index=False)
 with open(p, "rb") as f:
     sha = hashlib.sha256(f.read()).hexdigest()[:16]

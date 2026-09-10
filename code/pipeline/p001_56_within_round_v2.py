@@ -38,7 +38,7 @@ first_dt = pt_all.dropna(subset=["rdt"]).groupby("partner_uuid")["rdt"].min().to
 def load_scope(scope):
     if scope == "NAEU":
         return load_sample()
-    d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet")); d["dt"] = pd.to_datetime(d["dt"]); return d
+    d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet")); d["dt"] = pd.to_datetime(d["dt"]); return d
 
 
 def build_sample(scope, window_end, horizon_days):

@@ -22,7 +22,7 @@ import pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.environ.get("P001_PROJECT_ROOT", "/path/to/project-root")   # holds shared/data/processed (derived, not redistributed)
 OUT = os.path.join(ROOT, "shared", "data", "processed", "cb_funds_v1")
-SAMPLE = os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet")
+SAMPLE = os.environ.get("P001_SAMPLE_V1", "/path/to/sample_v1.parquet")
 FUNDS = os.path.join(ROOT, "..", "data", "crunchbase", "funds.csv")
 os.makedirs(OUT, exist_ok=True)
 s = pd.read_parquet(SAMPLE, columns=["funding_round_uuid", "investor_uuid", "dt"]).drop_duplicates(["funding_round_uuid", "investor_uuid"])

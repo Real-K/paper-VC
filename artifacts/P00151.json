@@ -2,120 +2,120 @@
   "id": "P001-51",
   "title": "R5 A-1: 라운드 내 재참여 설계의 변형 배터리 — 처치 정의·사전 투자자 통제·두-방향 FE·투자자 군집·양성 대조·추정 대상",
   "status": "PARTIAL",
-  "n": 1623,
+  "n": 1609,
   "estimates": {
     "A_baseline": {
       "fp": {
-        "coef": -0.00379,
+        "coef": -0.00378,
         "ci95": [
-          -0.0396,
-          0.0315
+          -0.0408,
+          0.0318
         ],
         "sig": false,
-        "se_boot": 0.01861,
-        "mde80": 0.0521,
+        "se_boot": 0.01913,
+        "mde80": 0.0536,
         "within_pm0.05": true,
-        "margin_lo_pp": 1.04,
-        "margin_hi_pp": 1.85
+        "margin_lo_pp": 0.92,
+        "margin_hi_pp": 1.82
       },
-      "n": 1623,
-      "n_clusters": 390,
+      "n": 1609,
+      "n_clusters": 388,
       "controls": [
         "ln_exp"
       ],
-      "p42_b_FF": -0.00385,
+      "p42_b_FF": -0.00386,
       "reproduces_p42_4dp": false
     },
     "B_treatment_definition": {
-      "n_mixed_attr_rows_dropped": 127,
+      "n_mixed_attr_rows_dropped": 126,
       "female_only": {
         "fp": {
-          "coef": -0.01536,
+          "coef": -0.01533,
           "ci95": [
-            -0.0694,
-            0.0275
+            -0.0593,
+            0.0246
           ],
           "sig": false,
-          "se_boot": 0.02315,
-          "mde80": 0.0648,
+          "se_boot": 0.0224,
+          "mde80": 0.0627,
           "within_pm0.05": false,
-          "margin_lo_pp": -1.94,
-          "margin_hi_pp": 2.25
+          "margin_lo_pp": -0.93,
+          "margin_hi_pp": 2.54
         },
-        "n": 1296,
-        "n_clusters": 324,
+        "n": 1287,
+        "n_clusters": 323,
         "controls": [
           "ln_exp"
         ],
-        "n_rounds": 436,
-        "n_companies": 324
+        "n_rounds": 434,
+        "n_companies": 323
       },
       "three_category": {
         "female_only_vs_male_only": {
-          "coef": -0.01381,
+          "coef": -0.01371,
           "ci95": [
-            -0.0573,
-            0.0265
+            -0.0571,
+            0.0253
           ],
           "sig": false,
-          "se_boot": 0.02171,
-          "mde80": 0.0608,
+          "se_boot": 0.02135,
+          "mde80": 0.0598,
           "within_pm0.05": false,
-          "margin_lo_pp": -0.73,
-          "margin_hi_pp": 2.35
+          "margin_lo_pp": -0.71,
+          "margin_hi_pp": 2.47
         },
         "mixed_vs_male_only": {
-          "coef": 0.03566,
+          "coef": 0.03552,
           "ci95": [
-            -0.0418,
-            0.1026
+            -0.0479,
+            0.1121
           ],
           "sig": false,
-          "se_boot": 0.03628,
-          "mde80": 0.1016,
+          "se_boot": 0.03933,
+          "mde80": 0.1101,
           "within_pm0.05": false,
-          "margin_lo_pp": 0.82,
-          "margin_hi_pp": -5.26
+          "margin_lo_pp": 0.21,
+          "margin_hi_pp": -6.21
         },
-        "n": 1623,
-        "n_mixed_rows": 127
+        "n": 1609,
+        "n_mixed_rows": 126
       },
       "any_female_investor_cluster": {
         "fp": {
-          "coef": -0.00379,
+          "coef": -0.00378,
           "ci95": [
-            -0.0346,
-            0.0278
+            -0.0355,
+            0.024
           ],
           "sig": false,
-          "se_boot": 0.01602,
-          "mde80": 0.0449,
+          "se_boot": 0.01549,
+          "mde80": 0.0434,
           "within_pm0.05": true,
-          "margin_lo_pp": 1.54,
-          "margin_hi_pp": 2.22
+          "margin_lo_pp": 1.45,
+          "margin_hi_pp": 2.6
         },
-        "n": 1623,
-        "n_clusters": 760,
+        "n": 1609,
+        "n_clusters": 756,
         "controls": [
           "ln_exp"
         ]
       },
       "female_only_investor_cluster": {
         "fp": {
-          "coef": -0.01536,
+          "coef": -0.01533,
           "ci95": [
-            -0.0491,
-            0.0213
+            -0.046,
+            0.0185
           ],
           "sig": false,
-          "se_boot": 0.01729,
-          "mde80": 0.0484,
+          "se_boot": 0.01662,
+          "mde80": 0.0465,
           "within_pm0.05": true,
-          "margin_lo_pp": 0.09,
-          "margin_hi_pp": 2.87
+          "margin_lo_pp": 0.4,
+          "margin_hi_pp": 3.15
         },
-        "n": 1296,
-        "n_clusters": 672,
+        "n": 1287,
+        "n_clusters": 670,
         "controls": [
           "ln_exp"
         ]
@@ -125,20 +125,20 @@
       "pre_ff_share": {
         "any_female": {
           "fp": {
-            "coef": -0.00309,
+            "coef": -0.00295,
             "ci95": [
-              -0.0422,
-              0.0331
+              -0.042,
+              0.0366
             ],
             "sig": false,
-            "se_boot": 0.02,
-            "mde80": 0.056,
+            "se_boot": 0.02005,
+            "mde80": 0.0561,
             "within_pm0.05": true,
-            "margin_lo_pp": 0.78,
-            "margin_hi_pp": 1.69
+            "margin_lo_pp": 0.8,
+            "margin_hi_pp": 1.34
           },
-          "n": 1623,
-          "n_clusters": 390,
+          "n": 1609,
+          "n_clusters": 388,
           "controls": [
             "ln_exp",
             "pre_ff_share_f",
@@ -147,45 +147,45 @@
         },
         "female_only": {
           "fp": {
-            "coef": -0.01392,
+            "coef": -0.01374,
             "ci95": [
-              -0.0558,
-              0.0308
+              -0.0581,
+              0.0301
             ],
             "sig": false,
-            "se_boot": 0.02218,
-            "mde80": 0.0621,
+            "se_boot": 0.02194,
+            "mde80": 0.0614,
             "within_pm0.05": false,
-            "margin_lo_pp": -0.58,
-            "margin_hi_pp": 1.92
+            "margin_lo_pp": -0.81,
+            "margin_hi_pp": 1.99
           },
-          "n": 1296,
-          "n_clusters": 324,
+          "n": 1287,
+          "n_clusters": 323,
           "controls": [
             "ln_exp",
             "pre_ff_share_f",
             "pre_any"
           ]
         },
-        "shift_vs_baseline_pp": 0.07
+        "shift_vs_baseline_pp": 0.083
       },
       "pre_early_share": {
         "any_female": {
           "fp": {
-            "coef": 0.00078,
+            "coef": 0.00076,
             "ci95": [
-              -0.039,
-              0.0389
+              -0.0371,
+              0.0402
             ],
             "sig": false,
-            "se_boot": 0.01898,
-            "mde80": 0.0532,
+            "se_boot": 0.0208,
+            "mde80": 0.0582,
             "within_pm0.05": true,
-            "margin_lo_pp": 1.1,
-            "margin_hi_pp": 1.11
+            "margin_lo_pp": 1.29,
+            "margin_hi_pp": 0.98
           },
-          "n": 1623,
-          "n_clusters": 390,
+          "n": 1609,
+          "n_clusters": 388,
           "controls": [
             "ln_exp",
             "pre_early_share_f",
@@ -194,45 +194,45 @@
         },
         "female_only": {
           "fp": {
-            "coef": -0.01173,
+            "coef": -0.01171,
             "ci95": [
-              -0.0547,
-              0.0296
+              -0.0595,
+              0.0284
             ],
             "sig": false,
-            "se_boot": 0.02225,
-            "mde80": 0.0623,
+            "se_boot": 0.02327,
+            "mde80": 0.0652,
             "within_pm0.05": false,
-            "margin_lo_pp": -0.47,
-            "margin_hi_pp": 2.04
+            "margin_lo_pp": -0.95,
+            "margin_hi_pp": 2.16
           },
-          "n": 1296,
-          "n_clusters": 324,
+          "n": 1287,
+          "n_clusters": 323,
           "controls": [
             "ln_exp",
             "pre_early_share_f",
             "pre_any"
           ]
         },
-        "shift_vs_baseline_pp": 0.457
+        "shift_vs_baseline_pp": 0.454
       },
       "ln_pre_n": {
         "any_female": {
           "fp": {
-            "coef": -0.00432,
+            "coef": -0.00431,
             "ci95": [
-              -0.0425,
-              0.0352
+              -0.0417,
+              0.0327
             ],
             "sig": false,
-            "se_boot": 0.01905,
-            "mde80": 0.0534,
+            "se_boot": 0.01883,
+            "mde80": 0.0527,
             "within_pm0.05": true,
-            "margin_lo_pp": 0.75,
-            "margin_hi_pp": 1.48
+            "margin_lo_pp": 0.83,
+            "margin_hi_pp": 1.73
           },
-          "n": 1623,
-          "n_clusters": 390,
+          "n": 1609,
+          "n_clusters": 388,
           "controls": [
             "ln_exp",
             "ln_pre_n"
@@ -240,20 +240,20 @@
         },
         "female_only": {
           "fp": {
-            "coef": -0.01536,
+            "coef": -0.01532,
             "ci95": [
-              -0.0555,
-              0.0296
+              -0.0589,
+              0.0277
             ],
             "sig": false,
-            "se_boot": 0.02231,
-            "mde80": 0.0625,
+            "se_boot": 0.0227,
+            "mde80": 0.0636,
             "within_pm0.05": false,
-            "margin_lo_pp": -0.55,
-            "margin_hi_pp": 2.04
+            "margin_lo_pp": -0.89,
+            "margin_hi_pp": 2.23
           },
-          "n": 1296,
-          "n_clusters": 324,
+          "n": 1287,
+          "n_clusters": 323,
           "controls": [
             "ln_exp",
             "ln_pre_n"
@@ -264,20 +264,20 @@
       "firm_age": {
         "any_female": {
           "fp": {
-            "coef": -0.00314,
+            "coef": -0.00312,
             "ci95": [
-              -0.0406,
-              0.0407
+              -0.0413,
+              0.0349
             ],
             "sig": false,
-            "se_boot": 0.02068,
-            "mde80": 0.0579,
+            "se_boot": 0.01949,
+            "mde80": 0.0546,
             "within_pm0.05": true,
-            "margin_lo_pp": 0.94,
-            "margin_hi_pp": 0.93
+            "margin_lo_pp": 0.87,
+            "margin_hi_pp": 1.51
           },
-          "n": 1623,
-          "n_clusters": 390,
+          "n": 1609,
+          "n_clusters": 388,
           "controls": [
             "ln_exp",
             "firm_age_f",
@@ -286,92 +286,92 @@
         },
         "female_only": {
           "fp": {
-            "coef": -0.01339,
+            "coef": -0.01333,
             "ci95": [
-              -0.0547,
-              0.0333
+              -0.0577,
+              0.0319
+            ],
+            "sig": false,
+            "se_boot": 0.02234,
+            "mde80": 0.0626,
+            "within_pm0.05": false,
+            "margin_lo_pp": -0.77,
+            "margin_hi_pp": 1.81
+          },
+          "n": 1287,
+          "n_clusters": 323,
+          "controls": [
+            "ln_exp",
+            "firm_age_f",
+            "firm_age_m"
+          ]
+        },
+        "shift_vs_baseline_pp": 0.066
+      },
+      "fund_age": {
+        "any_female": {
+          "fp": {
+            "coef": -0.00701,
+            "ci95": [
+              -0.049,
+              0.0311
+            ],
+            "sig": false,
+            "se_boot": 0.02093,
+            "mde80": 0.0586,
+            "within_pm0.05": true,
+            "margin_lo_pp": 0.1,
+            "margin_hi_pp": 1.89
+          },
+          "n": 1609,
+          "n_clusters": 388,
+          "controls": [
+            "ln_exp",
+            "fund_age_f",
+            "fund_age_m"
+          ]
+        },
+        "female_only": {
+          "fp": {
+            "coef": -0.01861,
+            "ci95": [
+              -0.0586,
+              0.0277
             ],
             "sig": false,
             "se_boot": 0.02272,
             "mde80": 0.0636,
             "within_pm0.05": false,
-            "margin_lo_pp": -0.47,
-            "margin_hi_pp": 1.67
+            "margin_lo_pp": -0.86,
+            "margin_hi_pp": 2.23
           },
-          "n": 1296,
-          "n_clusters": 324,
-          "controls": [
-            "ln_exp",
-            "firm_age_f",
-            "firm_age_m"
-          ]
-        },
-        "shift_vs_baseline_pp": 0.065
-      },
-      "fund_age": {
-        "any_female": {
-          "fp": {
-            "coef": -0.00708,
-            "ci95": [
-              -0.0461,
-              0.0263
-            ],
-            "sig": false,
-            "se_boot": 0.01872,
-            "mde80": 0.0524,
-            "within_pm0.05": true,
-            "margin_lo_pp": 0.39,
-            "margin_hi_pp": 2.37
-          },
-          "n": 1623,
-          "n_clusters": 390,
+          "n": 1287,
+          "n_clusters": 323,
           "controls": [
             "ln_exp",
             "fund_age_f",
             "fund_age_m"
           ]
         },
-        "female_only": {
-          "fp": {
-            "coef": -0.01867,
-            "ci95": [
-              -0.0601,
-              0.028
-            ],
-            "sig": false,
-            "se_boot": 0.02225,
-            "mde80": 0.0623,
-            "within_pm0.05": false,
-            "margin_lo_pp": -1.01,
-            "margin_hi_pp": 2.2
-          },
-          "n": 1296,
-          "n_clusters": 324,
-          "controls": [
-            "ln_exp",
-            "fund_age_f",
-            "fund_age_m"
-          ]
-        },
-        "shift_vs_baseline_pp": -0.329
+        "shift_vs_baseline_pp": -0.323
       },
       "all_pre_round": {
         "any_female": {
           "fp": {
-            "coef": -0.00671,
+            "coef": -0.00647,
             "ci95": [
               -0.0414,
-              0.0283
+              0.0393
             ],
             "sig": false,
-            "se_boot": 0.01842,
-            "mde80": 0.0516,
+            "se_boot": 0.02001,
+            "mde80": 0.056,
             "within_pm0.05": true,
             "margin_lo_pp": 0.86,
-            "margin_hi_pp": 2.17
+            "margin_hi_pp": 1.07
           },
-          "n": 1623,
-          "n_clusters": 390,
+          "n": 1609,
+          "n_clusters": 388,
           "controls": [
             "ln_exp",
             "pre_ff_share_f",
@@ -386,20 +386,20 @@
         },
         "female_only": {
           "fp": {
-            "coef": -0.01587,
+            "coef": -0.01564,
             "ci95": [
-              -0.0609,
-              0.0277
+              -0.0599,
+              0.0292
             ],
             "sig": false,
-            "se_boot": 0.02263,
-            "mde80": 0.0634,
+            "se_boot": 0.02323,
+            "mde80": 0.065,
             "within_pm0.05": false,
-            "margin_lo_pp": -1.09,
-            "margin_hi_pp": 2.23
+            "margin_lo_pp": -0.99,
+            "margin_hi_pp": 2.08
           },
-          "n": 1296,
-          "n_clusters": 324,
+          "n": 1287,
+          "n_clusters": 323,
           "controls": [
             "ln_exp",
             "pre_ff_share_f",
@@ -412,292 +412,292 @@
             "fund_age_m"
           ]
         },
-        "shift_vs_baseline_pp": -0.292
+        "shift_vs_baseline_pp": -0.269
       }
     },
     "D_investor_balance": {
       "pre_ff_share": {
         "fp": {
-          "coef": 0.07123,
+          "coef": 0.06973,
           "ci95": [
             0.0436,
-            0.1008
+            0.098
           ],
           "sig": true,
-          "se_boot": 0.01441,
-          "mde80": 0.0403,
-          "std_diff": 0.302,
-          "mean_male_attr": 0.2008
+          "se_boot": 0.01389,
+          "mde80": 0.0389,
+          "std_diff": 0.2957,
+          "mean_male_attr": 0.2009
         },
-        "n": 1444,
+        "n": 1431,
         "coverage": 0.911
       },
       "pre_early_share": {
         "fp": {
-          "coef": 0.041,
+          "coef": 0.04055,
           "ci95": [
-            0.0079,
-            0.0794
+            0.0107,
+            0.0786
           ],
           "sig": true,
-          "se_boot": 0.01734,
-          "mde80": 0.0485,
-          "std_diff": 0.1303,
-          "mean_male_attr": 0.524
+          "se_boot": 0.01789,
+          "mde80": 0.0501,
+          "std_diff": 0.1287,
+          "mean_male_attr": 0.5259
         },
-        "n": 1444,
+        "n": 1431,
         "coverage": 0.911
       },
       "ln_pre_n": {
         "fp": {
-          "coef": -0.06971,
+          "coef": -0.07128,
           "ci95": [
-            -0.2532,
-            0.117
+            -0.2725,
+            0.1213
           ],
           "sig": false,
-          "se_boot": 0.09756,
-          "mde80": 0.2732,
-          "std_diff": -0.0403,
-          "mean_male_attr": 3.0834
+          "se_boot": 0.10329,
+          "mde80": 0.2892,
+          "std_diff": -0.0412,
+          "mean_male_attr": 3.0761
         },
-        "n": 1623,
+        "n": 1609,
         "coverage": 1.0
       },
       "firm_age": {
         "fp": {
-          "coef": -3.68415,
+          "coef": -3.70045,
           "ci95": [
-            -5.8353,
-            -1.5914
+            -5.9512,
+            -1.7258
           ],
           "sig": true,
-          "se_boot": 1.11173,
-          "mde80": 3.1128,
-          "std_diff": -0.1806,
-          "mean_male_attr": 16.7366
+          "se_boot": 1.12373,
+          "mde80": 3.1464,
+          "std_diff": -0.1809,
+          "mean_male_attr": 16.7405
         },
-        "n": 1603,
-        "coverage": 0.99
+        "n": 1589,
+        "coverage": 0.989
       },
       "fund_age": {
         "fp": {
-          "coef": -0.3392,
+          "coef": -0.33305,
           "ci95": [
-            -0.5764,
-            -0.1091
+            -0.5898,
+            -0.0742
           ],
           "sig": true,
-          "se_boot": 0.12205,
-          "mde80": 0.3417,
-          "std_diff": -0.1814,
-          "mean_male_attr": 1.8864
+          "se_boot": 0.1268,
+          "mde80": 0.355,
+          "std_diff": -0.1785,
+          "mean_male_attr": 1.8791
         },
-        "n": 1106,
-        "coverage": 0.749
+        "n": 1094,
+        "coverage": 0.748
       },
       "ln_exp": {
         "fp": {
-          "coef": -0.17199,
+          "coef": -0.17227,
           "ci95": [
-            -0.4136,
-            0.0384
+            -0.3836,
+            0.0374
           ],
           "sig": false,
-          "se_boot": 0.10865,
-          "mde80": 0.3042,
-          "std_diff": -0.1008,
-          "mean_male_attr": 4.2356
+          "se_boot": 0.11268,
+          "mde80": 0.3155,
+          "std_diff": -0.1011,
+          "mean_male_attr": 4.2299
         },
-        "n": 1623,
+        "n": 1609,
         "coverage": 1.0
       },
       "lead": {
         "fp": {
-          "coef": -0.04408,
+          "coef": -0.04897,
           "ci95": [
-            -0.1173,
-            0.026
+            -0.12,
+            0.0192
           ],
           "sig": false,
-          "se_boot": 0.03671,
-          "mde80": 0.1028,
-          "std_diff": -0.0881,
-          "mean_male_attr": 0.49
+          "se_boot": 0.03681,
+          "mde80": 0.1031,
+          "std_diff": -0.0979,
+          "mean_male_attr": 0.4963
         },
-        "n": 734,
-        "coverage": 0.57
+        "n": 725,
+        "coverage": 0.569
       },
       "y0": {
         "fp": {
-          "coef": -0.02143,
+          "coef": -0.01959,
           "ci95": [
-            -0.06,
-            0.0183
+            -0.0595,
+            0.0225
           ],
           "sig": false,
-          "se_boot": 0.0212,
-          "mde80": 0.0594,
-          "std_diff": -0.047,
-          "mean_male_attr": 0.3061
+          "se_boot": 0.02171,
+          "mde80": 0.0608,
+          "std_diff": -0.043,
+          "mean_male_attr": 0.3054
         },
-        "n": 1623,
+        "n": 1609,
         "coverage": 1.0
       },
       "n_p": {
         "fp": {
-          "coef": 0.16318,
+          "coef": 0.16197,
           "ci95": [
-            0.1077,
-            0.2334
+            0.0963,
+            0.226
           ],
           "sig": true,
-          "se_boot": 0.03245,
-          "mde80": 0.0908,
-          "std_diff": 0.3287,
-          "mean_male_attr": 1.1069
+          "se_boot": 0.03338,
+          "mde80": 0.0935,
+          "std_diff": 0.3253,
+          "mean_male_attr": 1.1082
         },
-        "n": 1623,
+        "n": 1609,
         "coverage": 1.0
       }
     },
     "E_positive_controls": {
       "ln_exp": {
         "coef": {
-          "coef": 0.03238,
+          "coef": 0.03273,
           "ci95": [
-            0.0202,
-            0.0454
+            0.0173,
+            0.0471
           ],
           "sig": true,
-          "se_boot": 0.00652,
-          "mde80": 0.0183
+          "se_boot": 0.00727,
+          "mde80": 0.0204
         },
-        "n": 1623
+        "n": 1609
       },
       "lead": {
         "coef": {
-          "coef": 0.10626,
+          "coef": 0.10706,
           "ci95": [
-            0.0406,
-            0.1709
+            0.0345,
+            0.1716
           ],
           "sig": true,
-          "se_boot": 0.03337,
-          "mde80": 0.0934
+          "se_boot": 0.03449,
+          "mde80": 0.0966
         },
-        "n": 734
+        "n": 725
       },
       "pre_early_share": {
         "coef": {
-          "coef": -0.20954,
+          "coef": -0.20949,
           "ci95": [
-            -0.3081,
-            -0.1173
+            -0.3101,
+            -0.1109
           ],
           "sig": true,
-          "se_boot": 0.04911,
-          "mde80": 0.1375
+          "se_boot": 0.0525,
+          "mde80": 0.147
         },
-        "n": 1444
+        "n": 1431
       },
       "fund_age": {
         "coef": {
-          "coef": -0.02108,
+          "coef": -0.02115,
           "ci95": [
-            -0.0343,
-            -0.0073
+            -0.0353,
+            -0.0075
           ],
           "sig": true,
-          "se_boot": 0.00699,
-          "mde80": 0.0196
+          "se_boot": 0.00741,
+          "mde80": 0.0208
         },
-        "n": 1106
+        "n": 1094
       },
       "y0": {
         "coef": {
-          "coef": 0.00841,
+          "coef": 0.00853,
           "ci95": [
-            -0.0536,
-            0.0678
+            -0.0443,
+            0.066
           ],
           "sig": false,
-          "se_boot": 0.03126,
-          "mde80": 0.0875
+          "se_boot": 0.02846,
+          "mde80": 0.0797
         },
-        "n": 1623
+        "n": 1609
       },
       "ln_pre_n": {
         "coef": {
-          "coef": 0.03021,
+          "coef": 0.03052,
           "ci95": [
-            0.0174,
-            0.0434
+            0.0173,
+            0.0439
           ],
           "sig": true,
-          "se_boot": 0.00685,
-          "mde80": 0.0192
+          "se_boot": 0.00709,
+          "mde80": 0.0198
         },
-        "n": 1623
+        "n": 1609
       },
       "n_detected": 4
     },
     "F_twoway_FE_pooled": {
       "b_FF": {
-        "coef": -0.00939,
+        "coef": -0.01094,
         "ci95": [
-          -0.0831,
-          0.0591
+          -0.0652,
+          0.0486
         ],
         "sig": false,
-        "se_boot": 0.03735,
-        "mde80": 0.1046,
+        "se_boot": 0.03168,
+        "mde80": 0.0887,
         "within_pm0.05": false
       },
       "b_other": {
-        "coef": 0.03165,
+        "coef": 0.02994,
         "ci95": [
-          -0.0029,
-          0.0696
+          -0.011,
+          0.076
         ]
       },
-      "n": 7734,
-      "n_investors": 2061,
+      "n": 7675,
+      "n_investors": 2052,
       "n_investors_fp_varying": 291,
       "nb": 200,
       "iters": 80
     },
     "G_estimand": {
-      "n_ff_cond_rounds": 535,
-      "n_companies": 390,
-      "n_investor_firms": 760,
-      "attribution_coverage_rows": 0.4487,
-      "n_all_investor_rows": 3617,
-      "median_amt_usd_cond_rounds": 8224999.5,
+      "n_ff_cond_rounds": 532,
+      "n_companies": 388,
+      "n_investor_firms": 756,
+      "attribution_coverage_rows": 0.4478,
+      "n_all_investor_rows": 3593,
+      "median_amt_usd_cond_rounds": 8000000.0,
       "median_amt_usd_all_ff_rounds": 2500000.0,
-      "early_share_cond_rounds": 0.6206,
-      "early_share_all_ff_rounds": 0.6946,
+      "early_share_cond_rounds": 0.6241,
+      "early_share_all_ff_rounds": 0.6978,
       "reup_attributed_minus_unattributed_within_round": {
-        "coef": 0.1885,
+        "coef": 0.18873,
         "ci95": [
-          0.1557,
-          0.2209
+          0.1576,
+          0.2221
         ],
         "sig": true,
-        "se_boot": 0.01631,
-        "mde80": 0.0457
+        "se_boot": 0.01667,
+        "mde80": 0.0467
       },
-      "base_reup_cond_ff": 0.4627
+      "base_reup_cond_ff": 0.4649
     },
     "H_band_anchor": {
-      "base_reup": 0.4627
+      "base_reup": 0.4649
     },
     "prediction_check": {
       "A_reproduces_p42": false,
       "B2_fo_coef_in_[-0.04,0.01]": true,
       "B2_fo_mde_5.5_7.5pp": true,
       "B2_fo_band_fails": true,
-      "B2_fo_band_margin_lt_1.5pp": false,
+      "B2_fo_band_margin_lt_1.5pp": true,
       "B3_mixed_in_[-0.03,0.06]_incl0": true,
       "B4_inv_cluster_width_pm30pct": true,
       "C_shifts_lt_0.6pp_each": true,
@@ -706,23 +706,23 @@
       "D_fund_age_detected": true,
       "E_ge3_positive_controls": true,
       "F_bFF_in_[-0.04,0.02]_incl0": true,
-      "F_mde_6_10pp": false,
+      "F_mde_6_10pp": true,
       "G_companies_380_400": true,
       "G_attr_cov_0.40_0.50": true
     }
   },
   "prediction": "female-only b∈[−0.04,+0.01] MDE 5.5–7.5 밴드 실패(여유<1.5); mixed∈[−0.03,+0.06]; 사전 통제 Δ<0.6; 양성 대조 ≥3/4; 두-방향 FE MDE 6–10; 기업 380–400; 귀속 커버 0.40–0.50",
-  "verdict": "any-female b -0.38pp [-3.96,+3.15] ±5 True | female-only(436 라운드/1296 행) b -1.54pp [-6.94,+2.75] MDE 6.48 ±5 False | mixed 계수 +3.57pp | 사전 통제 전부 투입 Δ -0.29pp | 투자자 군집 CI [-3.46,+2.78] | 양성 대조 검출 4/4 | 두-방향 FE b_FF -0.94pp MDE 10.5 | 기업 390 · 귀속 커버 0.45 — 밴드 판정이 정의에 의존(any-female True, female-only False) — 미검출형 서술 + MDE 병기 (예측 적중 13/16)",
+  "verdict": "any-female b -0.38pp [-4.08,+3.18] ±5 True | female-only(434 라운드/1287 행) b -1.53pp [-5.93,+2.46] MDE 6.27 ±5 False | mixed 계수 +3.55pp | 사전 통제 전부 투입 Δ -0.27pp | 투자자 군집 CI [-3.55,+2.40] | 양성 대조 검출 4/4 | 두-방향 FE b_FF -1.09pp MDE 8.9 | 기업 388 · 귀속 커버 0.45 — 밴드 판정이 정의에 의존(any-female True, female-only False) — 미검출형 서술 + MDE 병기 (예측 적중 15/16)",
   "kill_met": false,
   "code": "p001_51_within_round_variants.py",
   "sha256_16": "c207763194f2c3b4",
   "seed": 42,
-  "runtime_s": 791.0,
-  "date": "2026-09-09",
+  "runtime_s": 488.7,
+  "date": "2026-09-10",
   "stage": 7,
   "feeds": "R5 ident A-1/F-1/F-2/F-3 → §4 ¶3 · Table 10 A · 초록/§1/§8 밴드 문장",
   "slug": "within_round_variants",
   "builds_on": "P001-42",
-  "common_sha256_16": "a63e7b62854b47c6",
-  "v6_common_sha256_16": "0e382e764d14fdc8"
+  "common_sha256_16": "73d12fb69e9b9b73",
+  "v6_common_sha256_16": "70e0b9a1fa1ae389"
 }

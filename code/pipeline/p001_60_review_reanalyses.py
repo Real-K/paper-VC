@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""p001_60 — 외부 원고 리뷰(comment/MANUSCRIPT_REVIEW_2026-09-10.md) 가 요구한 소수의 재분석 — 결론을 바꾸지 않고 해석의 결정을 해소하는 것만
+"""p001_60 — [v2 2026-09-10: B2 분할 표본 빈티지 차이(독립 추첨) 추가; sample_v2 (D067) 위에서 post-deal rule 행은 항등 확인 역할]
+외부 원고 리뷰(comment/MANUSCRIPT_REVIEW_2026-09-10.md) 가 요구한 소수의 재분석 — 결론을 바꾸지 않고 해석의 결정을 해소하는 것만
 
 [왜] (§3) Table 4B 의 β_int 는 두 FF–other 격차의 차이다. 여성 파트너 자신의 FF–other 격차(β_FF + β_int)의 구간은 두 계수의 공분산이 필요 →
  같은 부트 추첨에서 합을 계산한다. (§4) "결손은 2010–14 빈티지에 집중" 은 점추정 패턴 — 빈티지별 계수 차이의 직접 검정(상호작용) 필요.
@@ -103,6 +104,16 @@ B["exit3_2020"] = {"beta_int_2010_14": res3["ffp"], "contrast_2015_17_minus_2010
                    "contrast_2018_20_minus_2010_14": draw_sum(res3, ["ffp_L15", "ffp_L18"], [1, 1]), "beta_int_2018_20": draw_sum(res3, ["ffp", "ffp_L15", "ffp_L18"], [1, 1, 1]), "n": res3["n"]}
 log(f"  exit3 ≤2020: β_int(2010–14) {res3['ffp']['coef']*100:+.2f} · 대비(2015–17−2010–14) {res3['ffp_L15']['coef']*100:+.2f} [{res3['ffp_L15']['ci95'][0]*100:+.2f},{res3['ffp_L15']['ci95'][1]*100:+.2f}] · "
     f"대비(2018–20−2010–14) {B['exit3_2020']['contrast_2018_20_minus_2010_14']['coef']*100:+.2f} [{B['exit3_2020']['contrast_2018_20_minus_2010_14']['ci95'][0]*100:+.2f},{B['exit3_2020']['contrast_2018_20_minus_2010_14']['ci95'][1]*100:+.2f}]")
+# B2 (c3 §4-third): the split-sample estimates of Table 5B are separate regressions per vintage; their difference is tested with draws from the two
+# independent subsamples (variance adds; draws paired arbitrarily). This is a different object from the pooled interaction, which imposes common partner
+# effects and control slopes across vintages — both are reported.
+sE10, sE15 = sE[sE["L15"] == 0], sE[sE["L15"] == 1]
+r10 = run(sE10, X0, ["ffp"], nb=1000); r15 = run(sE15, X0, ["ffp"], nb=1000)
+d10, d15 = r10["_draws"][:, r10["_xc"].index("ffp")], r15["_draws"][:, r15["_xc"].index("ffp")]; m_ = min(len(d10), len(d15))
+lo, hi = qci(d15[:m_] - d10[:m_])
+B["exit_ever_2017"]["split_sample"] = {"beta_int_2010_14": strip_draws(r10)["ffp"], "beta_int_2015_17": strip_draws(r15)["ffp"], "n_2010_14": r10["n"], "n_2015_17": r15["n"],
+                                       "difference_2015_17_minus_2010_14_independent_draws": {"coef": round(float(r15["ffp"]["coef"] - r10["ffp"]["coef"]), 5), "ci95": [round(lo, 5), round(hi, 5)], "sig": bool(lo > 0 or hi < 0)}}
+log(f"  분할 표본: 2010–14 {r10['ffp']['coef']*100:+.2f} · 2015–17 {r15['ffp']['coef']*100:+.2f} · 차이(독립 추첨) {(r15['ffp']['coef']-r10['ffp']['coef'])*100:+.2f} [{lo*100:+.2f},{hi*100:+.2f}]")
 OUT["B_vintage_contrast"] = B
 
 # ── C. 딜 이후 출구 규칙 ────────────────────────────────────────────────────────────────────────────────────────────────
@@ -115,9 +126,15 @@ fi, fa = ip.groupby("org_uuid")["idt"].min(), acq.groupby("acquiree_uuid")["adt"
 pi_, pa_ = pre_rows["org_uuid"].map(fi), pre_rows["org_uuid"].map(fa)
 ipo_b = pi_.notna() & (pi_ <= pre_rows["dt"]); acq_b = pa_.notna() & (pa_ <= pre_rows["dt"])
 gap = (pre_rows["dt"] - pre_rows["exit_dt"]).dt.days
+# v2 (D067): sample_v2 excludes companies with an acquisition/IPO on or before the round date at construction, so pre_rows is empty by design;
+# the excluded counts are read from the sample manifest and the block below degrades gracefully.
+import yaml as _yaml, os
+_man = _yaml.safe_load(open(os.environ.get("P001_SAMPLE_MANIFEST", "/path/to/sample_v2_manifest.yaml"), encoding="utf-8"))
+C["population_rule_sample_v2"] = {"rule": "rows of companies with an acquisition or IPO dated on or before the round date are excluded at construction (same-day excluded)",
+                                  "manifest": {k: ({kk: (vv if isinstance(vv, (int, float, str, bool, list, dict, type(None))) else str(vv)) for kk, vv in v.items()} if isinstance(v, dict) else (v if isinstance(v, (int, float, str, bool, list, type(None))) else str(v))) for k, v in _man.items() if k != "columns"}}
 C["pre_deal_exit_records"] = {"n_rows_naeu": int(len(pre_rows)), "share_of_exit_ever_positives": round(float(len(pre_rows) / dn["exit_ever"].sum()), 4),
                               "acquisition_before_deal": int((acq_b & ~ipo_b).sum()), "ipo_before_deal": int((ipo_b & ~acq_b).sum()), "both": int((ipo_b & acq_b).sum()),
-                              "days_deal_after_exit_q10_q50_q90": [int(gap.quantile(q)) for q in (0.1, 0.5, 0.9)], "same_day": int((gap == 0).sum()),
+                              "days_deal_after_exit_q10_q50_q90": ([int(gap.quantile(q)) for q in (0.1, 0.5, 0.9)] if len(pre_rows) else None), "same_day": int((gap == 0).sum()),
                               "top_stages": {k: int(v) for k, v in pre_rows["stage"].value_counts().head(5).items()},
                               "share_of_exit3_positives_2020": round(float(((dn["dt"] <= END_FON) & (dn["exit3"] == 1) & (dn["exit_dt"] <= dn["dt"])).sum() / ((dn["dt"] <= END_FON) & (dn["exit3"] == 1)).sum()), 4),
                               "share_of_exit_ever_positives_2017": round(float(((dn["dt"] <= CUT) & (dn["exit_ever"] == 1) & (dn["exit_dt"] <= dn["dt"])).sum() / ((dn["dt"] <= CUT) & (dn["exit_ever"] == 1)).sum()), 4)}
@@ -131,7 +148,7 @@ for y, end in (("exit3", END_FON), ("exit_ever", CUT)):
 # Table 3 동류 비교 (P001-10 사양): FF 딜 ≤2017-10, exit_ever, 회사×연×섹터 셀 demean, 투자사 군집 부트 500 — GLOBAL 은 표본 파케이 전체
 import os
 HERE = os.path.dirname(os.path.abspath(__file__))
-allx = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet")); allx["dt"] = pd.to_datetime(allx["dt"])
+allx = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet")); allx["dt"] = pd.to_datetime(allx["dt"])
 exit_any = pd.concat([fa, fi], axis=1).min(axis=1); allx["exit_dt"] = allx["org_uuid"].map(exit_any)
 assert float((allx["exit_dt"].notna().astype(float) == allx["exit_ever"]).mean()) > 0.999
 allx["exit_ever_post"] = (allx["exit_ever"].astype(bool) & allx["exit_dt"].notna() & (allx["exit_dt"] > allx["dt"])).astype(float); allx["firm"] = allx["investor_uuid"]

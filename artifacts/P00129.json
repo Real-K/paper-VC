@@ -2,160 +2,160 @@
   "id": "P001-29",
   "title": "리뷰어 선제 검정 II — 기업 중복 제외 · 단계 집중 통제 · 단위 병기",
   "status": "GO",
-  "n": 2661,
+  "n": 2654,
   "estimates": {
-    "share_post_deals_overlapping_pre_companies": 0.2773,
+    "share_post_deals_overlapping_pre_companies": 0.2764,
     "T1_excl_overlap": {
-      "coef": 0.07893,
+      "coef": 0.08102,
       "ci95": [
-        0.0168,
-        0.1584
+        0.0136,
+        0.1466
       ],
-      "n": 1858,
-      "n_firms": 903,
+      "n": 1852,
+      "n_firms": 900,
       "sig": true,
-      "share_of_base": 0.768
+      "share_of_base": 0.789
     },
     "T1b_overlap_only": {
-      "coef": 0.19204,
+      "coef": 0.16522,
       "ci95": [
-        0.0724,
-        0.3059
+        0.0495,
+        0.2819
       ],
-      "n": 1667,
-      "n_firms": 789,
+      "n": 1657,
+      "n_firms": 785,
       "sig": true
     },
     "T2_late_stage_control": {
       "lp_any": {
         "no_late_ctrl": {
-          "coef": 0.49365,
+          "coef": 0.50459,
           "ci95": [
-            0.179,
-            0.7938
+            0.1795,
+            0.8495
           ],
-          "n": 378,
+          "n": 377,
           "n_firms": 287,
           "sig": true
         },
         "with_late_ctrl": {
-          "coef": 0.45588,
+          "coef": 0.4601,
           "ci95": [
-            -0.0856,
-            0.9661
+            -0.0557,
+            1.0003
           ],
-          "n": 378,
+          "n": 377,
           "n_firms": 287,
           "sig": false
         },
         "late_sh_own": {
-          "coef": 0.19952,
+          "coef": 0.20582,
           "ci95": [
-            0.0277,
-            0.3579
+            0.0416,
+            0.3619
           ],
-          "n": 378,
+          "n": 377,
           "n_firms": 287,
           "sig": true
         },
-        "pct_change": -7.7
+        "pct_change": -8.8
       },
       "lp_amt": {
         "no_late_ctrl": {
-          "coef": 2.46794,
+          "coef": 2.45863,
           "ci95": [
-            0.7824,
-            3.8902
+            0.9221,
+            3.855
           ],
           "n": 196,
           "n_firms": 148,
           "sig": true
         },
         "with_late_ctrl": {
-          "coef": 0.66206,
+          "coef": 0.67932,
           "ci95": [
-            -1.5774,
-            2.9639
+            -1.3833,
+            2.7378
           ],
           "n": 196,
           "n_firms": 148,
           "sig": false
         },
         "late_sh_own": {
-          "coef": 1.42316,
+          "coef": 1.41742,
           "ci95": [
-            0.7557,
-            2.2008
+            0.721,
+            2.1405
           ],
           "n": 196,
           "n_firms": 148,
           "sig": true
         },
-        "pct_change": -73.2
+        "pct_change": -72.4
       },
       "recv_q": {
         "no_late_ctrl": {
-          "coef": 1.16005,
+          "coef": 1.18895,
           "ci95": [
-            0.1961,
-            2.1294
+            0.2604,
+            2.1084
           ],
-          "n": 709,
-          "n_firms": 462,
+          "n": 707,
+          "n_firms": 461,
           "sig": true
         },
         "with_late_ctrl": {
-          "coef": 0.66341,
+          "coef": 0.71625,
           "ci95": [
-            -0.6928,
-            2.258
+            -0.8019,
+            2.317
           ],
-          "n": 709,
-          "n_firms": 462,
+          "n": 707,
+          "n_firms": 461,
           "sig": false
         },
         "late_sh_own": {
-          "coef": 0.58406,
+          "coef": 0.58977,
           "ci95": [
-            0.1501,
-            1.0615
+            0.1504,
+            1.0639
           ],
-          "n": 709,
-          "n_firms": 462,
+          "n": 707,
+          "n_firms": 461,
           "sig": true
         },
-        "pct_change": -42.8
+        "pct_change": -39.8
       }
     },
     "T3_unconditional_level": {
-      "coef": 0.14604,
+      "coef": 0.13839,
       "ci95": [
-        0.0792,
-        0.2131
+        0.0665,
+        0.2095
       ],
-      "n": 2164,
-      "n_firms": 990,
+      "n": 2155,
+      "n_firms": 987,
       "sig": true
     },
     "T3_unconditional_percentile": {
-      "coef": -0.03721,
+      "coef": -0.04253,
       "ci95": [
-        -0.11,
-        0.0284
+        -0.1151,
+        0.0241
       ],
-      "n": 2164,
-      "n_firms": 990,
+      "n": 2155,
+      "n_firms": 987,
       "sig": false
     }
   },
   "prediction": "T1 중복 20~40%, 제외 후 ≥50% 유지 · T2 lp_amt ≥40% 감소, lp_any/recv_q <30% · T3 레벨 +, 백분위 ≈0/−",
-  "verdict": "중복 비중 27.7% | T1 +0.0789 (77%) | T2 lp_any: +0.494→+0.456 (-8%) | T2 lp_amt: +2.468→+0.662 (-73%) | T2 recv_q: +1.160→+0.663 (-43%) | T3 레벨 +0.1460 vs 백분위 -0.0372 — **T1 통과 — 중복 제외 후 77% 유지, CI 0 배제. T2 lp_amt 는 late_sh 통제 시 유의 상실 → Panel C 펀드 크기 행을 '단계 집중과 분리 불가'로 재표기**",
+  "verdict": "중복 비중 27.6% | T1 +0.0810 (79%) | T2 lp_any: +0.505→+0.460 (-9%) | T2 lp_amt: +2.459→+0.679 (-72%) | T2 recv_q: +1.189→+0.716 (-40%) | T3 레벨 +0.1384 vs 백분위 -0.0425 — **T1 통과 — 중복 제외 후 79% 유지, CI 0 배제. T2 lp_amt 는 late_sh 통제 시 유의 상실 → Panel C 펀드 크기 행을 '단계 집중과 분리 불가'로 재표기**",
   "kill_met": false,
   "code": "p001_29_overlap_stage.py",
-  "sha256_16": "24e5e3a0f8988353",
+  "sha256_16": "8a2f695d2af692c0",
   "seed": 42,
-  "runtime_s": 31.6,
-  "date": "2026-09-08",
+  "runtime_s": 18.2,
+  "date": "2026-09-10",
   "stage": 7,
   "feeds": "내부리뷰 R2 대응 · Table 7/9",
   "slug": "overlap_stage",

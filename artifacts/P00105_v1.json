@@ -1,0 +1,47 @@
+{
+  "id": "P001-05",
+  "title": "귀결 A — 트랙레코드 랭킹 왜곡: 원시 vs 배치조정 (NA+EU)",
+  "status": "GO",
+  "n": 2686,
+  "estimates": {
+    "pct_diff_female": [
+      4.43,
+      [
+        2.131,
+        6.7743
+      ]
+    ],
+    "pct_diff_male": [
+      -0.34,
+      [
+        -0.5234,
+        -0.1538
+      ]
+    ],
+    "topq_female_share_raw": 0.0711,
+    "topq_female_share_adj": 0.0818,
+    "topq_change": [
+      1.07,
+      [
+        -0.0021,
+        0.0243
+      ]
+    ],
+    "spearman_raw_adj": 0.861,
+    "n_partners": 2686,
+    "n_female": 192,
+    "min_deals": 5
+  },
+  "prediction": "여성 백분위 +1~+5점 CI 배제; 상위 사분위 여성 비중 상대 +10%; 남성은 반대 부호 소폭",
+  "verdict": "여성 백분위 조정−원시 = +4.43점 [2.131, 6.7743] (남성 -0.34 [-0.5234, -0.1538]); 상위 사분위 여성 비중 7.1%→8.2% (Δ +1.07pp [-0.0021, 0.0243]); Spearman 0.861; 파트너 2686 (여성 192) — 귀결 A 성립: 원시 지표가 여성 파트너를 하향 랭킹",
+  "kill_met": false,
+  "code": "p001_05_trackrecord.py",
+  "sha256_16": "98d38a101a757eee",
+  "seed": 42,
+  "runtime_s": 1.1,
+  "date": "2026-09-03",
+  "stage": 3,
+  "feeds": "3막 A (GAP_MAP G3)",
+  "slug": "trackrecord",
+  "inputs": "sample_v1 (NA+EU, dt<=2017-10)"
+}

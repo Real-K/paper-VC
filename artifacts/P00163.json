@@ -1,0 +1,138 @@
+{
+  "id": "P001-63",
+  "title": "모집단 점검: 투자자 유형·귀속 인물 직책 구성 + VC 유형 한정 핵심 결과 4종",
+  "status": "OK",
+  "n": 126128,
+  "estimates": {
+    "A_investor_types": {
+      "share_deals_vc_type_naeu": 0.8683,
+      "share_deals_vc_type_global": 0.862,
+      "share_partners_at_vc_type_firms": 0.7193,
+      "first_type_shares_naeu": {
+        "venture_capital": 0.6095,
+        "private_equity_firm": 0.1218,
+        "accelerator": 0.0707,
+        "micro_vc": 0.0496,
+        "corporate_venture_capital": 0.0486,
+        "angel_group": 0.022,
+        "missing": 0.0214,
+        "family_investment_office": 0.0107,
+        "government_office": 0.01,
+        "hedge_fund": 0.009
+      },
+      "share_deals_missing_type_naeu": 0.0214
+    },
+    "B_partner_titles": {
+      "unique_pairs": 27981,
+      "share_by_bucket_pairs": {
+        "general/managing/founding partner": 0.2101,
+        "partner (other)": 0.1849,
+        "principal": 0.0322,
+        "director/managing director/VP": 0.1438,
+        "founder/CEO/chief": 0.0908,
+        "associate/analyst": 0.008,
+        "other title": 0.0801,
+        "no job record at the firm": 0.2502
+      },
+      "share_any_partner_title_pairs": 0.3949,
+      "share_by_bucket_deal_weighted": {
+        "general/managing/founding partner": 0.3692,
+        "partner (other)": 0.2466,
+        "principal": 0.0204,
+        "director/managing director/VP": 0.142,
+        "founder/CEO/chief": 0.0737,
+        "associate/analyst": 0.0048,
+        "other title": 0.0501,
+        "no job record at the firm": 0.0932
+      }
+    },
+    "C_vc_only_key_results": {
+      "matching_cell0": {
+        "coef_pp": 7.04,
+        "ci95_pp": [
+          5.55,
+          8.58
+        ],
+        "n": 35232,
+        "n_cells": 3250
+      },
+      "matching_cell_stage": {
+        "coef_pp": 0.669,
+        "ci95_pp": [
+          -0.6,
+          1.93
+        ],
+        "n": 8461,
+        "n_cells": 2921
+      },
+      "peer_exit_ever_2017_cell_cat_NAEU": {
+        "coef_pp": -4.797,
+        "ci95_pp": [
+          -11.33,
+          0.18
+        ],
+        "n": 398,
+        "n_cells": 161
+      },
+      "peer_exit_ever_2017_cell_cat_GLOBAL": {
+        "coef_pp": -6.725,
+        "ci95_pp": [
+          -12.38,
+          -0.82
+        ],
+        "n": 437,
+        "n_cells": 174
+      },
+      "within_partner_exit3_2020_no_controls": {
+        "ffp": {
+          "coef": 0.01032,
+          "ci95": [
+            -0.0157,
+            0.0318
+          ],
+          "mde80": 0.0344
+        },
+        "ff": {
+          "coef": -0.02636,
+          "ci95": [
+            -0.0352,
+            -0.0179
+          ]
+        },
+        "n": 45734,
+        "n_partners": 2993,
+        "n_female_partners": 367
+      },
+      "rank_shift_female_sample_end": {
+        "coef": 3.95,
+        "ci95": [
+          1.488,
+          6.527
+        ],
+        "n_partners": 2459,
+        "n_female": 174
+      }
+    },
+    "prediction_check": {
+      "A_vc_share_in_[0.55,0.80]": false,
+      "B_partner_title_in_[0.45,0.75]": false,
+      "C_ladder_stage_within_1pp_of_0.66": true,
+      "C_peer_global_negative": true,
+      "C_beta_int_in_[-2,3]": true,
+      "C_rank_shift_in_[2,6]": true
+    }
+  },
+  "prediction": "VC 비중 0.55–0.80; partner 직함 0.45–0.75; VC 한정 결과 부호·크기 유지",
+  "verdict": "VC 유형 딜 비중 0.87 · 'partner' 직함 쌍 비중 0.39 · VC 한정: 사다리 cell_stage +0.67 · 동류 GLOBAL -6.72 [-12.38,-0.82] · β_int exit3 +1.03 · 순위 이동 +3.95 (예측 적중 4/6)",
+  "kill_met": false,
+  "code": "p001_63_vc_population_check.py",
+  "sha256_16": "9bafdf501e0a0cc3",
+  "seed": 42,
+  "runtime_s": 42.6,
+  "date": "2026-09-10",
+  "stage": 8,
+  "feeds": "Table 1 · §2 모집단 문단 · Appendix Table IA (population check)",
+  "slug": "vc_population_check",
+  "rng_seed": 20260963,
+  "sample": "sample_v2"
+}

@@ -2,7 +2,7 @@
   "id": "P001-46",
   "title": "P8: 헤드라인 셀 내 사전 배정 공변량 균형 검정 (Rothstein 유사물) — 결합 순열 p · 크기 보정 · 양성 대조 · MDE",
   "status": "OK",
-  "n": 430,
+  "n": 427,
   "estimates": {
     "coverage": {
       "age": 1.0,
@@ -16,130 +16,130 @@
       "serial_share": 1.0,
       "hq_us": 1.0,
       "ln_round_size": 0.873,
-      "ln_next_round_size": 0.634
+      "ln_next_round_size": 0.63
     },
     "FF_cell_cat_pre": {
-      "n_mixed_cells": 174,
-      "n_deals": 430,
+      "n_mixed_cells": 173,
+      "n_deals": 427,
       "by_cov": {
         "age": {
-          "coef": -0.10181,
+          "coef": -0.1101,
           "ci95": [
-            -0.4269,
-            0.1661
+            -0.4056,
+            0.1712
           ],
-          "std_diff": -0.0298,
-          "se_boot": 0.1476,
-          "mde80_std": 0.121,
-          "n": 430,
+          "std_diff": -0.0329,
+          "se_boot": 0.15071,
+          "mde80_std": 0.126,
+          "n": 427,
           "sig": false
         },
         "ln_prior_rounds": {
-          "coef": -0.05977,
+          "coef": -0.05967,
           "ci95": [
-            -0.1318,
-            0.0067
+            -0.1229,
+            0.0117
           ],
-          "std_diff": -0.0961,
-          "se_boot": 0.03452,
-          "mde80_std": 0.155,
-          "n": 430,
+          "std_diff": -0.0958,
+          "se_boot": 0.03516,
+          "mde80_std": 0.158,
+          "n": 427,
           "sig": false
         },
         "ln_prior_capital": {
-          "coef": -0.64567,
+          "coef": -0.64758,
           "ci95": [
-            -1.7433,
-            0.3286
+            -1.7369,
+            0.2718
           ],
-          "std_diff": -0.0818,
-          "se_boot": 0.51255,
-          "mde80_std": 0.182,
-          "n": 430,
+          "std_diff": -0.082,
+          "se_boot": 0.53423,
+          "mde80_std": 0.189,
+          "n": 427,
           "sig": false
         },
         "emp_band": {
-          "coef": -0.15222,
+          "coef": -0.15106,
           "ci95": [
-            -0.304,
-            -0.0013
+            -0.3075,
+            -0.0085
           ],
-          "std_diff": -0.0855,
-          "se_boot": 0.07598,
-          "mde80_std": 0.12,
-          "n": 430,
+          "std_diff": -0.0846,
+          "se_boot": 0.07977,
+          "mde80_std": 0.125,
+          "n": 427,
           "sig": true
         },
         "prev_investor_count": {
-          "coef": -0.50412,
+          "coef": -0.50461,
           "ci95": [
-            -0.9139,
-            -0.207
+            -0.9227,
+            -0.2033
           ],
-          "std_diff": -0.1746,
-          "se_boot": 0.19316,
-          "mde80_std": 0.187,
-          "n": 269,
+          "std_diff": -0.1741,
+          "se_boot": 0.18755,
+          "mde80_std": 0.181,
+          "n": 266,
           "sig": true
         },
         "n_founders": {
-          "coef": -0.21233,
+          "coef": -0.2085,
           "ci95": [
-            -0.4297,
-            -0.0331
+            -0.4231,
+            -0.0068
           ],
-          "std_diff": -0.1444,
-          "se_boot": 0.10483,
-          "mde80_std": 0.2,
-          "n": 430,
+          "std_diff": -0.1421,
+          "se_boot": 0.10035,
+          "mde80_std": 0.192,
+          "n": 427,
           "sig": true
         },
         "n_female_founders": {
-          "coef": 0.04656,
+          "coef": 0.04682,
           "ci95": [
-            0.0097,
-            0.0925
+            0.012,
+            0.0907
           ],
-          "std_diff": 0.0999,
-          "se_boot": 0.02165,
-          "mde80_std": 0.13,
-          "n": 430,
+          "std_diff": 0.1002,
+          "se_boot": 0.0214,
+          "mde80_std": 0.128,
+          "n": 427,
           "sig": true
         },
         "founder_degree_share": {
-          "coef": -0.00317,
+          "coef": -0.00326,
           "ci95": [
             -0.0383,
-            0.0291
+            0.0281
           ],
-          "std_diff": -0.0106,
-          "se_boot": 0.0174,
-          "mde80_std": 0.163,
-          "n": 430,
+          "std_diff": -0.0109,
+          "se_boot": 0.0167,
+          "mde80_std": 0.156,
+          "n": 427,
           "sig": false
         },
         "serial_share": {
-          "coef": -0.03084,
+          "coef": -0.03081,
           "ci95": [
-            -0.0725,
-            0.0055
+            -0.0741,
+            0.0074
           ],
-          "std_diff": -0.078,
-          "se_boot": 0.02043,
-          "mde80_std": 0.145,
-          "n": 430,
+          "std_diff": -0.0779,
+          "se_boot": 0.02076,
+          "mde80_std": 0.147,
+          "n": 427,
           "sig": false
         },
         "hq_us": {
-          "coef": -0.00927,
+          "coef": -0.00932,
           "ci95": [
-            -0.0366,
-            0.0168
+            -0.0384,
+            0.0148
           ],
-          "std_diff": -0.0252,
-          "se_boot": 0.01345,
-          "mde80_std": 0.102,
-          "n": 430,
+          "std_diff": -0.0253,
+          "se_boot": 0.01398,
+          "mde80_std": 0.106,
+          "n": 427,
           "sig": false
         }
       },
@@ -156,314 +156,167 @@
           "serial_share",
           "hq_us"
         ],
-        "n_complete": 269,
-        "mahalanobis": 16.279,
-        "p_perm": 0.658,
+        "n_complete": 266,
+        "mahalanobis": 18.109,
+        "p_perm": 0.552,
         "n_perm": 500,
-        "null_p95": 46.31,
-        "size_calibration_reject_rate": 0.09,
+        "null_p95": 45.113,
+        "size_calibration_reject_rate": 0.06,
         "n_cal": 100
       }
     },
     "FF_cell_cat_post": {
-      "n_mixed_cells": 174,
-      "n_deals": 430,
+      "n_mixed_cells": 173,
+      "n_deals": 427,
       "by_cov": {
         "ln_round_size": {
-          "coef": -0.13864,
+          "coef": -0.13939,
           "ci95": [
-            -0.255,
-            -0.0304
+            -0.2825,
+            -0.0257
           ],
-          "std_diff": -0.0782,
-          "se_boot": 0.06066,
-          "mde80_std": 0.096,
-          "n": 387,
+          "std_diff": -0.0785,
+          "se_boot": 0.06419,
+          "mde80_std": 0.101,
+          "n": 384,
           "sig": true
         },
         "ln_next_round_size": {
-          "coef": -0.05172,
+          "coef": -0.05252,
           "ci95": [
-            -0.231,
-            0.1209
+            -0.2188,
+            0.1205
           ],
-          "std_diff": -0.0325,
-          "se_boot": 0.08961,
-          "mde80_std": 0.158,
-          "n": 295,
+          "std_diff": -0.033,
+          "se_boot": 0.09063,
+          "mde80_std": 0.159,
+          "n": 291,
           "sig": false
         }
       }
     },
     "FF_cell_stage_pre": {
-      "n_mixed_cells": 155,
-      "n_deals": 336,
+      "n_mixed_cells": 154,
+      "n_deals": 333,
       "by_cov": {
         "age": {
-          "coef": 0.08898,
+          "coef": 0.0705,
           "ci95": [
-            -0.0235,
-            0.2548
+            -0.0267,
+            0.1881
           ],
-          "std_diff": 0.025,
-          "se_boot": 0.06933,
-          "mde80_std": 0.055,
-          "n": 336,
+          "std_diff": 0.0204,
+          "se_boot": 0.05649,
+          "mde80_std": 0.046,
+          "n": 333,
           "sig": false
         },
         "ln_prior_rounds": {
-          "coef": 0.00734,
+          "coef": 0.00799,
           "ci95": [
-            -0.015,
-            0.0382
+            -0.0152,
+            0.0359
           ],
-          "std_diff": 0.0118,
-          "se_boot": 0.01382,
-          "mde80_std": 0.062,
-          "n": 336,
+          "std_diff": 0.0128,
+          "se_boot": 0.01324,
+          "mde80_std": 0.059,
+          "n": 333,
           "sig": false
         },
         "ln_prior_capital": {
-          "coef": -0.10204,
+          "coef": -0.09834,
           "ci95": [
-            -0.569,
-            0.3149
+            -0.6391,
+            0.2913
           ],
-          "std_diff": -0.013,
-          "se_boot": 0.23059,
-          "mde80_std": 0.082,
-          "n": 336,
+          "std_diff": -0.0125,
+          "se_boot": 0.2361,
+          "mde80_std": 0.084,
+          "n": 333,
           "sig": false
         },
         "emp_band": {
-          "coef": 0.03252,
+          "coef": 0.03893,
           "ci95": [
-            -0.0371,
-            0.1414
+            -0.0375,
+            0.1302
           ],
-          "std_diff": 0.0178,
-          "se_boot": 0.04582,
-          "mde80_std": 0.07,
-          "n": 336,
+          "std_diff": 0.0213,
+          "se_boot": 0.04437,
+          "mde80_std": 0.068,
+          "n": 333,
           "sig": false
         },
         "prev_investor_count": {
-          "coef": -0.17406,
+          "coef": -0.15571,
           "ci95": [
-            -0.4375,
-            0.0289
+            -0.4139,
+            0.0208
           ],
-          "std_diff": -0.0593,
-          "se_boot": 0.11915,
-          "mde80_std": 0.114,
-          "n": 207,
+          "std_diff": -0.0527,
+          "se_boot": 0.11251,
+          "mde80_std": 0.107,
+          "n": 204,
           "sig": false
         },
         "n_founders": {
-          "coef": -0.0122,
+          "coef": -0.00205,
           "ci95": [
-            -0.1319,
-            0.0684
+            -0.0995,
+            0.0758
           ],
-          "std_diff": -0.0101,
-          "se_boot": 0.05207,
-          "mde80_std": 0.121,
-          "n": 336,
+          "std_diff": -0.0017,
+          "se_boot": 0.04763,
+          "mde80_std": 0.111,
+          "n": 333,
           "sig": false
         },
         "n_female_founders": {
           "coef": 0.0,
           "ci95": [
-            -0.0169,
-            0.0196
+            -0.0204,
+            0.0149
           ],
           "std_diff": 0.0,
-          "se_boot": 0.00891,
+          "se_boot": 0.00896,
           "mde80_std": 0.054,
-          "n": 336,
+          "n": 333,
           "sig": false
         },
         "founder_degree_share": {
-          "coef": -0.00708,
+          "coef": -0.00659,
           "ci95": [
-            -0.0375,
-            0.0192
+            -0.0359,
+            0.0147
           ],
-          "std_diff": -0.0228,
-          "se_boot": 0.01421,
-          "mde80_std": 0.128,
-          "n": 336,
+          "std_diff": -0.0212,
+          "se_boot": 0.01398,
+          "mde80_std": 0.126,
+          "n": 333,
           "sig": false
         },
         "serial_share": {
-          "coef": -0.00021,
+          "coef": 0.00156,
           "ci95": [
-            -0.0414,
-            0.028
-          ],
-          "std_diff": -0.0005,
-          "se_boot": 0.01763,
-          "mde80_std": 0.124,
-          "n": 336,
-          "sig": false
-        },
-        "hq_us": {
-          "coef": -0.0122,
-          "ci95": [
-            -0.0331,
-            0.0
-          ],
-          "std_diff": -0.0312,
-          "se_boot": 0.00912,
-          "mde80_std": 0.065,
-          "n": 336,
-          "sig": false
-        }
-      },
-      "joint": {
-        "covariates": [
-          "age",
-          "ln_prior_rounds",
-          "ln_prior_capital",
-          "emp_band",
-          "prev_investor_count",
-          "n_founders",
-          "n_female_founders",
-          "founder_degree_share",
-          "serial_share",
-          "hq_us"
-        ],
-        "n_complete": 207,
-        "mahalanobis": 5.367,
-        "p_perm": 0.978,
-        "n_perm": 500,
-        "null_p95": 14488408.181,
-        "size_calibration_reject_rate": 0.11,
-        "n_cal": 100
-      }
-    },
-    "ALL_cell_stage_pre": {
-      "n_mixed_cells": 974,
-      "n_deals": 2532,
-      "by_cov": {
-        "age": {
-          "coef": -0.02006,
-          "ci95": [
-            -0.1815,
-            0.1471
-          ],
-          "std_diff": -0.0054,
-          "se_boot": 0.0851,
-          "mde80_std": 0.065,
-          "n": 2530,
-          "sig": false
-        },
-        "ln_prior_rounds": {
-          "coef": -0.00598,
-          "ci95": [
-            -0.0262,
-            0.0136
-          ],
-          "std_diff": -0.0094,
-          "se_boot": 0.01005,
-          "mde80_std": 0.044,
-          "n": 2532,
-          "sig": false
-        },
-        "ln_prior_capital": {
-          "coef": 0.09729,
-          "ci95": [
-            -0.1472,
-            0.366
-          ],
-          "std_diff": 0.0124,
-          "se_boot": 0.12894,
-          "mde80_std": 0.046,
-          "n": 2532,
-          "sig": false
-        },
-        "emp_band": {
-          "coef": -0.02724,
-          "ci95": [
-            -0.0859,
-            0.0393
-          ],
-          "std_diff": -0.0145,
-          "se_boot": 0.03164,
-          "mde80_std": 0.047,
-          "n": 2529,
-          "sig": false
-        },
-        "prev_investor_count": {
-          "coef": 0.10041,
-          "ci95": [
-            -0.0442,
-            0.2513
-          ],
-          "std_diff": 0.029,
-          "se_boot": 0.07838,
-          "mde80_std": 0.063,
-          "n": 1568,
-          "sig": false
-        },
-        "n_founders": {
-          "coef": 0.00429,
-          "ci95": [
-            -0.051,
-            0.0652
+            -0.0332,
+            0.0317
           ],
           "std_diff": 0.0039,
-          "se_boot": 0.02983,
-          "mde80_std": 0.076,
-          "n": 2532,
-          "sig": false
-        },
-        "n_female_founders": {
-          "coef": -0.00453,
-          "ci95": [
-            -0.0263,
-            0.0174
-          ],
-          "std_diff": -0.0091,
-          "se_boot": 0.01104,
-          "mde80_std": 0.062,
-          "n": 2532,
-          "sig": false
-        },
-        "founder_degree_share": {
-          "coef": -0.00934,
-          "ci95": [
-            -0.0277,
-            0.0055
-          ],
-          "std_diff": -0.0243,
-          "se_boot": 0.00877,
-          "mde80_std": 0.064,
-          "n": 2532,
-          "sig": false
-        },
-        "serial_share": {
-          "coef": -0.01493,
-          "ci95": [
-            -0.0363,
-            0.0061
-          ],
-          "std_diff": -0.0367,
-          "se_boot": 0.01043,
-          "mde80_std": 0.072,
-          "n": 2532,
+          "se_boot": 0.01612,
+          "mde80_std": 0.113,
+          "n": 333,
           "sig": false
         },
         "hq_us": {
-          "coef": -0.00995,
+          "coef": -0.0123,
           "ci95": [
-            -0.0247,
-            0.0016
+            -0.0328,
+            0.0
           ],
-          "std_diff": -0.025,
-          "se_boot": 0.00684,
-          "mde80_std": 0.048,
-          "n": 2532,
+          "std_diff": -0.0313,
+          "se_boot": 0.00896,
+          "mde80_std": 0.064,
+          "n": 333,
           "sig": false
         }
       },
@@ -480,71 +333,218 @@
           "serial_share",
           "hq_us"
         ],
-        "n_complete": 1566,
-        "mahalanobis": 14.577,
-        "p_perm": 0.236,
+        "n_complete": 204,
+        "mahalanobis": 5.254,
+        "p_perm": 0.954,
         "n_perm": 500,
-        "null_p95": 22.584,
+        "null_p95": 22878111.472,
         "size_calibration_reject_rate": 0.03,
         "n_cal": 100
       }
     },
+    "ALL_cell_stage_pre": {
+      "n_mixed_cells": 973,
+      "n_deals": 2527,
+      "by_cov": {
+        "age": {
+          "coef": -0.01758,
+          "ci95": [
+            -0.178,
+            0.1327
+          ],
+          "std_diff": -0.0048,
+          "se_boot": 0.08443,
+          "mde80_std": 0.064,
+          "n": 2525,
+          "sig": false
+        },
+        "ln_prior_rounds": {
+          "coef": -0.00574,
+          "ci95": [
+            -0.0263,
+            0.0144
+          ],
+          "std_diff": -0.009,
+          "se_boot": 0.0108,
+          "mde80_std": 0.047,
+          "n": 2527,
+          "sig": false
+        },
+        "ln_prior_capital": {
+          "coef": 0.0977,
+          "ci95": [
+            -0.1466,
+            0.3618
+          ],
+          "std_diff": 0.0125,
+          "se_boot": 0.12942,
+          "mde80_std": 0.046,
+          "n": 2527,
+          "sig": false
+        },
+        "emp_band": {
+          "coef": -0.02665,
+          "ci95": [
+            -0.0962,
+            0.0333
+          ],
+          "std_diff": -0.0141,
+          "se_boot": 0.03141,
+          "mde80_std": 0.047,
+          "n": 2524,
+          "sig": false
+        },
+        "prev_investor_count": {
+          "coef": 0.10147,
+          "ci95": [
+            -0.0461,
+            0.267
+          ],
+          "std_diff": 0.0292,
+          "se_boot": 0.07924,
+          "mde80_std": 0.064,
+          "n": 1564,
+          "sig": false
+        },
+        "n_founders": {
+          "coef": 0.00428,
+          "ci95": [
+            -0.0508,
+            0.0601
+          ],
+          "std_diff": 0.0039,
+          "se_boot": 0.02782,
+          "mde80_std": 0.071,
+          "n": 2527,
+          "sig": false
+        },
+        "n_female_founders": {
+          "coef": -0.00567,
+          "ci95": [
+            -0.0296,
+            0.0168
+          ],
+          "std_diff": -0.0113,
+          "se_boot": 0.01181,
+          "mde80_std": 0.066,
+          "n": 2527,
+          "sig": false
+        },
+        "founder_degree_share": {
+          "coef": -0.00902,
+          "ci95": [
+            -0.0262,
+            0.0078
+          ],
+          "std_diff": -0.0234,
+          "se_boot": 0.00874,
+          "mde80_std": 0.064,
+          "n": 2527,
+          "sig": false
+        },
+        "serial_share": {
+          "coef": -0.01472,
+          "ci95": [
+            -0.0348,
+            0.0058
+          ],
+          "std_diff": -0.0362,
+          "se_boot": 0.01061,
+          "mde80_std": 0.073,
+          "n": 2527,
+          "sig": false
+        },
+        "hq_us": {
+          "coef": -0.00994,
+          "ci95": [
+            -0.0278,
+            0.0043
+          ],
+          "std_diff": -0.0249,
+          "se_boot": 0.00756,
+          "mde80_std": 0.053,
+          "n": 2527,
+          "sig": false
+        }
+      },
+      "joint": {
+        "covariates": [
+          "age",
+          "ln_prior_rounds",
+          "ln_prior_capital",
+          "emp_band",
+          "prev_investor_count",
+          "n_founders",
+          "n_female_founders",
+          "founder_degree_share",
+          "serial_share",
+          "hq_us"
+        ],
+        "n_complete": 1562,
+        "mahalanobis": 17.484,
+        "p_perm": 0.148,
+        "n_perm": 500,
+        "null_p95": 21.53,
+        "size_calibration_reject_rate": 0.05,
+        "n_cal": 100
+      }
+    },
     "ALL_cell_cat_post": {
-      "n_mixed_cells": 1165,
-      "n_deals": 4237,
+      "n_mixed_cells": 1161,
+      "n_deals": 4214,
       "by_cov": {
         "ln_round_size": {
-          "coef": -0.05753,
+          "coef": -0.05963,
           "ci95": [
-            -0.1431,
-            0.0207
+            -0.1379,
+            0.0112
           ],
-          "std_diff": -0.0334,
-          "se_boot": 0.04134,
-          "mde80_std": 0.067,
-          "n": 3808,
+          "std_diff": -0.0346,
+          "se_boot": 0.03917,
+          "mde80_std": 0.064,
+          "n": 3785,
           "sig": false
         },
         "ln_next_round_size": {
-          "coef": -0.03425,
+          "coef": -0.04181,
           "ci95": [
-            -0.1264,
-            0.0742
+            -0.1493,
+            0.0499
           ],
-          "std_diff": -0.0221,
-          "se_boot": 0.05072,
-          "mde80_std": 0.092,
-          "n": 2810,
+          "std_diff": -0.027,
+          "se_boot": 0.05014,
+          "mde80_std": 0.091,
+          "n": 2776,
           "sig": false
         }
       }
     },
     "ALL_cell_stage_post": {
-      "n_mixed_cells": 974,
-      "n_deals": 2532,
+      "n_mixed_cells": 973,
+      "n_deals": 2527,
       "by_cov": {
         "ln_round_size": {
-          "coef": 0.00375,
+          "coef": 0.00148,
           "ci95": [
-            -0.0379,
-            0.0514
+            -0.0484,
+            0.0458
           ],
-          "std_diff": 0.002,
-          "se_boot": 0.02374,
-          "mde80_std": 0.036,
-          "n": 2184,
+          "std_diff": 0.0008,
+          "se_boot": 0.02436,
+          "mde80_std": 0.037,
+          "n": 2179,
           "sig": false
         },
         "ln_next_round_size": {
-          "coef": -0.00893,
+          "coef": -0.01123,
           "ci95": [
-            -0.0696,
-            0.0641
+            -0.0783,
+            0.0489
           ],
-          "std_diff": -0.0056,
-          "se_boot": 0.03409,
-          "mde80_std": 0.06,
-          "n": 1679,
+          "std_diff": -0.0071,
+          "se_boot": 0.03317,
+          "mde80_std": 0.059,
+          "n": 1665,
           "sig": false
         }
       }
@@ -558,17 +558,17 @@
     }
   },
   "prediction": "FF cat 결합 p>0.10, |d|<0.25; 전 딜 stage p>0.05; 크기 보정 0.02–0.09; 양성 대조(전 딜 cat 라운드 규모) 검출",
-  "verdict": "FF 회사×연×섹터: 혼합 셀 174 · 딜 430 · 결합 p 0.658 · 최대 |d| 0.17 · 크기 보정 기각률 0.09 | FF +단계: 결합 p 0.978 | 전 딜 +단계: 셀 974 · 딜 2532 · 결합 p 0.236 · 최대 |d| 0.04 | 양성 대조(전 딜 cat) log 라운드 규모 -0.058 sig False — 균형 실패 판: 없음 (예측 적중 4/5)",
+  "verdict": "FF 회사×연×섹터: 혼합 셀 173 · 딜 427 · 결합 p 0.552 · 최대 |d| 0.17 · 크기 보정 기각률 0.06 | FF +단계: 결합 p 0.954 | 전 딜 +단계: 셀 973 · 딜 2527 · 결합 p 0.148 · 최대 |d| 0.04 | 양성 대조(전 딜 cat) log 라운드 규모 -0.060 sig False — 균형 실패 판: 없음 (예측 적중 4/5)",
   "kill_met": false,
   "code": "p001_46_balance_rothstein.py",
   "sha256_16": "64fc05532842162e",
   "seed": 42,
-  "runtime_s": 4807.4,
-  "date": "2026-09-09",
+  "runtime_s": 2768.8,
+  "date": "2026-09-10",
   "stage": 7,
   "feeds": "v6 설계 제안 P8 / R2 Track A′ 균형검정",
   "slug": "balance_rothstein",
   "builds_on": "P001-10/40",
-  "common_sha256_16": "a63e7b62854b47c6",
-  "v6_common_sha256_16": "0e382e764d14fdc8"
+  "common_sha256_16": "73d12fb69e9b9b73",
+  "v6_common_sha256_16": "70e0b9a1fa1ae389"
 }

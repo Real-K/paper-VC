@@ -5,7 +5,7 @@
 (M-A) 창업자 경로의 부산물인지, (M-B) 연차·코호트인지, (M-C 배정 vs M-D 선호)의 잔여인지 분해.
 POSITIONING_NOTE 3막 구조의 2막 — 어느 결과가 나와도 기록하고, M-C/M-D 는 직접 분리 불가를
 전제로 Becker 한방향 검정(제약이면 밀어넣어진 구간에서 양의 선택 → 성과 우위)까지만 간다.
-[데이터] papers/P001_gender_screening/05_data/sample_v1.parquet (정본) + 연차 프록시는
+[데이터] papers/P001_gender_screening/05_data/sample_v2.parquet (정본) + 연차 프록시는
 cores_v1 partners×rounds 전체 이력(2010 이전 포함)의 (파트너,투자사)별 첫 귀속 시점 — 혼합 입력 명시.
 [설계]
   G0 기술: 남녀 파트너의 연차 분포 (평균·중위).
@@ -40,9 +40,9 @@ rng = np.random.default_rng(42)
 NB = 500
 EARLY = {"seed", "angel", "pre_seed", "equity_crowdfunding", "convertible_note"}
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SAMPLE = os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet")
+SAMPLE = os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet")
 if not os.path.exists(SAMPLE):
-    SAMPLE = os.path.abspath(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+    SAMPLE = os.path.abspath(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
 
 d = pd.read_parquet(SAMPLE)
 d["early"] = d["stage"].isin(EARLY).astype(float)
@@ -157,5 +157,5 @@ emit("I-81", "스테이지 skew 메커니즘 배터리 — 창업자 경로·연
      prediction="ff=0 β≥+2pp 배제; 연차 감쇠 30~60% 후 잔존; 기울기 차 CI 0 포함; Becker fon ≥0",
      verdict=verdict, kill_met=False, n=n0,
      extra={"stage": 2, "feeds": "P001 2막 (POSITIONING_NOTE)", "slug": "stage_mechanism",
-            "inputs": "sample_v1.parquet + cores_v1 first_attr(연차)"})
+            "inputs": "sample_v2.parquet + cores_v1 first_attr(연차)"})
 print("done")

@@ -19,7 +19,7 @@ import pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.environ.get("P001_PROJECT_ROOT", "/path/to/project-root")   # holds shared/data/processed (derived, not redistributed)
 D = os.path.join(ROOT, "shared", "data", "processed", "ch_officers_v1")
-SAMPLE = os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet")
+SAMPLE = os.environ.get("P001_SAMPLE_V1", "/path/to/sample_v1.parquet")
 CB = os.path.join(ROOT, "..", "data", "crunchbase")
 
 

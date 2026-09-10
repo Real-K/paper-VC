@@ -2,263 +2,263 @@
   "id": "P001-54",
   "title": "R5-1: 파트너 내 결과 검정 — 같은 파트너의 FF vs 비FF 딜의 시장 벤치마크 잔차, 파트너 성별 교차항 (파트너 FE·딜 통제·파트너 군집)",
   "status": "GO",
-  "n": 49847,
+  "n": 49595,
   "estimates": {
     "A_exit3": {
       "sample": {
         "y": "exit3",
         "deals_through": "2020-10-31",
-        "n_deals": 49847,
-        "n_deals_2015plus": 33142,
-        "n_partners": 3448,
-        "n_female_partners": 418,
-        "n_ff_deals_female_partners": 1519,
-        "n_nonff_deals_female_partners": 3311,
-        "base_y": 0.1569,
-        "sd_r": 0.339,
+        "n_deals": 49595,
+        "n_deals_2015plus": 32979,
+        "n_partners": 3430,
+        "n_female_partners": 416,
+        "n_ff_deals_female_partners": 1513,
+        "n_nonff_deals_female_partners": 3295,
+        "base_y": 0.1535,
+        "sd_r": 0.3359,
         "raw_within_partner_gap": {
-          "female": -0.0243,
-          "male": -0.0128
+          "female": -0.0248,
+          "male": -0.0126
         }
       },
       "main_partnerFE_clPartner": {
-        "n": 49835,
-        "n_firms": 3436,
+        "n": 49583,
+        "n_firms": 3418,
         "ff": {
-          "coef": -0.02551,
+          "coef": -0.02687,
           "ci95": [
-            -0.0347,
-            -0.0168
+            -0.0354,
+            -0.0176
           ],
           "sig": true,
-          "se_boot": 0.00461,
-          "mde80": 0.0129,
-          "beta_std": -0.0752,
+          "se_boot": 0.00443,
+          "mde80": 0.0124,
+          "beta_std": -0.08,
           "within_pm0.05": true
         },
         "ffp": {
-          "coef": 0.00482,
+          "coef": 0.00473,
           "ci95": [
-            -0.0182,
-            0.0279
+            -0.0237,
+            0.0293
           ],
           "sig": false,
-          "se_boot": 0.0125,
-          "mde80": 0.035,
-          "beta_std": 0.0142,
+          "se_boot": 0.01304,
+          "mde80": 0.0365,
+          "beta_std": 0.0141,
           "within_pm0.05": true
         },
-        "sd_r": 0.33902,
-        "n_partners": 3448,
-        "n_female_partners": 418,
+        "sd_r": 0.33591,
+        "n_partners": 3430,
+        "n_female_partners": 416,
         "fe": "partner_uuid",
         "cluster": "partner_uuid"
       },
       "main_partnerFE_clFirm": {
-        "n": 49835,
-        "n_firms": 2397,
+        "n": 49583,
+        "n_firms": 2384,
         "ff": {
-          "coef": -0.02551,
+          "coef": -0.02687,
           "ci95": [
-            -0.0346,
-            -0.017
+            -0.038,
+            -0.0176
           ],
           "sig": true,
-          "se_boot": 0.0045,
-          "mde80": 0.0126,
-          "beta_std": -0.0752,
+          "se_boot": 0.00481,
+          "mde80": 0.0135,
+          "beta_std": -0.08,
           "within_pm0.05": true
         },
         "ffp": {
-          "coef": 0.00482,
+          "coef": 0.00473,
           "ci95": [
-            -0.0231,
-            0.0311
+            -0.0205,
+            0.031
           ],
           "sig": false,
-          "se_boot": 0.01376,
-          "mde80": 0.0385,
-          "beta_std": 0.0142,
+          "se_boot": 0.01299,
+          "mde80": 0.0364,
+          "beta_std": 0.0141,
           "within_pm0.05": true
         },
-        "sd_r": 0.33902,
-        "n_partners": 3448,
-        "n_female_partners": 418,
+        "sd_r": 0.33591,
+        "n_partners": 3430,
+        "n_female_partners": 416,
         "fe": "partner_uuid",
         "cluster": "firm"
       },
       "V1_firmYearFE": {
-        "n": 46152,
-        "n_firms": 1725,
+        "n": 45934,
+        "n_firms": 1714,
         "ff": {
-          "coef": -0.027,
+          "coef": -0.02786,
           "ci95": [
-            -0.0373,
-            -0.0167
+            -0.0378,
+            -0.0179
           ],
           "sig": true,
-          "se_boot": 0.00509,
-          "mde80": 0.0142,
-          "beta_std": -0.0796,
+          "se_boot": 0.00524,
+          "mde80": 0.0147,
+          "beta_std": -0.0829,
           "within_pm0.05": true
         },
         "ffp": {
-          "coef": 0.00911,
+          "coef": 0.00836,
           "ci95": [
-            -0.0229,
-            0.0382
+            -0.0179,
+            0.0341
           ],
           "sig": false,
-          "se_boot": 0.01449,
-          "mde80": 0.0406,
-          "beta_std": 0.0269,
+          "se_boot": 0.01393,
+          "mde80": 0.039,
+          "beta_std": 0.0249,
           "within_pm0.05": true
         },
         "fp": {
-          "coef": -0.01333,
+          "coef": -0.01245,
           "ci95": [
-            -0.0325,
-            0.0042
+            -0.0322,
+            0.0066
           ],
           "sig": false,
-          "se_boot": 0.00937,
-          "mde80": 0.0262
+          "se_boot": 0.00957,
+          "mde80": 0.0268
         },
-        "sd_r": 0.33902,
-        "n_partners": 3448,
-        "n_female_partners": 418,
+        "sd_r": 0.33591,
+        "n_partners": 3430,
+        "n_female_partners": 416,
         "fe": "firm_year",
         "cluster": "firm"
       },
       "V2_partner2yFE": {
-        "n": 46458,
-        "n_firms": 3136,
+        "n": 46236,
+        "n_firms": 3122,
         "ff": {
-          "coef": -0.02665,
+          "coef": -0.0282,
           "ci95": [
-            -0.0367,
-            -0.0177
+            -0.0372,
+            -0.0196
           ],
           "sig": true,
-          "se_boot": 0.00484,
-          "mde80": 0.0136,
-          "beta_std": -0.0786,
+          "se_boot": 0.00457,
+          "mde80": 0.0128,
+          "beta_std": -0.084,
           "within_pm0.05": true
         },
         "ffp": {
-          "coef": 0.01218,
+          "coef": 0.01096,
           "ci95": [
-            -0.0124,
-            0.0419
+            -0.0143,
+            0.0379
           ],
           "sig": false,
-          "se_boot": 0.01366,
-          "mde80": 0.0382,
-          "beta_std": 0.0359,
+          "se_boot": 0.01381,
+          "mde80": 0.0387,
+          "beta_std": 0.0326,
           "within_pm0.05": true
         },
-        "sd_r": 0.33902,
-        "n_partners": 3448,
-        "n_female_partners": 418,
+        "sd_r": 0.33591,
+        "n_partners": 3430,
+        "n_female_partners": 416,
         "fe": "partner_2y",
         "cluster": "partner_uuid"
       },
       "V3_partners_ge5": {
-        "n": 47001,
-        "n_firms": 2474,
+        "n": 46758,
+        "n_firms": 2459,
         "ff": {
-          "coef": -0.02685,
+          "coef": -0.02852,
           "ci95": [
-            -0.0361,
-            -0.0195
+            -0.0365,
+            -0.0202
           ],
           "sig": true,
-          "se_boot": 0.00453,
-          "mde80": 0.0127,
-          "beta_std": -0.0792,
+          "se_boot": 0.00433,
+          "mde80": 0.0121,
+          "beta_std": -0.0849,
           "within_pm0.05": true
         },
         "ffp": {
-          "coef": 0.00484,
+          "coef": 0.00562,
           "ci95": [
-            -0.0238,
-            0.0333
+            -0.0174,
+            0.031
           ],
           "sig": false,
-          "se_boot": 0.01373,
-          "mde80": 0.0385,
-          "beta_std": 0.0143,
+          "se_boot": 0.01246,
+          "mde80": 0.0349,
+          "beta_std": 0.0167,
           "within_pm0.05": true
         },
-        "sd_r": 0.33885,
-        "n_partners": 2474,
-        "n_female_partners": 286,
+        "sd_r": 0.33588,
+        "n_partners": 2459,
+        "n_female_partners": 284,
         "fe": "partner_uuid",
         "cluster": "partner_uuid"
       },
       "V4_2015plus": {
-        "n": 32946,
-        "n_firms": 3122,
+        "n": 32786,
+        "n_firms": 3107,
         "ff": {
-          "coef": -0.02425,
+          "coef": -0.02674,
           "ci95": [
-            -0.0336,
-            -0.0142
+            -0.0362,
+            -0.018
           ],
           "sig": true,
-          "se_boot": 0.00488,
-          "mde80": 0.0137,
-          "beta_std": -0.0752,
+          "se_boot": 0.00493,
+          "mde80": 0.0138,
+          "beta_std": -0.0838,
           "within_pm0.05": true
         },
         "ffp": {
-          "coef": 0.01182,
+          "coef": 0.01228,
           "ci95": [
-            -0.016,
-            0.0358
+            -0.0149,
+            0.039
           ],
           "sig": false,
-          "se_boot": 0.01348,
-          "mde80": 0.0378,
-          "beta_std": 0.0366,
+          "se_boot": 0.01392,
+          "mde80": 0.039,
+          "beta_std": 0.0385,
           "within_pm0.05": true
         },
-        "sd_r": 0.32255,
-        "n_partners": 3318,
-        "n_female_partners": 408,
+        "sd_r": 0.31914,
+        "n_partners": 3300,
+        "n_female_partners": 406,
         "fe": "partner_uuid",
         "cluster": "partner_uuid"
       },
       "V5_company_controls": {
-        "n": 49835,
-        "n_firms": 3436,
+        "n": 49583,
+        "n_firms": 3418,
         "ff": {
-          "coef": -0.01411,
+          "coef": -0.01626,
           "ci95": [
-            -0.0327,
-            0.0059
+            -0.0346,
+            0.0025
           ],
           "sig": false,
-          "se_boot": 0.0098,
-          "mde80": 0.0274,
-          "beta_std": -0.0416,
+          "se_boot": 0.00933,
+          "mde80": 0.0261,
+          "beta_std": -0.0484,
           "within_pm0.05": true
         },
         "ffp": {
-          "coef": 0.0037,
+          "coef": 0.00337,
           "ci95": [
-            -0.0203,
-            0.0268
+            -0.0204,
+            0.0274
           ],
           "sig": false,
-          "se_boot": 0.01234,
-          "mde80": 0.0345,
-          "beta_std": 0.0109,
+          "se_boot": 0.01213,
+          "mde80": 0.034,
+          "beta_std": 0.01,
           "within_pm0.05": true
         },
-        "sd_r": 0.33902,
-        "n_partners": 3448,
-        "n_female_partners": 418,
+        "sd_r": 0.33591,
+        "n_partners": 3430,
+        "n_female_partners": 416,
         "fe": "partner_uuid",
         "cluster": "partner_uuid"
       },
@@ -268,82 +268,82 @@
       "sample": {
         "y": "fon",
         "deals_through": "2020-10-31",
-        "n_deals": 49847,
-        "n_deals_2015plus": 33142,
-        "n_partners": 3448,
-        "n_female_partners": 418,
-        "n_ff_deals_female_partners": 1519,
-        "n_nonff_deals_female_partners": 3311,
-        "base_y": 0.7172,
-        "sd_r": 0.4337,
+        "n_deals": 49595,
+        "n_deals_2015plus": 32979,
+        "n_partners": 3430,
+        "n_female_partners": 416,
+        "n_ff_deals_female_partners": 1513,
+        "n_nonff_deals_female_partners": 3295,
+        "base_y": 0.7185,
+        "sd_r": 0.4333,
         "raw_within_partner_gap": {
-          "female": -0.0302,
-          "male": -0.0241
+          "female": -0.0285,
+          "male": -0.0248
         }
       },
       "main_partnerFE_clPartner": {
-        "n": 49835,
-        "n_firms": 3436,
+        "n": 49583,
+        "n_firms": 3418,
         "ff": {
-          "coef": -0.00369,
+          "coef": -0.00414,
           "ci95": [
-            -0.0138,
-            0.007
+            -0.0148,
+            0.0059
           ],
           "sig": false,
-          "se_boot": 0.00529,
-          "mde80": 0.0148,
-          "beta_std": -0.0085,
+          "se_boot": 0.00521,
+          "mde80": 0.0146,
+          "beta_std": -0.0096,
           "within_pm0.05": true
         },
         "ffp": {
-          "coef": -0.0128,
+          "coef": -0.01064,
           "ci95": [
-            -0.0457,
-            0.0204
+            -0.0409,
+            0.0207
           ],
           "sig": false,
-          "se_boot": 0.0164,
-          "mde80": 0.0459,
-          "beta_std": -0.0295,
+          "se_boot": 0.0159,
+          "mde80": 0.0445,
+          "beta_std": -0.0246,
           "within_pm0.05": true
         },
-        "sd_r": 0.43372,
-        "n_partners": 3448,
-        "n_female_partners": 418,
+        "sd_r": 0.43326,
+        "n_partners": 3430,
+        "n_female_partners": 416,
         "fe": "partner_uuid",
         "cluster": "partner_uuid"
       },
       "main_partnerFE_clFirm": {
-        "n": 49835,
-        "n_firms": 2397,
+        "n": 49583,
+        "n_firms": 2384,
         "ff": {
-          "coef": -0.00369,
+          "coef": -0.00414,
           "ci95": [
-            -0.0144,
-            0.0068
+            -0.0145,
+            0.0064
           ],
           "sig": false,
-          "se_boot": 0.00564,
-          "mde80": 0.0158,
-          "beta_std": -0.0085,
+          "se_boot": 0.00562,
+          "mde80": 0.0157,
+          "beta_std": -0.0096,
           "within_pm0.05": true
         },
         "ffp": {
-          "coef": -0.0128,
+          "coef": -0.01064,
           "ci95": [
-            -0.0443,
-            0.0176
+            -0.0463,
+            0.0253
           ],
           "sig": false,
-          "se_boot": 0.01624,
-          "mde80": 0.0455,
-          "beta_std": -0.0295,
+          "se_boot": 0.01754,
+          "mde80": 0.0491,
+          "beta_std": -0.0246,
           "within_pm0.05": true
         },
-        "sd_r": 0.43372,
-        "n_partners": 3448,
-        "n_female_partners": 418,
+        "sd_r": 0.43326,
+        "n_partners": 3430,
+        "n_female_partners": 416,
         "fe": "partner_uuid",
         "cluster": "firm"
       }
@@ -352,82 +352,82 @@
       "sample": {
         "y": "exit_ever",
         "deals_through": "2017-10-31",
-        "n_deals": 28560,
-        "n_deals_2015plus": 13165,
-        "n_partners": 1998,
-        "n_female_partners": 206,
-        "n_ff_deals_female_partners": 664,
-        "n_nonff_deals_female_partners": 1627,
-        "base_y": 0.5416,
-        "sd_r": 0.4523,
+        "n_deals": 28416,
+        "n_deals_2015plus": 13101,
+        "n_partners": 1987,
+        "n_female_partners": 204,
+        "n_ff_deals_female_partners": 662,
+        "n_nonff_deals_female_partners": 1611,
+        "base_y": 0.5397,
+        "sd_r": 0.4522,
         "raw_within_partner_gap": {
-          "female": -0.0809,
-          "male": -0.0076
+          "female": -0.0914,
+          "male": -0.0072
         }
       },
       "main_partnerFE_clPartner": {
-        "n": 28556,
-        "n_firms": 1994,
+        "n": 28412,
+        "n_firms": 1983,
         "ff": {
-          "coef": -0.01878,
+          "coef": -0.01858,
           "ci95": [
-            -0.0372,
-            -0.0003
+            -0.0373,
+            0.0007
           ],
-          "sig": true,
-          "se_boot": 0.00978,
-          "mde80": 0.0274,
-          "beta_std": -0.0415,
+          "sig": false,
+          "se_boot": 0.00988,
+          "mde80": 0.0277,
+          "beta_std": -0.0411,
           "within_pm0.05": true
         },
         "ffp": {
-          "coef": -0.06507,
+          "coef": -0.06766,
           "ci95": [
-            -0.1177,
-            -0.0054
+            -0.1213,
+            -0.0165
           ],
           "sig": true,
-          "se_boot": 0.03043,
-          "mde80": 0.0852,
-          "beta_std": -0.1438,
+          "se_boot": 0.02632,
+          "mde80": 0.0737,
+          "beta_std": -0.1496,
           "within_pm0.05": false
         },
-        "sd_r": 0.45235,
-        "n_partners": 1998,
-        "n_female_partners": 206,
+        "sd_r": 0.45217,
+        "n_partners": 1987,
+        "n_female_partners": 204,
         "fe": "partner_uuid",
         "cluster": "partner_uuid"
       },
       "main_partnerFE_clFirm": {
-        "n": 28556,
-        "n_firms": 1340,
+        "n": 28412,
+        "n_firms": 1336,
         "ff": {
-          "coef": -0.01878,
+          "coef": -0.01858,
           "ci95": [
-            -0.0366,
-            0.0009
+            -0.0393,
+            0.0018
           ],
           "sig": false,
-          "se_boot": 0.01,
-          "mde80": 0.028,
-          "beta_std": -0.0415,
+          "se_boot": 0.01043,
+          "mde80": 0.0292,
+          "beta_std": -0.0411,
           "within_pm0.05": true
         },
         "ffp": {
-          "coef": -0.06507,
+          "coef": -0.06766,
           "ci95": [
-            -0.1207,
-            -0.0143
+            -0.1251,
+            -0.013
           ],
           "sig": true,
-          "se_boot": 0.02809,
-          "mde80": 0.0787,
-          "beta_std": -0.1438,
+          "se_boot": 0.02919,
+          "mde80": 0.0817,
+          "beta_std": -0.1496,
           "within_pm0.05": false
         },
-        "sd_r": 0.45235,
-        "n_partners": 1998,
-        "n_female_partners": 206,
+        "sd_r": 0.45217,
+        "n_partners": 1987,
+        "n_female_partners": 204,
         "fe": "partner_uuid",
         "cluster": "firm"
       }
@@ -448,17 +448,17 @@
     }
   },
   "prediction": "파트너 3,300–3,600(여 380–450); β_int(exit3)∈[−2,+2] CI 0 포함 MDE 3.5–5.0; β_FF(남)∈[−3,−1]; fon∈[−3,+2]; exit_ever∈[−4,+3]; V1/V2 이동<1.5; 2015+ 부호 동일",
-  "verdict": "exit3 ≤2020-10: 파트너 3,448 (여 418) · 딜 49,847 | β_int +0.48pp [-1.82,+2.79] MDE 3.50 (+0.014 sd) · β_FF(남) -2.55 | 투자사 군집 [-2.31,+3.11] | V1 +0.91 · V2 +1.22 · V3 +0.48 · V4(2015+) +1.18 · V5 +0.37 | fon β_int -1.28 [-4.57,+2.04] · exit_ever β_int -6.51 [-11.77,-0.54] — 파트너 자기 기록 안에서 FF 특유 선별 결손 미검출 — CI ⊂ ±5pp(헤드라인 규모 배제) (예측 적중 11/12)",
+  "verdict": "exit3 ≤2020-10: 파트너 3,430 (여 416) · 딜 49,595 | β_int +0.47pp [-2.37,+2.93] MDE 3.65 (+0.014 sd) · β_FF(남) -2.69 | 투자사 군집 [-2.05,+3.10] | V1 +0.84 · V2 +1.10 · V3 +0.56 · V4(2015+) +1.23 · V5 +0.34 | fon β_int -1.06 [-4.09,+2.07] · exit_ever β_int -6.77 [-12.13,-1.65] — 파트너 자기 기록 안에서 FF 특유 선별 결손 미검출 — CI ⊂ ±5pp(헤드라인 규모 배제) (예측 적중 11/12)",
   "kill_met": false,
   "code": "p001_54_within_partner_outcome.py",
   "sha256_16": "db186b76a0bda95b",
   "seed": 42,
-  "runtime_s": 727.4,
-  "date": "2026-09-09",
+  "runtime_s": 381.7,
+  "date": "2026-09-10",
   "stage": 7,
   "feeds": "R5 design R5-1 → §4 교차 딜 판별 · Table 4 새 패널",
   "slug": "within_partner_outcome",
   "builds_on": "P001-12/33/49",
-  "common_sha256_16": "a63e7b62854b47c6",
-  "v6_common_sha256_16": "0e382e764d14fdc8"
+  "common_sha256_16": "73d12fb69e9b9b73",
+  "v6_common_sha256_16": "70e0b9a1fa1ae389"
 }

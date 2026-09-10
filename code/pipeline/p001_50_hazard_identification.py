@@ -33,7 +33,7 @@ NAEU = EU | {"USA", "CAN"}
 OUT = {}
 
 # ── P001-12 패널 복제 ────────────────────────────────────────────────────────
-d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
 d = d[d["country_code"].isin(NAEU)].copy(); d["dt"] = pd.to_datetime(d["dt"])
 r = CTX.rounds[["uuid", "raised_amount_usd", "investor_count", "org_uuid", "announced_on"]].copy(); r["rdt"] = pd.to_datetime(r["announced_on"], errors="coerce")
 d = d.merge(r[["uuid", "raised_amount_usd", "investor_count"]], left_on="funding_round_uuid", right_on="uuid", how="left", suffixes=("", "_r"))

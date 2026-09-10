@@ -2,258 +2,258 @@
   "id": "P001-38",
   "title": "R3 결정 검정(파트너 수준, 고정 출구지평): 단계별 기저율 · Mundlak · 성별 함의 · ex-ante 창 · 중복만 · IPW · days≥0 · 표준화 · 반분",
   "status": "OK",
-  "n": 2661,
+  "n": 2654,
   "estimates": {
     "A_stage_rates": {
       "by_stage": {
         "pre_seed": {
-          "n": 969,
-          "fon": 0.7554,
-          "exit3": 0.033,
-          "exit_ever": 0.1899
+          "n": 968,
+          "fon": 0.7552,
+          "exit3": 0.032,
+          "exit_ever": 0.189
         },
         "convertible_note": {
-          "n": 761,
-          "fon": 0.7004,
-          "exit3": 0.159,
-          "exit_ever": 0.3417
+          "n": 756,
+          "fon": 0.7024,
+          "exit3": 0.1534,
+          "exit_ever": 0.3373
         },
         "seed": {
-          "n": 11138,
-          "fon": 0.739,
-          "exit3": 0.1045,
-          "exit_ever": 0.3765
+          "n": 11130,
+          "fon": 0.7394,
+          "exit3": 0.1039,
+          "exit_ever": 0.376
         },
         "series_a": {
-          "n": 10993,
+          "n": 10971,
           "fon": 0.7411,
-          "exit3": 0.1347,
-          "exit_ever": 0.5208
+          "exit3": 0.133,
+          "exit_ever": 0.5198
         },
         "series_unknown": {
-          "n": 5886,
-          "fon": 0.5622,
-          "exit3": 0.1981,
-          "exit_ever": 0.5367
-        },
-        "series_b": {
-          "n": 8219,
-          "fon": 0.72,
-          "exit3": 0.1722,
-          "exit_ever": 0.6233
+          "n": 5801,
+          "fon": 0.5685,
+          "exit3": 0.1863,
+          "exit_ever": 0.5299
         },
         "private_equity": {
-          "n": 1044,
-          "fon": 0.295,
-          "exit3": 0.2308,
-          "exit_ever": 0.6446
+          "n": 981,
+          "fon": 0.2997,
+          "exit3": 0.1814,
+          "exit_ever": 0.6218
+        },
+        "series_b": {
+          "n": 8188,
+          "fon": 0.7201,
+          "exit3": 0.169,
+          "exit_ever": 0.6219
         },
         "series_c": {
-          "n": 5344,
-          "fon": 0.6841,
-          "exit3": 0.2036,
-          "exit_ever": 0.6813
+          "n": 5315,
+          "fon": 0.6854,
+          "exit3": 0.1992,
+          "exit_ever": 0.6796
         },
         "series_d": {
-          "n": 2837,
-          "fon": 0.7138,
-          "exit3": 0.2499,
-          "exit_ever": 0.7617
+          "n": 2834,
+          "fon": 0.7135,
+          "exit3": 0.2491,
+          "exit_ever": 0.7615
         },
         "series_e": {
-          "n": 1259,
-          "fon": 0.7339,
-          "exit3": 0.3122,
-          "exit_ever": 0.8173
+          "n": 1257,
+          "fon": 0.7351,
+          "exit3": 0.3111,
+          "exit_ever": 0.817
         }
       },
-      "fon_range_excl_pe": 0.1932,
-      "exit3_range_excl_pe": 0.2791,
-      "cell_corr_fon_exit3_weighted": -0.2588,
-      "cell_corr_fon_exit_ever_weighted": -0.0365,
-      "cell_corr_exit3_exit_ever_weighted": 0.5027,
-      "n_cells": 1488
+      "fon_range_excl_pe": 0.1866,
+      "exit3_range_excl_pe": 0.279,
+      "cell_corr_fon_exit3_weighted": -0.2355,
+      "cell_corr_fon_exit_ever_weighted": -0.0276,
+      "cell_corr_exit3_exit_ever_weighted": 0.502,
+      "n_cells": 1482
     },
     "B1_mundlak_parts_fixed": {
-      "n": 2017,
-      "n_firms": 945,
+      "n": 2009,
+      "n_firms": 942,
       "dev_t_v": {
-        "coef": -1.6175,
+        "coef": -1.50081,
         "ci95": [
-          -2.9419,
-          -0.2493
+          -2.8053,
+          -0.152
         ],
         "sig": true,
-        "se_boot": 0.71537,
-        "mde80": 2.003
+        "se_boot": 0.7123,
+        "mde80": 1.9944
       },
       "dev_t_s": {
-        "coef": -0.03784,
+        "coef": 0.04918,
         "ci95": [
-          -0.707,
-          0.7033
+          -0.6818,
+          0.7441
         ],
         "sig": false,
-        "se_boot": 0.348,
-        "mde80": 0.9744
+        "se_boot": 0.35113,
+        "mde80": 0.9832
       },
       "dev_t_cs": {
-        "coef": 0.04414,
+        "coef": 0.01141,
         "ci95": [
-          -0.2338,
-          0.3155
+          -0.2912,
+          0.2837
         ],
         "sig": false,
-        "se_boot": 0.13657,
-        "mde80": 0.3824
+        "se_boot": 0.15198,
+        "mde80": 0.4255
       },
       "fm_t_v": {
-        "coef": -0.68204,
+        "coef": -0.79065,
         "ci95": [
-          -1.8825,
-          0.6003
+          -2.0758,
+          0.414
         ],
         "sig": false,
-        "se_boot": 0.67863,
-        "mde80": 1.9002
+        "se_boot": 0.67163,
+        "mde80": 1.8806
       },
       "fm_t_s": {
-        "coef": 0.388,
+        "coef": 0.45301,
         "ci95": [
-          0.0417,
-          0.6813
+          0.1214,
+          0.7692
         ],
         "sig": true,
-        "se_boot": 0.15568,
-        "mde80": 0.4359
+        "se_boot": 0.16667,
+        "mde80": 0.4667
       },
       "fm_t_cs": {
-        "coef": 0.5084,
+        "coef": 0.5054,
         "ci95": [
-          0.1674,
-          0.8478
+          0.1513,
+          0.8902
         ],
         "sig": true,
-        "se_boot": 0.17722,
-        "mde80": 0.4962
+        "se_boot": 0.18395,
+        "mde80": 0.5151
       }
     },
     "B1_contrast_tcs": {
-      "coef": -0.46426,
+      "coef": -0.494,
       "ci95": [
-        -0.8743,
-        -0.037
+        -0.9543,
+        -0.0736
       ],
       "sig": true
     },
     "B3_mundlak_total_fixed": {
-      "n": 2017,
-      "n_firms": 945,
+      "n": 2009,
+      "n_firms": 942,
       "dev_terrain": {
-        "coef": -0.01837,
+        "coef": -0.02433,
         "ci95": [
-          -0.2931,
-          0.221
+          -0.2802,
+          0.25
         ],
         "sig": false,
-        "se_boot": 0.13694,
-        "mde80": 0.3834
+        "se_boot": 0.14025,
+        "mde80": 0.3927
       },
       "fm_terrain": {
-        "coef": 0.43452,
+        "coef": 0.44687,
         "ci95": [
-          0.1774,
-          0.6935
+          0.1959,
+          0.7268
         ],
         "sig": true,
-        "se_boot": 0.12784,
-        "mde80": 0.3579
+        "se_boot": 0.13263,
+        "mde80": 0.3714
       }
     },
     "B3_contrast_terrain": {
-      "coef": -0.4529,
+      "coef": -0.4712,
       "ci95": [
-        -0.7859,
-        -0.1296
+        -0.8537,
+        -0.1063
       ],
       "sig": true
     },
     "C_implied_netting_fixed": {
-      "n": 2017,
+      "n": 2009,
       "gap_t_v": {
-        "coef": 6e-05,
+        "coef": 5e-05,
         "ci95": [
-          -0.0017,
+          -0.0014,
           0.0015
         ]
       },
       "coef_t_v": {
-        "coef": -0.96234,
+        "coef": -0.98843,
         "ci95": [
-          -2.3086,
-          0.3612
+          -2.1722,
+          0.245
         ]
       },
       "t_v": {
         "coef": -5e-05,
         "ci95": [
-          -0.0019,
-          0.002
+          -0.0017,
+          0.0021
         ],
         "within_pm0.02": true,
         "within_pm0.01": true
       },
       "gap_t_s": {
-        "coef": -0.00263,
+        "coef": -0.00245,
         "ci95": [
-          -0.0085,
-          0.0031
+          -0.0078,
+          0.0033
         ]
       },
       "coef_t_s": {
-        "coef": 0.32849,
+        "coef": 0.39742,
         "ci95": [
-          0.0303,
-          0.6208
+          0.0945,
+          0.6798
         ]
       },
       "t_s": {
-        "coef": -0.00086,
+        "coef": -0.00097,
         "ci95": [
           -0.0036,
-          0.0012
+          0.0014
         ],
         "within_pm0.02": true,
         "within_pm0.01": true
       },
       "gap_t_cs": {
-        "coef": 0.00235,
+        "coef": 0.00137,
         "ci95": [
-          -0.008,
-          0.0127
+          -0.0092,
+          0.0116
         ]
       },
       "coef_t_cs": {
-        "coef": 0.30719,
+        "coef": 0.28859,
         "ci95": [
-          0.0535,
-          0.5221
+          0.0278,
+          0.5063
         ]
       },
       "t_cs": {
-        "coef": 0.00072,
+        "coef": 0.0004,
         "ci95": [
-          -0.0023,
-          0.0047
+          -0.0028,
+          0.0037
         ],
         "within_pm0.02": true,
         "within_pm0.01": true
       },
       "total": {
-        "coef": -0.0002,
+        "coef": -0.00062,
         "ci95": [
-          -0.0041,
-          0.0053
+          -0.0047,
+          0.0041
         ],
         "within_pm0.02": true,
         "within_pm0.01": true
@@ -261,497 +261,497 @@
     },
     "D_exante_window": {
       "exante_le_2014_10": {
-        "n_partners": 1521,
-        "n_post": 1127,
+        "n_partners": 1515,
+        "n_post": 1118,
         "F2": {
-          "n": 1127,
-          "n_firms": 544,
+          "n": 1118,
+          "n_firms": 539,
           "t_v": {
-            "coef": -1.90264,
+            "coef": -1.81415,
             "ci95": [
-              -5.2868,
-              1.7933
+              -4.7349,
+              1.6891
             ],
             "sig": false,
-            "se_boot": 1.73522,
-            "mde80": 4.8586
+            "se_boot": 1.65374,
+            "mde80": 4.6305
           },
           "t_s": {
-            "coef": -0.08074,
+            "coef": -0.00566,
             "ci95": [
-              -0.5437,
-              0.4089
+              -0.4578,
+              0.4621
             ],
             "sig": false,
-            "se_boot": 0.24487,
-            "mde80": 0.6856
+            "se_boot": 0.2399,
+            "mde80": 0.6717
           },
           "t_cs": {
-            "coef": 0.16298,
+            "coef": 0.11363,
             "ci95": [
-              -0.1284,
-              0.4286
+              -0.1855,
+              0.3893
             ],
             "sig": false,
-            "se_boot": 0.14918,
-            "mde80": 0.4177
+            "se_boot": 0.14338,
+            "mde80": 0.4015
           }
         },
         "F2t": {
-          "n": 1127,
-          "n_firms": 544,
+          "n": 1118,
+          "n_firms": 539,
           "terrain": {
-            "coef": 0.0905,
+            "coef": 0.06737,
             "ci95": [
-              -0.1235,
-              0.3499
+              -0.1622,
+              0.3016
             ],
             "sig": false,
-            "se_boot": 0.12526,
-            "mde80": 0.3507
+            "se_boot": 0.12326,
+            "mde80": 0.3451
           },
           "adj": {
-            "coef": 0.03784,
+            "coef": 0.00239,
             "ci95": [
-              -0.0745,
-              0.1654
+              -0.1241,
+              0.1201
             ],
             "sig": false,
-            "se_boot": 0.06274,
-            "mde80": 0.1757
+            "se_boot": 0.06034,
+            "mde80": 0.1689
           }
         },
-        "pct_of_full_F2t": 32.5
+        "pct_of_full_F2t": 24.2
       },
       "mirror_2014_11_to_2017_10": {
-        "n_partners": 1417,
-        "n_post": 1298,
+        "n_partners": 1413,
+        "n_post": 1293,
         "F2": {
-          "n": 1298,
-          "n_firms": 665,
+          "n": 1293,
+          "n_firms": 664,
           "t_v": {
-            "coef": 1.29374,
+            "coef": 1.07385,
             "ci95": [
-              -1.235,
-              3.9608
+              -1.0276,
+              3.6615
             ],
             "sig": false,
-            "se_boot": 1.35031,
-            "mde80": 3.7809
+            "se_boot": 1.25542,
+            "mde80": 3.5152
           },
           "t_s": {
-            "coef": 0.28831,
+            "coef": 0.37786,
             "ci95": [
-              -0.0066,
-              0.4971
-            ],
-            "sig": false,
-            "se_boot": 0.13265,
-            "mde80": 0.3714
-          },
-          "t_cs": {
-            "coef": 0.33908,
-            "ci95": [
-              0.1432,
-              0.5331
+              0.1114,
+              0.6294
             ],
             "sig": true,
-            "se_boot": 0.1058,
-            "mde80": 0.2962
+            "se_boot": 0.12874,
+            "mde80": 0.3605
+          },
+          "t_cs": {
+            "coef": 0.28555,
+            "ci95": [
+              0.0773,
+              0.4933
+            ],
+            "sig": true,
+            "se_boot": 0.10908,
+            "mde80": 0.3054
           }
         },
         "F2t": {
-          "n": 1298,
-          "n_firms": 665,
+          "n": 1293,
+          "n_firms": 664,
           "terrain": {
-            "coef": 0.32567,
+            "coef": 0.32091,
             "ci95": [
-              0.1412,
-              0.4993
+              0.1334,
+              0.5029
             ],
             "sig": true,
-            "se_boot": 0.09314,
-            "mde80": 0.2608
+            "se_boot": 0.09839,
+            "mde80": 0.2755
           },
           "adj": {
-            "coef": 0.23308,
+            "coef": 0.21201,
             "ci95": [
-              0.1481,
-              0.3385
+              0.1171,
+              0.3125
             ],
             "sig": true,
-            "se_boot": 0.04547,
-            "mde80": 0.1273
+            "se_boot": 0.052,
+            "mde80": 0.1456
           }
         },
-        "pct_of_full_F2t": 117.1
+        "pct_of_full_F2t": 115.4
       }
     },
     "E_overlap_only": {
       "F2t": {
-        "n": 1594,
-        "n_firms": 767,
+        "n": 1587,
+        "n_firms": 764,
         "terrain": {
-          "coef": 0.35836,
+          "coef": 0.3285,
           "ci95": [
-            0.0822,
-            0.6431
+            0.0436,
+            0.6071
           ],
           "sig": true,
-          "se_boot": 0.14178,
-          "mde80": 0.397
+          "se_boot": 0.14765,
+          "mde80": 0.4134
         },
         "adj": {
-          "coef": 0.36103,
+          "coef": 0.33159,
           "ci95": [
-            0.2208,
-            0.5037
+            0.168,
+            0.4829
           ],
           "sig": true,
-          "se_boot": 0.07046,
-          "mde80": 0.1973
+          "se_boot": 0.07897,
+          "mde80": 0.2211
         }
       },
       "F2": {
-        "n": 1594,
-        "n_firms": 767,
+        "n": 1587,
+        "n_firms": 764,
         "t_v": {
-          "coef": -0.7215,
+          "coef": -0.98093,
           "ci95": [
-            -2.741,
-            1.1909
+            -2.7246,
+            0.8082
           ],
           "sig": false,
-          "se_boot": 0.99849,
-          "mde80": 2.7958
+          "se_boot": 0.95601,
+          "mde80": 2.6768
         },
         "t_s": {
-          "coef": 0.18234,
+          "coef": 0.17922,
           "ci95": [
-            -0.205,
-            0.5879
+            -0.2432,
+            0.7005
           ],
           "sig": false,
-          "se_boot": 0.21187,
-          "mde80": 0.5932
+          "se_boot": 0.24361,
+          "mde80": 0.6821
         },
         "t_cs": {
-          "coef": 0.48222,
+          "coef": 0.4545,
           "ci95": [
-            0.1139,
-            0.8345
+            0.0868,
+            0.7744
           ],
           "sig": true,
-          "se_boot": 0.17838,
-          "mde80": 0.4995
+          "se_boot": 0.17935,
+          "mde80": 0.5022
         }
       },
-      "n_partners_with_rep": 1594,
+      "n_partners_with_rep": 1587,
       "share_rep_rows": 0.2182
     },
     "F_ipw_fixed": {
       "selection_lpm": {
-        "n": 2661,
-        "n_firms": 1152,
+        "n": 2654,
+        "n_firms": 1150,
         "t_v": {
-          "coef": -14.5934,
+          "coef": -14.3225,
           "ci95": [
-            -16.1407,
-            -12.9895
+            -15.8688,
+            -12.9438
           ],
           "sig": true,
-          "se_boot": 0.8287,
-          "mde80": 2.3204
+          "se_boot": 0.76622,
+          "mde80": 2.1454
         },
         "t_s": {
-          "coef": 0.10084,
+          "coef": 0.10216,
           "ci95": [
-            -0.3118,
-            0.5166
+            -0.3215,
+            0.5293
           ],
           "sig": false,
-          "se_boot": 0.21213,
-          "mde80": 0.594
+          "se_boot": 0.20849,
+          "mde80": 0.5838
         },
         "t_cs": {
-          "coef": 0.09652,
+          "coef": 0.09424,
           "ci95": [
-            -0.189,
-            0.3703
+            -0.1704,
+            0.3581
           ],
           "sig": false,
-          "se_boot": 0.13973,
-          "mde80": 0.3913
+          "se_boot": 0.13611,
+          "mde80": 0.3811
         },
         "tenure": {
-          "coef": 0.01867,
+          "coef": 0.01976,
           "ci95": [
-            -0.0066,
-            0.06
+            -0.0067,
+            0.0638
           ],
           "sig": false,
-          "se_boot": 0.01832,
-          "mde80": 0.0513
+          "se_boot": 0.01913,
+          "mde80": 0.0536
         }
       },
       "F2t_ipw": {
-        "n": 2017,
-        "n_firms": 945,
+        "n": 2009,
+        "n_firms": 942,
         "terrain": {
-          "coef": 0.252,
+          "coef": 0.26467,
           "ci95": [
-            -0.0049,
-            0.519
-          ],
-          "sig": false,
-          "se_boot": 0.13591,
-          "mde80": 0.3805
-        },
-        "adj": {
-          "coef": 0.17624,
-          "ci95": [
-            0.0609,
-            0.3015
+            0.0038,
+            0.5081
           ],
           "sig": true,
-          "se_boot": 0.06083,
-          "mde80": 0.1703
+          "se_boot": 0.13294,
+          "mde80": 0.3722
+        },
+        "adj": {
+          "coef": 0.1599,
+          "ci95": [
+            0.0397,
+            0.3024
+          ],
+          "sig": true,
+          "se_boot": 0.06676,
+          "mde80": 0.1869
         }
       },
       "F2_ipw": {
-        "n": 2017,
-        "n_firms": 945,
+        "n": 2009,
+        "n_firms": 942,
         "t_v": {
-          "coef": -0.90274,
+          "coef": -0.8603,
           "ci95": [
-            -2.4916,
-            1.3614
+            -2.3401,
+            0.8191
           ],
           "sig": false,
-          "se_boot": 0.97304,
-          "mde80": 2.7245
+          "se_boot": 0.87056,
+          "mde80": 2.4376
         },
         "t_s": {
-          "coef": 0.30372,
+          "coef": 0.36768,
           "ci95": [
-            -0.0998,
-            0.7469
+            -0.1135,
+            0.8244
           ],
           "sig": false,
-          "se_boot": 0.23128,
-          "mde80": 0.6476
+          "se_boot": 0.24851,
+          "mde80": 0.6958
         },
         "t_cs": {
-          "coef": 0.27395,
+          "coef": 0.26804,
           "ci95": [
-            0.0343,
-            0.5451
+            0.0177,
+            0.5478
           ],
           "sig": true,
-          "se_boot": 0.133,
-          "mde80": 0.3724
+          "se_boot": 0.14513,
+          "mde80": 0.4064
         }
       },
-      "share_observed": 0.758,
-      "pct_change_vs_F2t": -9.4
+      "share_observed": 0.757,
+      "pct_change_vs_F2t": -4.9
     },
     "G_days_ge0": {
-      "base_pre": 0.1654,
-      "base_pre_pos": 0.1607,
-      "base_post": 0.1453,
-      "base_post_pos": 0.1384,
-      "share_negative_lag_among_exit3_pre": 0.0281,
-      "share_negative_lag_among_exit3_post": 0.0478,
+      "base_pre": 0.1611,
+      "base_pre_pos": 0.1611,
+      "base_post": 0.1388,
+      "base_post_pos": 0.1388,
+      "share_negative_lag_among_exit3_pre": 0.0,
+      "share_negative_lag_among_exit3_post": 0.0,
       "F2t": {
-        "n": 2017,
-        "n_firms": 945,
+        "n": 2009,
+        "n_firms": 942,
         "terrain": {
-          "coef": 0.27087,
+          "coef": 0.28316,
           "ci95": [
-            0.0777,
-            0.47
+            0.0734,
+            0.4811
           ],
           "sig": true,
-          "se_boot": 0.1085,
-          "mde80": 0.3038
+          "se_boot": 0.10827,
+          "mde80": 0.3032
         },
         "adj": {
-          "coef": 0.1537,
+          "coef": 0.15463,
           "ci95": [
-            0.0575,
-            0.2445
+            0.0591,
+            0.2605
           ],
           "sig": true,
-          "se_boot": 0.04905,
-          "mde80": 0.1373
+          "se_boot": 0.05372,
+          "mde80": 0.1504
         }
       },
       "F2": {
-        "n": 2017,
-        "n_firms": 945,
+        "n": 2009,
+        "n_firms": 942,
         "t_v": {
-          "coef": -1.06115,
+          "coef": -0.98843,
           "ci95": [
-            -2.2962,
-            0.1901
+            -2.2089,
+            0.2082
           ],
           "sig": false,
-          "se_boot": 0.64836,
-          "mde80": 1.8154
+          "se_boot": 0.65591,
+          "mde80": 1.8365
         },
         "t_s": {
-          "coef": 0.3817,
+          "coef": 0.39742,
           "ci95": [
-            0.0645,
-            0.6899
+            0.1011,
+            0.6942
           ],
           "sig": true,
-          "se_boot": 0.15885,
-          "mde80": 0.4448
+          "se_boot": 0.15232,
+          "mde80": 0.4265
         },
         "t_cs": {
-          "coef": 0.28073,
+          "coef": 0.28859,
           "ci95": [
-            0.0236,
-            0.5305
+            0.0636,
+            0.5718
           ],
           "sig": true,
-          "se_boot": 0.13064,
-          "mde80": 0.3658
+          "se_boot": 0.12593,
+          "mde80": 0.3526
         }
       },
-      "pct_of_F2t": 97.4
+      "pct_of_F2t": 101.8
     },
     "H_standardized": {
       "fixed_F1t": {
-        "n": 2017,
-        "n_firms": 945,
+        "n": 2009,
+        "n_firms": 942,
         "terrain": {
-          "coef": 0.28926,
+          "coef": 0.28998,
           "ci95": [
-            0.1276,
-            0.4719
+            0.1189,
+            0.4816
           ],
           "sig": true,
-          "se_boot": 0.09354,
-          "mde80": 0.2619,
-          "beta_std": 0.0864
+          "se_boot": 0.09238,
+          "mde80": 0.2587,
+          "beta_std": 0.0861
         },
         "adj": {
-          "coef": 0.18449,
+          "coef": 0.15808,
           "ci95": [
-            0.0855,
-            0.2809
+            0.0691,
+            0.2589
           ],
           "sig": true,
-          "se_boot": 0.05179,
-          "mde80": 0.145,
-          "beta_std": 0.1005
+          "se_boot": 0.04838,
+          "mde80": 0.1355,
+          "beta_std": 0.0862
         },
-        "ratio_std_terrain_over_adj": 0.86
+        "ratio_std_terrain_over_adj": 0.999
       },
       "fixed_F2t": {
-        "n": 2017,
-        "n_firms": 945,
+        "n": 2009,
+        "n_firms": 942,
         "terrain": {
-          "coef": 0.27817,
+          "coef": 0.28316,
           "ci95": [
-            0.0948,
-            0.4898
+            0.0968,
+            0.4701
           ],
           "sig": true,
-          "se_boot": 0.10374,
-          "mde80": 0.2905,
-          "beta_std": 0.0831
+          "se_boot": 0.10139,
+          "mde80": 0.2839,
+          "beta_std": 0.084
         },
         "adj": {
-          "coef": 0.17997,
+          "coef": 0.15463,
           "ci95": [
-            0.0788,
-            0.2751
+            0.066,
+            0.2524
           ],
           "sig": true,
-          "se_boot": 0.05041,
-          "mde80": 0.1411,
-          "beta_std": 0.098
+          "se_boot": 0.04905,
+          "mde80": 0.1373,
+          "beta_std": 0.0843
         },
-        "ratio_std_terrain_over_adj": 0.848
+        "ratio_std_terrain_over_adj": 0.996
       },
       "open_R1t": {
-        "n": 2164,
-        "n_firms": 990,
+        "n": 2155,
+        "n_firms": 987,
         "terrain": {
-          "coef": 0.09772,
+          "coef": 0.09205,
           "ci95": [
-            0.0326,
-            0.1657
+            0.0274,
+            0.1569
           ],
           "sig": true,
-          "se_boot": 0.03516,
-          "mde80": 0.0984,
-          "beta_std": 0.0566
+          "se_boot": 0.03493,
+          "mde80": 0.0978,
+          "beta_std": 0.0535
         },
         "adj": {
-          "coef": 0.33483,
+          "coef": 0.33071,
           "ci95": [
-            0.2895,
-            0.3781
+            0.2853,
+            0.3729
           ],
           "sig": true,
-          "se_boot": 0.02406,
-          "mde80": 0.0674,
-          "beta_std": 0.2996
+          "se_boot": 0.02325,
+          "mde80": 0.0651,
+          "beta_std": 0.2982
         },
-        "ratio_std_terrain_over_adj": 0.189
+        "ratio_std_terrain_over_adj": 0.179
       },
       "open_R2t": {
-        "n": 2164,
-        "n_firms": 990,
+        "n": 2155,
+        "n_firms": 987,
         "terrain": {
-          "coef": 0.07623,
+          "coef": 0.07521,
           "ci95": [
-            -0.0011,
-            0.1684
+            -0.0022,
+            0.1735
           ],
           "sig": false,
-          "se_boot": 0.04411,
-          "mde80": 0.1235,
-          "beta_std": 0.0441
+          "se_boot": 0.04452,
+          "mde80": 0.1247,
+          "beta_std": 0.0437
         },
         "adj": {
-          "coef": 0.3341,
+          "coef": 0.33018,
           "ci95": [
-            0.2832,
-            0.3827
+            0.2796,
+            0.3762
           ],
           "sig": true,
-          "se_boot": 0.02476,
-          "mde80": 0.0693,
-          "beta_std": 0.299
+          "se_boot": 0.02547,
+          "mde80": 0.0713,
+          "beta_std": 0.2977
         },
         "ratio_std_terrain_over_adj": 0.147
       }
     },
     "I_split_half_agreement_exit3": {
       "t_v": {
-        "r_half": 0.9341,
-        "rho_SB": 0.9659
+        "r_half": 0.9336,
+        "rho_SB": 0.9657
       },
       "t_s": {
-        "r_half": 0.6699,
-        "rho_SB": 0.8023
+        "r_half": 0.6659,
+        "rho_SB": 0.7994
       },
       "t_cs": {
-        "r_half": 0.3347,
-        "rho_SB": 0.5015
+        "r_half": 0.3215,
+        "rho_SB": 0.4866
       },
       "terrain": {
-        "r_half": 0.4536,
-        "rho_SB": 0.6241
+        "r_half": 0.4426,
+        "rho_SB": 0.6136
       },
       "adj": {
-        "r_half": 0.3054,
-        "rho_SB": 0.468
+        "r_half": 0.3034,
+        "rho_SB": 0.4655
       }
     },
     "prediction_check": {
@@ -768,7 +768,7 @@
       "F_ipw_within_15pct": true,
       "G_F2t_within_10pct": true,
       "H_std_adj_gt_terrain_fixed": true,
-      "I_tcs_agreement_0.4_0.5": false
+      "I_tcs_agreement_0.4_0.5": true
     },
     "flags": {
       "location_resolved_fixed": true,
@@ -778,16 +778,16 @@
     }
   },
   "prediction": "A fon 평탄·corr<0.3; B 위치 미결정; C 총 ∈[−0.008,−0.002], ±0.02 안·±0.01 실패 예상; D ex-ante ∈[0.10,0.30] 거울 동부호; E>F4t; F ±15%; G ±10%; H std adj>terrain; I 0.4–0.5",
-  "verdict": "A fon 범위 0.193 / exit3 범위 0.279, 셀 corr(fon,exit3) -0.26 | B 고정 Mundlak terrain within -0.018 [-0.293,+0.221] · between +0.435 [+0.177,+0.694]* · 대비 -0.453 [-0.786,-0.130]; t_cs within +0.044 [-0.234,+0.316] · between +0.508 [+0.167,+0.848]* | C 고정 함의 총 -0.0002 [-0.0041,+0.0053] ±0.02 True ±0.01 True | D ex-ante F2t +0.090 [-0.123,+0.350] (n 1127) · 거울 +0.326 [+0.141,+0.499]* | E 중복만 +0.358 [+0.082,+0.643]* | F IPW +0.252 [-0.005,+0.519] (-9%) | G days≥0 +0.271 [+0.078,+0.470]* (97%) | H std 고정 terrain +0.083 vs adj +0.098; 개방 +0.057 vs +0.300 | I exit3 t_cs 일치도 0.50 — 위치 결정 True · look-ahead 인공물 False (예측 적중 7/14)",
+  "verdict": "A fon 범위 0.187 / exit3 범위 0.279, 셀 corr(fon,exit3) -0.24 | B 고정 Mundlak terrain within -0.024 [-0.280,+0.250] · between +0.447 [+0.196,+0.727]* · 대비 -0.471 [-0.854,-0.106]; t_cs within +0.011 [-0.291,+0.284] · between +0.505 [+0.151,+0.890]* | C 고정 함의 총 -0.0006 [-0.0047,+0.0041] ±0.02 True ±0.01 True | D ex-ante F2t +0.067 [-0.162,+0.302] (n 1118) · 거울 +0.321 [+0.133,+0.503]* | E 중복만 +0.329 [+0.044,+0.607]* | F IPW +0.265 [+0.004,+0.508]* (-5%) | G days≥0 +0.283 [+0.073,+0.481]* (102%) | H std 고정 terrain +0.084 vs adj +0.084; 개방 +0.053 vs +0.298 | I exit3 t_cs 일치도 0.49 — 위치 결정 True · look-ahead 인공물 False (예측 적중 8/14)",
   "kill_met": false,
   "code": "p001_38_fixed_horizon_recheck.py",
   "sha256_16": "938bd55b801df521",
   "seed": 42,
-  "runtime_s": 66.0,
-  "date": "2026-09-09",
+  "runtime_s": 44.4,
+  "date": "2026-09-10",
   "stage": 7,
   "feeds": "R3 재심 응답 (ident.md F-1/F-3/F-4, R-3/R-4/R-7/R-13, CP-3, 결정 검정 1–5·8)",
   "slug": "fixed_horizon_recheck",
   "builds_on": "P001-32/33/35/36",
-  "common_sha256_16": "a63e7b62854b47c6"
+  "common_sha256_16": "73d12fb69e9b9b73"
 }

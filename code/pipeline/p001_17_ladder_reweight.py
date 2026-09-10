@@ -29,7 +29,7 @@ EARLY = {"seed", "angel", "pre_seed", "equity_crowdfunding", "convertible_note"}
 LATE = {"series_b", "series_c", "series_d", "series_e", "series_f", "series_g", "series_h",
         "series_i", "series_j", "private_equity", "growth"}
 
-d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
 d = d[d["country_code"].isin(NAEU)].copy()
 d["sgrp"] = np.where(d["stage"].isin(EARLY), "early",
                      np.where(d["stage"] == "series_a", "series_a",

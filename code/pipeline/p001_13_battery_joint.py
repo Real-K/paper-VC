@@ -32,7 +32,7 @@ NAEU = EU | {"USA", "CAN"}
 OUTS = [("fon", "2020-10-31", +1), ("exit_ever", "2017-10-31", +1), ("ipo6", "2017-10-31", +1),
         ("acqp6", "2017-10-31", +1), ("closed6", "2017-10-31", -1)]
 
-d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
 d = d[d["country_code"].isin(NAEU) & (d["ff"] == 1.0)].copy()
 d["dt"] = pd.to_datetime(d["dt"])
 de = d[d["dt"] <= "2017-10-31"].reset_index(drop=True)  # 지수는 공통 표본(출구 관측 가능)에서

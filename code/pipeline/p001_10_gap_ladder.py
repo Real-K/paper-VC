@@ -23,7 +23,7 @@ NB = 500
 EU = {"GBR", "DEU", "FRA", "NLD", "SWE", "ESP", "ITA", "CHE", "BEL", "AUT", "DNK", "FIN", "NOR",
       "IRL", "PRT", "POL", "CZE", "EST", "LTU", "LVA", "GRC", "HUN", "ROU", "LUX"}
 
-d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"))
+d = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v2.parquet"))
 d["dt"] = pd.to_datetime(d["dt"])
 d = d[(d["ff"] == 1.0) & (d["dt"] <= "2017-10-31")].copy()
 d["cell_year"] = d["year"]

@@ -1,0 +1,1 @@
+| Vintage difference from separate regressions per vintage, eventual exit (deals through 2017-10): β_int(2015–17) − β_int(2010–14), independent draws | +6.75 | [-3.29, +16.33] | — | — | — | — | — | 15,124 + 12,871 / — |

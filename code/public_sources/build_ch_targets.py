@@ -8,7 +8,7 @@ import pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.environ.get("P001_PROJECT_ROOT", "/path/to/project-root")   # holds shared/data/processed (derived, not redistributed)
 P001 = os.path.join(ROOT, "papers", "P001_gender_screening")
-s = pd.read_parquet(os.environ.get("P001_SAMPLE", "/path/to/sample_v1.parquet"), columns=["investor_uuid", "partner_uuid", "fp"])
+s = pd.read_parquet(os.environ.get("P001_SAMPLE_V1", "/path/to/sample_v1.parquet"), columns=["investor_uuid", "partner_uuid", "fp"])
 inv = pd.read_csv(os.path.join(ROOT, "..", "data", "crunchbase", "investors.csv"), usecols=["uuid", "name", "country_code", "city", "investor_types"], low_memory=False)
 uk = inv[inv["country_code"].eq("GBR") & inv["uuid"].isin(s["investor_uuid"].unique())].copy()
 g = s[s["investor_uuid"].isin(uk["uuid"])].groupby("investor_uuid").agg(n_sample_deals=("partner_uuid", "size"), n_partners=("partner_uuid", "nunique"))

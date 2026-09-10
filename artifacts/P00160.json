@@ -2,505 +2,562 @@
   "id": "P001-60",
   "title": "외부 리뷰 재분석: 여성 자신 FF–other 격차·빈티지 대비·딜 이후 출구 규칙·확장 Mundlak·eligible vs estimation 카운트",
   "status": "OK",
-  "n": 49835,
+  "n": 49583,
   "estimates": {
     "A_female_own_gap": {
       "exit3": {
         "window_end": "2020-10-31",
         "nb": 2000,
         "ff": {
-          "coef": -0.02551,
+          "coef": -0.02687,
           "ci95": [
-            -0.0343,
-            -0.017
+            -0.0355,
+            -0.0182
           ],
           "sig": true,
-          "se_boot": 0.00442,
-          "mde80": 0.0124,
-          "beta_std": -0.0752
+          "se_boot": 0.00441,
+          "mde80": 0.0123,
+          "beta_std": -0.08
         },
         "ffp": {
-          "coef": 0.00482,
+          "coef": 0.00473,
           "ci95": [
-            -0.0198,
-            0.0297
+            -0.0183,
+            0.028
           ],
           "sig": false,
-          "se_boot": 0.01264,
-          "mde80": 0.0354,
-          "beta_std": 0.0142
+          "se_boot": 0.01218,
+          "mde80": 0.0341,
+          "beta_std": 0.0141
         },
         "female_own_gap_ff_plus_ffp": {
-          "coef": -0.02069,
+          "coef": -0.02213,
           "ci95": [
             -0.0442,
-            0.0023
+            -0.0005
           ],
-          "se_boot": 0.01185,
-          "sig": false
+          "se_boot": 0.01133,
+          "sig": true
         },
-        "n": 49835,
-        "sd_r": 0.33902,
+        "n": 49583,
+        "sd_r": 0.33591,
         "counts": {
-          "deals_eligible": 50153,
-          "deals_estimation": 49835,
-          "deals_dropped_singleton_benchmark_cell": 306,
+          "deals_eligible": 49898,
+          "deals_estimation": 49583,
+          "deals_dropped_singleton_benchmark_cell": 303,
           "deals_dropped_single_row_partner": 12,
-          "partners_eligible": 3450,
-          "female_partners_eligible": 418,
-          "partners_identifying": 3425,
-          "female_partners_identifying": 415
+          "partners_eligible": 3432,
+          "female_partners_eligible": 416,
+          "partners_identifying": 3406,
+          "female_partners_identifying": 413
         }
       },
       "fon": {
         "window_end": "2020-10-31",
         "nb": 2000,
         "ff": {
-          "coef": -0.00369,
+          "coef": -0.00414,
           "ci95": [
-            -0.0138,
-            0.0069
+            -0.0141,
+            0.0055
           ],
           "sig": false,
-          "se_boot": 0.00513,
-          "mde80": 0.0144,
-          "beta_std": -0.0085
+          "se_boot": 0.00504,
+          "mde80": 0.0141,
+          "beta_std": -0.0096
         },
         "ffp": {
-          "coef": -0.0128,
+          "coef": -0.01064,
           "ci95": [
-            -0.0448,
-            0.0187
+            -0.0414,
+            0.0231
           ],
           "sig": false,
-          "se_boot": 0.016,
-          "mde80": 0.0448,
-          "beta_std": -0.0295
+          "se_boot": 0.0164,
+          "mde80": 0.0459,
+          "beta_std": -0.0246
         },
         "female_own_gap_ff_plus_ffp": {
-          "coef": -0.01649,
+          "coef": -0.01478,
           "ci95": [
-            -0.046,
-            0.0139
+            -0.0439,
+            0.0174
           ],
-          "se_boot": 0.01515,
+          "se_boot": 0.01562,
           "sig": false
         },
-        "n": 49835,
-        "sd_r": 0.43372,
+        "n": 49583,
+        "sd_r": 0.43326,
         "counts": {
-          "deals_eligible": 50153,
-          "deals_estimation": 49835,
-          "deals_dropped_singleton_benchmark_cell": 306,
+          "deals_eligible": 49898,
+          "deals_estimation": 49583,
+          "deals_dropped_singleton_benchmark_cell": 303,
           "deals_dropped_single_row_partner": 12,
-          "partners_eligible": 3450,
-          "female_partners_eligible": 418,
-          "partners_identifying": 3425,
-          "female_partners_identifying": 415
+          "partners_eligible": 3432,
+          "female_partners_eligible": 416,
+          "partners_identifying": 3406,
+          "female_partners_identifying": 413
         }
       },
       "exit_ever": {
         "window_end": "2017-10-31",
         "nb": 2000,
         "ff": {
-          "coef": -0.01878,
+          "coef": -0.01858,
           "ci95": [
-            -0.0383,
-            0.0009
+            -0.0377,
+            0.0005
           ],
           "sig": false,
-          "se_boot": 0.00993,
-          "mde80": 0.0278,
-          "beta_std": -0.0415
+          "se_boot": 0.00955,
+          "mde80": 0.0268,
+          "beta_std": -0.0411
         },
         "ffp": {
-          "coef": -0.06507,
+          "coef": -0.06766,
           "ci95": [
-            -0.1211,
-            -0.0098
+            -0.1227,
+            -0.0101
           ],
           "sig": true,
-          "se_boot": 0.02882,
+          "se_boot": 0.02884,
           "mde80": 0.0807,
-          "beta_std": -0.1438
+          "beta_std": -0.1496
         },
         "female_own_gap_ff_plus_ffp": {
-          "coef": -0.08385,
+          "coef": -0.08624,
           "ci95": [
             -0.1383,
-            -0.0327
+            -0.0323
           ],
-          "se_boot": 0.02703,
+          "se_boot": 0.02675,
           "sig": true
         },
-        "n": 28556,
-        "sd_r": 0.45235,
+        "n": 28412,
+        "sd_r": 0.45217,
         "counts": {
-          "deals_eligible": 28755,
-          "deals_estimation": 28556,
-          "deals_dropped_singleton_benchmark_cell": 195,
+          "deals_eligible": 28609,
+          "deals_estimation": 28412,
+          "deals_dropped_singleton_benchmark_cell": 193,
           "deals_dropped_single_row_partner": 4,
-          "partners_eligible": 1999,
-          "female_partners_eligible": 206,
-          "partners_identifying": 1987,
-          "female_partners_identifying": 205
+          "partners_eligible": 1988,
+          "female_partners_eligible": 204,
+          "partners_identifying": 1976,
+          "female_partners_identifying": 203
         }
       }
     },
     "B_vintage_contrast": {
       "exit_ever_2017": {
         "beta_int_2010_14": {
-          "coef": -0.07339,
+          "coef": -0.07634,
           "ci95": [
-            -0.1454,
-            0.0026
+            -0.1458,
+            -0.006
           ],
-          "sig": false,
-          "se_boot": 0.03783,
-          "mde80": 0.1059,
-          "beta_std": -0.1622
+          "sig": true,
+          "se_boot": 0.03631,
+          "mde80": 0.1017,
+          "beta_std": -0.1688
         },
         "contrast_2015_17_minus_2010_14": {
-          "coef": 0.01826,
+          "coef": 0.01919,
           "ci95": [
-            -0.0687,
-            0.0949
+            -0.0609,
+            0.1006
           ],
           "sig": false,
-          "se_boot": 0.04181,
-          "mde80": 0.1171,
-          "beta_std": 0.0404
+          "se_boot": 0.04005,
+          "mde80": 0.1121,
+          "beta_std": 0.0424
         },
         "beta_int_2015_17": {
-          "coef": -0.05513,
+          "coef": -0.05714,
           "ci95": [
-            -0.1202,
-            0.006
+            -0.1162,
+            0.0083
           ],
-          "se_boot": 0.03332,
+          "se_boot": 0.03241,
           "sig": false
         },
-        "n": 28556
+        "n": 28412,
+        "split_sample": {
+          "beta_int_2010_14": {
+            "coef": -0.1012,
+            "ci95": [
+              -0.1713,
+              -0.0257
+            ],
+            "sig": true,
+            "se_boot": 0.0377,
+            "mde80": 0.1056,
+            "beta_std": -0.2245
+          },
+          "beta_int_2015_17": {
+            "coef": -0.03371,
+            "ci95": [
+              -0.1062,
+              0.0313
+            ],
+            "sig": false,
+            "se_boot": 0.03566,
+            "mde80": 0.0999,
+            "beta_std": -0.0743
+          },
+          "n_2010_14": 15124,
+          "n_2015_17": 12871,
+          "difference_2015_17_minus_2010_14_independent_draws": {
+            "coef": 0.06749,
+            "ci95": [
+              -0.0329,
+              0.1633
+            ],
+            "sig": false
+          }
+        }
       },
       "exit3_2020": {
         "beta_int_2010_14": {
-          "coef": -0.00379,
+          "coef": -0.00543,
           "ci95": [
-            -0.0542,
-            0.0514
+            -0.0682,
+            0.05
           ],
           "sig": false,
-          "se_boot": 0.0265,
-          "mde80": 0.0742,
-          "beta_std": -0.0112
+          "se_boot": 0.02909,
+          "mde80": 0.0815,
+          "beta_std": -0.0162
         },
         "contrast_2015_17_minus_2010_14": {
-          "coef": 0.00685,
+          "coef": 0.00881,
           "ci95": [
-            -0.0542,
-            0.066
+            -0.055,
+            0.0731
           ],
           "sig": false,
-          "se_boot": 0.03081,
-          "mde80": 0.0863,
-          "beta_std": 0.0202
+          "se_boot": 0.03257,
+          "mde80": 0.0912,
+          "beta_std": 0.0262
         },
         "contrast_2018_20_minus_2015_17": {
-          "coef": 0.00284,
+          "coef": 0.00336,
           "ci95": [
-            -0.0387,
-            0.0444
+            -0.0388,
+            0.0432
           ],
           "sig": false,
-          "se_boot": 0.02168,
-          "mde80": 0.0607,
-          "beta_std": 0.0084
+          "se_boot": 0.02104,
+          "mde80": 0.0589,
+          "beta_std": 0.01
         },
         "contrast_2018_20_minus_2010_14": {
-          "coef": 0.00969,
+          "coef": 0.01218,
           "ci95": [
-            -0.0476,
-            0.0674
+            -0.0537,
+            0.0736
           ],
-          "se_boot": 0.02916,
+          "se_boot": 0.03195,
           "sig": false
         },
         "beta_int_2018_20": {
-          "coef": 0.0059,
+          "coef": 0.00675,
           "ci95": [
-            -0.0226,
-            0.0349
+            -0.0218,
+            0.0314
           ],
-          "se_boot": 0.01453,
+          "se_boot": 0.01418,
           "sig": false
         },
-        "n": 49835
+        "n": 49583
       }
     },
     "C_post_deal_exit_rule": {
+      "population_rule_sample_v2": {
+        "rule": "rows of companies with an acquisition or IPO dated on or before the round date are excluded at construction (same-day excluded)",
+        "manifest": {
+          "canonical_sample": {
+            "file": "05_data/sample_v2.parquet",
+            "sha256_16": "3acfb38d12559791",
+            "rows": 153012,
+            "rows_naeu": 126128,
+            "unit": "partner-attributed deal (funding_round x investor x partner)",
+            "span": "2010-01-01..2023-10-31",
+            "frozen_at": "2026-09-10",
+            "builder": "06_code/build_sample_v2.py",
+            "population_rule": "company has no acquisition or IPO recorded on or before the round date (same-day exits excluded)",
+            "v1_rows": 154123,
+            "excluded_pre_exit_rows": 1111,
+            "excluded_same_day": 85,
+            "excluded_first_exit_is_acquisition": 979,
+            "excluded_first_exit_is_ipo": 132,
+            "excluded_rows_with_a_later_distinct_exit_event": 336,
+            "base_ff": 0.1719,
+            "base_fp": 0.1061,
+            "n_fp_ff": 4449,
+            "unique_rounds": 84079,
+            "unique_companies": 47173,
+            "unique_investor_firms": 14963,
+            "unique_partners": 29551
+          },
+          "upstream": {
+            "cores_v1": "../../shared/data/processed/cores_v1/",
+            "predecessor": "05_data/sample_v1.parquet (sha256_16 5b83f6785878d867; 154,123 rows; kept for provenance)"
+          }
+        }
+      },
       "pre_deal_exit_records": {
-        "n_rows_naeu": 933,
-        "share_of_exit_ever_positives": 0.0227,
-        "acquisition_before_deal": 834,
-        "ipo_before_deal": 52,
-        "both": 47,
-        "days_deal_after_exit_q10_q50_q90": [
-          5,
-          1267,
-          4202
-        ],
-        "same_day": 79,
-        "top_stages": {
-          "private_equity": 372,
-          "series_unknown": 211,
-          "series_b": 69,
-          "series_a": 60,
-          "series_c": 55
-        },
-        "share_of_exit3_positives_2020": 0.0385,
-        "share_of_exit_ever_positives_2017": 0.0093
+        "n_rows_naeu": 0,
+        "share_of_exit_ever_positives": 0.0,
+        "acquisition_before_deal": 0,
+        "ipo_before_deal": 0,
+        "both": 0,
+        "days_deal_after_exit_q10_q50_q90": null,
+        "same_day": 0,
+        "top_stages": {},
+        "share_of_exit3_positives_2020": 0.0,
+        "share_of_exit_ever_positives_2017": 0.0
       },
       "within_partner_exit3": {
         "original": {
-          "coef": 0.00482,
+          "coef": 0.00473,
           "ci95": [
-            -0.0187,
-            0.0273
+            -0.0192,
+            0.0281
           ],
           "sig": false,
-          "se_boot": 0.01234,
-          "mde80": 0.0346,
-          "beta_std": 0.0142
+          "se_boot": 0.01206,
+          "mde80": 0.0338,
+          "beta_std": 0.0141
         },
         "post_deal_rule": {
-          "coef": 0.00638,
+          "coef": 0.00473,
           "ci95": [
-            -0.0157,
-            0.0327
+            -0.0192,
+            0.0262
           ],
           "sig": false,
-          "se_boot": 0.0124,
-          "mde80": 0.0347,
-          "beta_std": 0.019
+          "se_boot": 0.01183,
+          "mde80": 0.0331,
+          "beta_std": 0.0141
         },
-        "n_original": 49835,
-        "n_post_rule": 49835,
-        "base_original": 0.1569,
-        "base_post_rule": 0.1529
+        "n_original": 49583,
+        "n_post_rule": 49583,
+        "base_original": 0.1535,
+        "base_post_rule": 0.1535
       },
       "within_partner_exit_ever": {
         "original": {
-          "coef": -0.06507,
+          "coef": -0.06766,
           "ci95": [
-            -0.1211,
-            -0.0078
+            -0.1155,
+            -0.003
           ],
           "sig": true,
-          "se_boot": 0.02854,
-          "mde80": 0.0799,
-          "beta_std": -0.1438
+          "se_boot": 0.02915,
+          "mde80": 0.0816,
+          "beta_std": -0.1496
         },
         "post_deal_rule": {
-          "coef": -0.06497,
+          "coef": -0.06766,
           "ci95": [
-            -0.1185,
-            -0.0142
+            -0.1169,
+            -0.0104
           ],
           "sig": true,
-          "se_boot": 0.02741,
-          "mde80": 0.0768,
-          "beta_std": -0.1436
+          "se_boot": 0.02658,
+          "mde80": 0.0744,
+          "beta_std": -0.1496
         },
-        "n_original": 28556,
-        "n_post_rule": 28556,
-        "base_original": 0.5416,
-        "base_post_rule": 0.538
+        "n_original": 28412,
+        "n_post_rule": 28412,
+        "base_original": 0.5397,
+        "base_post_rule": 0.5397
       },
       "table3_peer_GLOBAL": {
         "original": {
           "fp": {
-            "coef": -0.06246,
+            "coef": -0.06187,
             "ci95": [
-              -0.1171,
-              -0.0162
+              -0.1246,
+              -0.0111
             ],
             "sig": true,
-            "se_boot": 0.02657,
-            "mde80": 0.0744
+            "se_boot": 0.02846,
+            "mde80": 0.0797
           },
-          "n": 478,
-          "n_cells": 191,
-          "base": 0.5293
+          "n": 475,
+          "n_cells": 190,
+          "base": 0.5263
         },
         "post_deal_rule": {
           "fp": {
-            "coef": -0.06067,
+            "coef": -0.06187,
             "ci95": [
-              -0.1195,
-              -0.0163
+              -0.1181,
+              -0.0117
             ],
             "sig": true,
-            "se_boot": 0.02707,
-            "mde80": 0.0758
+            "se_boot": 0.02686,
+            "mde80": 0.0752
           },
-          "n": 478,
-          "n_cells": 191,
-          "base": 0.523
+          "n": 475,
+          "n_cells": 190,
+          "base": 0.5263
         }
       },
       "table3_peer_NAEU": {
         "original": {
           "fp": {
-            "coef": -0.04549,
+            "coef": -0.04474,
             "ci95": [
-              -0.0933,
-              0.0071
+              -0.1052,
+              -0.0007
             ],
-            "sig": false,
-            "se_boot": 0.02498,
-            "mde80": 0.0699
+            "sig": true,
+            "se_boot": 0.02698,
+            "mde80": 0.0755
           },
-          "n": 430,
-          "n_cells": 174,
-          "base": 0.5488
+          "n": 427,
+          "n_cells": 173,
+          "base": 0.5457
         },
         "post_deal_rule": {
           "fp": {
-            "coef": -0.0435,
+            "coef": -0.04474,
             "ci95": [
-              -0.106,
-              0.0033
+              -0.1018,
+              0.0034
             ],
             "sig": false,
-            "se_boot": 0.02821,
-            "mde80": 0.079
+            "se_boot": 0.02672,
+            "mde80": 0.0748
           },
-          "n": 430,
-          "n_cells": 174,
-          "base": 0.5419
+          "n": 427,
+          "n_cells": 173,
+          "base": 0.5457
         }
       }
     },
     "D_mundlak_extended": {
       "baseline_partial_mundlak": {
         "dev_terrain": {
-          "coef": -0.01837,
+          "coef": -0.02433,
           "ci95": [
-            -0.2599,
-            0.2288
+            -0.2688,
+            0.2278
           ],
           "sig": false,
-          "se_boot": 0.12755,
-          "mde80": 0.3571
+          "se_boot": 0.13005,
+          "mde80": 0.3641
         },
         "fm_terrain": {
-          "coef": 0.43452,
+          "coef": 0.44687,
           "ci95": [
-            0.1902,
-            0.7088
+            0.1925,
+            0.6778
           ],
           "sig": true,
-          "se_boot": 0.13344,
-          "mde80": 0.3736
+          "se_boot": 0.13186,
+          "mde80": 0.3692
         },
         "contrast_dev_minus_fm": {
-          "coef": -0.4529,
+          "coef": -0.4712,
           "ci95": [
-            -0.8159,
-            -0.1044
+            -0.8061,
+            -0.1291
           ],
-          "se_boot": 0.18322,
+          "se_boot": 0.18171,
           "sig": true
         },
-        "n": 2017
+        "n": 2009
       },
       "full_mundlak_adj_lnn": {
         "dev_terrain": {
-          "coef": -0.01678,
+          "coef": -0.02065,
           "ci95": [
-            -0.2912,
-            0.2498
+            -0.2604,
+            0.2482
           ],
           "sig": false,
-          "se_boot": 0.1365,
-          "mde80": 0.3822
+          "se_boot": 0.12572,
+          "mde80": 0.352
         },
         "fm_terrain": {
-          "coef": 0.42887,
+          "coef": 0.43988,
           "ci95": [
-            0.1816,
-            0.672
+            0.1659,
+            0.687
           ],
           "sig": true,
-          "se_boot": 0.13024,
-          "mde80": 0.3647
+          "se_boot": 0.13168,
+          "mde80": 0.3687
         },
         "dev_adj": {
-          "coef": 0.11131,
+          "coef": 0.08115,
           "ci95": [
-            -0.0186,
-            0.2337
+            -0.0548,
+            0.2366
           ],
           "sig": false,
-          "se_boot": 0.066,
-          "mde80": 0.1848
+          "se_boot": 0.07374,
+          "mde80": 0.2065
         },
         "fm_adj": {
-          "coef": 0.22288,
+          "coef": 0.20325,
           "ci95": [
-            0.0874,
-            0.3428
+            0.0629,
+            0.354
           ],
           "sig": true,
-          "se_boot": 0.06559,
-          "mde80": 0.1837
+          "se_boot": 0.07045,
+          "mde80": 0.1973
         },
         "contrast_dev_minus_fm": {
-          "coef": -0.44565,
+          "coef": -0.46053,
           "ci95": [
-            -0.7885,
-            -0.0935
+            -0.7657,
+            -0.1002
           ],
-          "se_boot": 0.17885,
+          "se_boot": 0.1657,
           "sig": true
         },
-        "n": 2017
+        "n": 2009
       },
       "full_mundlak_all_within_between": {
         "dev_terrain": {
-          "coef": -0.02007,
+          "coef": -0.0362,
           "ci95": [
-            -0.2654,
-            0.2716
+            -0.3431,
+            0.2179
           ],
           "sig": false,
-          "se_boot": 0.14177,
-          "mde80": 0.397
+          "se_boot": 0.13927,
+          "mde80": 0.39
         },
         "fm_terrain": {
-          "coef": 0.44012,
+          "coef": 0.45958,
           "ci95": [
-            0.1407,
-            0.7155
+            0.1656,
+            0.7034
           ],
           "sig": true,
-          "se_boot": 0.13732,
-          "mde80": 0.3845
+          "se_boot": 0.13459,
+          "mde80": 0.3768
         },
         "contrast_dev_minus_fm": {
-          "coef": -0.46019,
+          "coef": -0.49578,
           "ci95": [
-            -0.8256,
-            -0.093
+            -0.8518,
+            -0.1126
           ],
-          "se_boot": 0.19088,
+          "se_boot": 0.18907,
           "sig": true
         },
-        "n": 2017
+        "n": 2009
       },
-      "n_partners": 2661,
+      "n_partners": 2654,
       "n_single_partner_firms": 597,
-      "corr_fm_terrain_fm_adj": 0.083
+      "corr_fm_terrain_fm_adj": 0.0864
     },
     "prediction_check": {
       "A_exit3_own_in_[-4.5,0]": true,
@@ -514,17 +571,17 @@
     }
   },
   "prediction": "A exit3 own ∈[−4.5,0]; exit_ever own ∈[−12,−4] 상단<0; B 대비 CI 0 포함; C 이동 <0.5pp(파트너 내)/<1pp(Table 3), GLOBAL 검출 유지; D between>0.2>within",
-  "verdict": "여성 자신 FF−other: exit3 -2.07 [-4.42,+0.23] · exit_ever -8.38 [-13.83,-3.27] | 빈티지 대비 exit_ever(15–17 − 10–14) +1.83 [-6.87,+9.49] · exit3(18–20 − 10–14) +0.97 [-4.76,+6.74] | 딜 이후 규칙: 파트너 내 exit3 +0.48→+0.64 · exit_ever -6.51→-6.50 · Table 3 GLOBAL -6.25→-6.07 [-11.95,-1.63] · NA+EU -4.55→-4.35 | 확장 Mundlak between +0.429 · within -0.017 · 대비 -0.446 [-0.788,-0.093] — 헤드라인 유지 (예측 적중 6/8)",
+  "verdict": "여성 자신 FF−other: exit3 -2.21 [-4.42,-0.05] · exit_ever -8.62 [-13.83,-3.23] | 빈티지 대비 exit_ever(15–17 − 10–14) +1.92 [-6.09,+10.06] · exit3(18–20 − 10–14) +1.22 [-5.37,+7.36] | 딜 이후 규칙: 파트너 내 exit3 +0.47→+0.47 · exit_ever -6.77→-6.77 · Table 3 GLOBAL -6.19→-6.19 [-11.81,-1.17] · NA+EU -4.47→-4.47 | 확장 Mundlak between +0.440 · within -0.021 · 대비 -0.461 [-0.766,-0.100] — 헤드라인 유지 (예측 적중 6/8)",
   "kill_met": false,
   "code": "p001_60_review_reanalyses.py",
-  "sha256_16": "6a4ac9ac4b558c05",
+  "sha256_16": "12519b529b4ee960",
   "seed": 42,
-  "runtime_s": 802.6,
+  "runtime_s": 696.8,
   "date": "2026-09-10",
   "stage": 8,
   "feeds": "comment/RESPONSE_1.md → §4 ¶F·Table 4B·§2 규칙·IA.1",
   "slug": "review_reanalyses",
   "builds_on": "P001-54/59/10/38",
-  "common_sha256_16": "a63e7b62854b47c6",
+  "common_sha256_16": "73d12fb69e9b9b73",
   "rng_seed": 20260960
 }

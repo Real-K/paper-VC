@@ -1,72 +1,51 @@
-# Table 7. Track-record composition: size, pricing, and information content
-## Panel A. Re-ranking: raw vs composition-adjusted exit rates
-| | Raw → Adjusted |
-|---|---|
-| Female partners' mean percentile shift | +4.43 pts [+2.13, +6.77] |
-| Male partners' mean percentile shift | -0.34 pts [-0.52, -0.15] |
-| Female share of top quartile | 7.11% → 8.18% (Δ interval crosses zero) |
-| Rank correlation (raw, adjusted) | 0.861 |
+# Table 7. Within-partner outcome test: female-founded versus other deals of the same partner, by partner gender, across horizons (NA+EU)
+Outcome: the deal's exit (or follow-on) indicator net of the leave-one-out mean of its year × sector × stage market cell; partner fixed effects and deal controls. β_int is the difference between female and male partners' own female-founded − other gaps.
 
-## Panel B. Subsequent attributed deal activity: log count of deals attributed to the partner in 2018–2020 on 2010–17 percentiles
-| | β (log deals per unit of percentile rank, 0–1) | 95% CI |
-|---|---|---|
-| Adjusted percentile A, holding the raw percentile fixed (β_A) | +1.54 | [+1.24, +1.86] |
-| Raw percentile R, holding A fixed (β_R) = coefficient on the rank difference R − A | -1.73 | [-2.11, -1.39] |
-| Adjusted percentile A, holding the rank difference R − A fixed (β_R + β_A; same bootstrap draws) | -0.19 | [-0.32, -0.08] |
+## Panel A. Estimates: female-founded vs other deals of the same partner, by partner gender (36-month exit net of the year × sector × stage market mean; deals through 2020-10). β_int is the difference between female and male partners' own female-founded − other gaps
+| Specification | β_int: female partners' extra FF gap (pp) | 95% CI | MDE80 (pp) | β_int in sd of the benchmarked outcome | inside ±5 pp | β_FF: male partners' own FF − other gap (pp) | 95% CI | n deals / partners (women) |
+|---|---|---|---|---|---|---|---|---|
+| Partner fixed effects, deal controls; partner-cluster bootstrap | +0.47 | [-2.37, +2.93] | 3.65 | +0.014 | yes | -2.69 | [-3.54, -1.76] | 49,583 / 3,430 (416) |
+| Same; investor-firm clusters | +0.47 | [-2.05, +3.10] | 3.64 | +0.014 | yes | -2.69 | [-3.80, -1.76] | 49,583 / 3,430 (416) |
+| Firm × year fixed effects instead of partner effects (partner gender included) | +0.84 | [-1.79, +3.41] | 3.90 | +0.025 | yes | -2.79 | [-3.78, -1.79] | 45,934 / 3,430 (416) |
+| Partner × two-year fixed effects | +1.10 | [-1.43, +3.79] | 3.87 | +0.033 | yes | -2.82 | [-3.72, -1.96] | 46,236 / 3,430 (416) |
+| Partners with ≥ 5 deals | +0.56 | [-1.74, +3.10] | 3.49 | +0.017 | yes | -2.85 | [-3.65, -2.02] | 46,758 / 2,459 (284) |
+| Vintages 2015 and later | +1.23 | [-1.49, +3.90] | 3.90 | +0.038 | yes | -2.67 | [-3.62, -1.80] | 32,786 / 3,300 (406) |
+| + company characteristics (Crunchbase profile values; see note) | +0.34 | [-2.04, +2.74] | 3.40 | +0.010 | yes | -1.63 | [-3.46, +0.25] | 49,583 / 3,430 (416) |
+| + prior patent applications (any before the deal; log count; assignee-match indicator, which is not pre-deal and absorbs unmatched zeros) | +0.53 | [-1.45, +2.75] | 3.18 | +0.016 | yes | -2.64 | [-3.64, -1.73] | 49,583 / — (any prior patent: +3.67 pp [+1.63, +5.46]) |
+| Follow-on financing within 36 months (deals through 2020-10) | -1.06 | [-4.09, +2.07] | 4.45 | -0.025 | yes | -0.41 | [-1.48, +0.59] | 49,583 / 3,430 (416) |
+| Exit by sample end (deals through 2017-10) | -6.77 | [-12.13, -1.65] | 7.37 | -0.150 | no | -1.86 | [-3.73, +0.07] | 28,412 / 1,987 (204) |
+| &nbsp;&nbsp;vintages 2010–14 | -10.12 | [-17.56, -3.20] | 10.43 | -0.225 | no | -0.61 | [-3.24, +1.96] | 15,124 / 1,139 (89) |
+| &nbsp;&nbsp;vintages 2015–17 | -3.37 | [-10.82, +2.59] | 10.03 | -0.074 | no | -2.90 | [-5.41, -0.63] | 12,871 / 1,285 (146) |
+| &nbsp;&nbsp;partners with an attributed deal after October 2020 | -7.13 | [-13.67, -0.38] | 9.52 | -0.158 | no | -1.64 | [-3.71, +0.32] | 23,608 / 1,421 (144) |
+| &nbsp;&nbsp;partners without one | -5.62 | [-18.09, +7.24] | 19.34 | -0.123 | no | -2.85 | [-7.09, +1.15] | 4,804 / 555 (59) |
+| &nbsp;&nbsp;IPO by sample end | -3.14 | [-7.20, +0.22] | 5.33 | -0.115 | no | +1.24 | [+0.16, +2.48] | 28,412 / 1,976 (203) |
+| &nbsp;&nbsp;acquisition by sample end (no IPO) | -3.63 | [-9.63, +2.55] | 8.51 | -0.078 | no | -3.10 | [-4.82, -1.04] | 28,412 / 1,976 (203) |
+| &nbsp;&nbsp;company clusters | -6.77 | [-11.97, -1.20] | 8.06 | -0.150 | no | -1.86 | [-4.58, +0.93] | 28,412 / 1,976 (203) |
+| 36-month exit, vintages 2010–14 | -2.80 | [-9.56, +3.89] | 9.56 | -0.076 | no | -3.14 | [-4.84, -1.25] | 16,299 / 1,139 (89) |
+| &nbsp;&nbsp;vintages 2015–17 | -0.04 | [-4.89, +4.59] | 6.73 | -0.001 | yes | -3.22 | [-4.68, -1.63] | 15,227 / 1,367 (160) |
+| &nbsp;&nbsp;vintages 2018–20 | +3.05 | [+0.02, +6.39] | 4.97 | +0.096 | no | -2.74 | [-4.11, -1.39] | 16,738 / 1,913 (263) |
+| 36-month exit, company clusters | +0.47 | [-2.16, +3.18] | 3.61 | +0.014 | yes | -2.69 | [-3.88, -1.48] | 49,583 / 3,406 (413) |
+| 36-month exit, year × sector × stage × country benchmark | +0.96 | [-1.37, +3.39] | 3.47 | +0.029 | yes | -2.79 | [-3.56, -1.90] | 48,122 / 3,299 (400) |
+| Same partners and window as eventual exit (deals through 2017-10): 36-month exit | -1.47 | [-5.19, +2.73] | 5.56 | -0.042 | no | -2.97 | [-4.27, -1.78] | 28,412 / 1,987 |
+| &nbsp;&nbsp;72-month exit | -4.40 | [-9.64, +0.25] | 7.33 | -0.099 | no | -1.69 | [-3.45, -0.17] | 28,412 / 1,987 |
+| &nbsp;&nbsp;exit after month 36 (indicator on the full sample: exit by sample end and not by month 36; equals eventual exit minus 36-month exit by construction) | -5.29 | [-11.01, +0.26] | 8.02 | -0.118 | no | +1.11 | [-0.67, +2.89] | 28,412 / 1,987 |
+| &nbsp;&nbsp;follow-on financing within 36 months | -0.75 | [-5.20, +3.73] | 6.88 | -0.017 | no | +0.02 | [-1.22, +1.34] | 28,412 / 1,987 |
+| Same partners and window (deals through 2017-10): 60-month exit | -3.76 | [-9.10, +1.03] | 7.24 | -0.088 | no | -1.55 | [-3.13, -0.10] | 28,412 / 1,987 |
+| &nbsp;&nbsp;96-month exit | -4.13 | [-8.80, +0.93] | 7.15 | -0.090 | no | -2.32 | [-4.09, -0.58] | 28,412 / 1,987 |
+| Horizon differences from the same bootstrap draws (deals through 2017-10): 60 − 36 months | -2.28 | [-5.73, +0.56] | — | — | — | — | — | paired draws 400 |
+| &nbsp;&nbsp;72 − 36 months | -2.93 | [-6.94, +0.53] | — | — | — | — | — | |
+| &nbsp;&nbsp;96 − 36 months | -2.66 | [-7.20, +1.79] | — | — | — | — | — | |
+| &nbsp;&nbsp;eventual − 36 months | -5.29 | [-11.01, +0.26] | — | — | — | — | — | |
+| &nbsp;&nbsp;eventual − 96 months | -2.63 | [-5.69, +0.29] | — | — | — | — | — | |
+| Partner and year × sector × stage fixed effects entered jointly on the raw outcome: 36-month exit, deals through 2020-10 | +0.67 | [-1.77, +3.07] | 3.53 | — | yes | -2.82 | [-3.77, -1.90] | 49,583 / 3,418 |
+| &nbsp;&nbsp;eventual exit, deals through 2017-10 | -5.71 | [-12.18, -0.01] | 8.66 | — | no | -2.43 | [-4.65, -0.40] | 28,412 / 1,983 |
+| Female partners' own female-founded − other gap (β_FF + β_int), 36-month exit, deals through 2020-10, 2,000 draws | -2.21 | [-4.42, -0.05] | 3.17 | -0.066 | yes | — | — | — |
+| &nbsp;&nbsp;same, follow-on financing | -1.48 | [-4.39, +1.74] | 4.37 | -0.034 | yes | — | — | — |
+| &nbsp;&nbsp;same, eventual exit, deals through 2017-10 | -8.62 | [-13.83, -3.23] | 7.49 | -0.191 | no | — | — | — |
+| Vintage contrast, eventual exit (deals through 2017-10): β_int for 2015–17 minus β_int for 2010–14 (pooled interaction model) | +1.92 | [-6.09, +10.06] | 11.21 | +0.042 | no | — | — | — |
+| Vintage contrast, 36-month exit (deals through 2020-10): β_int for 2018–20 minus β_int for 2010–14 | +1.22 | [-5.37, +7.36] | 8.95 | +0.036 | no | — | — | — |
+| Vintage difference from separate regressions per vintage, eventual exit (deals through 2017-10): β_int(2015–17) − β_int(2010–14), independent draws | +6.75 | [-3.29, +16.33] | — | — | — | — | — | 15,124 + 12,871 / — |
+| Exits dated on or before the deal excluded (post-deal rule): 36-month exit, deals through 2020-10 | +0.47 | [-1.92, +2.62] | 3.31 | +0.014 | yes | — | — | 49,583 / — |
+| &nbsp;&nbsp;same, eventual exit, deals through 2017-10 | -6.77 | [-11.69, -1.04] | 7.44 | -0.150 | no | — | — | 28,412 / — |
 
-## Panel C. External outcomes among partners who move or spin out, 2017-11 to 2023-10
-| Outcome | Sample | β on composition component (given adjusted percentile) | 95% CI | β with pre-period late-stage share as control | 95% CI | Late-stage share, own coefficient |
-|---|---|---|---|---|---|---|
-| New firm records a fund close (partners who spin out) | 380 partners; 221 raise (58.2%) | +0.494 | [+0.143, +0.862] | +0.456 | [-0.086, +0.966] | +0.200 [+0.028, +0.358] |
-| log fund size recorded | 197 | +2.501 | [+0.996, +4.194] | +0.662 | [-1.577, +2.964] | +1.423 [+0.756, +2.201] |
-| Receiving firm's prior attributed deal count, log(1+n) (partners who move) | 712 | +1.201 | [+0.362, +2.244] | +0.663 | [-0.693, +2.258] | +0.584 [+0.150, +1.062] |
-| Joint randomization test, three outcomes (uncontrolled) | 400 permutations of the composition component | Mahalanobis 30.0 vs null 95th percentile 7.5; 3/3 signs aligned | p < 0.003 (no exceedance in 400 permutations) | | | |
-
-## Panel D1. Does composition carry information? Open horizon (exit by sample end); post window 2017-11 to 2023-10
-Rows are on the percentile scale (β on raw percentile given adjusted percentile) unless marked *levels* (β on the composition component in exit-probability units).
-| Specification | β | 95% CI | n |
-|---|---|---|---|
-| Baseline cell benchmark | +0.097 | [+0.039, +0.160] | 2,178 |
-| Leave-one-out cell benchmark | +0.103 | [+0.034, +0.176] | 2,164 |
-| Excluding post-period deals in companies the partner backed pre-period | +0.079 | [+0.017, +0.158] | 1,858 |
-| Composition component, levels, given tenure and first-deal-year effects | +0.076 | [-0.018, +0.162] | 2,164 |
-| Composition component, levels, home-firm fixed effects | +0.099 | [-0.060, +0.257] | 1,624 |
-| Decomposition of the composition component, levels: vintage / stage within year / sector within year–stage | +0.075 / +0.081 / +0.160 | [-0.089, +0.258] / [-0.040, +0.198] / [+0.004, +0.307] | 2,164 |
-| Same decomposition, given tenure and first-deal-year effects | -0.037 / +0.057 / +0.151 | [-0.269, +0.212] / [-0.068, +0.189] / [-0.008, +0.300] | 2,164 |
-| Contrast, levels: adjusted exit rate, same regression as the composition-component levels row | +0.335 | [+0.284, +0.383] | 2,164 |
-| Contrast: adjusted percentile's own coefficient | +0.246 | [+0.208, +0.279] | 2,178 |
-Remaining rows (benchmark variation and additional analyses) are in Internet Appendix Table IA.1.
-
-## Panel D2. Same question at a fixed 36-month exit horizon in both periods (post window 2017-11 to 2020-10); levels
-β on the composition component, or the named part, in 36-month exit-probability units. Partner-level rows include the adjusted rate, log deal count, gender, tenure, tenure², and first-deal-year effects unless noted. Deal-level rows include the partner's prior within-cell residual, log prior deals, gender, tenure at the deal date and its square, and year effects where no firm–year effect is present.
-| Specification | β | 95% CI | n |
-|---|---|---|---|
-| **Composition component — preferred specification for this question** | **+0.278** | **[+0.075, +0.480]** | 2,017 |
-| Sector-within-year–stage part | +0.307 | [+0.057, +0.570] | 2,017 |
-| Adjusted exit rate's own coefficient, same regression as the preferred row | +0.180 | [+0.083, +0.281] | 2,017 |
-| Home-firm fixed effects (minimum detectable effect 0.38; sector part 0.40) | -0.039 | [-0.328, +0.235] | 1,490 |
-| Pre-period restricted to deals whose 36-month window closes before the ranking date (deals through 2014-10; minimum detectable effect 0.35) | +0.090 | [-0.123, +0.350] | 1,127 |
-| Reweighted for selection out of post-period observation (inverse probability) | +0.252 | [-0.005, +0.519] | 2,017 |
-| Tenure and rank from employment records (join date, title) instead of first-deal tenure; partners with a recorded join date | +0.305 | [+0.117, +0.501] | 1,789 |
-| Follow-on construct instead of exit (follow-on within 36 months, both periods) | +0.035 | [-0.159, +0.237] | 2,017 |
-| Deal level, within firm–year: composition component (minimum detectable effect 0.16) | +0.058 | [-0.044, +0.176] | 25,600 |
-Remaining rows (benchmark variation and additional analyses) are in Internet Appendix Table IA.1.
-
-## Panel E. By partner gender (female − male)
-Percentile-scale rows are in fractions of the percentile scale (0.01 = one percentile point); *levels* rows are in exit-probability units (exit by sample end).
-| Outcome | β | 95% CI | n |
-|---|---|---|---|
-| Composition component (raw − adjusted percentile) | -0.048 | [-0.075, -0.025] | 2,686 |
-| Composition component, leave-one-out benchmark | -0.050 | [-0.079, -0.022] | 2,661 |
-| Post-period within-cell performance, levels | -0.007 | [-0.048, +0.034] | 2,178 |
-| Post-period within-cell performance, levels, given composition | -0.008 | [-0.045, +0.031] | 2,178 |
-| Pre-period within-cell performance, levels (adjusted exit rate) | +0.014 | [-0.020, +0.049] | 2,686 |
-| Composition component, levels | -0.041 | [-0.061, -0.016] | 2,661 |
-| Composition component, levels, given tenure and first-deal-year effects | -0.016 | [-0.034, +0.003] | 2,661 |
-| Vintage / stage-within-year / sector-within-year–stage parts, levels | -0.017 / -0.016 / -0.007 | [-0.028, -0.009] / [-0.029, -0.002] / [-0.017, +0.004] | 2,661 |
-| Composition component, levels, given employment-record tenure and rank | -0.021 | [-0.041, +0.001] | 2,333 |
-| Composition component, levels, given rank only | -0.039 | [-0.063, -0.016] | 2,333 |
-| Implied contribution of composition to the post-period gap, levels, open horizon (Σ tenure-controlled part gap × tenure-controlled coefficient, same resamples; materiality band ±0.02; interval inside ±0.01) | -0.0014 | [-0.0042, +0.0008] | 2,164 |
-| Same, fixed 36-month exit horizon (post window to 2020-10) | -0.0002 | [-0.0041, +0.0053] | 2,017 |
-
-*Partners with ≥5 attributed deals through 2017-10: 2,686 (192 women). Panels B–E: deal-count and gender controls (Panel B additionally pre-period early-stage share and sector breadth); investor-firm cluster bootstrap. Because the adjusted percentile is the raw percentile net of year–sector–stage cell benchmarks, the raw-percentile coefficient given the adjusted percentile equals the coefficient on their difference, the composition component (percentile correlation 0.8614, VIF 7.4); Panel B's negative value is that composition coefficient. Panel D1 and Panel E percentile-scale rows: β per unit of the raw percentile (0.01 = one percentile point); *levels* rows: β per unit of the composition component in exit-probability units. Panel D2's control set is stated in its header; the follow-on-construct row reproduces P001-30 (a separate bootstrap in P001-33 returns the same point). Panel D2 rows below the preferred row are additional analyses. † Exploratory: identifies off within-partner changes in composition over time rather than off placement across partners; clustered by partner. Sources: P001-05, P001-18b, P001-23, P001-25, P001-26, P001-27, P001-28, P001-29, P001-30, P001-31, P001-33, P001-34, P001-36, P001-38, P001-39.*
+*Panel B: partners with at least one female-founded and one other deal in the window. Eligible deals 49,898 → 49,595 with a market benchmark (303 deals alone in their year × sector × stage cell have none) → 49,583 in the estimation sample (12 are a partner's only remaining deal); 3,430 partners (416 women) are eligible and 3,406 (413) retain both kinds of deal after these drops and identify β_int; the partner counts shown in each row follow the same convention (eligible for the P001-54 rows, identifying for the later rows). 32,979 deals are dated 2015 or later; exit3 base rate 0.153. The "inside ±5 pp" column marks whether the 95% interval lies within a reference band equal to the peer-comparison gap of Table 5; it is a reference scale, not a materiality threshold. Outcome = deal outcome minus the leave-one-out mean of its year × sector × stage cell; deal controls as in Panel A. β_FF is the within-partner gap for male partners; β_int is the additional gap for female partners (favoritism predicts β_int < 0); female partners' own gap is β_FF + β_int, with its interval from the same bootstrap draws. The vintage-contrast rows come from one pooled regression with β_int interacted with vintage indicators; the post-deal-rule rows recode exits dated on or before the deal as non-exits (Appendix IA.1). Same-window rows re-estimate the specification on the eventual-exit sample (P001-57). Bootstrap two-sided p-values for β_int on the three featured outcomes (36-month exit, follow-on, exit by sample end): 0.722, 0.494, 0.014; Holm-adjusted 0.988, 0.988, 0.042. Dropping any one of the 204 women from the exit-by-sample-end row moves β_int by at most 0.87 points. Female partners' female-founded deals outside this sample (partners with no other deal): 23.5 percent. Sources: P001-54, P001-57, P001-59, P001-60.*

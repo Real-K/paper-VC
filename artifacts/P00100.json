@@ -3,9 +3,16 @@
  "title": "정본 표본 집계 카운트 (Table 1 입력)",
  "status": "OK",
  "estimates": {
-  "n_deals": 154123,
-  "n_naeu": 127061,
-  "sample_sha256_16": "5b83f6785878d867"
+  "n_deals": 153012,
+  "n_naeu": 126128,
+  "sample_sha256_16": "3acfb38d12559791",
+  "unique_rounds": 84079,
+  "unique_companies": 47173,
+  "unique_investor_firms": 14963,
+  "unique_partners": 29551,
+  "v1_rows": 154123,
+  "excluded_pre_exit_rows": 1111,
+  "excluded_pre_exit_rows_naeu": 933
  },
  "code": "06_code/p001_00_sample_counts.py"
 }

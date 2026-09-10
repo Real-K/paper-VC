@@ -1,6 +1,6 @@
 # Artifact manifest
 
-73 aggregate result files in `artifacts/`. `sha256_16` is the first 16 hex digits of the file's SHA-256; `ledger_rows` counts the rows of `CLAIMS_LEDGER.csv` that cite the file; `read_by_exhibit_generator` marks the files `code/build/p001_09_exhibits.py` reads. Titles are in Korean (the project's working language); the paper's exhibits are in English.
+74 aggregate result files in `artifacts/`. `sha256_16` is the first 16 hex digits of the file's SHA-256; `ledger_rows` counts the rows of `CLAIMS_LEDGER.csv` that cite the file; `read_by_exhibit_generator` marks the files `code/build/p001_09_exhibits.py` reads. Titles are in Korean (the project's working language); the paper's exhibits are in English.
 
 | file | sha256_16 | bytes | id | status | generating script | ledger rows | exhibits | title |
 |---|---|---|---|---|---|---|---|---|
@@ -16,7 +16,7 @@
 | P00107.json | `aad08ff4a13d3329` | 2,627 | P001-07 | PARTIAL | `p001_07_robustness_grid.py` | 1 | yes | 강건성 격자 — 측정·표본·창·추론 축 (W4) |
 | P00108.json | `ccc40dec0c37de7f` | 2,227 | P001-08 | PARTIAL | `p001_08_measurement_diags.py` | 3 | yes | 측정 진단 — 귀속 선택·결측 선택·드리프트·세분 Becker (W4) |
 | P00110.json | `042ce11827ad6e9a` | 2,525 | P001-10 | GO | `p001_10_gap_ladder.py` | 4 | yes | 원 격차 위치 정본 사다리 — 지역×셀 (D012, Table 3 유일 소스) |
-| P00111.json | `968361cc2b3e7dae` | 1,546 | P001-11 | PARTIAL | `p001_11_e3_deal_level.py` | 5 | yes | E3 딜 수준 스택 회귀 — 정보 손실 제거 (Track D, P-1) |
+| P00111.json | `31f0197e45b2d348` | 2,451 | P001-11 | PARTIAL | `p001_11_e3_deal_level.py` | 14 | yes | E3 딜 수준 스택 회귀 — 정보 손실 제거 (Track D, P-1) |
 | P00112.json | `497e4075e8798bda` | 2,432 | P001-12 | GO | `p001_12_covadj_hazard.py` | 6 | yes | E2 공변량 조정 배터리 + 이산시간 해저드 (Track D, P-2·P-3) |
 | P00113.json | `28e46e8144c69d6d` | 1,878 | P001-13 | PARTIAL | `p001_13_battery_joint.py` | 1 | yes | 판별 배터리 결합 — 지수 등가·IU-TOST·Romano-Wolf (Track D, P-4) |
 | P00114.json | `0073914a6985a1b0` | 1,946 | P001-14 | GO | `p001_14_tier2_robust.py` | 3 | yes | 순서 불변 분해 + E2 순열 + E3 감도 곡선 (Track D, Tier 2) |
@@ -25,7 +25,7 @@
 | P00116.json | `4d7f25fb0e9f2a33` | 1,294 | P001-16 | PARTIAL | `p001_16_meas_diags2.py` | 2 | yes | 딜 수준 귀속 진단 + 스테이지 라벨 품질 (Track C-④·⑥) |
 | P00117.json | `06ea3031a3754531` | 1,029 | P001-17 | GO | `p001_17_ladder_reweight.py` | 2 | yes | Table 8 판정가능성 재가중 + 다수-여성 (Track C-⑤) |
 | P00118.json | `56daee7618a4544f` | 1,058 | P001-18 | PARTIAL | `p001_18_career.py` | 0 |  | 커리어 검정 — 원시 vs 조정 랭크의 미래 딜플로우 가격 반영 (Track C-⑦) |
-| P00118b.json | `333be5cff39853f2` | 1,074 | P001-18b | PARTIAL | `p001_18b_career_fix.py` | 2 | yes | 커리어 검정 — 원시 vs 조정 랭크의 미래 딜플로우 가격 반영 (Track C-⑦) |
+| P00118b.json | `c433effc7118efca` | 1,185 | P001-18b | PARTIAL | `p001_18b_career_fix.py` | 3 | yes | 커리어 검정 — 원시 vs 조정 랭크의 미래 딜플로우 가격 반영 (Track C-⑦) |
 | P00119.json | `c7898050e6fffe79` | 1,362 | P001-19 | GO | `p001_19_ss_row.py` | 4 | yes | Snellman–Solal 회사 간 행 — 리드 투자자 성별과 후속 조달 (Track C-③) |
 | P00120.json | `58e2654c80962554` | 4,011 | P001-20 | PARTIAL | `p001_20_period_split.py` | 0 |  | 격차의 시대성 — 2000년대 vs 2010년대 코호트 (GMWX 비재현 규명) |
 | P00121.json | `891452118822b55d` | 1,831 | P001-21 | PARTIAL | `p001_21_succession.py` | 0 |  | 승계 검정 — 이탈 후 채널을 누가 이어받는가 (§5 메커니즘) |
@@ -64,9 +64,10 @@
 | P00154.json | `6e37dc4c3924a773` | 12,417 | P001-54 | GO | `p001_54_within_partner_outcome.py` | 16 | yes | R5-1: 파트너 내 결과 검정 — 같은 파트너의 FF vs 비FF 딜의 시장 벤치마크 잔차, 파트너 성별 교차항 (파트너 FE·딜 통제·파트너 군집) |
 | P00155.json | `f59838d12321ed1b` | 13,987 | P001-55 | OK | `p001_55_table3_fixed_horizon_ladder.py` | 49 | yes | R5-3: Table 3 고정 36m 지평(exit3, 딜 ≤2020-10)·달력 거칠기 사다리·다중 라운드 셀 추정량·딜 수준 처치 코딩 |
 | P00156.json | `b0fe0c178207570c` | 12,397 | P001-56 | OK | `p001_56_within_round_v2.py` | 18 | yes | R5-5: 라운드 내 재참여 v2 — 리드 플래그 합집합·파트너 연공·글로벌+24m 창·전남성 위약 풀·재참여↔출구 보정 (설계의 CB 천장) |
-| P00157.json | `2b8f351c3ceedc95` | 6,927 | P001-57 | OK | `p001_57_within_partner_horizon.py` | 5 |  | P001-54 후속: 파트너 내 결과 검정의 결과 구성물 분해 (같은 창에서 exit3·exit6·exit_ever·36m 이후 출구·fon) |
+| P00157.json | `2b8f351c3ceedc95` | 6,927 | P001-57 | OK | `p001_57_within_partner_horizon.py` | 5 | yes | P001-54 후속: 파트너 내 결과 검정의 결과 구성물 분해 (같은 창에서 exit3·exit6·exit_ever·36m 이후 출구·fon) |
 | P00158.json | `ff8e6e5457c756da` | 24,922 | P001-58 | OK | `p001_58_public_sources_controls.py` | 21 | yes | 공개 소스 변수 투입: 라운드 내 펀드 통제(CB funds·Form D T1) · §6 between 분해 · 특허 균형/통제(PatentsView v2) |
 | P00159.json | `47f598292efc2350` | 15,149 | P001-59 | OK | `p001_59_within_partner_extensions.py` | 13 | yes | R6 ident 후속: 파트너 내 검정 확장(빈티지×지평·이탈 상태·회사 군집·LOO·IPO/인수·Holm·국가 벤치마크·선택) + 라운드 내 밴드 2,000회 |
+| P00160.json | `2769ca0faeae4353` | 13,866 | P001-60 | OK | `p001_60_review_reanalyses.py` | 41 | yes | 외부 리뷰 재분석: 여성 자신 FF–other 격차·빈티지 대비·딜 이후 출구 규칙·확장 Mundlak·eligible vs estimation 카운트 |
 | I73.json | `779a52a0c69980f5` | 2,221 | I-73 | GO | `i73_gender_screening.py` | 3 |  | 여성 파트너×여성 창업자 — 호의 vs 선별 판별 (K-3 본추정) |
 | I74.json | `82bcddf31b7964b6` | 1,334 | I-74 | PARTIAL | `i74_gender_gates.py` | 2 |  | 동류교배 게이트 — 섹터·국가 구성 교란과 측정 강건성 (K-3) |
 | I75.json | `070ca71325c5eef0` | 1,539 | I-75 | GO | `i75_gender_adjud_cells.py` | 0 |  | 판별의 섹터 셀 재추정 — 선별 vs 호의 (K-3 최종 게이트) |
@@ -78,4 +79,4 @@
 | I81.json | `8757f43b5457031e` | 2,151 | I-81 | GO | `i81_stage_mechanism.py` | 2 |  | 스테이지 skew 메커니즘 배터리 — 창업자 경로·연차·동학·Becker (P001 2막) |
 | I82.json | `651c511d39ebf22f` | 1,429 | I-82 | PARTIAL | `i82_e3_repairs.py` | 1 |  | E3 심판 수리 — 추세 조정 결합 CI + 동료-딜 분해 (P001 동결 전) |
 
-Also in `artifacts/`: `CLAIMS_LEDGER.csv` (the claim-level ledger, 542 rows), `run_log.csv` (one row per harness run: script, sha256_16 of the script, inputs, output, verdict), `sample_manifest.yaml` (row count and SHA-256 of the frozen analysis file, which is not redistributed).
+Also in `artifacts/`: `CLAIMS_LEDGER.csv` (the claim-level ledger, 594 rows), `run_log.csv` (one row per harness run: script, sha256_16 of the script, inputs, output, verdict), `sample_manifest.yaml` (row count and SHA-256 of the frozen analysis file, which is not redistributed).

@@ -46,10 +46,10 @@ def ttitle(b):
 cells = [(["## Setup — imports, helpers and every artifact the generator reads (verbatim header of `p001_09_exhibits.py`)"], SETUP)]
 for b in table_blocks:
     cells.append(([f"## {ttitle(b)}"], b + f'\n_md = open(os.path.join(OUT_T, "{tname(b)}"), encoding="utf-8").read()'))
-ASSEMBLE = ('# The build step assembles tables.md: Tables 1–8, Table 9 (= generated table10 Panels A–B) and Appendix Tables IA.1–IA.3 (verbatim: p001_09b_assemble_tables.py)\n'
+ASSEMBLE = ('# The build step assembles tables.md: Tables 1–10 and Appendix Tables IA.1–IA.3 (verbatim: p001_09b_assemble_tables.py)\n'
             'import runpy, sys\nsys.argv = ["p001_09b_assemble_tables.py"]\nrunpy.run_path("../code/build/p001_09b_assemble_tables.py", run_name="__main__")\n'
             '_md = open("../figures/tables.md", encoding="utf-8").read()[:1200] + "\\n\\n…(truncated preview; the full file is ../figures/tables.md)"')
-cells.append((["## Assembly — `tables.md` as attached to the manuscript (renumbered exhibits; Unicode minus normalisation)"], ASSEMBLE))
+cells.append((["## Assembly — `tables.md` as attached to the manuscript (Unicode minus normalisation)"], ASSEMBLE))
 CHECK_T = '''import glob, os
 fails = 0
 mine = sorted(glob.glob(os.path.join(OUT_T, "table*.md"))); ref_dir = "../paper_exhibits/tables"
@@ -58,15 +58,15 @@ for p in mine:
     ok = a == b; fails += (not ok); print(f"{os.path.basename(p):<16} {'IDENTICAL' if ok else 'DIFFERS'}  ({len(a):,} chars)")
 a = open("../figures/tables.md", encoding="utf-8").read(); b = open("../paper_exhibits/tables.md", encoding="utf-8").read()
 ok = a == b; fails += (not ok); print(f"{'tables.md':<16} {'IDENTICAL' if ok else 'DIFFERS'}  ({len(a):,} chars; {a.count(chr(10) + '### ')} exhibits)")
-assert len(mine) == len(glob.glob(os.path.join(ref_dir, "table*.md"))) == 11, "table count"
+assert len(mine) == len(glob.glob(os.path.join(ref_dir, "table*.md"))) == 13, "table count"
 assert fails == 0, f"{fails} file(s) differ from the paper's exhibits"
 print("\\nAll 11 generated table files and the assembled tables.md are byte-identical to the exhibits attached to the manuscript.")'''
 cells.append((["## Consistency check — regenerated tables versus the paper's exhibits",
                "Byte-for-byte comparison of every generated table file and of the assembled `tables.md` with `../paper_exhibits/`. The cell raises if anything differs."], CHECK_T))
-build("notebooks/01_tables.ipynb", "# Tables 1–9 and Appendix Tables IA.1–IA.3", COMMON, cells)
+build("notebooks/01_tables.ipynb", "# Tables 1–10 and Appendix Tables IA.1–IA.3", COMMON, cells)
 
 # ── 02 figures ─────────────────────────────────────────────────────────────────────────────────────────────────────────────
-FTITLES = {"fig1_ladder": "Figure 1 — Matching decomposition ladder (NA+EU)", "fig2_eventstudy": "Figure 2 — Female-partner arrivals and new-deal composition", "fig3_channel": "Figure 3 — The female-partner channel narrows along the ladder"}
+FTITLES = {"figure1_ladder": "Figure 1 — Matching decomposition ladder (NA+EU)", "figure2_eventstudy": "Figure 2 — Female-partner arrivals and new-deal composition", "figure3_channel": "Figure 3 — Female-partner share by stage"}
 
 
 def fname(b): return re.search(r'"(fig\w+)\.png"', b).group(1)

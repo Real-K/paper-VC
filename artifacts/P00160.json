@@ -1,0 +1,530 @@
+{
+  "id": "P001-60",
+  "title": "외부 리뷰 재분석: 여성 자신 FF–other 격차·빈티지 대비·딜 이후 출구 규칙·확장 Mundlak·eligible vs estimation 카운트",
+  "status": "OK",
+  "n": 49835,
+  "estimates": {
+    "A_female_own_gap": {
+      "exit3": {
+        "window_end": "2020-10-31",
+        "nb": 2000,
+        "ff": {
+          "coef": -0.02551,
+          "ci95": [
+            -0.0343,
+            -0.017
+          ],
+          "sig": true,
+          "se_boot": 0.00442,
+          "mde80": 0.0124,
+          "beta_std": -0.0752
+        },
+        "ffp": {
+          "coef": 0.00482,
+          "ci95": [
+            -0.0198,
+            0.0297
+          ],
+          "sig": false,
+          "se_boot": 0.01264,
+          "mde80": 0.0354,
+          "beta_std": 0.0142
+        },
+        "female_own_gap_ff_plus_ffp": {
+          "coef": -0.02069,
+          "ci95": [
+            -0.0442,
+            0.0023
+          ],
+          "se_boot": 0.01185,
+          "sig": false
+        },
+        "n": 49835,
+        "sd_r": 0.33902,
+        "counts": {
+          "deals_eligible": 50153,
+          "deals_estimation": 49835,
+          "deals_dropped_singleton_benchmark_cell": 306,
+          "deals_dropped_single_row_partner": 12,
+          "partners_eligible": 3450,
+          "female_partners_eligible": 418,
+          "partners_identifying": 3425,
+          "female_partners_identifying": 415
+        }
+      },
+      "fon": {
+        "window_end": "2020-10-31",
+        "nb": 2000,
+        "ff": {
+          "coef": -0.00369,
+          "ci95": [
+            -0.0138,
+            0.0069
+          ],
+          "sig": false,
+          "se_boot": 0.00513,
+          "mde80": 0.0144,
+          "beta_std": -0.0085
+        },
+        "ffp": {
+          "coef": -0.0128,
+          "ci95": [
+            -0.0448,
+            0.0187
+          ],
+          "sig": false,
+          "se_boot": 0.016,
+          "mde80": 0.0448,
+          "beta_std": -0.0295
+        },
+        "female_own_gap_ff_plus_ffp": {
+          "coef": -0.01649,
+          "ci95": [
+            -0.046,
+            0.0139
+          ],
+          "se_boot": 0.01515,
+          "sig": false
+        },
+        "n": 49835,
+        "sd_r": 0.43372,
+        "counts": {
+          "deals_eligible": 50153,
+          "deals_estimation": 49835,
+          "deals_dropped_singleton_benchmark_cell": 306,
+          "deals_dropped_single_row_partner": 12,
+          "partners_eligible": 3450,
+          "female_partners_eligible": 418,
+          "partners_identifying": 3425,
+          "female_partners_identifying": 415
+        }
+      },
+      "exit_ever": {
+        "window_end": "2017-10-31",
+        "nb": 2000,
+        "ff": {
+          "coef": -0.01878,
+          "ci95": [
+            -0.0383,
+            0.0009
+          ],
+          "sig": false,
+          "se_boot": 0.00993,
+          "mde80": 0.0278,
+          "beta_std": -0.0415
+        },
+        "ffp": {
+          "coef": -0.06507,
+          "ci95": [
+            -0.1211,
+            -0.0098
+          ],
+          "sig": true,
+          "se_boot": 0.02882,
+          "mde80": 0.0807,
+          "beta_std": -0.1438
+        },
+        "female_own_gap_ff_plus_ffp": {
+          "coef": -0.08385,
+          "ci95": [
+            -0.1383,
+            -0.0327
+          ],
+          "se_boot": 0.02703,
+          "sig": true
+        },
+        "n": 28556,
+        "sd_r": 0.45235,
+        "counts": {
+          "deals_eligible": 28755,
+          "deals_estimation": 28556,
+          "deals_dropped_singleton_benchmark_cell": 195,
+          "deals_dropped_single_row_partner": 4,
+          "partners_eligible": 1999,
+          "female_partners_eligible": 206,
+          "partners_identifying": 1987,
+          "female_partners_identifying": 205
+        }
+      }
+    },
+    "B_vintage_contrast": {
+      "exit_ever_2017": {
+        "beta_int_2010_14": {
+          "coef": -0.07339,
+          "ci95": [
+            -0.1454,
+            0.0026
+          ],
+          "sig": false,
+          "se_boot": 0.03783,
+          "mde80": 0.1059,
+          "beta_std": -0.1622
+        },
+        "contrast_2015_17_minus_2010_14": {
+          "coef": 0.01826,
+          "ci95": [
+            -0.0687,
+            0.0949
+          ],
+          "sig": false,
+          "se_boot": 0.04181,
+          "mde80": 0.1171,
+          "beta_std": 0.0404
+        },
+        "beta_int_2015_17": {
+          "coef": -0.05513,
+          "ci95": [
+            -0.1202,
+            0.006
+          ],
+          "se_boot": 0.03332,
+          "sig": false
+        },
+        "n": 28556
+      },
+      "exit3_2020": {
+        "beta_int_2010_14": {
+          "coef": -0.00379,
+          "ci95": [
+            -0.0542,
+            0.0514
+          ],
+          "sig": false,
+          "se_boot": 0.0265,
+          "mde80": 0.0742,
+          "beta_std": -0.0112
+        },
+        "contrast_2015_17_minus_2010_14": {
+          "coef": 0.00685,
+          "ci95": [
+            -0.0542,
+            0.066
+          ],
+          "sig": false,
+          "se_boot": 0.03081,
+          "mde80": 0.0863,
+          "beta_std": 0.0202
+        },
+        "contrast_2018_20_minus_2015_17": {
+          "coef": 0.00284,
+          "ci95": [
+            -0.0387,
+            0.0444
+          ],
+          "sig": false,
+          "se_boot": 0.02168,
+          "mde80": 0.0607,
+          "beta_std": 0.0084
+        },
+        "contrast_2018_20_minus_2010_14": {
+          "coef": 0.00969,
+          "ci95": [
+            -0.0476,
+            0.0674
+          ],
+          "se_boot": 0.02916,
+          "sig": false
+        },
+        "beta_int_2018_20": {
+          "coef": 0.0059,
+          "ci95": [
+            -0.0226,
+            0.0349
+          ],
+          "se_boot": 0.01453,
+          "sig": false
+        },
+        "n": 49835
+      }
+    },
+    "C_post_deal_exit_rule": {
+      "pre_deal_exit_records": {
+        "n_rows_naeu": 933,
+        "share_of_exit_ever_positives": 0.0227,
+        "acquisition_before_deal": 834,
+        "ipo_before_deal": 52,
+        "both": 47,
+        "days_deal_after_exit_q10_q50_q90": [
+          5,
+          1267,
+          4202
+        ],
+        "same_day": 79,
+        "top_stages": {
+          "private_equity": 372,
+          "series_unknown": 211,
+          "series_b": 69,
+          "series_a": 60,
+          "series_c": 55
+        },
+        "share_of_exit3_positives_2020": 0.0385,
+        "share_of_exit_ever_positives_2017": 0.0093
+      },
+      "within_partner_exit3": {
+        "original": {
+          "coef": 0.00482,
+          "ci95": [
+            -0.0187,
+            0.0273
+          ],
+          "sig": false,
+          "se_boot": 0.01234,
+          "mde80": 0.0346,
+          "beta_std": 0.0142
+        },
+        "post_deal_rule": {
+          "coef": 0.00638,
+          "ci95": [
+            -0.0157,
+            0.0327
+          ],
+          "sig": false,
+          "se_boot": 0.0124,
+          "mde80": 0.0347,
+          "beta_std": 0.019
+        },
+        "n_original": 49835,
+        "n_post_rule": 49835,
+        "base_original": 0.1569,
+        "base_post_rule": 0.1529
+      },
+      "within_partner_exit_ever": {
+        "original": {
+          "coef": -0.06507,
+          "ci95": [
+            -0.1211,
+            -0.0078
+          ],
+          "sig": true,
+          "se_boot": 0.02854,
+          "mde80": 0.0799,
+          "beta_std": -0.1438
+        },
+        "post_deal_rule": {
+          "coef": -0.06497,
+          "ci95": [
+            -0.1185,
+            -0.0142
+          ],
+          "sig": true,
+          "se_boot": 0.02741,
+          "mde80": 0.0768,
+          "beta_std": -0.1436
+        },
+        "n_original": 28556,
+        "n_post_rule": 28556,
+        "base_original": 0.5416,
+        "base_post_rule": 0.538
+      },
+      "table3_peer_GLOBAL": {
+        "original": {
+          "fp": {
+            "coef": -0.06246,
+            "ci95": [
+              -0.1171,
+              -0.0162
+            ],
+            "sig": true,
+            "se_boot": 0.02657,
+            "mde80": 0.0744
+          },
+          "n": 478,
+          "n_cells": 191,
+          "base": 0.5293
+        },
+        "post_deal_rule": {
+          "fp": {
+            "coef": -0.06067,
+            "ci95": [
+              -0.1195,
+              -0.0163
+            ],
+            "sig": true,
+            "se_boot": 0.02707,
+            "mde80": 0.0758
+          },
+          "n": 478,
+          "n_cells": 191,
+          "base": 0.523
+        }
+      },
+      "table3_peer_NAEU": {
+        "original": {
+          "fp": {
+            "coef": -0.04549,
+            "ci95": [
+              -0.0933,
+              0.0071
+            ],
+            "sig": false,
+            "se_boot": 0.02498,
+            "mde80": 0.0699
+          },
+          "n": 430,
+          "n_cells": 174,
+          "base": 0.5488
+        },
+        "post_deal_rule": {
+          "fp": {
+            "coef": -0.0435,
+            "ci95": [
+              -0.106,
+              0.0033
+            ],
+            "sig": false,
+            "se_boot": 0.02821,
+            "mde80": 0.079
+          },
+          "n": 430,
+          "n_cells": 174,
+          "base": 0.5419
+        }
+      }
+    },
+    "D_mundlak_extended": {
+      "baseline_partial_mundlak": {
+        "dev_terrain": {
+          "coef": -0.01837,
+          "ci95": [
+            -0.2599,
+            0.2288
+          ],
+          "sig": false,
+          "se_boot": 0.12755,
+          "mde80": 0.3571
+        },
+        "fm_terrain": {
+          "coef": 0.43452,
+          "ci95": [
+            0.1902,
+            0.7088
+          ],
+          "sig": true,
+          "se_boot": 0.13344,
+          "mde80": 0.3736
+        },
+        "contrast_dev_minus_fm": {
+          "coef": -0.4529,
+          "ci95": [
+            -0.8159,
+            -0.1044
+          ],
+          "se_boot": 0.18322,
+          "sig": true
+        },
+        "n": 2017
+      },
+      "full_mundlak_adj_lnn": {
+        "dev_terrain": {
+          "coef": -0.01678,
+          "ci95": [
+            -0.2912,
+            0.2498
+          ],
+          "sig": false,
+          "se_boot": 0.1365,
+          "mde80": 0.3822
+        },
+        "fm_terrain": {
+          "coef": 0.42887,
+          "ci95": [
+            0.1816,
+            0.672
+          ],
+          "sig": true,
+          "se_boot": 0.13024,
+          "mde80": 0.3647
+        },
+        "dev_adj": {
+          "coef": 0.11131,
+          "ci95": [
+            -0.0186,
+            0.2337
+          ],
+          "sig": false,
+          "se_boot": 0.066,
+          "mde80": 0.1848
+        },
+        "fm_adj": {
+          "coef": 0.22288,
+          "ci95": [
+            0.0874,
+            0.3428
+          ],
+          "sig": true,
+          "se_boot": 0.06559,
+          "mde80": 0.1837
+        },
+        "contrast_dev_minus_fm": {
+          "coef": -0.44565,
+          "ci95": [
+            -0.7885,
+            -0.0935
+          ],
+          "se_boot": 0.17885,
+          "sig": true
+        },
+        "n": 2017
+      },
+      "full_mundlak_all_within_between": {
+        "dev_terrain": {
+          "coef": -0.02007,
+          "ci95": [
+            -0.2654,
+            0.2716
+          ],
+          "sig": false,
+          "se_boot": 0.14177,
+          "mde80": 0.397
+        },
+        "fm_terrain": {
+          "coef": 0.44012,
+          "ci95": [
+            0.1407,
+            0.7155
+          ],
+          "sig": true,
+          "se_boot": 0.13732,
+          "mde80": 0.3845
+        },
+        "contrast_dev_minus_fm": {
+          "coef": -0.46019,
+          "ci95": [
+            -0.8256,
+            -0.093
+          ],
+          "se_boot": 0.19088,
+          "sig": true
+        },
+        "n": 2017
+      },
+      "n_partners": 2661,
+      "n_single_partner_firms": 597,
+      "corr_fm_terrain_fm_adj": 0.083
+    },
+    "prediction_check": {
+      "A_exit3_own_in_[-4.5,0]": true,
+      "A_exit_ever_own_in_[-12,-4]_upper_lt0": true,
+      "B_ev_contrast_in_[3,11]_incl0": false,
+      "B_e3_contrast_in_[2,9]_incl0": false,
+      "C_within_shift_lt_0.5pp": true,
+      "C_table3_global_shift_lt_1pp_detected": true,
+      "C_table3_naeu_shift_lt_1pp": true,
+      "D_between_gt_0.2_and_gt_within": true
+    }
+  },
+  "prediction": "A exit3 own ∈[−4.5,0]; exit_ever own ∈[−12,−4] 상단<0; B 대비 CI 0 포함; C 이동 <0.5pp(파트너 내)/<1pp(Table 3), GLOBAL 검출 유지; D between>0.2>within",
+  "verdict": "여성 자신 FF−other: exit3 -2.07 [-4.42,+0.23] · exit_ever -8.38 [-13.83,-3.27] | 빈티지 대비 exit_ever(15–17 − 10–14) +1.83 [-6.87,+9.49] · exit3(18–20 − 10–14) +0.97 [-4.76,+6.74] | 딜 이후 규칙: 파트너 내 exit3 +0.48→+0.64 · exit_ever -6.51→-6.50 · Table 3 GLOBAL -6.25→-6.07 [-11.95,-1.63] · NA+EU -4.55→-4.35 | 확장 Mundlak between +0.429 · within -0.017 · 대비 -0.446 [-0.788,-0.093] — 헤드라인 유지 (예측 적중 6/8)",
+  "kill_met": false,
+  "code": "p001_60_review_reanalyses.py",
+  "sha256_16": "6a4ac9ac4b558c05",
+  "seed": 42,
+  "runtime_s": 802.6,
+  "date": "2026-09-10",
+  "stage": 8,
+  "feeds": "comment/RESPONSE_1.md → §4 ¶F·Table 4B·§2 규칙·IA.1",
+  "slug": "review_reanalyses",
+  "builds_on": "P001-54/59/10/38",
+  "common_sha256_16": "a63e7b62854b47c6",
+  "rng_seed": 20260960
+}

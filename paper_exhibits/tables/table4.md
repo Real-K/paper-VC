@@ -1,50 +1,25 @@
-# Table 4. Conditional on composition: the within-partner outcome test and the covariate-adjusted battery (NA+EU)
-## Panel A. Covariate-adjusted exit hazard on the Table 3 cells (firm × year × sector × stage × duration effects; deal controls)
-| | Estimate | 95% CI |
-|---|---|---|
-| Annual exit hazard gap (pp/yr) | -0.240 | [-0.81, +0.26] |
-| Baseline hazard (%/yr) | 6.19 | interval within ±25% of baseline: yes |
-| Same gap, multi-round cell–year groups only (pp/yr); MDE80 | -1.699; 11.31 | [-11.83, +2.87]; within ±25% of baseline: no |
-| Identifying base: cell–year groups with female-partner variation; share single-round co-attributions; groups with exit variation | 814; 0.89; 10 | — |
+# Table 4. Where the exit gap lives: female-founded deals
+## Panel A. Exit by sample end, deals through October 2017: the location ladder
+| Comparison | Global | 95% CI | NA+EU | 95% CI |
+|---|---|---|---|---|
+| Year effects only | -2.73 | [-8.28, +3.01] | -3.35 | [-7.90, +2.16] |
+| Firm × year | +0.21 | [-5.90, +5.34] | -0.50 | [-6.76, +5.42] |
+| Additive firm+year+sector+stage | +0.78 | [-5.75, +7.05] | -0.82 | [-8.20, +5.24] |
+| **Firm × year × sector (peer comparison)** | **-6.25 | [-11.50, -1.38]** | -4.55 | [-10.13, +0.22] |
+| + stage | -1.75 | [-5.29, +1.43] | -1.02 | [-4.49, +2.67] |
 
-## Panel B. Within-partner outcome test: female-founded vs other deals of the same partner, by partner gender (36-month exit net of the year × sector × stage market mean; deals through 2020-10)
-| Specification | β_int: female partners' extra FF gap (pp) | 95% CI | MDE80 (pp) | β_int in sd of the benchmarked outcome | inside ±5 pp | β_FF: male partners' own FF − other gap (pp) | 95% CI | n deals / partners (women) |
-|---|---|---|---|---|---|---|---|---|
-| Partner fixed effects, deal controls; partner-cluster bootstrap | +0.48 | [-1.82, +2.79] | 3.50 | +0.014 | yes | -2.55 | [-3.47, -1.68] | 49,835 / 3,448 (418) |
-| Same; investor-firm clusters | +0.48 | [-2.31, +3.11] | 3.85 | +0.014 | yes | -2.55 | [-3.46, -1.70] | 49,835 / 3,448 (418) |
-| Firm × year fixed effects instead of partner effects (partner gender included) | +0.91 | [-2.29, +3.82] | 4.06 | +0.027 | yes | -2.70 | [-3.73, -1.67] | 46,152 / 3,448 (418) |
-| Partner × two-year fixed effects | +1.22 | [-1.24, +4.19] | 3.82 | +0.036 | yes | -2.67 | [-3.67, -1.77] | 46,458 / 3,448 (418) |
-| Partners with ≥ 5 deals | +0.48 | [-2.38, +3.33] | 3.85 | +0.014 | yes | -2.69 | [-3.61, -1.95] | 47,001 / 2,474 (286) |
-| Vintages 2015 and later | +1.18 | [-1.60, +3.58] | 3.78 | +0.037 | yes | -2.43 | [-3.36, -1.42] | 32,946 / 3,318 (408) |
-| + pre-assignment company characteristics | +0.37 | [-2.03, +2.68] | 3.45 | +0.011 | yes | -1.41 | [-3.27, +0.59] | 49,835 / 3,448 (418) |
-| + prior patent applications (any before the deal; log count; assignee-match indicator, which is not pre-deal and absorbs unmatched zeros) | +0.53 | [-1.78, +2.83] | 3.46 | +0.016 | yes | -2.51 | [-3.31, -1.63] | 49,835 / — (any prior patent: +3.99 pp [+2.36, +5.66]) |
-| Follow-on financing within 36 months (deals through 2020-10) | -1.28 | [-4.57, +2.04] | 4.59 | -0.029 | yes | -0.37 | [-1.38, +0.70] | 49,835 / 3,448 (418) |
-| Exit by sample end (deals through 2017-10) | -6.51 | [-11.77, -0.54] | 8.52 | -0.144 | no | -1.88 | [-3.72, -0.03] | 28,556 / 1,998 (206) |
-| &nbsp;&nbsp;vintages 2010–14 | -10.54 | [-17.93, -2.71] | 10.89 | -0.234 | no | -0.75 | [-3.42, +1.65] | 15,203 / 1,146 (89) |
-| &nbsp;&nbsp;vintages 2015–17 | -3.22 | [-9.96, +3.54] | 10.01 | -0.071 | no | -2.78 | [-5.16, -0.40] | 12,930 / 1,291 (147) |
-| &nbsp;&nbsp;partners with an attributed deal after October 2020 | -6.63 | [-12.48, -0.33] | 8.76 | -0.147 | no | -1.61 | [-3.96, +0.58] | 23,710 / 1,428 (146) |
-| &nbsp;&nbsp;partners without one | -6.22 | [-18.06, +5.57] | 17.86 | -0.137 | no | -3.04 | [-7.00, +0.94] | 4,846 / 559 (59) |
-| &nbsp;&nbsp;IPO by sample end | -3.02 | [-6.58, +0.44] | 5.03 | -0.110 | no | +1.27 | [+0.16, +2.55] | 28,556 / 1,987 (205) |
-| &nbsp;&nbsp;acquisition by sample end (no IPO) | -3.49 | [-9.79, +2.66] | 8.69 | -0.075 | no | -3.15 | [-5.20, -1.29] | 28,556 / 1,987 (205) |
-| &nbsp;&nbsp;company clusters | -6.51 | [-12.28, -0.91] | 8.10 | -0.144 | no | -1.88 | [-4.44, +0.87] | 28,556 / 1,987 (205) |
-| 36-month exit, vintages 2010–14 | -3.23 | [-9.51, +4.12] | 10.03 | -0.088 | no | -3.23 | [-5.04, -1.40] | 16,389 / 1,146 (89) |
-| &nbsp;&nbsp;vintages 2015–17 | +0.08 | [-4.50, +4.86] | 6.53 | +0.003 | yes | -2.98 | [-4.41, -1.42] | 15,289 / 1,374 (161) |
-| &nbsp;&nbsp;vintages 2018–20 | +2.91 | [-0.15, +5.95] | 4.30 | +0.090 | no | -2.38 | [-3.74, -1.05] | 16,831 / 1,926 (264) |
-| 36-month exit, company clusters | +0.48 | [-2.09, +2.75] | 3.67 | +0.014 | yes | -2.55 | [-3.70, -1.38] | 49,835 / 3,425 (415) |
-| 36-month exit, year × sector × stage × country benchmark | +0.90 | [-1.76, +3.48] | 3.59 | +0.027 | yes | -2.67 | [-3.53, -1.78] | 48,367 / 3,319 (402) |
 
-*Panel B: partners with at least one female-founded and one other deal in the window: 3,448 partners (418 women), 49,847 deals (33,142 dated 2015 or later); exit3 base rate 0.157. Outcome = deal outcome minus the leave-one-out mean of its year × sector × stage cell; deal controls as in Panel A. β_FF is the within-partner gap for male partners; β_int is the additional gap for female partners (favoritism predicts β_int < 0). Bootstrap two-sided p-values for β_int on the three featured outcomes (36-month exit, follow-on, exit by sample end): 0.708, 0.424, 0.022; Holm-adjusted 0.848, 0.848, 0.066. Dropping any one of the 206 women from the exit-by-sample-end row moves β_int by at most 0.88 points. Female partners' female-founded deals outside this sample (partners with no other deal): 23.4 percent. Sources: P001-54, P001-59.*
+## Panel B. Fixed 36-month exit horizon, deals through 2020-10 (NA+EU): the cross-deal comparisons as the estimator
+| Cell definition | Mixed cells / deals | Multi-round (cross-deal) cells / deals | Cells with exit variation | Share of Σx̃² from single-round cells (d) | β, all cells (pp) | β, cross-deal cells (pp) | 95% CI | MDE80 (pp; sd) | Placebo 95th pct (pp) |
+|---|---|---|---|---|---|---|---|---|---|
+| firm×year×sector | 411 / 1,174 | 174 / 652 | 61 | 0.47 | -1.44 | -2.74 | [-9.41, +2.70] | 8.23; 0.25 | 5.64 |
+| firm×year×sector×stage | 380 / 953 | 78 / 258 | 23 | 0.74 | -0.42 | -1.64 | [-13.20, +6.26] | 13.81; 0.42 | 7.28 |
+| firm×2yr×sector | 399 / 1,338 | 228 / 956 | 82 | 0.31 | -0.28 | -0.40 | [-4.22, +3.04] | 5.47; 0.17 | 4.58 |
+| firm×3yr×sector | 392 / 1,451 | 243 / 1,124 | 84 | 0.25 | -0.87 | -1.17 | [-5.21, +2.44] | 5.61; 0.17 | 3.8 |
+| firm×sector + year FE | 360 / 1,960 | 274 / 1,765 | 111 | 0.12 | -2.93 | -2.26 | [-5.86, +1.52] | 5.20; 0.16 | 3.44 |
+| Deal-level coding, firm × year × sector: female-only vs male-only attributed deals (mixed-attribution deals excluded) | — | 113 cells / 335 deals | 45 | 0 by construction | — | -8.57 | [-20.44, +0.14] | 14.61 | 8.57 |
+| Reference: sample-end horizon, deals through 2017-10, firm × year × sector (canonical run; Appendix Table IA.2, Panel E) | 174 / 430 | 61 / 195 | 30 | 0.58 | -4.55 | -10.71 | [-0.22, +0.02] | 17.51; — | 12.67 |
 
-## Panel C. Outcome battery (covariate-adjusted, pp) with Romano–Wolf stepdown
-| Outcome | Gap | 95% CI | Multiple-testing |
-|---|---|---|---|
-| fon (adj.) | +0.91 | [-1.35, +3.21] | RW p = 1.0 |
-| exit_ever (adj.) | -0.94 | [-4.20, +2.41] | RW p = 0.703 |
-| ipo6 (adj.) | -0.40 | [-2.27, +1.37] | RW p = 0.91 |
-| acqp6 (adj.) | +0.65 | [-0.24, +2.24] | RW p = 0.997 |
-| closed6 (adj.) | +1.38 | [-0.78, +3.84] | RW p = 0.64 |
+*Panel B: exit within 36 months of the deal; FF deals 13,187, base rate 0.125. Σx̃² is the within-cell estimator's identifying variance and d the share of it contributed by cells whose partner rows all belong to one round (co-attributed pairs), so that the all-cells coefficient equals the cross-deal coefficient times (1 − d). MDE80 = minimum detectable effect at 80 percent power. β on cross-deal cells is the within-cell estimator restricted to mixed cells whose partner rows span at least two rounds; investor-firm cluster bootstrap (500); placebo = 95th percentile of |β| under within-cell reassignment of partner gender (400). The firm × sector row adds additive year effects (two-way demeaning); with additive effects the identity β_all = (1 − d)·β_cross-deal holds only approximately, which is why that row's all-cells and cross-deal coefficients do not satisfy it exactly. The reference row repeats the canonical sample-end estimates of P001-49 so that the same specification carries one set of numbers throughout the paper. Sources: P001-55, P001-49.*
 
-Within-cell permutation (unadjusted spec): follow-on p = 0.514; exit p = 0.52.
-IPO and closure margins remain unresolved (MDE80 ≈ 2.8 / 3.6 pp) rather than established nulls.
-
-*Deal controls: round size, company age, prior rounds, syndicate size, co-investor experience (all at deal date). Identifying base of the hazard (share of cell–year groups that are co-attributions on a single round; gap on multi-round groups): Table 9, Panel E. The deal-fixed continuation margin is Table 10, Panel A. Sources: P001-12, P001-13, P001-14, P001-03 (MDEs), P001-50 (identifying base).*
+*Deals through 2017-10; exit = acquisition or IPO by sample end. n = 8,058 (global) / 7,103 (NA+EU). The deficit is detected only in the interacted firm–year–sector comparison; the coarser intervals contain both zero and the peer-comparison estimate, and only the + stage row's interval excludes it. All rows are estimated on one sample and one bootstrap draw. Identifying variation of the peer-comparison row (Appendix Table IA.2, Panel D): 174 NA+EU cells contain both a female- and a male-partner female-founded deal (430 deals, 6.0 percent of the sample; global 191 cells, 478 deals). Base exit rate among female-founded deals, global: 46.4 percent (I-78). Sources: P001-10 (ladder), P001-15 (additive row), P001-40 (identifying variation), I-78 (base rate).*

@@ -79,6 +79,9 @@ for _ in range(NB):
 bs = np.array(bs)
 ci_raw, ci_adj = qci(bs[:, 0]), qci(bs[:, 1])
 b_raw, b_adj = round(float(b0[0]), 4), round(float(b0[1]), 4)
+# v2 (2026-09-10, external review §5-1): reparametrise y ~ β_R·R + β_A·A = β_R·(R − A) + (β_R + β_A)·A. The coefficient on the adjusted
+# percentile holding the rank *difference* fixed is β_R + β_A; its interval comes from the same bootstrap draws (covariance preserved).
+b_adj_given_diff = round(float(b0[0] + b0[1]), 4); ci_adj_given_diff = qci(bs[:, 0] + bs[:, 1])
 
 p1 = ci_raw[0] > 0
 status = "GO" if p1 else "PARTIAL"
@@ -89,6 +92,7 @@ verdict = (f"미래 딜플로우 ~ 원시랭크 β={b_raw:+.3f} {ci_raw} (조정
 
 emit("P001-18b", "커리어 검정 — 원시 vs 조정 랭크의 미래 딜플로우 가격 반영 (Track C-⑦)", status,
      {"beta_raw_given_adj": [b_raw, ci_raw], "beta_adj_given_raw": [b_adj, ci_adj],
+      "beta_adj_given_rankdiff": [b_adj_given_diff, ci_adj_given_diff],   # = β_R + β_A (reparametrisation on A and R − A)
       "n_partners": int(len(P)), "n_female": int((P["fp"] == 1).sum()),
       "mean_future_deals": round(float(np.expm1(P['y']).mean()), 2)},
      prediction="β_raw|adj > 0 CI 배제; β_adj ≤ β_raw",

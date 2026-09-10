@@ -7,11 +7,12 @@
 | Female share of top quartile | 7.11% → 8.18% (Δ interval crosses zero) |
 | Rank correlation (raw, adjusted) | 0.861 |
 
-## Panel B. Internal pricing: future attributed deal flow (2018–2020) on 2010–17 percentiles
-| | β (log deals per rank unit) | 95% CI |
+## Panel B. Subsequent attributed deal activity: log count of deals attributed to the partner in 2018–2020 on 2010–17 percentiles
+| | β (log deals per unit of percentile rank, 0–1) | 95% CI |
 |---|---|---|
-| Composition-adjusted percentile (given raw) | +1.54 | [+1.24, +1.86] |
-| Raw percentile (given adjusted) ≡ composition component | -1.73 | [-2.11, -1.39] |
+| Adjusted percentile A, holding the raw percentile fixed (β_A) | +1.54 | [+1.24, +1.86] |
+| Raw percentile R, holding A fixed (β_R) = coefficient on the rank difference R − A | -1.73 | [-2.11, -1.39] |
+| Adjusted percentile A, holding the rank difference R − A fixed (β_R + β_A; same bootstrap draws) | -0.19 | [-0.32, -0.08] |
 
 ## Panel C. External outcomes among partners who move or spin out, 2017-11 to 2023-10
 | Outcome | Sample | β on composition component (given adjusted percentile) | 95% CI | β with pre-period late-stage share as control | 95% CI | Late-stage share, own coefficient |

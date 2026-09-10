@@ -190,10 +190,17 @@ firms = D["firm"].unique()
 fidx = {f: g.index.to_numpy() for f, g in D.groupby("firm")}
 fidx_c = {f: g.index.to_numpy() for f, g in Dc.groupby("firm")}
 bs = {"c": [], "cc": [], "j": [], "e": []}
+bs_path = {k: [] for k in KS if k != -1}                      # v2: per-period bootstrap intervals for the arrival path (Figure 2)
 for _ in range(NB):
     pick = firms[rng.integers(0, len(firms), len(firms))]
     rows_ = np.concatenate([fidx[f] for f in pick])
-    bj, be, bc = contrast(D.loc[rows_].reset_index(drop=True))
+    Db = D.loc[rows_].reset_index(drop=True)
+    bj, be, bc = contrast(Db)
+    DJb = Db[Db["kind"] == "join"]
+    for k in bs_path:
+        subk = DJb[DJb["rel"].isin([k, -1])].copy(); subk["post"] = (subk["rel"] == k).astype(float)
+        vk = beta_stack(subk)
+        if np.isfinite(vk): bs_path[k].append(vk)
     rows_c = np.concatenate([fidx_c[f] for f in pick if f in fidx_c])
     _, _, bc2 = contrast(Dc.loc[rows_c].reset_index(drop=True))
     if np.isfinite(bc):
@@ -204,6 +211,21 @@ for _ in range(NB):
         bs["cc"].append(bc2)
 ci_c, ci_cc = qci(bs["c"]), qci(bs["cc"])
 ci_j, ci_e = qci(bs["j"]), qci(bs["e"])
+# v2 (2026-09-10, external review §6): (a) mirror-reversal test needs β_join + β_exit (= 0 under exact reversal), from the same joint draws;
+# (b) the mechanical own-deal channel is s·(p_own − p_colleagues) on post-event deals of female arrivals — the inputs are reported, not assumed;
+# (c) whether a female arrival is the firm's first female partner / a female departure removes its last one (descriptive).
+bsum0 = bj0 + be0; ci_sum = qci(np.array(bs["j"]) + np.array(bs["e"]))
+DJf = D[(D["kind"] == "join") & (D["fem"] == 1) & (D["post"] == 1)]
+s_own = float(DJf["own"].mean()); p_own = float(DJf.loc[DJf["own"], "y"].mean()); p_col = float(DJf.loc[~DJf["own"], "y"].mean())
+mech = s_own * (p_own - p_col)
+act = pj.copy(); act["s"] = pd.to_datetime(act["started_on"], errors="coerce"); act["e"] = pd.to_datetime(act["ended_on"], errors="coerce")
+act["pg"] = act["partner_uuid"].map(g_map); actf = act[act["pg"] == "female"]
+def other_female_active(row):
+    g = actf[(actf["investor_uuid"] == row["investor_uuid"]) & (actf["partner_uuid"] != row["partner_uuid"])]
+    return bool(((g["s"].isna() | (g["s"] <= row["t"])) & (g["e"].isna() | (g["e"] > row["t"]))).any())
+evf = ev[(ev["fem"] == 1) & ev["event_id"].isin(D["event_id"].unique())].copy()
+evf["other_female"] = evf.apply(other_female_active, axis=1)
+first_female_share = float(1 - evf.loc[evf["kind"] == "join", "other_female"].mean()); last_female_share = float(1 - evf.loc[evf["kind"] == "exit", "other_female"].mean())
 
 pre_ok = all(abs(path.get(k, 0) or 0) < 0.02 for k in (-4, -3, -2))
 width = (ci_c[1] - ci_c[0]) * 100
@@ -222,7 +244,13 @@ emit("P001-11", "E3 딜 수준 스택 회귀 — 정보 손실 제거 (Track D, 
      {"joint_contrast": [round(bc0 * 100, 2), ci_c], "join": [round(bj0 * 100, 2), ci_j],
       "exit": [round(be0 * 100, 2), ci_e],
       "colleague_joint": [round(bcc * 100, 2), ci_cc],
+      "join_plus_exit": [round(bsum0 * 100, 2), ci_sum],                       # v2: = 0 under exact mirror reversal
+      "mechanical_own_channel": {"own_share_post_female_join": round(s_own, 4), "ff_share_own_deals": round(p_own, 4), "ff_share_colleague_deals": round(p_col, 4),
+                                 "direct_composition_pp": round(mech * 100, 2), "n_post_deals": int(len(DJf))},
+      "female_events": {"n_join": int((evf["kind"] == "join").sum()), "share_first_female_partner": round(first_female_share, 4),
+                        "n_exit": int((evf["kind"] == "exit").sum()), "share_last_female_partner": round(last_female_share, 4)},
       "path_join": {str(k): round((v or np.nan) * 100, 2) for k, v in path.items()},
+      "path_join_ci": {str(k): [round(x * 100, 2) for x in qci(v)] for k, v in bs_path.items() if len(v) > 10},   # v2: per-period 95% bootstrap intervals (pp)
       "ci_width_pp": round(width, 2), "n_deal_obs": int(len(D)),
       "n_events": int(D["event_id"].nunique()),
       "p1_width": bool(p1), "p2_colleague_separated": bool(p2), "p3_pre_ok": bool(pre_ok)},

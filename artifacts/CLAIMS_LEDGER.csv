@@ -36,13 +36,13 @@ C128,Table4,Romano-Wolf 최소 조정 p,0.64,-,7103,07_analysis/out/P00113.json,
 C129,Table4,E2 순열 p (fon/exit),0.514 / 0.52,-,13187,07_analysis/out/P00114.json,estimates.e2_perm,06_code/p001_14_tier2_robust.py,,valid
 C130,Table2,역순 사다리 (스테이지 먼저),+5.77pp,"[+4.34, +7.04]",127061,07_analysis/out/P00114.json,estimates.ladder_reverse.stage_first,06_code/p001_14_tier2_robust.py,,valid
 C131,Table2,배치 총몫 / 섹터 / 스테이지 bracket,90.5% / 54-73% / 17-37%,-,127061,07_analysis/out/P00114.json,estimates.share_bracket,06_code/p001_14_tier2_robust.py,,valid
-C132,Table6,"영입 마진 (딜 수준, 재가중)",+2.81pp,"[+1.39, +3.95]",244349,07_analysis/out/P00111.json,estimates.join,06_code/p001_11_e3_deal_level.py,,valid
-C133,Table6,이탈 마진 (딜 수준),+0.75pp,"[-2.29, +3.08]",244349,07_analysis/out/P00111.json,estimates.exit,06_code/p001_11_e3_deal_level.py,,valid
-C134,Table6,동료-딜 결합 (딜 수준),+2.04pp,"[-0.09, +4.48]",244349,07_analysis/out/P00111.json,estimates.colleague_joint,06_code/p001_11_e3_deal_level.py,,valid
+C132,Table6,"영입 마진 (딜 수준, 재가중)",+2.81pp,"[+1.39, +3.95]",244349,07_analysis/out/P00111.json,estimates.join,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
+C133,Table6,이탈 마진 (딜 수준),+0.75pp,"[-2.29, +3.08]",244349,07_analysis/out/P00111.json,estimates.exit,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
+C134,Table6,동료-딜 결합 (딜 수준),+2.04pp,"[-0.09, +4.48]",244349,07_analysis/out/P00111.json,estimates.colleague_joint,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
 C135,Table6,영입 감도 δ* [표시단위는 원고 참조],0.4,-,127061,07_analysis/out/P00114b.json,estimates.delta_star,06_code/p001_14b_join_sensitivity.py,,valid
-C136,Table6,딜 수준 결합 대비,+2.06pp,"[-0.07, +4.57]",244349,07_analysis/out/P00111.json,estimates.joint_contrast,06_code/p001_11_e3_deal_level.py,,valid
-C137,Table7,커리어: 조정 랭크 β (given raw),+1.54,"[+1.24, +1.86]",2686,07_analysis/out/P00118b.json,estimates.beta_adj_given_raw,06_code/p001_18b_career_fix.py,,valid
-C138,Table7,커리어: 원시 랭크 β (given adj),-1.73,"[-2.11, -1.39]",2686,07_analysis/out/P00118b.json,estimates.beta_raw_given_adj,06_code/p001_18b_career_fix.py,,valid
+C136,Table6,딜 수준 결합 대비,+2.06pp,"[-0.07, +4.57]",244349,07_analysis/out/P00111.json,estimates.joint_contrast,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
+C137,Table7,커리어: 조정 랭크 β (given raw),+1.54,"[+1.24, +1.86]",2686,07_analysis/out/P00118b.json,estimates.beta_adj_given_raw,06_code/p001_18b_career_fix.py,c10efd6be6054d5a,valid
+C138,Table7,커리어: 원시 랭크 β (given adj),-1.73,"[-2.11, -1.39]",2686,07_analysis/out/P00118b.json,estimates.beta_raw_given_adj,06_code/p001_18b_career_fix.py,c10efd6be6054d5a,valid
 C139,Table8,경사: 판정가능성 재가중,+4.40pp,"[+1.70, +7.22]",113708,07_analysis/out/P00117.json,estimates.slope_reweighted,06_code/p001_17_ladder_reweight.py,,valid
 C140,Table8,경사: 다수-여성 정의,+3.71pp,"[+0.57, +6.86]",113708,07_analysis/out/P00117.json,estimates.slope_majority_female,06_code/p001_17_ladder_reweight.py,,valid
 C141,Table8,[SUPERSEDED -> C164 (P00124.json)] S&S 행: 리드 fp_share 高 raw,+5.91pp,"[+1.31, +10.19]",4197,07_analysis/out/P00119.json,estimates.lead_fp_share_hi.raw_yearFE,06_code/p001_19_ss_row.py,,SUPERSEDED
@@ -58,7 +58,7 @@ C148,Table4,조정 배터리 acqp6,+0.65pp,"[-0.24, +2.24]",7103,07_analysis/out
 C149,Table4,조정 배터리 ipo6,-0.40pp,"[-2.27, +1.37]",7103,07_analysis/out/P00112.json,estimates.battery_adj.ipo6,06_code/p001_12_covadj_hazard.py,,valid
 C150,Table4,조정 배터리 closed6,+1.38pp,"[-0.78, +3.84]",7103,07_analysis/out/P00112.json,estimates.battery_adj.closed6,06_code/p001_12_covadj_hazard.py,,valid
 C151,Table8,[SUPERSEDED -> C164 (P00124.json)] S&S 셀 조정 (fp_share),+3.98pp,"[-0.43, +9.08]",4197,07_analysis/out/P00119.json,estimates.lead_fp_share_hi.cells,06_code/p001_19_ss_row.py,,SUPERSEDED
-C152,Table6,딜 수준 사건 수 (전체/여성 포함) [복합값],4824 / 1177,-,244349,07_analysis/out/P00111.json,estimates,06_code/p001_11_e3_deal_level.py,,valid
+C152,Table6,딜 수준 사건 수 (전체/여성 포함) [복합값],4824 / 1177,-,244349,07_analysis/out/P00111.json,estimates,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
 C153,Table7,외부 평가자 관측 가능성 (스핀아웃 / 신생사 펀드조성),380 / 221 (58.2%),-,2686,07_analysis/out/P00123.json,estimates.A6_LP_side,06_code/p001_23_audit_p22.py,,valid
 C154,Table7,신생사 펀드조성 ← terrain (wedge),+0.494,"[0.143, 0.862]",380,07_analysis/out/P00125.json,estimates.B2_joint_RI.individual.lp_any,06_code/p001_25_wedge_decisive.py,,valid
 C155,Table7,신생사 log 조성액 ← terrain,+2.501,"[0.996, 4.194]",197,07_analysis/out/P00125.json,estimates.B2_joint_RI.individual.lp_amt,06_code/p001_25_wedge_decisive.py,,valid
@@ -541,3 +541,55 @@ C662,Table4,Holm 보정 p (exit_ever β_int; 세 결과),0.066,-,3,07_analysis/o
 C663,Table4,파트너 내 표본 밖 여성 파트너 FF 딜 비중,0.2339,-,1988,07_analysis/out/P00159.json,estimates.D_selection.share_outside_within_partner_sample,06_code/p001_59_within_partner_extensions.py,3b26084abfec8048,valid
 C664,Table10,"라운드 내 any-female 2,000회 부트 b",-0.00379,"[-0.043,0.0312]",1623,07_analysis/out/P00159.json,estimates.E_within_round_2000.any_female.fp.coef,06_code/p001_59_within_partner_extensions.py,3b26084abfec8048,valid
 C665,Table10,"라운드 내 female-only 2,000회 부트 b",-0.01536,"[-0.0588,0.0321]",1296,07_analysis/out/P00159.json,estimates.E_within_round_2000.female_only.fp.coef,06_code/p001_59_within_partner_extensions.py,3b26084abfec8048,valid
+C666,Table5,"여성 파트너 자신 FF−other 격차(β_FF+β_int) exit3 ≤2020, 2000회",-0.02069,"[-0.0442,0.0023]",49835,07_analysis/out/P00160.json,estimates.A_female_own_gap.exit3.female_own_gap_ff_plus_ffp.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C667,Table5,여성 파트너 자신 FF−other 격차 fon ≤2020,-0.01649,"[-0.046,0.0139]",49835,07_analysis/out/P00160.json,estimates.A_female_own_gap.fon.female_own_gap_ff_plus_ffp.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C668,Table5,여성 파트너 자신 FF−other 격차 exit_ever ≤2017,-0.08385,"[-0.1383,-0.0327]",28556,07_analysis/out/P00160.json,estimates.A_female_own_gap.exit_ever.female_own_gap_ff_plus_ffp.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C669,Table5,"빈티지 대비 exit_ever: β_int(2015–17)−β_int(2010–14), 풀 상호작용",0.01826,"[-0.0687,0.0949]",28556,07_analysis/out/P00160.json,estimates.B_vintage_contrast.exit_ever_2017.contrast_2015_17_minus_2010_14.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C670,Table5,풀 상호작용 β_int(2010–14) exit_ever,-0.07339,"[-0.1454,0.0026]",28556,07_analysis/out/P00160.json,estimates.B_vintage_contrast.exit_ever_2017.beta_int_2010_14.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C671,Table5,풀 상호작용 β_int(2015–17) exit_ever,-0.05513,"[-0.1202,0.006]",28556,07_analysis/out/P00160.json,estimates.B_vintage_contrast.exit_ever_2017.beta_int_2015_17.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C672,Table5,빈티지 대비 exit3: β_int(2018–20)−β_int(2010–14),0.00969,"[-0.0476,0.0674]",49835,07_analysis/out/P00160.json,estimates.B_vintage_contrast.exit3_2020.contrast_2018_20_minus_2010_14.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C673,Table5,딜 이후 출구 규칙: 파트너 내 β_int exit3,0.00638,"[-0.0157,0.0327]",49835,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.within_partner_exit3.post_deal_rule.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C674,Table5,딜 이후 출구 규칙: 파트너 내 β_int exit_ever,-0.06497,"[-0.1185,-0.0142]",28556,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.within_partner_exit_ever.post_deal_rule.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C675,Table4,딜 이후 출구 규칙: Table 4 동류 비교 GLOBAL,-0.06067,"[-0.1195,-0.0163]",478,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.table3_peer_GLOBAL.post_deal_rule.fp.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C676,Table4,딜 이후 출구 규칙: Table 4 동류 비교 NA+EU,-0.0435,"[-0.106,0.0033]",430,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.table3_peer_NAEU.post_deal_rule.fp.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C677,Table4,Table 4 동류 비교 GLOBAL 재현(P001-60),-0.06246,"[-0.1171,-0.0162]",478,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.table3_peer_GLOBAL.original.fp.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C678,Table4,Table 4 동류 비교 NA+EU 재현(P001-60),-0.04549,"[-0.0933,0.0071]",430,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.table3_peer_NAEU.original.fp.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C679,§2,딜 이전 출구 기록 행 수(NA+EU),933,-,933,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.pre_deal_exit_records.n_rows_naeu,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C680,§2,딜 이전 출구: exit_ever 양성 중 비중,0.0227,-,933,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.pre_deal_exit_records.share_of_exit_ever_positives,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C681,§2,딜 이전 출구: exit3 양성(≤2020) 중 비중,0.0385,-,933,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.pre_deal_exit_records.share_of_exit3_positives_2020,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C682,IA.1,딜 이전 출구: exit_ever 양성(≤2017) 중 비중,0.0093,-,933,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.pre_deal_exit_records.share_of_exit_ever_positives_2017,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C683,IA.1,딜 이전 출구: 인수 선행 건수,834,-,933,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.pre_deal_exit_records.acquisition_before_deal,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C684,IA.1,딜 이전 출구: IPO 선행 건수,52,-,933,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.pre_deal_exit_records.ipo_before_deal,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C685,IA.1,딜 이전 출구: 둘 다,47,-,933,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.pre_deal_exit_records.both,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C686,IA.1,딜 이전 출구: 같은 날,79,-,933,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.pre_deal_exit_records.same_day,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C687,IA.1,딜 이전 출구: 간격 분위(10/50/90일),"[5, 1267, 4202]",-,933,07_analysis/out/P00160.json,estimates.C_post_deal_exit_rule.pre_deal_exit_records.days_deal_after_exit_q10_q50_q90,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C688,Table5,파트너 내 eligible 딜 수(≤2020),50153,-,50153,07_analysis/out/P00160.json,estimates.A_female_own_gap.exit3.counts.deals_eligible,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C689,Table5,파트너 내 벤치마크 단독 셀 탈락 딜,306,-,50153,07_analysis/out/P00160.json,estimates.A_female_own_gap.exit3.counts.deals_dropped_singleton_benchmark_cell,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C690,Table5,파트너 내 단독 행 파트너 탈락 딜,12,-,50153,07_analysis/out/P00160.json,estimates.A_female_own_gap.exit3.counts.deals_dropped_single_row_partner,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C691,Table5,파트너 내 eligible 파트너 수,3450,-,3450,07_analysis/out/P00160.json,estimates.A_female_own_gap.exit3.counts.partners_eligible,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C692,Table5,파트너 내 식별 파트너 수(≤2020),3425,-,3425,07_analysis/out/P00160.json,estimates.A_female_own_gap.exit3.counts.partners_identifying,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C693,Table5,파트너 내 식별 여성 파트너 수(≤2020),415,-,3425,07_analysis/out/P00160.json,estimates.A_female_own_gap.exit3.counts.female_partners_identifying,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C694,IA.1,파트너 내 eligible 딜(≤2017),28755,-,28755,07_analysis/out/P00160.json,estimates.A_female_own_gap.exit_ever.counts.deals_eligible,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C695,IA.1,파트너 내 estimation 딜(≤2017),28556,-,28556,07_analysis/out/P00160.json,estimates.A_female_own_gap.exit_ever.counts.deals_estimation,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C696,IA.1,파트너 내 식별 파트너(≤2017),1987,-,1987,07_analysis/out/P00160.json,estimates.A_female_own_gap.exit_ever.counts.partners_identifying,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C697,IA.1,파트너 내 식별 여성 파트너(≤2017),205,-,1987,07_analysis/out/P00160.json,estimates.A_female_own_gap.exit_ever.counts.female_partners_identifying,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C698,§5,확장 Mundlak(adj·ln_n 분해) between terrain,0.42887,"[0.1816,0.672]",2017,07_analysis/out/P00160.json,estimates.D_mundlak_extended.full_mundlak_adj_lnn.fm_terrain.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C699,§5,확장 Mundlak within terrain,-0.01678,"[-0.2912,0.2498]",2017,07_analysis/out/P00160.json,estimates.D_mundlak_extended.full_mundlak_adj_lnn.dev_terrain.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C700,§5,확장 Mundlak 대비 within−between,-0.44565,"[-0.7885,-0.0935]",2017,07_analysis/out/P00160.json,estimates.D_mundlak_extended.full_mundlak_adj_lnn.contrast_dev_minus_fm.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C701,IA.6,확장 Mundlak fm_adj,0.22288,"[0.0874,0.3428]",2017,07_analysis/out/P00160.json,estimates.D_mundlak_extended.full_mundlak_adj_lnn.fm_adj.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C702,IA.6,확장 Mundlak dev_adj,0.11131,"[-0.0186,0.2337]",2017,07_analysis/out/P00160.json,estimates.D_mundlak_extended.full_mundlak_adj_lnn.dev_adj.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C703,§5,전 변수 분해 Mundlak between terrain,0.44012,"[0.1407,0.7155]",2017,07_analysis/out/P00160.json,estimates.D_mundlak_extended.full_mundlak_all_within_between.fm_terrain.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C704,§5,전 변수 분해 Mundlak within terrain,-0.02007,"[-0.2654,0.2716]",2017,07_analysis/out/P00160.json,estimates.D_mundlak_extended.full_mundlak_all_within_between.dev_terrain.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C705,§5,전 변수 분해 Mundlak 대비,-0.46019,"[-0.8256,-0.093]",2017,07_analysis/out/P00160.json,estimates.D_mundlak_extended.full_mundlak_all_within_between.contrast_dev_minus_fm.coef,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C706,IA.6,"고정지평 corr(fm_terrain, fm_adj)",0.083,-,2661,07_analysis/out/P00160.json,estimates.D_mundlak_extended.corr_fm_terrain_fm_adj,06_code/p001_60_review_reanalyses.py,6a4ac9ac4b558c05,valid
+C707,Table7,"Table 7B 재모수화: A 계수 (β_R+β_A), R−A 고정",-0.1872,"[-0.3188,-0.0771]",2686,07_analysis/out/P00118b.json,estimates.beta_adj_given_rankdiff.0,06_code/p001_18b_career_fix.py,c10efd6be6054d5a,valid
+C708,Table10,영입+이탈 합(거울 반전 검정; 공동 추첨) pp,3.56,"[-0.0036,0.0655]",244349,07_analysis/out/P00111.json,estimates.join_plus_exit.0,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
+C709,Table10,여성 영입 사후 본인 딜 비중,0.0211,-,47586,07_analysis/out/P00111.json,estimates.mechanical_own_channel.own_share_post_female_join,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
+C710,Table10,본인 딜 FF 비중,0.2876,-,47586,07_analysis/out/P00111.json,estimates.mechanical_own_channel.ff_share_own_deals,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
+C711,Table10,동료 딜 FF 비중,0.2422,-,47586,07_analysis/out/P00111.json,estimates.mechanical_own_channel.ff_share_colleague_deals,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
+C712,Table10,기계적 구성 몫 s·(p_own−p_col) pp,0.1,-,47586,07_analysis/out/P00111.json,estimates.mechanical_own_channel.direct_composition_pp,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
+C713,Table10,첫 여성 파트너인 영입 비중,0.3626,-,1059,07_analysis/out/P00111.json,estimates.female_events.share_first_female_partner,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
+C714,Table10,마지막 여성 파트너 이탈 비중,0.3292,-,401,07_analysis/out/P00111.json,estimates.female_events.share_last_female_partner,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
+C715,Table10,여성 영입 사건 수(추정 표본),1059,-,1059,07_analysis/out/P00111.json,estimates.female_events.n_join,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
+C716,Table10,여성 이탈 사건 수(추정 표본),401,-,401,07_analysis/out/P00111.json,estimates.female_events.n_exit,06_code/p001_11_e3_deal_level.py,002626b5bd9c2bac,valid
+C717,IA.1,Form D T1 매칭 CB 운용사 수,1368,-,5051,shared/data/processed/formd_v1/fund_match_summary_v2.json,T1_cb_firms,shared/code/public_sources/match_formd_funds_v2.py,,valid

@@ -1,0 +1,139 @@
+{
+  "id": "P001-49",
+  "title": "동료 비교의 식별 기반: 공동귀속(단일 라운드) 셀 비중 · 결과 분산이 있는 셀 · 희석 · 다중 라운드 셀만의 격차",
+  "status": "OK",
+  "n": 7103,
+  "estimates": {
+    "GLOBAL": {
+      "n_ff_deals": 8058,
+      "cell_cat": {
+        "n_mixed_cells": 191,
+        "n_deals_mixed": 478,
+        "n_single_round_cells": 120,
+        "share_single_round_cells": 0.6283,
+        "n_multi_round_cells": 71,
+        "n_deals_multi": 228,
+        "n_cells_exit_var_pos": 35,
+        "n_deals_exit_var_pos": 120,
+        "dilution_share_sxx_single_round": 0.5497,
+        "beta_full_pp": -6.246,
+        "beta_multi_exit_ever_pp": -13.87,
+        "ci_multi_exit_ever_pp": [
+          -24.77,
+          -2.5
+        ],
+        "mde_multi_exit_ever_pp": 15.73,
+        "placebo_p95_multi_exit_ever_pp": 11.89,
+        "beta_multi_fon_pp": -2.147,
+        "ci_multi_fon_pp": [
+          -11.54,
+          7.18
+        ],
+        "mde_multi_fon_pp": 13.31,
+        "placebo_p95_multi_fon_pp": 9.75
+      },
+      "cell_stage": {
+        "n_mixed_cells": 169,
+        "n_deals_mixed": 371,
+        "n_single_round_cells": 144,
+        "share_single_round_cells": 0.8521,
+        "n_multi_round_cells": 25,
+        "n_deals_multi": 67,
+        "n_cells_exit_var_pos": 10,
+        "n_deals_exit_var_pos": 25,
+        "dilution_share_sxx_single_round": 0.8246,
+        "beta_full_pp": -1.754,
+        "beta_multi_exit_ever_pp": -10.0,
+        "ci_multi_exit_ever_pp": [
+          -26.57,
+          9.23
+        ],
+        "mde_multi_exit_ever_pp": 25.31,
+        "placebo_p95_multi_exit_ever_pp": 16.32,
+        "beta_multi_fon_pp": 1.579,
+        "ci_multi_fon_pp": [
+          -11.97,
+          17.12
+        ],
+        "mde_multi_fon_pp": 21.61,
+        "placebo_p95_multi_fon_pp": 17.37
+      }
+    },
+    "NAEU": {
+      "n_ff_deals": 7103,
+      "cell_cat": {
+        "n_mixed_cells": 174,
+        "n_deals_mixed": 430,
+        "n_single_round_cells": 113,
+        "share_single_round_cells": 0.6494,
+        "n_multi_round_cells": 61,
+        "n_deals_multi": 195,
+        "n_cells_exit_var_pos": 30,
+        "n_deals_exit_var_pos": 101,
+        "dilution_share_sxx_single_round": 0.5752,
+        "beta_full_pp": -4.549,
+        "beta_multi_exit_ever_pp": -10.707,
+        "ci_multi_exit_ever_pp": [
+          -21.72,
+          2.07
+        ],
+        "mde_multi_exit_ever_pp": 17.51,
+        "placebo_p95_multi_exit_ever_pp": 12.67,
+        "beta_multi_fon_pp": -1.169,
+        "ci_multi_fon_pp": [
+          -11.25,
+          7.0
+        ],
+        "mde_multi_fon_pp": 12.65,
+        "placebo_p95_multi_fon_pp": 8.18
+      },
+      "cell_stage": {
+        "n_mixed_cells": 155,
+        "n_deals_mixed": 336,
+        "n_single_round_cells": 135,
+        "share_single_round_cells": 0.871,
+        "n_multi_round_cells": 20,
+        "n_deals_multi": 51,
+        "n_cells_exit_var_pos": 8,
+        "n_deals_exit_var_pos": 19,
+        "dilution_share_sxx_single_round": 0.8506,
+        "beta_full_pp": -1.016,
+        "beta_multi_exit_ever_pp": -6.803,
+        "ci_multi_exit_ever_pp": [
+          -25.4,
+          17.23
+        ],
+        "mde_multi_exit_ever_pp": 30.7,
+        "placebo_p95_multi_exit_ever_pp": 23.13,
+        "beta_multi_fon_pp": 5.442,
+        "ci_multi_fon_pp": [
+          -11.37,
+          27.8
+        ],
+        "mde_multi_fon_pp": 27.12,
+        "placebo_p95_multi_fon_pp": 19.05
+      }
+    },
+    "prediction_check": {
+      "NAEU_single_share_0.60_0.70": true,
+      "NAEU_varpos_25_40": true,
+      "NAEU_beta_multi_in_[-12,-5]": true,
+      "NAEU_halfwidth_ge_8": true,
+      "GLOBAL_varpos_35_55": true,
+      "GLOBAL_beta_multi_in_[-12,-5]": false
+    }
+  },
+  "prediction": "NAEU cat 단일라운드 0.60–0.70; 분산>0 셀 25–40; β_다중 ∈[−12,−5] 반폭≥8; GLOBAL 분산>0 35–55",
+  "verdict": "NAEU cat: 혼합 174 셀 중 단일라운드(공동귀속) 113 (65%), exit 분산>0 셀 30/101 딜, Σxr² 희석 58%; β 전체 -4.55 → 다중라운드 셀만 -10.707 [-21.72, 2.07] (MDE 17.51, 위약 p95 12.67) | GLOBAL cat: 단일 63%, 분산>0 35 셀; β 전체 -6.25 → 다중 -13.87 [-24.77, -2.5] | NAEU stage: 단일 87%, 분산>0 8 셀 (예측 적중 5/6)",
+  "kill_met": false,
+  "code": "p001_49_coattribution_audit.py",
+  "sha256_16": "ea49c8100c9130e4",
+  "seed": 42,
+  "runtime_s": 75.8,
+  "date": "2026-09-09",
+  "stage": 7,
+  "feeds": "§4 동료 비교 서술 · Table 9 (P001-40 보완)",
+  "slug": "coattribution_audit",
+  "builds_on": "P001-10/40/48",
+  "common_sha256_16": "a63e7b62854b47c6"
+}

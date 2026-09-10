@@ -1,0 +1,36 @@
+{
+  "id": "P001-18b",
+  "title": "커리어 검정 — 원시 vs 조정 랭크의 미래 딜플로우 가격 반영 (Track C-⑦)",
+  "status": "PARTIAL",
+  "n": 2686,
+  "estimates": {
+    "beta_raw_given_adj": [
+      -1.7314,
+      [
+        -2.1065,
+        -1.3895
+      ]
+    ],
+    "beta_adj_given_raw": [
+      1.5442,
+      [
+        1.2399,
+        1.8619
+      ]
+    ],
+    "n_partners": 2686,
+    "n_female": 192,
+    "mean_future_deals": 5.01
+  },
+  "prediction": "β_raw|adj > 0 CI 배제; β_adj ≤ β_raw",
+  "verdict": "미래 딜플로우 ~ 원시랭크 β=-1.731 [-2.1065, -1.3895] (조정랭크 통제 하) — 가격 반영 미검출 — Table 7 은 측정 따름정리로 제시 (정직 기록); 조정랭크 β=+1.544 [1.2399, 1.8619]; 파트너 2,686 (여성 192)",
+  "kill_met": false,
+  "code": "p001_18b_career_fix.py",
+  "sha256_16": "50cc80b5dd6366d3",
+  "seed": 42,
+  "runtime_s": 1.6,
+  "date": "2026-09-04",
+  "stage": 5,
+  "feeds": "finance#3 / §6.1·Table 7 격상 판정",
+  "slug": "career_stylectrl"
+}

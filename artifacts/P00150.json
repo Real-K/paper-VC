@@ -1,0 +1,95 @@
+{
+  "id": "P001-50",
+  "title": "Table 4 해저드의 식별 변이: 공동귀속 셀 비중·결과 변이·희석, 다중 라운드 셀만의 해저드 격차",
+  "status": "OK",
+  "n": 37416,
+  "estimates": {
+    "A_cells": {
+      "n_rows_panel": 37416,
+      "n_cells_panel": 30997,
+      "base_hazard": 0.0619,
+      "n_mixed_cells": 814,
+      "n_rows_mixed": 1764,
+      "n_single_round_cells": 728,
+      "share_single_round_cells": 0.8943,
+      "n_multi_round_cells": 86,
+      "n_rows_multi": 226,
+      "n_cells_outcome_var_pos": 10,
+      "share_cells_outcome_var_pos": 0.0123,
+      "n_rows_outcome_var_pos": 25,
+      "dilution_share_sxx_single_round": 0.8729,
+      "n_exit_events_mixed": 109,
+      "n_exit_events_varpos": 12
+    },
+    "B_hazard_gap": {
+      "full": {
+        "coef_pp": -0.244,
+        "ci95_pp": [
+          -1.0,
+          0.31
+        ],
+        "mde80_pp": 0.911,
+        "n_rows": 37416,
+        "n_cells": 30997,
+        "within_quarter_of_base": true
+      },
+      "multi_round_cells": {
+        "coef_pp": -1.699,
+        "ci95_pp": [
+          -11.83,
+          2.87
+        ],
+        "mde80_pp": 11.31,
+        "n_rows": 226,
+        "n_cells": 86,
+        "within_quarter_of_base": false
+      },
+      "outcome_var_cells_reference": {
+        "coef_pp": -34.661,
+        "ci95_pp": [
+          -67.61,
+          15.49
+        ],
+        "mde80_pp": 63.283,
+        "n_rows": 25,
+        "n_cells": 10,
+        "within_quarter_of_base": false
+      },
+      "full_unadj": {
+        "coef_pp": -0.251,
+        "ci95_pp": [
+          -0.88,
+          0.31
+        ],
+        "mde80_pp": 0.881,
+        "n_rows": 37416,
+        "n_cells": 30997,
+        "within_quarter_of_base": true
+      }
+    },
+    "quarter_of_base_pp": 1.548,
+    "prediction_check": {
+      "A_mixed_600_900": true,
+      "A_single_share_0.80_0.90": true,
+      "A_varpos_share_0.05_0.12": false,
+      "A_dilution_0.75_0.90": true,
+      "B_full_reproduces_-0.24": true,
+      "B_multi_in_[-1.5,0.5]": false,
+      "B_multi_halfwidth_ge_1.2": true,
+      "B_multi_equiv_fails": true
+    }
+  },
+  "prediction": "fp 변동 cellt 600–900; 단일 라운드 0.80–0.90; 결과 변이>0 5–12%; 희석 0.75–0.90; 전체 −0.24 재현; 다중 β∈[−1.5,0.5] 반폭≥1.2, ±25% 등가 실패",
+  "verdict": "해저드 패널 fp 변동 셀 814 중 단일 라운드(공동귀속) 89% · 결과 변이>0 10 (1%) · Σx̃² 희석 87% | 전체 -0.244 [-1.00,+0.31] (±25% True) → 다중 라운드 셀만 -1.699 [-11.83,+2.87] MDE 11.31 (±25%=1.55pp; 등가 False) — Table 4 의 ±25% 경계는 희석 추정량의 경계 — 교차 딜 셀만으로는 등가 미성립(MDE 병기) (예측 적중 6/8)",
+  "kill_met": false,
+  "code": "p001_50_hazard_identification.py",
+  "sha256_16": "97ce317656b3ad64",
+  "seed": 42,
+  "runtime_s": 354.2,
+  "date": "2026-09-09",
+  "stage": 7,
+  "feeds": "§4 Table 4 분업 서술 · Table 9 Panel E",
+  "slug": "hazard_identification",
+  "builds_on": "P001-12/49",
+  "p001_12_sha256_16": "76ca9e401a2051c5"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "P001-24",
+  "title": "주장 ③ S&S 대조 필수 재실행 — 여성전용 리드·첫라운드·US·Seed/A·2010-18·Cox",
+  "status": "GO",
+  "n": 428,
+  "estimates": {
+    "S1|처치 단독": {
+      "beta_allf": -0.01036,
+      "hazard_ratio": 0.9897,
+      "ci95_beta": [
+        -0.8311,
+        0.4663
+      ],
+      "converged": true,
+      "grad_max": 2.9976021664879227e-15,
+      "n": 421,
+      "n_event": 142,
+      "n_boot": 400,
+      "sig": false
+    },
+    "S1|+연도·섹터·단계": {
+      "beta_allf": -0.00736,
+      "hazard_ratio": 0.9927,
+      "ci95_beta": [
+        NaN,
+        NaN
+      ],
+      "converged": false,
+      "grad_max": 2.949809834943285e-12,
+      "n": 421,
+      "n_event": 142,
+      "n_boot": 0,
+      "sig": false
+    },
+    "S2|구정의(혼성포함)": {
+      "beta_anyf": 0.02573,
+      "hazard_ratio": 1.0261,
+      "converged": false,
+      "n": 428,
+      "n_event": 145
+    },
+    "S3|혼성vs전원남성": {
+      "beta_mixed": 0.15858,
+      "hazard_ratio": 1.1718,
+      "converged": false,
+      "n": 392,
+      "n_event": 134
+    },
+    "counts": {
+      "n_allf": 36,
+      "n_allm": 385,
+      "n_mixed": 7,
+      "n_events": 145,
+      "n_total": 428
+    }
+  },
+  "prediction": "전원여성 계수 양(+) 또는 0 근처 · 표본 부족이 실질 위험 · 혼성 포함/제외에서 부호 갈리면 §7 오조준 확인",
+  "verdict": "표본 428 (전원여성 36/전원남성 385/혼성 7) 사건 145 | S1|처치 단독: β=-0.01036 HR=0.9897 | S1|+연도·섹터·단계: β=-0.00736 HR=0.9927 | S2|구정의(혼성포함): β=0.02573 HR=1.0261 | S3|혼성vs전원남성: β=0.15858 HR=1.1718 | counts: β=None HR=None — **전원여성 리드의 출구 위험비 0.9927 이나 CI 가 0 을 포함 — 미검출. §7 의 오조준은 교정했으나 대조 자체는 무정보**",
+  "kill_met": false,
+  "code": "p001_24_ss_rerun_cox.py",
+  "sha256_16": "c775cc3ea9c1d08a",
+  "seed": 42,
+  "runtime_s": 89.8,
+  "date": "2026-09-08",
+  "stage": 7,
+  "feeds": "주장 ③ 서술 확정",
+  "slug": "ss_rerun_cox",
+  "supersedes": "P001-19 의 S&S 대조 (표적 오조준)"
+}

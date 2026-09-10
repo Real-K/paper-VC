@@ -1,0 +1,397 @@
+{
+  "id": "P001-34",
+  "title": "딜 수준 롤링 구성 → 고정지평 셀 내 잔차: 회사×연 FE · 파트너 FE 사다리",
+  "status": "PARTIAL",
+  "n": 35348,
+  "estimates": {
+    "desc_exit_ever": {
+      "n_deals": 35348,
+      "n_partners": 3132,
+      "n_firms": 1742,
+      "n_firm_years": 6041,
+      "n_deals_multi_partner_fy": 25600,
+      "n_firm_years_multi": 2402,
+      "sd_t_cs_pr": 0.0544,
+      "sd_terrain_pr": 0.1607,
+      "sd_r": 0.4417,
+      "within_fy_share_t_cs_pr": 0.5468,
+      "within_partner_share_t_cs_pr": 0.1377
+    },
+    "D0_pool_exit_ever": {
+      "n": 35348,
+      "n_firms": 1742,
+      "t_v_pr": {
+        "coef": 0.0189,
+        "ci95": [
+          -0.0367,
+          0.0809
+        ],
+        "sig": false,
+        "se_boot": 0.03114,
+        "mde80": 0.0872
+      },
+      "t_s_pr": {
+        "coef": 0.12281,
+        "ci95": [
+          0.0571,
+          0.1883
+        ],
+        "sig": true,
+        "se_boot": 0.03361,
+        "mde80": 0.0941
+      },
+      "t_cs_pr": {
+        "coef": 0.142,
+        "ci95": [
+          0.0283,
+          0.2421
+        ],
+        "sig": true,
+        "se_boot": 0.05515,
+        "mde80": 0.1544
+      },
+      "adj_pr": {
+        "coef": 0.45616,
+        "ci95": [
+          0.4224,
+          0.4887
+        ],
+        "sig": true,
+        "se_boot": 0.01676,
+        "mde80": 0.0469
+      }
+    },
+    "D0t_total": {
+      "n": 35348,
+      "n_firms": 1742,
+      "terrain_pr": {
+        "coef": 0.07502,
+        "ci95": [
+          0.0407,
+          0.1088
+        ],
+        "sig": true,
+        "se_boot": 0.0179,
+        "mde80": 0.0501
+      }
+    },
+    "D0fe_firmyear_exit_ever": {
+      "n": 33611,
+      "n_firms": 1270,
+      "t_v_pr": {
+        "coef": 0.01939,
+        "ci95": [
+          -0.1812,
+          0.2435
+        ],
+        "sig": false,
+        "se_boot": 0.10945,
+        "mde80": 0.3065
+      },
+      "t_s_pr": {
+        "coef": 0.01317,
+        "ci95": [
+          -0.1933,
+          0.1881
+        ],
+        "sig": false,
+        "se_boot": 0.09198,
+        "mde80": 0.2576
+      },
+      "t_cs_pr": {
+        "coef": 0.00167,
+        "ci95": [
+          -0.1546,
+          0.1615
+        ],
+        "sig": false,
+        "se_boot": 0.0809,
+        "mde80": 0.2265
+      }
+    },
+    "desc_exit3": {
+      "n_deals": 35348,
+      "n_partners": 3132,
+      "n_firms": 1742,
+      "n_firm_years": 6041,
+      "n_deals_multi_partner_fy": 25600,
+      "n_firm_years_multi": 2402,
+      "sd_t_cs_pr": 0.0484,
+      "sd_terrain_pr": 0.0686,
+      "sd_r": 0.3392,
+      "within_fy_share_t_cs_pr": 0.544,
+      "within_partner_share_t_cs_pr": 0.1345,
+      "share_repeat_company_multi_fy": 0.5056,
+      "D3n_rows_before_refilter": 12657,
+      "D3n_firm_years_multi_after_refilter": 1497
+    },
+    "D1_pool_exit3": {
+      "n": 35348,
+      "n_firms": 1742,
+      "t_v_pr": {
+        "coef": 0.04672,
+        "ci95": [
+          -0.1965,
+          0.2909
+        ],
+        "sig": false,
+        "se_boot": 0.13269,
+        "mde80": 0.3715
+      },
+      "t_s_pr": {
+        "coef": 0.20303,
+        "ci95": [
+          0.0973,
+          0.3169
+        ],
+        "sig": true,
+        "se_boot": 0.05884,
+        "mde80": 0.1648
+      },
+      "t_cs_pr": {
+        "coef": 0.14984,
+        "ci95": [
+          0.0665,
+          0.237
+        ],
+        "sig": true,
+        "se_boot": 0.04439,
+        "mde80": 0.1243
+      },
+      "adj_pr": {
+        "coef": 0.27203,
+        "ci95": [
+          0.2304,
+          0.3209
+        ],
+        "sig": true,
+        "se_boot": 0.02221,
+        "mde80": 0.0622
+      }
+    },
+    "D2_tenure_year": {
+      "n": 35348,
+      "n_firms": 1742,
+      "t_v_pr": {
+        "coef": 0.09542,
+        "ci95": [
+          -0.4157,
+          0.6396
+        ],
+        "sig": false,
+        "se_boot": 0.29174,
+        "mde80": 0.8169
+      },
+      "t_s_pr": {
+        "coef": 0.21979,
+        "ci95": [
+          0.1068,
+          0.3718
+        ],
+        "sig": true,
+        "se_boot": 0.06797,
+        "mde80": 0.1903
+      },
+      "t_cs_pr": {
+        "coef": 0.14963,
+        "ci95": [
+          0.0535,
+          0.2507
+        ],
+        "sig": true,
+        "se_boot": 0.04833,
+        "mde80": 0.1353
+      },
+      "tenure_at": {
+        "coef": 9e-05,
+        "ci95": [
+          -0.0038,
+          0.0031
+        ],
+        "sig": false,
+        "se_boot": 0.00187,
+        "mde80": 0.0052
+      }
+    },
+    "D3_firmyear_FE": {
+      "n": 25600,
+      "n_firms": 661,
+      "t_v_pr": {
+        "coef": 0.21767,
+        "ci95": [
+          -0.5732,
+          0.9448
+        ],
+        "sig": false,
+        "se_boot": 0.41675,
+        "mde80": 1.1669
+      },
+      "t_s_pr": {
+        "coef": 0.0797,
+        "ci95": [
+          -0.1621,
+          0.2991
+        ],
+        "sig": false,
+        "se_boot": 0.12499,
+        "mde80": 0.35
+      },
+      "t_cs_pr": {
+        "coef": 0.05039,
+        "ci95": [
+          -0.0806,
+          0.1728
+        ],
+        "sig": false,
+        "se_boot": 0.06666,
+        "mde80": 0.1866
+      },
+      "adj_pr": {
+        "coef": 0.24153,
+        "ci95": [
+          0.1913,
+          0.296
+        ],
+        "sig": true,
+        "se_boot": 0.02615,
+        "mde80": 0.0732
+      }
+    },
+    "D3t_total_firmyear_FE": {
+      "n": 25600,
+      "n_firms": 661,
+      "terrain_pr": {
+        "coef": 0.05842,
+        "ci95": [
+          -0.0438,
+          0.1756
+        ],
+        "sig": false,
+        "se_boot": 0.05859,
+        "mde80": 0.164
+      }
+    },
+    "D3n_new_company_firmyear_FE": {
+      "n": 11697,
+      "n_firms": 500,
+      "t_v_pr": {
+        "coef": 0.07201,
+        "ci95": [
+          -1.0364,
+          1.3465
+        ],
+        "sig": false,
+        "se_boot": 0.64308,
+        "mde80": 1.8006
+      },
+      "t_s_pr": {
+        "coef": -0.01603,
+        "ci95": [
+          -0.3805,
+          0.3448
+        ],
+        "sig": false,
+        "se_boot": 0.18797,
+        "mde80": 0.5263
+      },
+      "t_cs_pr": {
+        "coef": 0.12775,
+        "ci95": [
+          -0.094,
+          0.3378
+        ],
+        "sig": false,
+        "se_boot": 0.11031,
+        "mde80": 0.3089
+      }
+    },
+    "D3nt_total_new_company": {
+      "n": 11697,
+      "n_firms": 500,
+      "terrain_pr": {
+        "coef": 0.10297,
+        "ci95": [
+          -0.0783,
+          0.2784
+        ],
+        "sig": false,
+        "se_boot": 0.09302,
+        "mde80": 0.2605
+      }
+    },
+    "D4_partner_FE": {
+      "n": 34905,
+      "n_firms": 2689,
+      "t_v_pr": {
+        "coef": -0.54082,
+        "ci95": [
+          -1.8395,
+          0.7864
+        ],
+        "sig": false,
+        "se_boot": 0.70037,
+        "mde80": 1.961
+      },
+      "t_s_pr": {
+        "coef": 0.43616,
+        "ci95": [
+          0.0071,
+          0.9262
+        ],
+        "sig": true,
+        "se_boot": 0.24282,
+        "mde80": 0.6799
+      },
+      "t_cs_pr": {
+        "coef": 0.19186,
+        "ci95": [
+          -0.0349,
+          0.4023
+        ],
+        "sig": false,
+        "se_boot": 0.11526,
+        "mde80": 0.3227
+      }
+    },
+    "D4t_total_partner_FE": {
+      "n": 34905,
+      "n_firms": 2689,
+      "terrain_pr": {
+        "coef": 0.22569,
+        "ci95": [
+          -0.0146,
+          0.4625
+        ],
+        "sig": false,
+        "se_boot": 0.11909,
+        "mde80": 0.3335
+      }
+    },
+    "D3n_pct_of_D3": {
+      "t_cs_pr": 253.5,
+      "terrain_pr": 176.3
+    },
+    "prediction_check": {
+      "D0_tcs_in_[0.08,0.20]_sig": true,
+      "D1_tcs_in_[0.03,0.12]": false,
+      "D3_tcs_in_[0.02,0.10]": true,
+      "D3_width_le_0.24": false,
+      "D4_tcs_in_pm0.05": false,
+      "D1_tv_near0": true,
+      "D3n_ge70pct_of_D3": true
+    }
+  },
+  "prediction": "D0 t_cs∈[0.08,0.20]*; D1∈[0.03,0.12]; D3∈[0.02,0.10] 폭≤0.24; D4≈0; 고정지평 t_v≈0; GO=D3/D3t 하한>0; KILL=D3·D3t 상단<0.03",
+  "verdict": "D0(exit_ever 풀) t_cs +0.142 [+0.028,+0.242]* | D1(exit3 풀) +0.150 [+0.067,+0.237]* · t_v +0.047 [-0.197,+0.291] | D2(+연공+연도) +0.150 [+0.053,+0.251]* | **D3(회사×연 FE) +0.050 [-0.081,+0.173] 폭 0.253 MDE80 0.187** · D3t terrain +0.058 [-0.044,+0.176] · D3n 새기업 +0.128 [-0.094,+0.338] (254%) · D3nt +0.103 [-0.078,+0.278] (176%) | D4(파트너 FE) +0.192 [-0.035,+0.402] · D4t +0.226 [-0.015,+0.463] — 회사×연 비교 · 고정지평에서 검출도 배제도 안 됨 — MDE 병기 (예측 적중 4/7)",
+  "kill_met": false,
+  "code": "p001_34_deal_rolling_fe.py",
+  "sha256_16": "4a6b41ee108b8150",
+  "seed": 42,
+  "runtime_s": 168.7,
+  "date": "2026-09-09",
+  "stage": 7,
+  "feeds": "R2 power-rescue",
+  "slug": "deal_rolling_fe",
+  "builds_on": "P001-30/31",
+  "common_sha256_16": "a63e7b62854b47c6"
+}

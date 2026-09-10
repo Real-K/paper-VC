@@ -1,0 +1,265 @@
+{
+  "id": "P001-57",
+  "title": "P001-54 후속: 파트너 내 결과 검정의 결과 구성물 분해 (같은 창에서 exit3·exit6·exit_ever·36m 이후 출구·fon)",
+  "status": "OK",
+  "n": 28556,
+  "estimates": {
+    "A_2017": {
+      "exit3": {
+        "n": 28556,
+        "n_firms": 1994,
+        "ff": {
+          "coef": -0.02924,
+          "ci95": [
+            -0.0418,
+            -0.0192
+          ],
+          "sig": true,
+          "se_boot": 0.00608,
+          "mde80": 0.017,
+          "beta_std": -0.0836,
+          "within_pm0.05": true
+        },
+        "ffp": {
+          "coef": -0.01289,
+          "ci95": [
+            -0.0522,
+            0.0237
+          ],
+          "sig": false,
+          "se_boot": 0.01878,
+          "mde80": 0.0526,
+          "beta_std": -0.0369,
+          "within_pm0.05": false
+        },
+        "sd_r": 0.34978,
+        "n_partners": 1998,
+        "n_female_partners": 206,
+        "n_deals_2015plus": 13165,
+        "base_y": 0.1672
+      },
+      "exit6": {
+        "n": 28556,
+        "n_firms": 1994,
+        "ff": {
+          "coef": -0.01697,
+          "ci95": [
+            -0.035,
+            -0.0006
+          ],
+          "sig": true,
+          "se_boot": 0.00901,
+          "mde80": 0.0252,
+          "beta_std": -0.0379,
+          "within_pm0.05": true
+        },
+        "ffp": {
+          "coef": -0.04116,
+          "ci95": [
+            -0.091,
+            0.0087
+          ],
+          "sig": false,
+          "se_boot": 0.02584,
+          "mde80": 0.0724,
+          "beta_std": -0.092,
+          "within_pm0.05": false
+        },
+        "sd_r": 0.44739,
+        "n_partners": 1998,
+        "n_female_partners": 206,
+        "n_deals_2015plus": 13165,
+        "base_y": 0.3688
+      },
+      "exit_ever": {
+        "n": 28556,
+        "n_firms": 1994,
+        "ff": {
+          "coef": -0.01878,
+          "ci95": [
+            -0.0376,
+            -0.0013
+          ],
+          "sig": true,
+          "se_boot": 0.00945,
+          "mde80": 0.0264,
+          "beta_std": -0.0415,
+          "within_pm0.05": true
+        },
+        "ffp": {
+          "coef": -0.06507,
+          "ci95": [
+            -0.1261,
+            -0.0086
+          ],
+          "sig": true,
+          "se_boot": 0.02964,
+          "mde80": 0.083,
+          "beta_std": -0.1438,
+          "within_pm0.05": false
+        },
+        "sd_r": 0.45235,
+        "n_partners": 1998,
+        "n_female_partners": 206,
+        "n_deals_2015plus": 13165,
+        "base_y": 0.5416
+      },
+      "late_exit": {
+        "n": 28556,
+        "n_firms": 1994,
+        "ff": {
+          "coef": 0.01046,
+          "ci95": [
+            -0.0049,
+            0.0274
+          ],
+          "sig": false,
+          "se_boot": 0.00877,
+          "mde80": 0.0245,
+          "beta_std": 0.0232,
+          "within_pm0.05": true
+        },
+        "ffp": {
+          "coef": -0.05218,
+          "ci95": [
+            -0.1082,
+            0.0014
+          ],
+          "sig": false,
+          "se_boot": 0.02904,
+          "mde80": 0.0813,
+          "beta_std": -0.116,
+          "within_pm0.05": false
+        },
+        "sd_r": 0.44989,
+        "n_partners": 1998,
+        "n_female_partners": 206,
+        "n_deals_2015plus": 13165,
+        "base_y": 0.3744
+      },
+      "fon": {
+        "n": 28556,
+        "n_firms": 1994,
+        "ff": {
+          "coef": 0.00101,
+          "ci95": [
+            -0.0111,
+            0.0118
+          ],
+          "sig": false,
+          "se_boot": 0.00626,
+          "mde80": 0.0175,
+          "beta_std": 0.0023,
+          "within_pm0.05": true
+        },
+        "ffp": {
+          "coef": -0.00742,
+          "ci95": [
+            -0.0552,
+            0.0335
+          ],
+          "sig": false,
+          "se_boot": 0.02365,
+          "mde80": 0.0662,
+          "beta_std": -0.0171,
+          "within_pm0.05": false
+        },
+        "sd_r": 0.43347,
+        "n_partners": 1998,
+        "n_female_partners": 206,
+        "n_deals_2015plus": 13165,
+        "base_y": 0.714
+      }
+    },
+    "B_2020": {
+      "exit3": {
+        "n": 49835,
+        "n_firms": 3436,
+        "ff": {
+          "coef": -0.02551,
+          "ci95": [
+            -0.0331,
+            -0.017
+          ],
+          "sig": true,
+          "se_boot": 0.0042,
+          "mde80": 0.0118,
+          "beta_std": -0.0752,
+          "within_pm0.05": true
+        },
+        "ffp": {
+          "coef": 0.00482,
+          "ci95": [
+            -0.0176,
+            0.0291
+          ],
+          "sig": false,
+          "se_boot": 0.01255,
+          "mde80": 0.0351,
+          "beta_std": 0.0142,
+          "within_pm0.05": true
+        },
+        "sd_r": 0.33902,
+        "n_partners": 3448,
+        "n_female_partners": 418,
+        "n_deals_2015plus": 33142,
+        "base_y": 0.1569
+      },
+      "fon": {
+        "n": 49835,
+        "n_firms": 3436,
+        "ff": {
+          "coef": -0.00369,
+          "ci95": [
+            -0.0144,
+            0.0062
+          ],
+          "sig": false,
+          "se_boot": 0.00513,
+          "mde80": 0.0144,
+          "beta_std": -0.0085,
+          "within_pm0.05": true
+        },
+        "ffp": {
+          "coef": -0.0128,
+          "ci95": [
+            -0.0424,
+            0.0206
+          ],
+          "sig": false,
+          "se_boot": 0.01716,
+          "mde80": 0.0481,
+          "beta_std": -0.0295,
+          "within_pm0.05": true
+        },
+        "sd_r": 0.43372,
+        "n_partners": 3448,
+        "n_female_partners": 418,
+        "n_deals_2015plus": 33142,
+        "base_y": 0.7172
+      }
+    },
+    "prediction_check": {
+      "A_exit3_in_[-3,2]_incl0": true,
+      "A_exit6_in_[-5,1]": true,
+      "A_exit_ever_reproduces": true,
+      "A_late_in_[-6,-1]": true,
+      "B_exit3_reproduces": true,
+      "A_partners_1998": true
+    }
+  },
+  "prediction": "≤2017 exit3∈[−3,+2] CI 0 포함; exit6∈[−5,+1]; exit_ever −6.5 재현; late∈[−6,−1]; ≤2020 exit3 +0.48 재현",
+  "verdict": "≤2017-10: exit3 β_int -1.29 [-5.22,+2.37] · exit6 -4.12 [-9.10,+0.87] · exit_ever -6.51 [-12.61,-0.86] · late(36m+) -5.22 [-10.82,+0.14] · fon -0.74 | ≤2020-10: exit3 +0.48 · fon -1.28 — 구성물 분해 — 전부 보고 (예측 적중 6/6)",
+  "kill_met": false,
+  "code": "p001_57_within_partner_horizon.py",
+  "sha256_16": "aadb9711000a0988",
+  "seed": 42,
+  "runtime_s": 402.3,
+  "date": "2026-09-09",
+  "stage": 7,
+  "feeds": "P001-54 해석 → §4 파트너 내 문단 · Table 4 B",
+  "slug": "within_partner_horizon",
+  "builds_on": "P001-54/33",
+  "common_sha256_16": "a63e7b62854b47c6",
+  "v6_common_sha256_16": "0e382e764d14fdc8"
+}

@@ -1,0 +1,465 @@
+{
+  "id": "P001-42",
+  "title": "P1: 라운드 내 투자자 수준 결과 — 재참여·재귀속·리드, 혼성 신디케이트",
+  "status": "GO",
+  "n": 1623,
+  "estimates": {
+    "A_sample": {
+      "n_rounds_window": 77677,
+      "n_investor_rows_attributed": 71966,
+      "n_mixed_rounds": 3419,
+      "n_mixed_rows": 10399,
+      "n_mixed_ff_rounds": 734,
+      "n_companies_mixed": 2321,
+      "n_cond_rounds": 2505,
+      "n_cond_ff_rounds": 535,
+      "n_cond_ff_rows": 1623,
+      "n_cond_companies": 1741,
+      "n_cond_firms": 2061,
+      "four_cell_next36": {
+        "fp0_ff0": 0.7509,
+        "fp0_ff1": 0.7355,
+        "fp1_ff0": 0.7353,
+        "fp1_ff1": 0.7417
+      },
+      "four_cell_reup_cond": {
+        "fp0_ff0": 0.4885,
+        "fp0_ff1": 0.4675,
+        "fp1_ff0": 0.5126,
+        "fp1_ff1": 0.4559
+      },
+      "four_cell_repartner_cond": {
+        "fp0_ff0": 0.4332,
+        "fp0_ff1": 0.4099,
+        "fp1_ff0": 0.4573,
+        "fp1_ff1": 0.4081
+      },
+      "raw_dd_reup_cond": -0.0356,
+      "base_reup_cond_ff": 0.4627
+    },
+    "B_reup_conditional": {
+      "reg": {
+        "n": 7734,
+        "n_firms": 1741,
+        "fp": {
+          "coef": 0.00703,
+          "ci95": [
+            -0.0101,
+            0.0277
+          ],
+          "sig": false,
+          "se_boot": 0.00999,
+          "mde80": 0.028
+        },
+        "fpff": {
+          "coef": -0.01087,
+          "ci95": [
+            -0.0554,
+            0.0295
+          ],
+          "sig": false,
+          "se_boot": 0.02146,
+          "mde80": 0.0601
+        },
+        "b_FF": {
+          "coef": -0.00385,
+          "ci95": [
+            -0.0424,
+            0.0291
+          ],
+          "sig": false,
+          "se_boot": 0.01894,
+          "mde80": 0.053,
+          "within_pm0.05": true
+        },
+        "b_other": {
+          "coef": 0.00703,
+          "ci95": [
+            -0.0101,
+            0.0277
+          ],
+          "sig": false,
+          "se_boot": 0.00999,
+          "mde80": 0.028
+        },
+        "b_diff": {
+          "coef": -0.01087,
+          "ci95": [
+            -0.0554,
+            0.0295
+          ],
+          "sig": false,
+          "se_boot": 0.02146,
+          "mde80": 0.0601
+        }
+      },
+      "perm_FF": {
+        "n_perm": 500,
+        "p_two": 0.846,
+        "null_p95_abs": 0.0367
+      }
+    },
+    "C_reup_unconditional": {
+      "n": 10399,
+      "n_firms": 2321,
+      "fp": {
+        "coef": 0.00333,
+        "ci95": [
+          -0.0132,
+          0.0181
+        ],
+        "sig": false,
+        "se_boot": 0.00786,
+        "mde80": 0.022
+      },
+      "fpff": {
+        "coef": -0.00132,
+        "ci95": [
+          -0.0303,
+          0.0327
+        ],
+        "sig": false,
+        "se_boot": 0.01605,
+        "mde80": 0.0449
+      },
+      "b_FF": {
+        "coef": 0.00201,
+        "ci95": [
+          -0.0251,
+          0.0301
+        ],
+        "sig": false,
+        "se_boot": 0.01382,
+        "mde80": 0.0387,
+        "within_pm0.05": true
+      },
+      "b_other": {
+        "coef": 0.00333,
+        "ci95": [
+          -0.0132,
+          0.0181
+        ],
+        "sig": false,
+        "se_boot": 0.00786,
+        "mde80": 0.022
+      },
+      "b_diff": {
+        "coef": -0.00132,
+        "ci95": [
+          -0.0303,
+          0.0327
+        ],
+        "sig": false,
+        "se_boot": 0.01605,
+        "mde80": 0.0449
+      }
+    },
+    "D_repartner": {
+      "cond_on_reup": {
+        "n": 3301,
+        "n_firms": 886,
+        "fp": {
+          "coef": 0.00445,
+          "ci95": [
+            -0.0182,
+            0.0261
+          ],
+          "sig": false,
+          "se_boot": 0.01113,
+          "mde80": 0.0312
+        },
+        "fpff": {
+          "coef": -0.00684,
+          "ci95": [
+            -0.0546,
+            0.0379
+          ],
+          "sig": false,
+          "se_boot": 0.02359,
+          "mde80": 0.0661
+        },
+        "b_FF": {
+          "coef": -0.00239,
+          "ci95": [
+            -0.0455,
+            0.037
+          ],
+          "sig": false,
+          "se_boot": 0.02046,
+          "mde80": 0.0573,
+          "within_pm0.05": true
+        },
+        "b_other": {
+          "coef": 0.00445,
+          "ci95": [
+            -0.0182,
+            0.0261
+          ],
+          "sig": false,
+          "se_boot": 0.01113,
+          "mde80": 0.0312
+        },
+        "b_diff": {
+          "coef": -0.00684,
+          "ci95": [
+            -0.0546,
+            0.0379
+          ],
+          "sig": false,
+          "se_boot": 0.02359,
+          "mde80": 0.0661
+        }
+      },
+      "unconditional": {
+        "n": 7734,
+        "n_firms": 1741,
+        "fp": {
+          "coef": 0.0157,
+          "ci95": [
+            -0.0044,
+            0.0364
+          ],
+          "sig": false,
+          "se_boot": 0.01054,
+          "mde80": 0.0295
+        },
+        "fpff": {
+          "coef": -0.01051,
+          "ci95": [
+            -0.0565,
+            0.0282
+          ],
+          "sig": false,
+          "se_boot": 0.02233,
+          "mde80": 0.0625
+        },
+        "b_FF": {
+          "coef": 0.0052,
+          "ci95": [
+            -0.0345,
+            0.0438
+          ],
+          "sig": false,
+          "se_boot": 0.02038,
+          "mde80": 0.0571,
+          "within_pm0.05": true
+        },
+        "b_other": {
+          "coef": 0.0157,
+          "ci95": [
+            -0.0044,
+            0.0364
+          ],
+          "sig": false,
+          "se_boot": 0.01054,
+          "mde80": 0.0295
+        },
+        "b_diff": {
+          "coef": -0.01051,
+          "ci95": [
+            -0.0565,
+            0.0282
+          ],
+          "sig": false,
+          "se_boot": 0.02233,
+          "mde80": 0.0625
+        }
+      },
+      "n_rows_cond": 3789
+    },
+    "E_lead": {
+      "lead_recorded_share": 0.5755,
+      "lead_recorded_fp_minus_mp": -0.0076,
+      "lead_within_round": {
+        "n": 4770,
+        "n_firms": 1287,
+        "fp": {
+          "coef": -0.00132,
+          "ci95": [
+            -0.0323,
+            0.0326
+          ],
+          "sig": false,
+          "se_boot": 0.01732,
+          "mde80": 0.0485
+        },
+        "fpff": {
+          "coef": -0.02604,
+          "ci95": [
+            -0.0967,
+            0.0382
+          ],
+          "sig": false,
+          "se_boot": 0.03471,
+          "mde80": 0.0972
+        },
+        "b_FF": {
+          "coef": -0.02736,
+          "ci95": [
+            -0.088,
+            0.0297
+          ],
+          "sig": false,
+          "se_boot": 0.02974,
+          "mde80": 0.0833,
+          "within_pm0.05": false
+        },
+        "b_other": {
+          "coef": -0.00132,
+          "ci95": [
+            -0.0323,
+            0.0326
+          ],
+          "sig": false,
+          "se_boot": 0.01732,
+          "mde80": 0.0485
+        },
+        "b_diff": {
+          "coef": -0.02604,
+          "ci95": [
+            -0.0967,
+            0.0382
+          ],
+          "sig": false,
+          "se_boot": 0.03471,
+          "mde80": 0.0972
+        }
+      },
+      "lead_rec_within_round": {
+        "n": 10399,
+        "n_firms": 2321,
+        "fp": {
+          "coef": -0.01467,
+          "ci95": [
+            -0.0349,
+            0.0027
+          ],
+          "sig": false,
+          "se_boot": 0.00976,
+          "mde80": 0.0273
+        },
+        "fpff": {
+          "coef": 0.00676,
+          "ci95": [
+            -0.0383,
+            0.0515
+          ],
+          "sig": false,
+          "se_boot": 0.02328,
+          "mde80": 0.0652
+        },
+        "b_FF": {
+          "coef": -0.0079,
+          "ci95": [
+            -0.0499,
+            0.0315
+          ],
+          "sig": false,
+          "se_boot": 0.02068,
+          "mde80": 0.0579,
+          "within_pm0.05": true
+        },
+        "b_other": {
+          "coef": -0.01467,
+          "ci95": [
+            -0.0349,
+            0.0027
+          ],
+          "sig": false,
+          "se_boot": 0.00976,
+          "mde80": 0.0273
+        },
+        "b_diff": {
+          "coef": 0.00676,
+          "ci95": [
+            -0.0383,
+            0.0515
+          ],
+          "sig": false,
+          "se_boot": 0.02328,
+          "mde80": 0.0652
+        }
+      }
+    },
+    "F_reverse_placebo": {
+      "n": 8898,
+      "n_firms": 1942,
+      "fp": {
+        "coef": -0.01602,
+        "ci95": [
+          -0.0394,
+          0.01
+        ],
+        "sig": false,
+        "se_boot": 0.01176,
+        "mde80": 0.0329
+      },
+      "fpff": {
+        "coef": 0.01178,
+        "ci95": [
+          -0.0336,
+          0.06
+        ],
+        "sig": false,
+        "se_boot": 0.02469,
+        "mde80": 0.0691
+      },
+      "b_FF": {
+        "coef": -0.00424,
+        "ci95": [
+          -0.0469,
+          0.0369
+        ],
+        "sig": false,
+        "se_boot": 0.0215,
+        "mde80": 0.0602,
+        "within_pm0.05": true
+      },
+      "b_other": {
+        "coef": -0.01602,
+        "ci95": [
+          -0.0394,
+          0.01
+        ],
+        "sig": false,
+        "se_boot": 0.01176,
+        "mde80": 0.0329
+      },
+      "b_diff": {
+        "coef": 0.01178,
+        "ci95": [
+          -0.0336,
+          0.06
+        ],
+        "sig": false,
+        "se_boot": 0.02469,
+        "mde80": 0.0691
+      }
+    },
+    "prediction_check": {
+      "A_ff_rounds_650_720": false,
+      "A_next36_balanced": true,
+      "B_bFF_in_[-0.06,0.02]": true,
+      "B_ci_incl0": true,
+      "B_mde_4_5pp": true,
+      "B_diff_in_[-0.05,0.02]": true,
+      "D_bFF_in_[-0.08,0.02]": true,
+      "E_lead_cov_0.5_0.7": true,
+      "F_abs_lt_0.03_incl0": true
+    }
+  },
+  "prediction": "FF 라운드 650–720; next36 4셀 균형; b_FF ∈[−0.06,+0.02] CI 0 포함 MDE 4–5pp; 차이 ∈[−0.05,+0.02]; 역방향 위약 |b|<0.03",
+  "verdict": "혼성 FF 라운드(다음 36m 조건) 535·행 1,623·기업 1,741 | 재참여 b_FF -0.0039 [-0.042,+0.029] (MDE 0.053; 순열 p 0.846) · 비FF +0.0070 · 차이 -0.0109 [-0.055,+0.029] | 무조건 +0.0020 | 재귀속|재참여 -0.0024 | 리드 -0.0274 (커버 0.58) | 역방향 위약 -0.0042 — 같은 라운드 안에서 여성 귀속 투자자의 재참여 차등이 ±5pp 안 — 선별 정합, 호의 예측 기각 (예측 적중 8/9)",
+  "kill_met": false,
+  "code": "p001_42_within_round_reup.py",
+  "sha256_16": "5255a5696474744a",
+  "seed": 42,
+  "runtime_s": 214.4,
+  "date": "2026-09-09",
+  "stage": 7,
+  "feeds": "v6 설계 제안 P1 → §4 판별 강화",
+  "slug": "within_round_reup",
+  "builds_on": "P001-12/40",
+  "common_sha256_16": "a63e7b62854b47c6",
+  "v6_common_sha256_16": "0e382e764d14fdc8"
+}

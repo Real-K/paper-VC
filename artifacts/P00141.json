@@ -1,0 +1,251 @@
+{
+  "id": "P001-41",
+  "title": "딜 수준 회사×연 FE — 파트너 사전 잔차(adj_pr) 통제 유·무 병기 (R3 R-9)",
+  "status": "OK",
+  "n": 25600,
+  "estimates": {
+    "corr_adjpr_terrainpr": 0.058,
+    "corr_adjpr_tcspr": 0.0455,
+    "with_adjpr": {
+      "D2": {
+        "n": 35348,
+        "n_firms": 1742,
+        "t_v_pr": {
+          "coef": 0.09542,
+          "ci95": [
+            -0.4352,
+            0.5992
+          ],
+          "sig": false,
+          "se_boot": 0.27252,
+          "mde80": 0.7631
+        },
+        "t_s_pr": {
+          "coef": 0.21979,
+          "ci95": [
+            0.1017,
+            0.3615
+          ],
+          "sig": true,
+          "se_boot": 0.07113,
+          "mde80": 0.1992
+        },
+        "t_cs_pr": {
+          "coef": 0.14963,
+          "ci95": [
+            0.0589,
+            0.2385
+          ],
+          "sig": true,
+          "se_boot": 0.04512,
+          "mde80": 0.1263
+        },
+        "adj_pr": {
+          "coef": 0.27244,
+          "ci95": [
+            0.2312,
+            0.316
+          ],
+          "sig": true,
+          "se_boot": 0.02159,
+          "mde80": 0.0604
+        }
+      },
+      "D2t": {
+        "n": 35348,
+        "n_firms": 1742,
+        "terrain_pr": {
+          "coef": 0.17397,
+          "ci95": [
+            0.0913,
+            0.2574
+          ],
+          "sig": true,
+          "se_boot": 0.04271,
+          "mde80": 0.1196
+        }
+      },
+      "D3": {
+        "n": 25600,
+        "n_firms": 661,
+        "t_v_pr": {
+          "coef": 0.21767,
+          "ci95": [
+            -0.6292,
+            1.0784
+          ],
+          "sig": false,
+          "se_boot": 0.44961,
+          "mde80": 1.2589
+        },
+        "t_s_pr": {
+          "coef": 0.0797,
+          "ci95": [
+            -0.1477,
+            0.3091
+          ],
+          "sig": false,
+          "se_boot": 0.12056,
+          "mde80": 0.3376
+        },
+        "t_cs_pr": {
+          "coef": 0.05039,
+          "ci95": [
+            -0.0819,
+            0.1736
+          ],
+          "sig": false,
+          "se_boot": 0.06598,
+          "mde80": 0.1847
+        },
+        "adj_pr": {
+          "coef": 0.24153,
+          "ci95": [
+            0.1849,
+            0.2895
+          ],
+          "sig": true,
+          "se_boot": 0.02765,
+          "mde80": 0.0774
+        }
+      },
+      "D3t": {
+        "n": 25600,
+        "n_firms": 661,
+        "terrain_pr": {
+          "coef": 0.05842,
+          "ci95": [
+            -0.0529,
+            0.1836
+          ],
+          "sig": false,
+          "se_boot": 0.06177,
+          "mde80": 0.173
+        }
+      }
+    },
+    "no_adjpr": {
+      "D2": {
+        "n": 35348,
+        "n_firms": 1742,
+        "t_v_pr": {
+          "coef": 0.20339,
+          "ci95": [
+            -0.4379,
+            0.7785
+          ],
+          "sig": false,
+          "se_boot": 0.31611,
+          "mde80": 0.8851
+        },
+        "t_s_pr": {
+          "coef": 0.23397,
+          "ci95": [
+            0.0882,
+            0.3846
+          ],
+          "sig": true,
+          "se_boot": 0.07707,
+          "mde80": 0.2158
+        },
+        "t_cs_pr": {
+          "coef": 0.17682,
+          "ci95": [
+            0.0647,
+            0.2737
+          ],
+          "sig": true,
+          "se_boot": 0.0536,
+          "mde80": 0.1501
+        }
+      },
+      "D2t": {
+        "n": 35348,
+        "n_firms": 1742,
+        "terrain_pr": {
+          "coef": 0.19836,
+          "ci95": [
+            0.1026,
+            0.2811
+          ],
+          "sig": true,
+          "se_boot": 0.04721,
+          "mde80": 0.1322
+        }
+      },
+      "D3": {
+        "n": 25600,
+        "n_firms": 661,
+        "t_v_pr": {
+          "coef": 0.4824,
+          "ci95": [
+            -0.4914,
+            1.3981
+          ],
+          "sig": false,
+          "se_boot": 0.45685,
+          "mde80": 1.2792
+        },
+        "t_s_pr": {
+          "coef": -0.03582,
+          "ci95": [
+            -0.2933,
+            0.2027
+          ],
+          "sig": false,
+          "se_boot": 0.13267,
+          "mde80": 0.3715
+        },
+        "t_cs_pr": {
+          "coef": 0.04313,
+          "ci95": [
+            -0.0961,
+            0.1734
+          ],
+          "sig": false,
+          "se_boot": 0.06979,
+          "mde80": 0.1954
+        }
+      },
+      "D3t": {
+        "n": 25600,
+        "n_firms": 661,
+        "terrain_pr": {
+          "coef": 0.03937,
+          "ci95": [
+            -0.0958,
+            0.1487
+          ],
+          "sig": false,
+          "se_boot": 0.06697,
+          "mde80": 0.1875
+        }
+      }
+    },
+    "delta_no_minus_with": {
+      "D3_tcs": -0.00726,
+      "D3t_terrain": -0.01905,
+      "D2_tcs": 0.02719,
+      "D2t_terrain": 0.02439
+    },
+    "prediction_check": {
+      "D3_tcs_shift_le_0.03": true,
+      "D3t_shift_le_0.03": true,
+      "adjpr_sig_D3": true,
+      "D2_tcs_rises_without_adjpr": true
+    }
+  },
+  "prediction": "adj_pr 제거 시 D3 t_cs·D3t 이동 ≤0.03; adj_pr +0.24*; 풀 D2 는 제거 시 상승",
+  "verdict": "D3 t_cs: adj_pr 有 +0.050 [-0.082,+0.174] → 無 +0.043 [-0.096,+0.173] (Δ -0.007) · D3t: +0.058 [-0.053,+0.184] → +0.039 [-0.096,+0.149] · D2 t_cs: +0.150 [+0.059,+0.238]* → +0.177 [+0.065,+0.274]* · adj_pr(D3) +0.242 [+0.185,+0.289]* · corr(adj_pr, terrain_pr) +0.06 (예측 적중 4/4)",
+  "kill_met": false,
+  "code": "p001_41_deal_rolling_no_adjpr.py",
+  "sha256_16": "16584ff39be335d4",
+  "seed": 42,
+  "runtime_s": 132.2,
+  "date": "2026-09-09",
+  "stage": 7,
+  "feeds": "R3 재심 응답 (ident.md R-9)",
+  "slug": "deal_rolling_no_adjpr",
+  "builds_on": "P001-34",
+  "common_sha256_16": "a63e7b62854b47c6"
+}

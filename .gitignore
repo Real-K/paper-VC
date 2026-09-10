@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.parquet
+.ipynb_checkpoints/
+figures/tables/*.bak
+code/pipeline/out/

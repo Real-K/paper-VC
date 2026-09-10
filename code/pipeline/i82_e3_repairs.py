@@ -1,0 +1,169 @@
+# -*- coding: utf-8 -*-
+"""I-82 E3 심판 수리 2종 — 추세 조정 결합 대비 CI + 동료-딜 분해 (P001 동결 전 필수)
+
+[왜] 식별 심판 보고(2026-09-03): 조건부 치명 쌍 — (i) 추세 조정 결합 대비 CI 가 0 포함이면
+그리고 (ii) 동료-딜(본인 딜 제외) 효과가 null 이면, E3 는 채용-구성 산술로 강등(Route D 언어).
+(i) 은 인과 주장의 축인데 미계산 상태였고, (ii) 는 기계적 구성 공격(신규 파트너 지분 s ×
+E1 격차 ≈ +1.0~+3.3pp 가 관측 +2.46 전체를 포함)에 대한 유일한 판별 검정이며 run-up 교란에 면역.
+[검증] 영입 일자는 jobs.started_on 이 유일 원천(귀속 시점 대입 없음) — 심판의 기계-치명 항목 확인.
+[설계] I-79 사건·창 기계 재사용.
+  (a) 조정 결합 = [(jf−jm)] − [(ef−em)] on d2 = (post−pre) − (pre−pre2). 군별 부트 500 결합.
+  (b) 동료-딜: 사건 파트너 P 가 V 에서 귀속한 org 를 V 의 신규 딜 집합에서 제외하고 Δff 재계산
+      → 동료 결합 대비(원 d1). 본인-딜 비중 s (여성 영입 사후 창) 도 보고 — 기계 채널의 크기.
+[사전 예측] (결과 전, 2026-09-03)
+  P1 조정 결합 = +1.0~+3.5pp (심판 산술 ≈ +2.1), CI 0 배제 여부가 관건 — 배제 기대.
+  P2 동료 결합 ≥ 0; 본인-딜 비중 s = 10~25%. 동료 효과가 원 결합의 절반 이상이면 파급(spillover) 실재.
+[판정] (사전 등록, 심판 언어 규칙 승계)
+  P1 통과 + P2 동료 CI 0 배제 → 인과 업그레이드 문장 허용.
+  P1 통과 + P2 null → "구성(본인 딜플로우) 효과" 언어만 — 기관 파급 주장 금지.
+  P1 실패 → E3 를 Route D(연관) 로 강등, ESTIMAND_CARD 개정.
+"""
+import os
+import sys
+
+import numpy as np
+import pandas as pd
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from emit_contract import emit, qci  # noqa: E402
+from gates import CTX  # noqa: E402
+
+rng = np.random.default_rng(42)
+NB = 500
+W = pd.Timedelta(days=730)
+MIN_DEALS = 3
+EQ_EXCL = {"grant", "debt_financing", "post_ipo_debt", "post_ipo_equity", "non_equity_assistance"}
+
+people = CTX.people[["uuid", "gender"]]
+g_map = people[people["gender"].isin(["male", "female"])].set_index("uuid")["gender"]
+rounds = CTX.rounds.dropna(subset=["announced_on", "org_uuid"]).copy()
+rounds = rounds[~rounds["investment_type"].isin(EQ_EXCL)]
+rounds["dt"] = pd.to_datetime(rounds["announced_on"], errors="coerce")
+rounds = rounds.dropna(subset=["dt"])
+inv = CTX.inv.dropna(subset=["funding_round_uuid", "investor_uuid"])
+pt = CTX.partners.dropna(subset=["funding_round_uuid", "investor_uuid", "partner_uuid"])
+jobs = CTX.jobs
+
+pv = inv.merge(rounds[["uuid", "org_uuid", "dt"]], left_on="funding_round_uuid", right_on="uuid")
+first_deal = pv.groupby(["investor_uuid", "org_uuid"])["dt"].min().rename("fdt").reset_index()
+fj = jobs[jobs["title"].fillna("").str.lower().str.contains("founder", regex=False)][
+    ["person_uuid", "org_uuid"]].dropna()
+fj["fg"] = fj["person_uuid"].map(g_map)
+fj = fj[fj["fg"].notna()]
+org_ff = (fj["fg"] == "female").groupby(fj["org_uuid"]).max()
+first_deal["ff"] = first_deal["org_uuid"].map(org_ff)
+first_deal = first_deal[first_deal["ff"].notna()]
+first_deal["ff"] = first_deal["ff"].astype(float)
+fd_by_v = {v: g for v, g in first_deal.groupby("investor_uuid")}
+
+pa = pt.merge(rounds[["uuid", "dt"]], left_on="funding_round_uuid", right_on="uuid")
+first_attr = pa.groupby(["partner_uuid", "investor_uuid"])["dt"].min().rename("fa")
+own_orgs_map = pt.merge(rounds[["uuid", "org_uuid"]], left_on="funding_round_uuid", right_on="uuid") \
+    .groupby(["partner_uuid", "investor_uuid"])["org_uuid"].agg(set)
+
+pj = jobs.merge(pt[["partner_uuid", "investor_uuid"]].drop_duplicates(),
+                left_on=["person_uuid", "org_uuid"], right_on=["partner_uuid", "investor_uuid"])
+arr = pj[pj["started_on"].notna()].copy()          # 영입 일자 = jobs.started_on 만 (대입 없음)
+arr["t"] = pd.to_datetime(arr["started_on"], errors="coerce")
+arr = arr.dropna(subset=["t"])
+arr = arr[(arr["t"] >= "2012-01-01") & (arr["t"] <= "2023-10-31")]
+arr = arr.sort_values("t").groupby(["partner_uuid", "investor_uuid"]).head(1)[
+    ["partner_uuid", "investor_uuid", "t"]]
+arr = arr.merge(first_attr, left_on=["partner_uuid", "investor_uuid"], right_index=True, how="left")
+arr = arr[arr["fa"].notna() & (arr["fa"] >= arr["t"])]
+arr["kind"] = "join"
+dep = pj[pj["ended_on"].notna()].copy()
+dep["t"] = pd.to_datetime(dep["ended_on"], errors="coerce")
+dep = dep.dropna(subset=["t"])
+dep = dep[(dep["t"] >= "2012-01-01") & (dep["t"] <= "2023-10-31")]
+dep = dep.sort_values("t").groupby(["partner_uuid", "investor_uuid"]).tail(1)[
+    ["partner_uuid", "investor_uuid", "t"]]
+dep["kind"] = "exit"
+events = pd.concat([arr[["partner_uuid", "investor_uuid", "t", "kind"]], dep], ignore_index=True)
+events["pg"] = events["partner_uuid"].map(g_map)
+events = events[events["pg"].notna()]
+
+
+def wshare(g, lo, hi):
+    w = g[(g["fdt"] >= lo) & (g["fdt"] < hi)]
+    return (float(w["ff"].mean()), len(w)) if len(w) >= MIN_DEALS else (np.nan, len(w))
+
+
+rows = []
+for ev in events.itertuples():
+    g = fd_by_v.get(ev.investor_uuid)
+    if g is None:
+        continue
+    pre, _ = wshare(g, ev.t - W, ev.t)
+    post, n_post = wshare(g, ev.t, ev.t + W + pd.Timedelta(days=1))
+    if np.isnan(pre) or np.isnan(post):
+        continue
+    pre2, _ = wshare(g, ev.t - 2 * W, ev.t - W)
+    d1 = post - pre
+    d2 = (d1 - (pre - pre2)) if not np.isnan(pre2) else np.nan
+    own = own_orgs_map.get((ev.partner_uuid, ev.investor_uuid), set())
+    gc = g[~g["org_uuid"].isin(own)]
+    prc, _ = wshare(gc, ev.t - W, ev.t)
+    poc, _ = wshare(gc, ev.t, ev.t + W + pd.Timedelta(days=1))
+    d1c = (poc - prc) if not (np.isnan(prc) or np.isnan(poc)) else np.nan
+    wpost = g[(g["fdt"] >= ev.t) & (g["fdt"] < ev.t + W + pd.Timedelta(days=1))]
+    s_own = float(wpost["org_uuid"].isin(own).mean()) if len(wpost) else np.nan
+    rows.append({"kind": ev.kind, "pg": ev.pg, "d1": d1, "d2": d2, "d1c": d1c, "s_own": s_own})
+E = pd.DataFrame(rows)
+
+
+def bsm(x, nb=NB):
+    x = np.asarray(x, float)
+    x = x[np.isfinite(x)]
+    if len(x) < 50:
+        return float("nan"), [], 0
+    return float(x.mean()), [x[rng.integers(0, len(x), len(x))].mean() for _ in range(nb)], len(x)
+
+
+g_ = {(k, p, c): bsm(E[(E["kind"] == k) & (E["pg"] == p)][c])
+      for k in ("join", "exit") for p in ("female", "male") for c in ("d1", "d2", "d1c")}
+
+
+def contrast(c):
+    spec = [(("join", "female", c), 1), (("join", "male", c), -1),
+            (("exit", "female", c), -1), (("exit", "male", c), 1)]
+    b = sum(s * g_[k][0] for k, s in spec)
+    m = min(len(g_[k][1]) for k, _ in spec)
+    if m < 50 or np.isnan(b):
+        return float("nan"), [float("nan")] * 2, 0
+    bs = np.zeros(m)
+    for k, s in spec:
+        bs = bs + s * np.asarray(g_[k][1][:m])
+    return b, qci(bs), m
+
+
+adj_joint, ci_adj, _ = contrast("d2")
+col_joint, ci_col, _ = contrast("d1c")
+raw_joint, ci_raw, _ = contrast("d1")
+s_own_f = float(E[(E["kind"] == "join") & (E["pg"] == "female")]["s_own"].mean())
+n_jf = g_[("join", "female", "d2")][2]
+
+p1 = (not np.isnan(ci_adj[0])) and (ci_adj[0] > 0)
+p2 = (not np.isnan(ci_col[0])) and (ci_col[0] > 0)
+if p1 and p2:
+    lang = "인과 업그레이드 허용 — 추세강건 + 동료-딜 비영: 기관 파급 언어 가능"
+elif p1:
+    lang = "구성(본인 딜플로우) 언어만 — 기관 파급 주장 금지"
+else:
+    lang = "E3 → Route D(연관) 강등 — ESTIMAND_CARD 개정 필요"
+status = "GO" if p1 else "PARTIAL"
+verdict = (f"조정 결합={adj_joint:+.4f} {ci_adj} (원 결합 재현 {raw_joint:+.4f} {ci_raw}); "
+           f"동료-딜 결합={col_joint:+.4f} {ci_col}; 여성영입 본인-딜 사후 비중 s={s_own_f:.3f}; "
+           f"영입일자=jobs.started_on 단일 원천 확인 — {lang}")
+
+emit("I-82", "E3 심판 수리 — 추세 조정 결합 CI + 동료-딜 분해 (P001 동결 전)", status,
+     {"adjusted_joint": [None if np.isnan(adj_joint) else round(adj_joint, 4), ci_adj],
+      "colleague_joint": [None if np.isnan(col_joint) else round(col_joint, 4), ci_col],
+      "raw_joint_replication": [round(raw_joint, 4), ci_raw],
+      "own_deal_share_post_female_join": round(s_own_f, 3), "n_join_f": n_jf,
+      "join_dating_source": "jobs.started_on (no imputation)",
+      "p1_trend_robust": bool(p1), "p2_colleague_nonzero": bool(p2), "claim_language": lang},
+     prediction="조정 결합 +1.0~+3.5pp CI 배제 기대; 동료 결합 ≥0; s=10~25%",
+     verdict=verdict, kill_met=False, n=n_jf,
+     extra={"stage": 2, "feeds": "P001 referee 수리 (IDENTIFICATION_STRATEGY)", "slug": "e3_repairs"})
+print("done")

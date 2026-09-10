@@ -1,0 +1,136 @@
+{
+  "id": "P001-27",
+  "title": "셀평균 잡음 검정 — leave-one-out 벤치마크 하에서 β_raw|adj 가 남는가",
+  "status": "GO",
+  "n": 2661,
+  "estimates": {
+    "A naive (P001-25 재현)": {
+      "coef": 0.0973,
+      "ci95": [
+        0.039,
+        0.1612
+      ],
+      "n": 2178,
+      "n_firms": 999,
+      "sig": true,
+      "n_partners": 2686,
+      "share_of_naive": 1.0
+    },
+    "B LOO": {
+      "coef": 0.10272,
+      "ci95": [
+        0.0339,
+        0.1761
+      ],
+      "n": 2164,
+      "n_firms": 990,
+      "sig": true,
+      "n_partners": 2661,
+      "share_of_naive": 1.056
+    },
+    "C LOO + 셀≥10": {
+      "coef": 0.10826,
+      "ci95": [
+        0.0387,
+        0.1859
+      ],
+      "n": 2011,
+      "n_firms": 919,
+      "sig": true,
+      "n_partners": 2476,
+      "share_of_naive": 1.113
+    },
+    "D LOO + 셀≥30": {
+      "coef": 0.09344,
+      "ci95": [
+        0.0004,
+        0.1907
+      ],
+      "n": 1673,
+      "n_firms": 772,
+      "sig": true,
+      "n_partners": 2075,
+      "share_of_naive": 0.96
+    },
+    "gender_recheck": {
+      "naive": {
+        "fp_to_wedge": {
+          "coef": -0.04802,
+          "ci95": [
+            -0.0746,
+            -0.0232
+          ],
+          "n": 2686,
+          "n_firms": 1162,
+          "sig": true
+        },
+        "fp_to_post_adj": {
+          "coef": -0.00661,
+          "ci95": [
+            -0.0472,
+            0.0337
+          ],
+          "n": 2178,
+          "n_firms": 999,
+          "sig": false
+        }
+      },
+      "LOO": {
+        "fp_to_wedge": {
+          "coef": -0.04989,
+          "ci95": [
+            -0.0792,
+            -0.0222
+          ],
+          "n": 2661,
+          "n_firms": 1152,
+          "sig": true
+        },
+        "fp_to_post_adj": {
+          "coef": -0.00639,
+          "ci95": [
+            -0.0444,
+            0.0341
+          ],
+          "n": 2164,
+          "n_firms": 990,
+          "sig": false
+        }
+      },
+      "LOO+셀≥10": {
+        "fp_to_wedge": {
+          "coef": -0.03913,
+          "ci95": [
+            -0.0636,
+            -0.0163
+          ],
+          "n": 2476,
+          "n_firms": 1072,
+          "sig": true
+        },
+        "fp_to_post_adj": {
+          "coef": -0.0224,
+          "ci95": [
+            -0.0718,
+            0.0177
+          ],
+          "n": 2011,
+          "n_firms": 919,
+          "sig": false
+        }
+      }
+    }
+  },
+  "prediction": "naive 재현 · LOO 에서 계수 감소하나 부호·유의성 유지 · 셀 하한 올리면 안정 · 성별 결과는 LOO 에서도 유지",
+  "verdict": "A naive (P001-25 재현): β=+0.09730 [+0.0390,+0.1612] naive의 100%  |  B LOO: β=+0.10272 [+0.0339,+0.1761] naive의 106%  |  C LOO + 셀≥10: β=+0.10826 [+0.0387,+0.1859] naive의 111%  |  D LOO + 셀≥30: β=+0.09344 [+0.0004,+0.1907] naive의 96% — **LOO 에서 계수가 +0.10272 (naive 의 106%) 로 유지되고 CI 가 0 을 배제한다. 기계적 성분이 지배하지 않는다 — '조정이 정보를 걷어낸다'를 프레임의 근거로 쓸 수 있다**",
+  "kill_met": false,
+  "code": "p001_27_loo_cellmean.py",
+  "sha256_16": "b044e27351b110ab",
+  "seed": 42,
+  "runtime_s": 57.5,
+  "date": "2026-09-08",
+  "stage": 7,
+  "feeds": "P001 원고 프레임의 근거 계수 타당성",
+  "slug": "loo_cellmean",
+  "resolves": "D050"
+}

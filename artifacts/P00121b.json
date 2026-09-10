@@ -1,0 +1,62 @@
+{
+  "id": "P001-21b",
+  "title": "승계 검정 — 이탈 후 채널을 누가 이어받는가 (§5 메커니즘)",
+  "status": "PARTIAL",
+  "n": 855,
+  "estimates": {
+    "incumbent_ff_did": [
+      -0.0031,
+      [
+        -0.024,
+        0.0192
+      ],
+      226,
+      629
+    ],
+    "incumbent_male_only_did": [
+      -0.0117,
+      [
+        -0.0353,
+        0.007
+      ],
+      208,
+      578
+    ],
+    "new_partner_ff_did": [
+      0.0343,
+      [
+        0.005,
+        0.065
+      ],
+      135,
+      441
+    ],
+    "female_replacement_did": [
+      0.0267,
+      [
+        -0.0492,
+        0.1139
+      ],
+      226,
+      629
+    ],
+    "departing_own_share_pre": 0.0769,
+    "raw_change_female_dep": 0.0004,
+    "raw_change_male_dep": 0.0019,
+    "n_events": 855,
+    "p1_inheritance": false,
+    "p2_not_replacement": true,
+    "p3_own_share_material": true
+  },
+  "prediction": "잔류 동료 DiD 하한 > −1pp; 여성 대체 채용 DiD < +10pp; 사전 점유율 10~25%",
+  "verdict": "잔류 동료 ff 비중 DiD(여−남 이탈) = -0.0031 [-0.024, 0.0192] (여 226·남 629 사건; 원 변화 여 +0.0004 vs 남 +0.0019); **남성 잔류 동료만** -0.0117 [-0.0353, 0.007]; 신규 파트너 딜 ff 비중 DiD 0.0343 [0.005, 0.065]; 여성 신규 귀속 발생 DiD 0.0267 [-0.0492, 0.1139]; 떠난 여성 파트너의 사전 딜 점유율 0.077 — 잔류 동료 ff 비중 하락 — 회사 수준 무반전은 신규 채용의 산물 (경로 B): 서사 정정 필요",
+  "kill_met": false,
+  "code": "p001_21b_succession_fix.py",
+  "sha256_16": "2473e3f2a6095215",
+  "seed": 42,
+  "runtime_s": 39.2,
+  "date": "2026-09-04",
+  "stage": 6,
+  "feeds": "§5 비대칭의 메커니즘 (논문 최대 novelty 후보)",
+  "slug": "succession_fix"
+}

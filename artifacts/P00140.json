@@ -1,0 +1,198 @@
+{
+  "id": "P001-40",
+  "title": "P2: 헤드라인의 식별 변이(혼합 셀·딜) · 동료 가용성 · 잭나이프 · 셀 내 재배정 위약",
+  "status": "OK",
+  "n": 7103,
+  "estimates": {
+    "GLOBAL": {
+      "n_deals": 8058,
+      "n_fp_deals": 917,
+      "n_female_partners": 370,
+      "year": {
+        "n_cells": 8,
+        "n_mixed_cells": 8,
+        "n_deals_mixed": 8058,
+        "share_deals_mixed": 1.0,
+        "share_fp_deals_with_peer": 1.0,
+        "n_female_partners_with_peer": 370,
+        "beta_full_pp": -2.7265,
+        "beta_mixed_pp": -2.7265,
+        "identical": true
+      },
+      "invyear": {
+        "n_cells": 3954,
+        "n_mixed_cells": 261,
+        "n_deals_mixed": 1082,
+        "share_deals_mixed": 0.1343,
+        "share_fp_deals_with_peer": 0.4362,
+        "n_female_partners_with_peer": 167,
+        "beta_full_pp": 0.2096,
+        "beta_mixed_pp": 0.2096,
+        "identical": true
+      },
+      "pluscat": {
+        "n_cells": 6109,
+        "n_mixed_cells": 191,
+        "n_deals_mixed": 478,
+        "share_deals_mixed": 0.0593,
+        "share_fp_deals_with_peer": 0.241,
+        "n_female_partners_with_peer": 103,
+        "beta_full_pp": -6.2458,
+        "beta_mixed_pp": -6.2458,
+        "identical": true,
+        "ci95_pp": [
+          -12.11,
+          -1.19
+        ],
+        "jackknife": {
+          "n": 191,
+          "min_pp": -6.882,
+          "max_pp": -5.614,
+          "max_abs_shift_pp": 0.636,
+          "any_outside_ci": false
+        },
+        "placebo": {
+          "n": 400,
+          "p95_abs_pp": 5.358,
+          "p50_abs_pp": 1.785,
+          "share_ge_headline": 0.025
+        }
+      },
+      "plusstage": {
+        "n_cells": 6673,
+        "n_mixed_cells": 169,
+        "n_deals_mixed": 371,
+        "share_deals_mixed": 0.046,
+        "share_fp_deals_with_peer": 0.1952,
+        "n_female_partners_with_peer": 82,
+        "beta_full_pp": -1.7544,
+        "beta_mixed_pp": -1.7544,
+        "identical": true,
+        "ci95_pp": [
+          -5.07,
+          1.46
+        ],
+        "jackknife": {
+          "n": 169,
+          "min_pp": -2.321,
+          "max_pp": -1.023,
+          "max_abs_shift_pp": 0.731,
+          "any_outside_ci": false
+        },
+        "placebo": {
+          "n": 400,
+          "p95_abs_pp": 2.862,
+          "p50_abs_pp": 1.57,
+          "share_ge_headline": 0.18
+        }
+      }
+    },
+    "NAEU": {
+      "n_deals": 7103,
+      "n_fp_deals": 837,
+      "n_female_partners": 326,
+      "year": {
+        "n_cells": 8,
+        "n_mixed_cells": 8,
+        "n_deals_mixed": 7103,
+        "share_deals_mixed": 1.0,
+        "share_fp_deals_with_peer": 1.0,
+        "n_female_partners_with_peer": 326,
+        "beta_full_pp": -3.352,
+        "beta_mixed_pp": -3.352,
+        "identical": true
+      },
+      "invyear": {
+        "n_cells": 3475,
+        "n_mixed_cells": 234,
+        "n_deals_mixed": 966,
+        "share_deals_mixed": 0.136,
+        "share_fp_deals_with_peer": 0.4241,
+        "n_female_partners_with_peer": 143,
+        "beta_full_pp": -0.5029,
+        "beta_mixed_pp": -0.5029,
+        "identical": true
+      },
+      "pluscat": {
+        "n_cells": 5375,
+        "n_mixed_cells": 174,
+        "n_deals_mixed": 430,
+        "share_deals_mixed": 0.0605,
+        "share_fp_deals_with_peer": 0.2366,
+        "n_female_partners_with_peer": 90,
+        "beta_full_pp": -4.5488,
+        "beta_mixed_pp": -4.5488,
+        "identical": true,
+        "ci95_pp": [
+          -10.47,
+          0.56
+        ],
+        "jackknife": {
+          "n": 174,
+          "min_pp": -5.246,
+          "max_pp": -3.833,
+          "max_abs_shift_pp": 0.716,
+          "any_outside_ci": false
+        },
+        "placebo": {
+          "n": 400,
+          "p95_abs_pp": 5.542,
+          "p50_abs_pp": 1.57,
+          "share_ge_headline": 0.1
+        }
+      },
+      "plusstage": {
+        "n_cells": 5868,
+        "n_mixed_cells": 155,
+        "n_deals_mixed": 336,
+        "share_deals_mixed": 0.0473,
+        "share_fp_deals_with_peer": 0.1947,
+        "n_female_partners_with_peer": 73,
+        "beta_full_pp": -1.0163,
+        "beta_mixed_pp": -1.0163,
+        "identical": true,
+        "ci95_pp": [
+          -4.18,
+          2.38
+        ],
+        "jackknife": {
+          "n": 155,
+          "min_pp": -1.636,
+          "max_pp": -0.205,
+          "max_abs_shift_pp": 0.811,
+          "any_outside_ci": false
+        },
+        "placebo": {
+          "n": 400,
+          "p95_abs_pp": 2.642,
+          "p50_abs_pp": 1.016,
+          "share_ge_headline": 0.54
+        }
+      }
+    },
+    "NAEU_all_deals_fp_peer_share_cell_cat": 0.419,
+    "NAEU_female_partners_ge5_ff_deals": 44,
+    "prediction_check": {
+      "NAEU_mixed_cells_170_180": true,
+      "NAEU_mixed_deals_420_440": true,
+      "NAEU_fp_peer_share_0.22_0.26": true,
+      "identical_all": true,
+      "NAEU_jackknife_none_outside": true,
+      "NAEU_placebo_p95_5_7": true,
+      "GLOBAL_placebo_p95_lt_NAEU": true
+    }
+  },
+  "prediction": "NAEU cell_cat 혼합 ≈174/430, FP 동료가용 ≈24%, 여성 ≈90/326; 혼합=전체 정확; 잭나이프 CI 안; 위약 p95 5~7pp",
+  "verdict": "NAEU 회사×연×섹터: 혼합 셀 174/5,375 · 딜 430/7,103 (6.0%) · FP-FF 딜 동료 가용 23.7% · 여성 파트너 90/326 · β 전체=혼합 True · 잭나이프 최대이동 0.72pp (CI밖 False) · 위약 p95 5.54pp vs |β| 4.55 | GLOBAL: 혼합 셀 191 · 딜 478 (5.9%) · 위약 p95 5.36pp vs |β| 6.25 · 잭나이프 CI밖 False (예측 적중 7/7)",
+  "kill_met": false,
+  "code": "p001_40_identifying_cells_audit.py",
+  "sha256_16": "cff8e960f7b94cda",
+  "seed": 42,
+  "runtime_s": 160.9,
+  "date": "2026-09-09",
+  "stage": 7,
+  "feeds": "R3 설계 제안 P2 → §4 서술 강화",
+  "slug": "identifying_cells_audit",
+  "builds_on": "P001-10",
+  "common_sha256_16": "a63e7b62854b47c6"
+}

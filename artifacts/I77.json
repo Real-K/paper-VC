@@ -1,0 +1,55 @@
+{
+  "id": "I-77",
+  "title": "출구 판별 검정력 보강 — 표본 소급 2005+ (K-3 power-rescue 레버 B)",
+  "status": "PARTIAL",
+  "n": 8855,
+  "estimates": {
+    "exit_gap_ff": [
+      -0.0391,
+      [
+        -0.0997,
+        0.014
+      ]
+    ],
+    "exit_gap_mf": [
+      0.0127,
+      [
+        -0.0133,
+        0.0382
+      ]
+    ],
+    "exit_adjudicator": [
+      -0.0518,
+      [
+        -0.118,
+        0.0093
+      ]
+    ],
+    "n_ff_exit": 8855,
+    "n_mf_exit": 57585,
+    "sample_gain_pct": 9.9,
+    "n_attr_2005_09": 10081,
+    "mde80_pp": 8.16,
+    "i75_ref": {
+      "gap_ff": -0.0397,
+      "ci": [
+        -0.0979,
+        0.011
+      ]
+    },
+    "favoritism_excluded": false,
+    "deficit_found": false,
+    "lever_failed_gain": true
+  },
+  "prediction": "표본 +15%+; gap_ff ∈ [−6,+2]pp 잔류; MDE80 ≤ 7pp",
+  "verdict": "2005+ 소급: ff 출구 딜 8,058→8855 (+9.9%, 2005–09 귀속 10081건); gap_ff=-0.0391 [-0.0997, 0.014] (MDE80 8.2pp; I-75 대비), gap_mf=+0.0127 [-0.0133, 0.0382], 판별자=-0.0518 [-0.118, 0.0093] — 레버 이득 부족, i78 결과변수 레버로",
+  "kill_met": false,
+  "code": "i77_exit_power_sample.py",
+  "sha256_16": "ce552c96fc02ba00",
+  "seed": 42,
+  "runtime_s": 25.9,
+  "date": "2026-09-03",
+  "stage": 2,
+  "feeds": "RESULTS_LEDGER_K3.md §4 레버 B",
+  "slug": "exit_power_sample"
+}

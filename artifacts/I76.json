@@ -1,0 +1,74 @@
+{
+  "id": "I-76",
+  "title": "충격 레이어 — 여성 파트너 깨끗한 영입·이탈과 여성 창업 신규 딜 (K-3 인과층)",
+  "status": "PARTIAL",
+  "n": 1200,
+  "estimates": {
+    "join_did": 0.0102,
+    "join_did_ci": [
+      -0.0007,
+      0.0213
+    ],
+    "n_join_f": 1200,
+    "n_join_m": 4464,
+    "exit_did": -0.0144,
+    "exit_did_ci": [
+      -0.0306,
+      0.0031
+    ],
+    "n_exit_f": 437,
+    "n_exit_m": 2167,
+    "join_f_raw": [
+      0.0178,
+      [
+        0.0092,
+        0.0283
+      ]
+    ],
+    "join_m_raw": [
+      0.0076,
+      [
+        0.0031,
+        0.0128
+      ]
+    ],
+    "exit_f_raw": [
+      0.0019,
+      [
+        -0.0145,
+        0.0185
+      ]
+    ],
+    "exit_m_raw": [
+      0.0163,
+      [
+        0.0095,
+        0.0234
+      ]
+    ],
+    "pre_runup_join_f": [
+      0.0216,
+      [
+        0.0128,
+        0.0319
+      ],
+      945
+    ],
+    "kills": {
+      "K1_power": false,
+      "K2_selection_runup": false,
+      "K3_no_shock_effect": true
+    }
+  },
+  "prediction": "영입 DiD +1~+4pp CI 배제; 이탈 DiD −1~−3pp; Δpre ⊂ ±2pp",
+  "verdict": "영입 DiD(여−남)=+0.0102 [-0.0007, 0.0213] (여 1200·남 4464); 이탈 DiD=-0.0144 [-0.0306, 0.0031] (여 437·남 2167); 여성영입 Δff=+0.0178 [0.0092, 0.0283]; 평균회귀 Δpre=+0.0216 [0.0128, 0.0319] (n=945)",
+  "kill_met": false,
+  "code": "i76_gender_shock.py",
+  "sha256_16": "e180c52e267cd1e8",
+  "seed": 42,
+  "runtime_s": 39.4,
+  "date": "2026-09-03",
+  "stage": 2,
+  "feeds": "K-3 인과층 (RESULTS_LEDGER_K3.md §4)",
+  "slug": "gender_shock"
+}

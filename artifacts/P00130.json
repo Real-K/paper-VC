@@ -1,0 +1,314 @@
+{
+  "id": "P001-30",
+  "title": "R2 결정 검정 — terrain 분해(빈티지/단계/섹터) · 연공 · 회사 FE · 고정지평 · leave-partner-out",
+  "status": "KILL",
+  "n": 2661,
+  "estimates": {
+    "R1_decomp": {
+      "n": 2164,
+      "n_firms": 990,
+      "t_v": {
+        "coef": 0.07518,
+        "ci95": [
+          -0.0889,
+          0.2579
+        ],
+        "sig": false
+      },
+      "t_s": {
+        "coef": 0.08149,
+        "ci95": [
+          -0.0398,
+          0.1981
+        ],
+        "sig": false
+      },
+      "t_cs": {
+        "coef": 0.16017,
+        "ci95": [
+          0.0038,
+          0.3066
+        ],
+        "sig": true
+      },
+      "adj": {
+        "coef": 0.33385,
+        "ci95": [
+          0.2891,
+          0.3824
+        ],
+        "sig": true
+      }
+    },
+    "R2_tenure": {
+      "n": 2164,
+      "n_firms": 990,
+      "t_v": {
+        "coef": -0.03706,
+        "ci95": [
+          -0.2691,
+          0.2116
+        ],
+        "sig": false
+      },
+      "t_s": {
+        "coef": 0.0567,
+        "ci95": [
+          -0.0682,
+          0.1893
+        ],
+        "sig": false
+      },
+      "t_cs": {
+        "coef": 0.15113,
+        "ci95": [
+          -0.008,
+          0.3002
+        ],
+        "sig": false
+      },
+      "adj": {
+        "coef": 0.33258,
+        "ci95": [
+          0.2875,
+          0.3834
+        ],
+        "sig": true
+      },
+      "tenure": {
+        "coef": 0.00907,
+        "ci95": [
+          -0.018,
+          0.0289
+        ],
+        "sig": false
+      }
+    },
+    "R3_firm_ctrl": {
+      "n": 1737,
+      "n_firms": 563,
+      "t_v": {
+        "coef": 0.0308,
+        "ci95": [
+          -0.2239,
+          0.3027
+        ],
+        "sig": false
+      },
+      "t_s": {
+        "coef": 0.02821,
+        "ci95": [
+          -0.1165,
+          0.1534
+        ],
+        "sig": false
+      },
+      "t_cs": {
+        "coef": 0.18409,
+        "ci95": [
+          -0.0067,
+          0.3807
+        ],
+        "sig": false
+      },
+      "firm_adj_mp": {
+        "coef": 0.01828,
+        "ci95": [
+          -0.0452,
+          0.0852
+        ],
+        "sig": false
+      }
+    },
+    "R4_firm_FE": {
+      "n": 1624,
+      "n_firms": 450,
+      "t_v": {
+        "coef": -0.02543,
+        "ci95": [
+          -0.4038,
+          0.4437
+        ],
+        "sig": false
+      },
+      "t_s": {
+        "coef": 0.14642,
+        "ci95": [
+          -0.1175,
+          0.4272
+        ],
+        "sig": false
+      },
+      "t_cs": {
+        "coef": 0.11613,
+        "ci95": [
+          -0.1393,
+          0.3428
+        ],
+        "sig": false
+      }
+    },
+    "R1t_total": {
+      "n": 2164,
+      "n_firms": 990,
+      "terrain": {
+        "coef": 0.09772,
+        "ci95": [
+          0.0313,
+          0.1763
+        ],
+        "sig": true
+      },
+      "adj": {
+        "coef": 0.33483,
+        "ci95": [
+          0.2837,
+          0.3834
+        ],
+        "sig": true
+      }
+    },
+    "R2t_total_tenure": {
+      "n": 2164,
+      "n_firms": 990,
+      "terrain": {
+        "coef": 0.07623,
+        "ci95": [
+          -0.0182,
+          0.1624
+        ],
+        "sig": false
+      }
+    },
+    "R4t_total_firmFE": {
+      "n": 1624,
+      "n_firms": 450,
+      "terrain": {
+        "coef": 0.09861,
+        "ci95": [
+          -0.0598,
+          0.2566
+        ],
+        "sig": false
+      }
+    },
+    "R5_fixed_horizon": {
+      "n": 2017,
+      "n_firms": 945,
+      "terrain_fon": {
+        "coef": 0.03539,
+        "ci95": [
+          -0.1594,
+          0.2366
+        ],
+        "sig": false
+      },
+      "adj_fon": {
+        "coef": 0.24839,
+        "ci95": [
+          0.1562,
+          0.3456
+        ],
+        "sig": true
+      }
+    },
+    "R6_leave_partner_out": {
+      "n": 2164,
+      "n_firms": 990,
+      "raw_lpo": {
+        "coef": 0.09984,
+        "ci95": [
+          0.0245,
+          0.1638
+        ],
+        "sig": true
+      },
+      "adj_lpo": {
+        "coef": 0.23416,
+        "ci95": [
+          0.1332,
+          0.3275
+        ],
+        "sig": true
+      }
+    },
+    "R7_selection_decomp": {
+      "n": 2661,
+      "n_firms": 1152,
+      "t_v": {
+        "coef": -2.18805,
+        "ci95": [
+          -2.4168,
+          -1.9722
+        ],
+        "sig": true
+      },
+      "t_s": {
+        "coef": 0.37924,
+        "ci95": [
+          0.1976,
+          0.5845
+        ],
+        "sig": true
+      },
+      "t_cs": {
+        "coef": 0.08183,
+        "ci95": [
+          -0.1639,
+          0.2991
+        ],
+        "sig": false
+      }
+    },
+    "R7b_selection_tenure": {
+      "n": 2661,
+      "n_firms": 1152,
+      "t_v": {
+        "coef": -3.01673,
+        "ci95": [
+          -3.3672,
+          -2.6664
+        ],
+        "sig": true
+      },
+      "t_s": {
+        "coef": 0.21662,
+        "ci95": [
+          0.0138,
+          0.4044
+        ],
+        "sig": true
+      },
+      "t_cs": {
+        "coef": 0.08237,
+        "ci95": [
+          -0.1398,
+          0.3116
+        ],
+        "sig": false
+      },
+      "tenure": {
+        "coef": 0.0283,
+        "ci95": [
+          0.0022,
+          0.0754
+        ],
+        "sig": true
+      }
+    },
+    "corr_tenure_terrain": 0.5191,
+    "corr_tenure_vintage": 0.601
+  },
+  "prediction": "연공 성분 상당; t_s 생존 시 프레임 유지, t_v 만 남으면 REFRAME; R5 부호 유지; R6 ±30%",
+  "verdict": "R1 t_v/t_s/t_cs = +0.075/+0.081/+0.160* · adj +0.334 | R2(+연공) -0.037/+0.057/+0.151 tenure +0.0091 | R4(회사FE) -0.025/+0.146/+0.116 | 총terrain: R1t +0.098* → R2t +0.076 → R4t +0.099 | R5 고정지평 terrain +0.035 | R6 LPO +0.100* | R7 선택 t_v -2.188* tenure +0.0283* — **REFRAME — 분해·연공·회사 통제 후 어느 성분도 유의하지 않다. §6 의 정보 주장 철회**",
+  "kill_met": true,
+  "code": "p001_30_terrain_decomp.py",
+  "sha256_16": "0ec1b62314e8ffc6",
+  "seed": 42,
+  "runtime_s": 27.7,
+  "date": "2026-09-08",
+  "stage": 7,
+  "feeds": "내부리뷰 R2 편집 결정",
+  "slug": "terrain_decomp",
+  "builds_on": "P001-27/28/29"
+}

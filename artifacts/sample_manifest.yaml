@@ -1,0 +1,22 @@
+# P001 데이터 매니페스트
+canonical_sample:
+  file: 05_data/sample_v1.parquet
+  sha256_16: 5b83f6785878d867
+  rows: 154123
+  unit: partner-attributed deal (funding_round x investor x partner)
+  span: 2010-01-01..2023-10-31
+  frozen_at: 2026-09-03
+  builder: 06_code/build_sample_v1.py
+  reproduction_check: base_ff 0.1715 / base_fp 0.1059 / n_fp_ff 4462 (I-73 과 정확 일치)
+upstream:
+  cores_v1: ../../shared/data/processed/cores_v1/  # MANIFEST.json 참조
+  raw: ../../../data/crunchbase/  # 읽기 전용, checksum.csv 동봉
+exclusions:
+  investment_types: [grant, debt_financing, post_ipo_debt, post_ipo_equity, non_equity_assistance]
+  gender: male/female 만 판정 (NaN·not_provided·비이진 제외 — 한계 서술 의무, R1)
+key_variables:
+  fp: partner gender == female
+  ff: org 에 성별 관측 여성 창업자 >=1 (founder 직함 jobs x people.gender)
+  cells: [cell0 investor|year, cell_cat +topcat, cell_stage +investment_type]
+  outcomes: [fon 36m, exit6/ipo6/acqp6 72m, exit_ever, closed6]
+change_policy: 규칙 변경은 sample_v2 + DECISION_LOG 기록. 조용한 덮어쓰기 금지.

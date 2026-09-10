@@ -1,0 +1,163 @@
+{
+  "id": "P001-29",
+  "title": "리뷰어 선제 검정 II — 기업 중복 제외 · 단계 집중 통제 · 단위 병기",
+  "status": "GO",
+  "n": 2661,
+  "estimates": {
+    "share_post_deals_overlapping_pre_companies": 0.2773,
+    "T1_excl_overlap": {
+      "coef": 0.07893,
+      "ci95": [
+        0.0168,
+        0.1584
+      ],
+      "n": 1858,
+      "n_firms": 903,
+      "sig": true,
+      "share_of_base": 0.768
+    },
+    "T1b_overlap_only": {
+      "coef": 0.19204,
+      "ci95": [
+        0.0724,
+        0.3059
+      ],
+      "n": 1667,
+      "n_firms": 789,
+      "sig": true
+    },
+    "T2_late_stage_control": {
+      "lp_any": {
+        "no_late_ctrl": {
+          "coef": 0.49365,
+          "ci95": [
+            0.179,
+            0.7938
+          ],
+          "n": 378,
+          "n_firms": 287,
+          "sig": true
+        },
+        "with_late_ctrl": {
+          "coef": 0.45588,
+          "ci95": [
+            -0.0856,
+            0.9661
+          ],
+          "n": 378,
+          "n_firms": 287,
+          "sig": false
+        },
+        "late_sh_own": {
+          "coef": 0.19952,
+          "ci95": [
+            0.0277,
+            0.3579
+          ],
+          "n": 378,
+          "n_firms": 287,
+          "sig": true
+        },
+        "pct_change": -7.7
+      },
+      "lp_amt": {
+        "no_late_ctrl": {
+          "coef": 2.46794,
+          "ci95": [
+            0.7824,
+            3.8902
+          ],
+          "n": 196,
+          "n_firms": 148,
+          "sig": true
+        },
+        "with_late_ctrl": {
+          "coef": 0.66206,
+          "ci95": [
+            -1.5774,
+            2.9639
+          ],
+          "n": 196,
+          "n_firms": 148,
+          "sig": false
+        },
+        "late_sh_own": {
+          "coef": 1.42316,
+          "ci95": [
+            0.7557,
+            2.2008
+          ],
+          "n": 196,
+          "n_firms": 148,
+          "sig": true
+        },
+        "pct_change": -73.2
+      },
+      "recv_q": {
+        "no_late_ctrl": {
+          "coef": 1.16005,
+          "ci95": [
+            0.1961,
+            2.1294
+          ],
+          "n": 709,
+          "n_firms": 462,
+          "sig": true
+        },
+        "with_late_ctrl": {
+          "coef": 0.66341,
+          "ci95": [
+            -0.6928,
+            2.258
+          ],
+          "n": 709,
+          "n_firms": 462,
+          "sig": false
+        },
+        "late_sh_own": {
+          "coef": 0.58406,
+          "ci95": [
+            0.1501,
+            1.0615
+          ],
+          "n": 709,
+          "n_firms": 462,
+          "sig": true
+        },
+        "pct_change": -42.8
+      }
+    },
+    "T3_unconditional_level": {
+      "coef": 0.14604,
+      "ci95": [
+        0.0792,
+        0.2131
+      ],
+      "n": 2164,
+      "n_firms": 990,
+      "sig": true
+    },
+    "T3_unconditional_percentile": {
+      "coef": -0.03721,
+      "ci95": [
+        -0.11,
+        0.0284
+      ],
+      "n": 2164,
+      "n_firms": 990,
+      "sig": false
+    }
+  },
+  "prediction": "T1 중복 20~40%, 제외 후 ≥50% 유지 · T2 lp_amt ≥40% 감소, lp_any/recv_q <30% · T3 레벨 +, 백분위 ≈0/−",
+  "verdict": "중복 비중 27.7% | T1 +0.0789 (77%) | T2 lp_any: +0.494→+0.456 (-8%) | T2 lp_amt: +2.468→+0.662 (-73%) | T2 recv_q: +1.160→+0.663 (-43%) | T3 레벨 +0.1460 vs 백분위 -0.0372 — **T1 통과 — 중복 제외 후 77% 유지, CI 0 배제. T2 lp_amt 는 late_sh 통제 시 유의 상실 → Panel C 펀드 크기 행을 '단계 집중과 분리 불가'로 재표기**",
+  "kill_met": false,
+  "code": "p001_29_overlap_stage.py",
+  "sha256_16": "24e5e3a0f8988353",
+  "seed": 42,
+  "runtime_s": 31.6,
+  "date": "2026-09-08",
+  "stage": 7,
+  "feeds": "내부리뷰 R2 대응 · Table 7/9",
+  "slug": "overlap_stage",
+  "builds_on": "P001-28"
+}

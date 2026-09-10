@@ -1,0 +1,167 @@
+{
+  "id": "P001-23",
+  "title": "P001-22 사양 전수감사 (경마 공선성·재모수화·표본외 예측력) + LP 측 검정",
+  "status": "PARTIAL",
+  "n": 2686,
+  "estimates": {
+    "A1_reproduce": {
+      "move": {
+        "beta_raw": -0.0518,
+        "ci_raw": [
+          -0.2061,
+          0.0744
+        ],
+        "beta_adj": 0.09921,
+        "ci_adj": [
+          -0.0088,
+          0.2333
+        ]
+      },
+      "spin": {
+        "beta_raw": -0.15746,
+        "ci_raw": [
+          -0.2852,
+          -0.0367
+        ],
+        "beta_adj": 0.18966,
+        "ci_adj": [
+          0.0836,
+          0.2891
+        ]
+      },
+      "reproduced": true
+    },
+    "A2_collinearity": {
+      "rho_raw_adj": 0.8614,
+      "R2_raw_on_others": 0.8643,
+      "VIF_raw": 7.371,
+      "identifying_share": 0.1357
+    },
+    "A3_reparam_identity": {
+      "move": {
+        "beta_wedge": -0.051803,
+        "beta_raw_orig": -0.051803,
+        "abs_diff": 4.996003610813204e-16,
+        "identical": true
+      },
+      "spin": {
+        "beta_wedge": -0.157461,
+        "beta_raw_orig": -0.157461,
+        "abs_diff": 4.996003610813204e-16,
+        "identical": true
+      }
+    },
+    "A4_solo": {
+      "move|raw 단독": {
+        "coef": 0.04909,
+        "ci95": [
+          -0.0149,
+          0.1229
+        ],
+        "sig": false
+      },
+      "move|adj 단독": {
+        "coef": 0.05709,
+        "ci95": [
+          0.0009,
+          0.1125
+        ],
+        "sig": true
+      },
+      "spin|raw 단독": {
+        "coef": 0.03541,
+        "ci95": [
+          -0.0225,
+          0.0885
+        ],
+        "sig": false
+      },
+      "spin|adj 단독": {
+        "coef": 0.06163,
+        "ci95": [
+          0.0222,
+          0.1024
+        ],
+        "sig": true
+      }
+    },
+    "A5_cv_auc": {
+      "move|raw 단독": 0.5467,
+      "move|adj 단독": 0.5507,
+      "move|둘 다": 0.5464,
+      "spin|raw 단독": 0.554,
+      "spin|adj 단독": 0.5623,
+      "spin|둘 다": 0.5638
+    },
+    "A6_LP_side": {
+      "n_spinout": 380,
+      "n_raised": 221,
+      "rate": 0.5816,
+      "n_amt": 192,
+      "lp_any|raw 단독": {
+        "coef": 0.13204,
+        "ci95": [
+          -0.0741,
+          0.3393
+        ],
+        "sig": false
+      },
+      "lp_any|adj 단독": {
+        "coef": 0.06827,
+        "ci95": [
+          -0.1091,
+          0.2783
+        ],
+        "sig": false
+      },
+      "lp_any|wedge+adj": {
+        "coef": 0.374,
+        "ci95": [
+          -0.093,
+          0.8104
+        ],
+        "sig": false
+      }
+    },
+    "A7_receiving_firm": {
+      "n_movers": 712,
+      "recv_q|raw 단독": {
+        "coef": -0.11204,
+        "ci95": [
+          -0.6404,
+          0.405
+        ],
+        "sig": false
+      },
+      "recv_q|adj 단독": {
+        "coef": -0.28652,
+        "ci95": [
+          -0.796,
+          0.1689
+        ],
+        "sig": false
+      },
+      "recv_q|wedge+adj": {
+        "coef": 1.04706,
+        "ci95": [
+          -0.2327,
+          2.4737
+        ],
+        "sig": false
+      }
+    }
+  },
+  "prediction": "재현 성공 · ρ≥0.80 VIF≥3 · β_wedge≡β_raw 항등 성립 · 단독에선 둘 다 양수 · CV AUC 거의 동일 · LP 측은 표본 부족 가능성 높음",
+  "verdict": "재현 성공 | ρ=0.861 VIF=7.37 식별지분 13.6% | 항등 True | 단독 raw 유의양 False | CV AUC 차 move -0.0040 spin -0.0083 | LP: 스핀아웃 380 조성 221 — **P001-22 의 P1 은 유효한 검정이 아니었다 (β_raw|adj ≡ β_wedge = terrain 계수). 그러나 단독 사양·LP 측에서도 원시 신호가 평가자 결과를 예측한다는 양의 증거는 없다. 따라서 검정을 '무효'로 재분류하되 ① 은 되살리지 않는다**",
+  "kill_met": false,
+  "code": "p001_23_audit_p22.py",
+  "sha256_16": "c7b1a4f02c458e8d",
+  "seed": 42,
+  "runtime_s": 27.4,
+  "date": "2026-09-08",
+  "stage": 7,
+  "feeds": "주장 ⑤ 귀결 철회의 재검토",
+  "slug": "audit_p22",
+  "skill": "academics:power-rescue",
+  "audits": "P001-22"
+}

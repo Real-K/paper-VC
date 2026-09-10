@@ -1,0 +1,314 @@
+{
+  "id": "P001-35",
+  "title": "terrain 성분 반분 신뢰도 · 감쇠 보정 IV",
+  "status": "OK",
+  "n": 2661,
+  "estimates": {
+    "A_reliability": {
+      "n": 2661,
+      "t_v": {
+        "r_half": 0.9366,
+        "rho_SB": 0.9672,
+        "disattenuation": 1.034
+      },
+      "t_s": {
+        "r_half": 0.7722,
+        "rho_SB": 0.8714,
+        "disattenuation": 1.148
+      },
+      "t_cs": {
+        "r_half": 0.3044,
+        "rho_SB": 0.4668,
+        "disattenuation": 2.142
+      },
+      "terrain": {
+        "r_half": 0.7193,
+        "rho_SB": 0.8368,
+        "disattenuation": 1.195
+      },
+      "adj": {
+        "r_half": 0.4201,
+        "rho_SB": 0.5917,
+        "disattenuation": 1.69
+      }
+    },
+    "B_IV_AfromB": {
+      "n": 2164,
+      "n_firms": 990,
+      "t_v_A": {
+        "coef": 0.08223,
+        "ci95": [
+          -0.1091,
+          0.2733
+        ],
+        "sig": false,
+        "se_boot": 0.09723,
+        "mde80": 0.2722
+      },
+      "t_s_A": {
+        "coef": 0.11231,
+        "ci95": [
+          -0.0315,
+          0.2559
+        ],
+        "sig": false,
+        "se_boot": 0.0739,
+        "mde80": 0.2069
+      },
+      "t_cs_A": {
+        "coef": 0.23105,
+        "ci95": [
+          -0.1572,
+          0.6568
+        ],
+        "sig": false,
+        "se_boot": 0.22274,
+        "mde80": 0.6237
+      },
+      "first_stage_corr": {
+        "t_v_A": 0.939,
+        "t_s_A": 0.776,
+        "t_cs_A": 0.308
+      }
+    },
+    "B_IV_BfromA": {
+      "n": 2164,
+      "n_firms": 990,
+      "t_v_B": {
+        "coef": 0.0627,
+        "ci95": [
+          -0.1256,
+          0.2518
+        ],
+        "sig": false,
+        "se_boot": 0.09554,
+        "mde80": 0.2675
+      },
+      "t_s_B": {
+        "coef": 0.06151,
+        "ci95": [
+          -0.0831,
+          0.19
+        ],
+        "sig": false,
+        "se_boot": 0.07,
+        "mde80": 0.196
+      },
+      "t_cs_B": {
+        "coef": 0.41572,
+        "ci95": [
+          -0.0107,
+          0.8495
+        ],
+        "sig": false,
+        "se_boot": 0.20655,
+        "mde80": 0.5783
+      },
+      "first_stage_corr": {
+        "t_v_B": 0.939,
+        "t_s_B": 0.776,
+        "t_cs_B": 0.308
+      }
+    },
+    "B_IV_AfromB_tenure": {
+      "n": 2164,
+      "n_firms": 990,
+      "t_v_A": {
+        "coef": -0.00286,
+        "ci95": [
+          -0.2961,
+          0.2865
+        ],
+        "sig": false,
+        "se_boot": 0.14994,
+        "mde80": 0.4198
+      },
+      "t_s_A": {
+        "coef": 0.09053,
+        "ci95": [
+          -0.0665,
+          0.241
+        ],
+        "sig": false,
+        "se_boot": 0.07781,
+        "mde80": 0.2179
+      },
+      "t_cs_A": {
+        "coef": 0.20716,
+        "ci95": [
+          -0.2666,
+          0.5912
+        ],
+        "sig": false,
+        "se_boot": 0.22676,
+        "mde80": 0.6349
+      },
+      "first_stage_corr": {
+        "t_v_A": 0.939,
+        "t_s_A": 0.776,
+        "t_cs_A": 0.308
+      }
+    },
+    "B_IV_BfromA_tenure": {
+      "n": 2164,
+      "n_firms": 990,
+      "t_v_B": {
+        "coef": -0.07507,
+        "ci95": [
+          -0.3333,
+          0.1845
+        ],
+        "sig": false,
+        "se_boot": 0.13429,
+        "mde80": 0.376
+      },
+      "t_s_B": {
+        "coef": 0.03321,
+        "ci95": [
+          -0.1171,
+          0.1726
+        ],
+        "sig": false,
+        "se_boot": 0.07587,
+        "mde80": 0.2124
+      },
+      "t_cs_B": {
+        "coef": 0.40601,
+        "ci95": [
+          0.0639,
+          0.851
+        ],
+        "sig": true,
+        "se_boot": 0.20545,
+        "mde80": 0.5753
+      },
+      "first_stage_corr": {
+        "t_v_B": 0.939,
+        "t_s_B": 0.776,
+        "t_cs_B": 0.308
+      }
+    },
+    "B_IV_tcs_avg_tenure": 0.30658,
+    "C_OLS_A": {
+      "n": 2164,
+      "n_firms": 990,
+      "t_v_A": {
+        "coef": 0.07169,
+        "ci95": [
+          -0.0984,
+          0.2366
+        ],
+        "sig": false,
+        "se_boot": 0.08699,
+        "mde80": 0.2436
+      },
+      "t_s_A": {
+        "coef": 0.06441,
+        "ci95": [
+          -0.0354,
+          0.1758
+        ],
+        "sig": false,
+        "se_boot": 0.05466,
+        "mde80": 0.153
+      },
+      "t_cs_A": {
+        "coef": 0.1305,
+        "ci95": [
+          0.0012,
+          0.2457
+        ],
+        "sig": true,
+        "se_boot": 0.06301,
+        "mde80": 0.1764
+      }
+    },
+    "C_OLS_A_tenure": {
+      "n": 2164,
+      "n_firms": 990,
+      "t_v_A": {
+        "coef": -0.06714,
+        "ci95": [
+          -0.328,
+          0.1936
+        ],
+        "sig": false,
+        "se_boot": 0.13028,
+        "mde80": 0.3648
+      },
+      "t_s_A": {
+        "coef": 0.03862,
+        "ci95": [
+          -0.0787,
+          0.144
+        ],
+        "sig": false,
+        "se_boot": 0.05583,
+        "mde80": 0.1563
+      },
+      "t_cs_A": {
+        "coef": 0.12606,
+        "ci95": [
+          0.0039,
+          0.2518
+        ],
+        "sig": true,
+        "se_boot": 0.06304,
+        "mde80": 0.1765
+      }
+    },
+    "C_OLS_B_tenure": {
+      "n": 2164,
+      "n_firms": 990,
+      "t_v_B": {
+        "coef": -0.00433,
+        "ci95": [
+          -0.2333,
+          0.232
+        ],
+        "sig": false,
+        "se_boot": 0.11719,
+        "mde80": 0.3281
+      },
+      "t_s_B": {
+        "coef": 0.06669,
+        "ci95": [
+          -0.052,
+          0.1707
+        ],
+        "sig": false,
+        "se_boot": 0.05574,
+        "mde80": 0.1561
+      },
+      "t_cs_B": {
+        "coef": 0.06362,
+        "ci95": [
+          -0.0684,
+          0.199
+        ],
+        "sig": false,
+        "se_boot": 0.06592,
+        "mde80": 0.1846
+      }
+    },
+    "IV_over_OLS_tcs_tenure": 3.233,
+    "prediction_check": {
+      "A_tcs_r_half_in_[0.35,0.60]": false,
+      "A_adj_less_reliable_than_tcs": false,
+      "B_IV_tcs_1.3to2x_R2": false
+    }
+  },
+  "prediction": "t_cs 반분 상관 0.35–0.60(ρ_SB 0.50–0.75); adj 신뢰도 더 낮음; IV t_cs 는 R2 의 1.3–2배, CI 넓음",
+  "verdict": "반분 신뢰도 ρ_SB: t_v 0.97 · t_s 0.87 · t_cs 0.47 · terrain 0.84 · adj 0.59 | IV(+연공) t_cs A←B +0.207 [-0.267,+0.591] · B←A +0.406 [+0.064,+0.851] · 평균 +0.307 (반분 OLS 대비 3.23배) — 예측 적중 0/3",
+  "kill_met": false,
+  "code": "p001_35_terrain_reliability.py",
+  "sha256_16": "f1d43f10a3a6f451",
+  "seed": 42,
+  "runtime_s": 21.4,
+  "date": "2026-09-08",
+  "stage": 7,
+  "feeds": "R2 power-rescue",
+  "slug": "terrain_reliability",
+  "builds_on": "P001-30",
+  "common_sha256_16": "a63e7b62854b47c6"
+}

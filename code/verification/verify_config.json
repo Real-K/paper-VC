@@ -1,0 +1,64 @@
+{
+ "_comment": "Configuration as used on the manuscript (paths relative to this file). The manuscript files themselves are not in the repository; ledger_lint.py runs here as-is.",
+ "ledger": "../../artifacts/CLAIMS_LEDGER.csv",
+ "artifacts_dir": "../../artifacts",
+ "harvest_root_key": "estimates",
+ "extra_artifact_files": [],
+ "retired_artifacts": {},
+ "manual_stale": {},
+ "extra_constants": [
+  [
+   154123,
+   "분석 표본 딜"
+  ],
+  [
+   127061,
+   "NA+EU 딜"
+  ],
+  [
+   34457,
+   "창업자 성별 미관측 제외"
+  ],
+  [
+   2686,
+   "재순위 파트너"
+  ],
+  [
+   4824,
+   "딜수준 사건"
+  ],
+  [
+   1177,
+   "여성 관여 사건"
+  ],
+  [
+   244349,
+   "딜수준 관측"
+  ],
+  [
+   8119,
+   "귀속 진단 회사"
+  ],
+  [
+   19,
+   "CB 테이블"
+  ],
+  [
+   125,
+   "DGTW 통제 포트폴리오"
+  ],
+  [
+   95,
+   "신뢰수준 (95 percent CI)"
+  ]
+ ],
+ "manuscripts": [
+  "<manuscript.md>",
+  "<appendix_IA.md>"
+ ],
+ "main_manuscript": "<manuscript.md>",
+ "exhibits_dir": "../../paper_exhibits/tables",
+ "anchors_file": "anchors.json",
+ "references_marker": "### References",
+ "tables_md": "../../paper_exhibits/tables.md"
+}

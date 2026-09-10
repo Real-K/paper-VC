@@ -1,0 +1,46 @@
+{
+  "id": "I-82",
+  "title": "E3 심판 수리 — 추세 조정 결합 CI + 동료-딜 분해 (P001 동결 전)",
+  "status": "PARTIAL",
+  "n": 945,
+  "estimates": {
+    "adjusted_joint": [
+      0.0218,
+      [
+        -0.0162,
+        0.0553
+      ]
+    ],
+    "colleague_joint": [
+      0.0206,
+      [
+        -0.0003,
+        0.0401
+      ]
+    ],
+    "raw_joint_replication": [
+      0.0246,
+      [
+        0.0056,
+        0.0427
+      ]
+    ],
+    "own_deal_share_post_female_join": 0.061,
+    "n_join_f": 945,
+    "join_dating_source": "jobs.started_on (no imputation)",
+    "p1_trend_robust": false,
+    "p2_colleague_nonzero": false,
+    "claim_language": "E3 → Route D(연관) 강등 — ESTIMAND_CARD 개정 필요"
+  },
+  "prediction": "조정 결합 +1.0~+3.5pp CI 배제 기대; 동료 결합 ≥0; s=10~25%",
+  "verdict": "조정 결합=+0.0218 [-0.0162, 0.0553] (원 결합 재현 +0.0246 [0.0056, 0.0427]); 동료-딜 결합=+0.0206 [-0.0003, 0.0401]; 여성영입 본인-딜 사후 비중 s=0.061; 영입일자=jobs.started_on 단일 원천 확인 — E3 → Route D(연관) 강등 — ESTIMAND_CARD 개정 필요",
+  "kill_met": false,
+  "code": "i82_e3_repairs.py",
+  "sha256_16": "acf3a119ec1499cd",
+  "seed": 42,
+  "runtime_s": 154.8,
+  "date": "2026-09-03",
+  "stage": 2,
+  "feeds": "P001 referee 수리 (IDENTIFICATION_STRATEGY)",
+  "slug": "e3_repairs"
+}

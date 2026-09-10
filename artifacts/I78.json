@@ -1,0 +1,66 @@
+{
+  "id": "I-78",
+  "title": "출구 판별 결과변수 품질 배터리 (K-3 power-rescue 레버 C)",
+  "status": "PARTIAL",
+  "n": 8058,
+  "estimates": {
+    "ipo6": {
+      "gap_ff": -0.0337,
+      "ci": [
+        -0.0751,
+        0.0063
+      ],
+      "base_ff": 0.0791,
+      "sesoi": 0.0198,
+      "mde80_pp": 5.55,
+      "material_deficit_excluded": false
+    },
+    "acqp6": {
+      "gap_ff": 0.0168,
+      "ci": [
+        -0.0076,
+        0.045
+      ],
+      "base_ff": 0.0732,
+      "sesoi": 0.0183,
+      "mde80_pp": 3.7,
+      "material_deficit_excluded": true
+    },
+    "exit_ever": {
+      "gap_ff": -0.0625,
+      "ci": [
+        -0.115,
+        -0.0138
+      ],
+      "base_ff": 0.4636,
+      "sesoi": 0.1159,
+      "mde80_pp": 7.38,
+      "material_deficit_excluded": true
+    },
+    "closed6": {
+      "gap_ff": 0.0213,
+      "ci": [
+        -0.0125,
+        0.0639
+      ],
+      "base_ff": 0.0851,
+      "sesoi": 0.0213,
+      "mde80_pp": 5.55,
+      "material_deficit_excluded": false
+    },
+    "n_ff_deals": 8058,
+    "excluded_count": 2,
+    "sig_deficit": []
+  },
+  "prediction": "≥3/4 결과에서 상대 25% 열위 배제; 폐업 +25% 배제; 유의 열위 미검출",
+  "verdict": "ipo6 gap_ff=-0.0337 [-0.0751, 0.0063] (기저 0.079, SESOI ±0.020, 미배제); acqp6 gap_ff=+0.0168 [-0.0076, 0.045] (기저 0.073, SESOI ±0.018, 배제); exit_ever gap_ff=-0.0625 [-0.115, -0.0138] (기저 0.464, SESOI ±0.116, 배제); closed6 gap_ff=+0.0213 [-0.0125, 0.0639] (기저 0.085, SESOI ±0.021, 미배제) — 판별 불능 지속: 출구는 MDE 병기로 원고 기록, 후속 마진으로 성립",
+  "kill_met": false,
+  "code": "i78_exit_battery.py",
+  "sha256_16": "0751fc91824e3b4b",
+  "seed": 42,
+  "runtime_s": 25.5,
+  "date": "2026-09-03",
+  "stage": 2,
+  "feeds": "RESULTS_LEDGER_K3.md §4 레버 C",
+  "slug": "exit_battery"
+}

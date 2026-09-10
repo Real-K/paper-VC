@@ -1,0 +1,137 @@
+{
+  "id": "P001-25",
+  "title": "① 결정 검정 — wedge 가 장래성과 미예측 & 평가자 보상(결합 RI)",
+  "status": "PARTIAL",
+  "n": 2686,
+  "estimates": {
+    "B1_wedge_predicts_future": {
+      "coef": 0.0973,
+      "ci95": [
+        0.0389,
+        0.1604
+      ],
+      "n": 2178,
+      "n_firms": 999,
+      "sig": true,
+      "ci_halfwidth": 0.06075,
+      "informative_null": false
+    },
+    "B1b_control_adj_predicts_future": {
+      "coef": 0.24583,
+      "ci95": [
+        0.208,
+        0.2787
+      ],
+      "n": 2178,
+      "n_firms": 999,
+      "sig": true
+    },
+    "B2_joint_RI": {
+      "outcomes": [
+        "lp_any",
+        "lp_amt",
+        "recv_q"
+      ],
+      "coefs": {
+        "lp_any": 0.49424,
+        "lp_amt": 2.500851,
+        "recv_q": 1.200569
+      },
+      "n_aligned": 3,
+      "mahalanobis": 29.9682,
+      "placebo_median": 2.4636,
+      "placebo_p95": 7.512,
+      "joint_RI_p": 0.0,
+      "n_placebo": 400,
+      "individual": {
+        "lp_any": {
+          "coef": 0.49424,
+          "ci95": [
+            0.1426,
+            0.8618
+          ],
+          "n": 380,
+          "n_firms": 289,
+          "sig": true
+        },
+        "lp_amt": {
+          "coef": 2.50085,
+          "ci95": [
+            0.9955,
+            4.1943
+          ],
+          "n": 197,
+          "n_firms": 149,
+          "sig": true
+        },
+        "recv_q": {
+          "coef": 1.20057,
+          "ci95": [
+            0.3616,
+            2.2442
+          ],
+          "n": 712,
+          "n_firms": 465,
+          "sig": true
+        }
+      },
+      "pass": true
+    },
+    "B3_expanded_min3": {
+      "post_adj": {
+        "coef": 0.07981,
+        "ci95": [
+          0.008,
+          0.1437
+        ],
+        "n": 3032,
+        "n_firms": 1364,
+        "sig": true
+      },
+      "lp_any": {
+        "coef": 0.37176,
+        "ci95": [
+          0.0702,
+          0.7136
+        ],
+        "n": 552,
+        "n_firms": 408,
+        "sig": true
+      },
+      "lp_amt": {
+        "coef": 2.39663,
+        "ci95": [
+          0.7862,
+          3.8039
+        ],
+        "n": 269,
+        "n_firms": 201,
+        "sig": true
+      },
+      "recv_q": {
+        "coef": 1.12511,
+        "ci95": [
+          0.2156,
+          1.9741
+        ],
+        "n": 1027,
+        "n_firms": 643,
+        "sig": true
+      },
+      "n_partners": 4111
+    }
+  },
+  "prediction": "wedge→장래성과 ≈0 CI±0.05 · 결합 RI p<0.10 이나 0.05 미달 예상 · 조성액이 이분보다 강함 · 확대로 CI 10~20% 축소",
+  "verdict": "B1 wedge→장래성과 β=0.0973 CI반폭=0.06075 (대조 adj β=0.24583) | B2 결합 RI p=0.0000 방향일치 3/3 | B3 확대 파트너 4,111 — **wedge 가 장래 성과를 예측하거나 CI 가 넓다 → ① 의 해석 전제가 성립하지 않는다. 평가자가 wedge 를 보상해도 '속는 것'이라 부를 수 없다**",
+  "kill_met": false,
+  "code": "p001_25_wedge_decisive.py",
+  "sha256_16": "b51c4e4afed9ed6c",
+  "seed": 42,
+  "runtime_s": 32.2,
+  "date": "2026-09-08",
+  "stage": 7,
+  "feeds": "① 재개 가부",
+  "slug": "wedge_decisive",
+  "skill": "academics:power-rescue",
+  "builds_on": "P001-23"
+}

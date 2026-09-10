@@ -1,0 +1,11 @@
+{
+ "id": "P001-00",
+ "title": "정본 표본 집계 카운트 (Table 1 입력)",
+ "status": "OK",
+ "estimates": {
+  "n_deals": 154123,
+  "n_naeu": 127061,
+  "sample_sha256_16": "5b83f6785878d867"
+ },
+ "code": "06_code/p001_00_sample_counts.py"
+}

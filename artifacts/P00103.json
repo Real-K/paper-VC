@@ -1,0 +1,82 @@
+{
+  "id": "P001-03",
+  "title": "판별 배터리 확정 + MDE 표 (E2, NA+EU 스테이지 셀)",
+  "status": "GO",
+  "n": 13187,
+  "estimates": {
+    "fon": {
+      "gap_ff": 0.0108,
+      "ci": [
+        -0.0148,
+        0.0362
+      ],
+      "base": 0.7009,
+      "sesoi": 0.1752,
+      "mde80_pp": 3.7,
+      "excluded": true,
+      "n": 13187
+    },
+    "exit_ever": {
+      "gap_ff": -0.0102,
+      "ci": [
+        -0.0494,
+        0.0226
+      ],
+      "base": 0.4839,
+      "sesoi": 0.121,
+      "mde80_pp": 5.05,
+      "excluded": true,
+      "n": 7103
+    },
+    "ipo6": {
+      "gap_ff": -0.0051,
+      "ci": [
+        -0.0257,
+        0.0147
+      ],
+      "base": 0.0839,
+      "sesoi": 0.021,
+      "mde80_pp": 2.81,
+      "excluded": false,
+      "n": 7103
+    },
+    "acqp6": {
+      "gap_ff": 0.0061,
+      "ci": [
+        0.0,
+        0.0203
+      ],
+      "base": 0.078,
+      "sesoi": 0.0195,
+      "mde80_pp": 1.6,
+      "excluded": true,
+      "n": 7103
+    },
+    "closed6": {
+      "gap_ff": 0.0142,
+      "ci": [
+        -0.0106,
+        0.0414
+      ],
+      "base": 0.0926,
+      "sesoi": 0.0232,
+      "mde80_pp": 3.64,
+      "excluded": false,
+      "n": 7103
+    },
+    "p1_fon_floor": true,
+    "p3_no_material_deficit": true
+  },
+  "prediction": "fon 하한 > −5pp; exit_ever CI 0 포함; 유의 물질 열위 미검출",
+  "verdict": "fon +0.0108 [-0.0148, 0.0362] (MDE 3.7pp, 배제); exit_ever -0.0102 [-0.0494, 0.0226] (MDE 5.05pp, 배제); ipo6 -0.0051 [-0.0257, 0.0147] (MDE 2.81pp, 미배제); acqp6 +0.0061 [0.0, 0.0203] (MDE 1.6pp, 배제); closed6 +0.0142 [-0.0106, 0.0414] (MDE 3.64pp, 미배제) — E2 확정: 후속 마진 호의 배제 유지",
+  "kill_met": false,
+  "code": "p001_03_adjudication_naeu.py",
+  "sha256_16": "86ac40299b3d4c3a",
+  "seed": 42,
+  "runtime_s": 1.8,
+  "date": "2026-09-03",
+  "stage": 3,
+  "feeds": "E2 확정 / MDE 표",
+  "slug": "adjudication_naeu",
+  "inputs": "sample_v1 (NA+EU, ff=1)"
+}

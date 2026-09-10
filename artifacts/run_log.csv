@@ -1,0 +1,62 @@
+run_id,date,script,sha256_16,inputs,outputs,verdict,notes
+I-73,2026-09-03,harness50/i73_gender_screening.py,863805a81d962684,cores_v1,harness50/out/I73.json,GO,본추정: 동류교배+판별. n=154123
+I-74,2026-09-03,harness50/i74_gender_gates.py,a36e262171d1f234,cores_v1,harness50/out/I74.json,PARTIAL,섹터 구성 게이트 — D002 촉발
+I-75,2026-09-03,harness50/i75_gender_adjud_cells.py,be1159238f78b568,cores_v1,harness50/out/I75.json,GO,판별 섹터 셀 재추정
+I-76,2026-09-03,harness50/i76_gender_shock.py,e180c52e267cd1e8,cores_v1,harness50/out/I76.json,PARTIAL,충격층 개별 마진 + run-up 진단
+I-77,2026-09-03,harness50/i77_exit_power_sample.py,ce552c96fc02ba00,cores_v1,harness50/out/I77.json,PARTIAL,레버 B 실패 (D005)
+I-78,2026-09-03,harness50/i78_exit_battery.py,0751fc91824e3b4b,cores_v1,harness50/out/I78.json,PARTIAL,결과 배터리 — exit-ever 불리 발견
+I-79,2026-09-03,harness50/i79_shock_joint.py,007e2521b38d7918,cores_v1,harness50/out/I79.json,GO,충격 결합 검정 (D004)
+I-80,2026-09-03,harness50/i80_stage_control.py,88dabccfbba4fe36,cores_v1,harness50/out/I80.json,GO,스테이지 점검 (D003)
+S-01,2026-09-03,06_code/build_sample_v1.py,5b83f6785878d867,cores_v1,05_data/sample_v1.parquet,OK,정본 표본 동결 (D006) — sha 는 산출 parquet 기준
+P001-01,2026-09-03,06_code/p001_01_gmwx_staircase.py,0e77d5f067d0378c,sample_v1(NA+EU),07_analysis/out/P00101.json,PARTIAL,"exit6: 연도만 -0.0192 [-0.0448, 0.0085] → 가법 +0.0080 [-0.0222, 0.0385] → 완전셀 +0.0076 [-0.013, 0.0296] (감쇠 5%); fon: +0.0047"
+P001-02,2026-09-03,06_code/p001_02_decomposition_region.py,3bbe6a1fad847c1d,sample_v1(NA+EU),07_analysis/out/P00102.json,GO,"사다리: +0.0696 → +0.0321 → +0.0066 (섹터 경로 54%·스테이지 경로 37%); H8: NA +0.0063 [-0.0067, 0.0211] vs EU -0.0037 [-0.0265, 0.020"
+P001-03,2026-09-03,06_code/p001_03_adjudication_naeu.py,86ac40299b3d4c3a,sample_v1(NA+EU),07_analysis/out/P00103.json,GO,"fon +0.0108 [-0.0148, 0.0362] (MDE 3.7pp, 배제); exit_ever -0.0102 [-0.0494, 0.0226] (MDE 5.05pp, 배제); ipo6 -0.0051 [-0.02"
+P001-01b,2026-09-03,06_code/p001_01b_headline_staircase.py,188e8ef9de8a7846,"sample_v1(NA+EU,ff=1)",07_analysis/out/P00101b.json,PARTIAL,"사다리 비단조 — 격차는 섹터 셀 내부 현상(§8b), 스테이지가 소거; P001-03 끝점 재현 일치"
+P001-04,2026-09-03,06_code/p001_04_stacked_event.py,a8e9c8f26793ad01,cores_v1 보조표+jobs 사건(NA+EU),07_analysis/out/P00104.json,PARTIAL,"원판 — 오염 제외 오적용(처치 포함), 여성 사건 212 붕괴; 원장 보존"
+P001-04b,2026-09-03,06_code/p001_04b_stacked_fix.py,5f65ab774bdd1e4d,cores_v1 보조표+jobs 사건(NA+EU),07_analysis/out/P00104b.json,PARTIAL,"정정판 — L2 재가중 +2.32 [0.18,4.49] 0 배제·순열 .025·위약 청정; 부분 승격(§9)"
+P001-05,2026-09-03,06_code/p001_05_trackrecord.py,98d38a101a757eee,sample_v1(NA+EU),07_analysis/out/P00105.json,GO,"귀결 A GO — 여성 +4.43 백분위점 [2.13,6.77] 하향 랭킹 교정; 상위 사분위 7.1→8.2%"
+P001-06,2026-09-03,06_code/p001_06_capital_stage.py,d25f8eb9f327cc98,sample_v1(NA+EU),07_analysis/out/P00106.json,GO,"귀결 B GO — 차등 경사 +3.91 [1.5,6.7]; 재배치 반사실 +26.8%"
+P001-07,2026-09-03,06_code/p001_07_robustness_grid.py,394a8949e9cf21f7,sample_v1+cores_v1 보조,07_analysis/out/P00107.json,PARTIAL,격자 8/9 통과; T2 부표본 검정력 퇴화(negative_results)
+P001-08,2026-09-03,06_code/p001_08_measurement_diags.py,d153b0d08537a99b,sample_v1+cores_v1 보조,07_analysis/out/P00108.json,PARTIAL,R2 중립(r=−0.023)·드리프트 무·세분 Becker 수렴; R4 결측 선택 확인→ceiling
+I-81,2026-09-03,harness50/i81_stage_mechanism.py,43e2a098e1b8ecda,sample_v1/cores_v1,harness50/out/I81.json,GO,2막 메커니즘 배터리
+I-82,2026-09-03,harness50/i82_e3_repairs.py,acf3a119ec1499cd,sample_v1/cores_v1,harness50/out/I82.json,PARTIAL,E3 심판 수리
+P001-10,2026-09-04,06_code/p001_10_gap_ladder.py,db16b4eac2521288,sample_v1/cores_v1,07_analysis/out/P00110.json,GO,격차 위치 정본 사다리 (Table 3)
+P001-11,2026-09-03,06_code/p001_11_e3_deal_level.py,1e0718e660c487af,sample_v1/cores_v1,07_analysis/out/P00111.json,PARTIAL,E3 딜 수준 — 영입 마진 주통계량 (D009)
+P001-12,2026-09-03,06_code/p001_12_covadj_hazard.py,76ca9e401a2051c5,sample_v1/cores_v1,07_analysis/out/P00112.json,GO,공변량+해저드 (D010)
+P001-13,2026-09-03,06_code/p001_13_battery_joint.py,2c57a75774253f3c,sample_v1/cores_v1,07_analysis/out/P00113.json,PARTIAL,배터리 결합 (RW)
+P001-14,2026-09-03,06_code/p001_14_tier2_robust.py,71da157a427bcdc5,sample_v1/cores_v1,07_analysis/out/P00114.json,GO,역순 분해+순열+감도(결합)
+P001-14b,2026-09-03,06_code/p001_14b_join_sensitivity.py,98be4fe1984fef90,sample_v1/cores_v1,07_analysis/out/P00114b.json,GO,감도 곡선 (영입 마진)
+P001-15,2026-09-04,06_code/p001_15_gmwx_staircase_ff.py,284501cdd9b2e46c,sample_v1/cores_v1,07_analysis/out/P00115.json,PARTIAL,가법 vs 셀 (예측 반전 기록)
+P001-16,2026-09-04,06_code/p001_16_meas_diags2.py,e75121aeaaab99ef,sample_v1/cores_v1,07_analysis/out/P00116.json,PARTIAL,살리언스 지문+라벨
+P001-17,2026-09-04,06_code/p001_17_ladder_reweight.py,09b8edea1e2078cd,sample_v1/cores_v1,07_analysis/out/P00117.json,GO,Table 8 재가중+다수여성
+P001-18,2026-09-04,06_code/p001_18_career.py,78ce52f29833de28,sample_v1/cores_v1,07_analysis/out/P00118.json,PARTIAL,커리어 원판 (스테이지 오염 의심)
+P001-18b,2026-09-04,06_code/p001_18b_career_fix.py,50cc80b5dd6366d3,sample_v1/cores_v1,07_analysis/out/P00118b.json,PARTIAL,커리어 스타일 통제판
+P001-19,2026-09-04,06_code/p001_19_ss_row.py,fc8738f29fc3245a,sample_v1/cores_v1,07_analysis/out/P00119.json,GO,S&S 회사 간 행
+P001-31,2026-09-08,p001_31_gate_power.py,62e41f83f854271a,sample_v1 (+CTX acq/ipos/partners/rounds/funds),07_analysis/out/P00131.json,OK,R2 게이트 검정력 진단 (MDE·within 분산·다중성)
+P001-32,2026-09-08,p001_32_firm_between_within.py,b9fccf99d20f542e,sample_v1 (+CTX acq/ipos/partners/rounds/funds),07_analysis/out/P00132.json,PARTIAL,회사 between/within Mundlak
+P001-33,2026-09-08,p001_33_fixed_horizon_exit.py,6e8a8216e524b024,sample_v1 (+CTX acq/ipos/partners/rounds/funds),07_analysis/out/P00133.json,GO,고정 출구지평 exit3/exit6 (+회사FE·새기업·LCO)
+P001-34,2026-09-08,p001_34_deal_rolling_fe.py,6a38b1e6d4954a5c,sample_v1 (+CTX acq/ipos/partners/rounds/funds),07_analysis/out/P00134.json,PARTIAL,"딜 수준 롤링 구성, 회사×연 FE / 파트너 FE"
+P001-35,2026-09-08,p001_35_terrain_reliability.py,f1d43f10a3a6f451,sample_v1 (+CTX acq/ipos/partners/rounds/funds),07_analysis/out/P00135.json,OK,terrain 반분 신뢰도·IV
+P001-36,2026-09-08,p001_36_gender_components.py,b7c75195ca7dc111,sample_v1 (+CTX acq/ipos/partners/rounds/funds),07_analysis/out/P00136.json,OK,"성별 × 성분, 함의 상쇄 CI"
+P001-37,2026-09-08,p001_37_lp_components.py,b8965c144b6dbbaa,sample_v1 (+CTX acq/ipos/partners/rounds/funds),07_analysis/out/P00137.json,PARTIAL,Panel C ← 성분 + late_sh
+P001-38,2026-09-09,p001_38_fixed_horizon_recheck.py,938bd55b801df521,sample_v1 (+CTX),07_analysis/out/P00138.json,OK,R3 결정 검정: 고정 Mundlak·성별 함의·ex-ante·중복만·IPW·days≥0·표준화·반분
+P001-39,2026-09-09,p001_39_jobs_tenure_rank.py,a9032c1005a08377,sample_v1 (+CTX),07_analysis/out/P00139.json,OK,CP-1 jobs 합류일·직급 재직연차
+P001-40,2026-09-09,p001_40_identifying_cells_audit.py,cff8e960f7b94cda,sample_v1 (+CTX),07_analysis/out/P00140.json,OK,P2 식별 셀·동료 가용성·잭나이프·위약
+P001-41,2026-09-09,p001_41_deal_rolling_no_adjpr.py,16584ff39be335d4,sample_v1 (+CTX),07_analysis/out/P00141.json,OK,R-9 adj_pr 통제 유무
+P001-47,2026-09-09,p001_47_exante_share_artifacts.py,96915f1ac9c78620,sample_v1 (+CTX),07_analysis/out/P00147.json,OK,R4 소형 산출물
+P001-42,2026-09-09,p001_42_within_round_reup.py,5255a5696474744a,sample_v1 (+CTX inv/rounds/partners/people/jobs/orgs),07_analysis/out/P00142.json,GO,P1 라운드 내 재참여·재귀속·리드·역방향 위약
+P001-43,2026-09-09,p001_43_movers_assignment.py,7e66d6de20c1ac36,sample_v1 (+CTX inv/rounds/partners/people/jobs/orgs),07_analysis/out/P00143.json,GO,P3 이동자 배정 β · 미래회사/위약/방향
+P001-44,2026-09-09,p001_44_absence_spells.py,5bbfca722f49af76,sample_v1 (+CTX inv/rounds/partners/people/jobs/orgs),07_analysis/out/P00144.json,PARTIAL,P4 부재 스펠 (귀속·전체 딜) · 기록 위약
+P001-45,2026-09-09,p001_45_ladder_pipeline.py,ec197e08a1d57bbe,sample_v1 (+CTX inv/rounds/partners/people/jobs/orgs),07_analysis/out/P00145.json,OK,P5 사다리 파이프라인 4마진
+P001-48,2026-09-09,p001_48_region_split.py,621f8999c0985ff2,sample_v1,07_analysis/out/P00148.json,OK,지역 분할 US/NA/EU
+P001-49,2026-09-09,p001_49_coattribution_audit.py,ea49c8100c9130e4,sample_v1,07_analysis/out/P00149.json,OK,공동귀속 셀 감사
+P001-50,2026-09-09,p001_50_hazard_identification.py,97ce317656b3ad64,sample_v1 (+CTX rounds/orgs/inv/acq/ipos),07_analysis/out/P00150.json,OK,Table 4 해저드 식별 변이 감사
+P001-46,2026-09-09,p001_46_balance_rothstein.py,64fc05532842162e,sample_v1 (+CTX orgs/jobs/degrees/rounds),07_analysis/out/P00146.json,OK,P8 균형검정 (정정 재실행)
+P001-51,2026-09-09,p001_51_within_round_variants.py,c207763194f2c3b4,sample_v1 (+CTX rounds/inv/partners/funds/investors),07_analysis/out/P00151.json,PARTIAL,R5 A-1 라운드 내 변형 배터리
+P001-56,2026-09-09,p001_56_within_round_v2.py,41714b8627b18887,sample_v1 NAEU+GLOBAL (+CTX rounds/inv/partners/exits),07_analysis/out/P00156.json,OK,R5-5 라운드 내 v2
+P001-52,2026-09-09,p001_52_balance_maxt.py,8a6da3b569fe28f1,sample_v1 (+CTX orgs/rounds/founders/inv/partners),07_analysis/out/P00152.json,OK,R5 E-1/E-2/R5-4 균형 재통계 v2 (max-|t| · 비희석 · T10A 희석)
+P001-54,2026-09-09,p001_54_within_partner_outcome.py,db186b76a0bda95b,sample_v1 NAEU (+CTX rounds/orgs/inv/founders),07_analysis/out/P00154.json,GO,R5-1 파트너 내 결과 검정
+P001-57,2026-09-09,p001_57_within_partner_horizon.py,aadb9711000a0988,sample_v1 NAEU (+CTX rounds/orgs/inv),07_analysis/out/P00157.json,OK,P001-54 후속 구성물 분해
+P001-55,2026-09-09,p001_55_table3_fixed_horizon_ladder.py,473f5fc7a612d777,sample_v1 NAEU (+CTX acq/ipos/partners),07_analysis/out/P00155.json,OK,R5-3 Table 3 고정지평 사다리·딜 코딩
+P001-58,2026-09-09,p001_58_public_sources_controls.py,f1d27e1917f02afb,sample_v1 (+cb funds; formd_v1 T1; patents_v1 v2),07_analysis/out/P00158.json,OK,공개 소스 변수 투입(펀드 통제·between 분해·특허)
+P001-59,2026-09-09,p001_59_within_partner_extensions.py,3b26084abfec8048,sample_v1 (+P001-54 controls; v6_common within-round sample),07_analysis/out/P00159.json,OK,"R6 식별 후속: 파트너 내 검정 확장(빈티지×지평·이탈 상태·회사 군집·LOO·IPO/인수·Holm·국가 벤치마크·선택) + 라운드 내 밴드 2,000회; 예측 적중 12/13(표본 밖 비중 0.234 > 0.10) | v2 2026-09-10: 코드 검토 반영 재실행(식별 파트너 수·활동 정의·IPO/인수 LOO·Holm 행 nb=2000)"

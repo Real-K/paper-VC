@@ -1,0 +1,46 @@
+{
+  "id": "P001-16",
+  "title": "딜 수준 귀속 진단 + 스테이지 라벨 품질 (Track C-④·⑥)",
+  "status": "PARTIAL",
+  "n": 331661,
+  "estimates": {
+    "attr_ff_main": [
+      -0.0119,
+      [
+        -0.0164,
+        -0.0064
+      ]
+    ],
+    "attr_ff_x_fpshare": [
+      0.0246,
+      [
+        0.007,
+        0.0444
+      ]
+    ],
+    "n_rounds": 331661,
+    "generic_share_fp": 0.0873,
+    "generic_share_mp": 0.0989,
+    "e1_stage_excl_generic": [
+      0.0059,
+      [
+        -0.0053,
+        0.0191
+      ],
+      114658
+    ],
+    "p1_no_salience": false,
+    "p2_label_neutral": true
+  },
+  "prediction": "상호작용 CI ⊂ ±3pp; generic 격차 <2pp; 제외 후 E1 잔여 유지",
+  "verdict": "딜 수준 귀속: ff 주효과 -1.19pp [-0.0164, -0.0064], **ff×fp_share 상호작용 +2.46pp [0.007, 0.0444]** (지문 존재 — ceiling 반영); generic 라벨 fp 8.7% vs mp 9.9% (중립); generic 제외 E1 스테이지층 +0.59pp [-0.0053, 0.0191] (기준 +0.66 과 비교)",
+  "kill_met": false,
+  "code": "p001_16_meas_diags2.py",
+  "sha256_16": "e75121aeaaab99ef",
+  "seed": 42,
+  "runtime_s": 20.8,
+  "date": "2026-09-04",
+  "stage": 5,
+  "feeds": "DA#3·측정#8 방어 / Table 9 확장",
+  "slug": "meas_diags2"
+}

@@ -1,0 +1,284 @@
+# -*- coding: utf-8 -*-
+"""p001_51 — R5 식별 심판 A-1/F-1/F-2/F-3: 라운드 내 재참여 설계(P001-42)의 변형 배터리 — 처치 정의·투자자 통제·투자자 FE·군집·양성 대조
+
+[왜] D060 이 판별의 중심을 Table 4 해저드에서 라운드 내 재참여(P001-42)로 옮겼다. R5 식별 심판(09_review/R5_recheck/ident.md A-1):
+ 승격된 설계의 처치 "여성 파트너 귀속 있음(any-female)" 은 같은 라운드에 남성 파트너도 귀속된 투자자 행(혼합 귀속 127/669) 을 처치로 센다 —
+ D060 이 진단한 희석이 승격된 설계 안에도 있다. 또 라운드 FE 는 **딜** 구성을 닫지만 **투자자** 구성(펀드 나이·단계 초점·경험·리드)은 열려 있다.
+ 이 하네스는 (1) 처치 정의 변형, (2) 사전(라운드 이전) 투자자 통제, (3) 라운드+투자자 두-방향 FE, (4) 투자자 군집 CI, (5) 양성 대조,
+ (6) 추정 대상 기술(estimand) 을 한 번에 내어 초록·§1·§4·§8 의 "±5pp" 문장의 운명을 결정한다(rule 11: 통과하는 정의만 골라 쓰지 않는다).
+
+[구성] P001-42 표본 재구성(동일 코드): sample_v1 기업의 지분형 라운드 2010-01~2020-10, 혼성(fp 변동) 라운드, 다음 라운드 36m 조건, FF 라운드.
+ 처치 변형: any-female(기준) · female-only(fp=1 이면서 남성 파트너도 귀속된 행 제거 후 혼성 재필터) · 3범주(female-only, mixed; 기준 male-only).
+ 사전 투자자 통제(라운드 이전 정보만): 사전 귀속 딜의 FF 비중·초기단계 비중·log 사전 딜 수(sample_v1 기준) · 운용사 나이(founded_on) ·
+ 펀드 나이(CB funds: 라운드 이전 최근 펀드 공시 후 경과년; 결측 지시자). 두-방향 FE: 라운드 + 투자자(반복 demean 80회), fp·fp×ff, 풀 표본(FF+비FF).
+ 부트: 기업 군집 400 (기준); 투자자 군집 400 (F-1). 두-방향 FE 는 기업 군집 200.
+[사전 예측] (2026-09-09, 결과 조회 전; 심판 probe 점추정 −1.5pp·해석적 se 2.3 를 알고 있음 — 부트 구간은 미지)
+ A 기준 재현: b_FF = −0.0038 (P001-42 와 소수 4자리 일치).
+ B2 female-only: b ∈ [−0.04, +0.01]; MDE80 5.5–7.5pp; **±5pp 밴드 실패 예측**(하단 −5.5~−6.5); 밴드 밖 여유 <1.5pp.
+ B3 3범주: female-only 계수 ≈ B2, mixed 계수 ∈ [−0.03, +0.06], 둘 다 CI 0 포함.
+ B4 투자자 군집: 기준 CI 폭 변화 ±30% 이내, 밴드 판정 불변(any-female 통과).
+ C 사전 통제: 각 행의 b 가 기준 대비 |Δ| < 0.6pp; 전부 투입 시 |Δ| < 0.8pp; 밴드 판정 불변.
+ D 투자자 균형: 사전 초기단계 비중 +0.02~+0.06(검출), 펀드 나이 −0.2~−0.5년(검출), 운용사 나이 −2~−5년(검출), 사전 FF 비중 +0.04~+0.10(검출).
+ E 양성 대조: ln_exp(+), 리드(+), 사전 초기단계 비중(−), 펀드 나이(−) 중 ≥3 개 CI 가 0 을 배제.
+ F 두-방향 FE(풀): b_FF ∈ [−0.04, +0.02], MDE 6–10pp, CI 0 포함; 변동 운용사 250–320.
+ G 기술: FF 조건 라운드 기업 380–400; 귀속 커버(귀속 행/전 투자자 행) 0.40–0.50; 중위 라운드 금액이 전체 FF 지분형 라운드의 2.5–4배.
+[판정] any-female 과 female-only 둘 다 CI ⊂ ±5pp → GO("정의 불변 등가"). 하나만 통과 → PARTIAL("정의 의존; 미검출 + MDE 병기" — 초록·§1·§8 을 미검출형으로).
+ female-only 상단 < 0 → GO(호의 정합; §4 판정 재검).
+"""
+import json
+import os
+
+import numpy as np
+import pandas as pd
+
+from p001_v6_common import (CTX, RESCUE_SHA, V6_SHA, boot, emit, equity_rounds, fit, investor_experience, investor_rows, load_sample, log,
+                            org_maps, partner_gender_rows, qci)
+
+rng = np.random.default_rng(20260951)
+NB, NB_TW, ITERS = 400, 200, 80
+OUT = {}
+HERE = os.path.dirname(os.path.abspath(__file__))
+d = load_sample()
+om = org_maps(d)
+R = equity_rounds(set(d["org_uuid"]))
+W0, W1 = pd.Timestamp("2010-01-01"), pd.Timestamp("2020-10-31")
+R0 = R[(R["rdt"] >= W0) & (R["rdt"] <= W1)].copy()
+R0["ff"] = R0["org_uuid"].map(om["ff"])
+R0["next36"] = ((R0["next_dt"] - R0["rdt"]).dt.days <= 1095).fillna(False).astype(float)
+I = investor_rows(R0["uuid"])
+pt = partner_gender_rows(R0["uuid"])
+pa = pt.groupby(["funding_round_uuid", "investor_uuid"]).agg(fp=("fp", "max"), fp_min=("fp", "min"), n_p=("fp", "size")).reset_index()
+X = I.merge(pa, on=["funding_round_uuid", "investor_uuid"], how="inner")
+X = X.merge(R0[["uuid", "org_uuid", "rdt", "investment_type", "ff", "next_uuid", "next36", "prev_uuid", "amt"]], left_on="funding_round_uuid", right_on="uuid")
+X = X.merge(investor_experience(), on=["funding_round_uuid", "investor_uuid"], how="left")
+X["ln_exp"] = np.log1p(X["exp_before"].fillna(0))
+inv_all = investor_rows(set(R0["next_uuid"].dropna()) | set(R0["prev_uuid"].dropna()))
+next_inv = inv_all.groupby("funding_round_uuid")["investor_uuid"].agg(set).to_dict()
+X["y1"] = [1.0 if (isinstance(nu, str) and inv in next_inv.get(nu, set())) else 0.0 for nu, inv in zip(X["next_uuid"], X["investor_uuid"])]
+X["y0"] = [1.0 if (isinstance(pu, str) and inv in next_inv.get(pu, set())) else 0.0 for pu, inv in zip(X["prev_uuid"], X["investor_uuid"])]
+X["lead"] = X["is_lead_investor"].map({True: 1.0, False: 0.0})
+g = X.groupby("funding_round_uuid")["fp"].agg(["mean", "size"])
+mixed = g.index[(g["mean"] > 0) & (g["mean"] < 1) & (g["size"] >= 2)]
+M = X[X["funding_round_uuid"].isin(mixed)].copy()
+M["fpff"] = M["fp"] * M["ff"]
+M["firm"] = M["org_uuid"]          # boot() 군집 열 규약: 'firm' = 기업(company)
+Mc = M[M["next36"] == 1].copy()
+
+# ── 사전(라운드 이전) 투자자 특성 ──────────────────────────────────────────────
+dd_ = d[["investor_uuid", "dt", "ff", "stage", "fp"]].sort_values(["investor_uuid", "dt"]).copy()
+dd_["early"] = dd_["stage"].isin(["pre_seed", "seed", "angel", "series_a", "convertible_note"]).astype(float)
+grp = {k: (g_["dt"].to_numpy(), g_["ff"].cumsum().to_numpy(), g_["early"].cumsum().to_numpy(), np.arange(1, len(g_) + 1)) for k, g_ in dd_.groupby("investor_uuid")}
+
+
+def pre(inv, t):
+    if inv not in grp:
+        return (np.nan, np.nan, 0)
+    dts, cff, cea, cnt = grp[inv]
+    k = np.searchsorted(dts, np.datetime64(t), side="left")
+    return (np.nan, np.nan, 0) if k == 0 else (cff[k - 1] / k, cea[k - 1] / k, k)
+
+
+vals = np.array([pre(i, t) for i, t in zip(Mc["investor_uuid"], Mc["rdt"])], dtype=float)
+Mc["pre_ff_share"], Mc["pre_early_share"], Mc["pre_n"] = vals[:, 0], vals[:, 1], vals[:, 2]
+Mc["ln_pre_n"] = np.log1p(Mc["pre_n"]); Mc["pre_any"] = (Mc["pre_n"] > 0).astype(float)
+for c in ("pre_ff_share", "pre_early_share"):
+    Mc[c + "_f"] = Mc[c].fillna(0)
+inv_tab = CTX.investors.set_index("uuid"); founded = pd.to_datetime(inv_tab["founded_on"], errors="coerce")
+Mc["firm_age"] = (Mc["rdt"] - Mc["investor_uuid"].map(founded)).dt.days / 365.25
+Mc["firm_age_m"] = Mc["firm_age"].isna().astype(float); Mc["firm_age_f"] = Mc["firm_age"].fillna(0)
+F = CTX.funds.dropna(subset=["entity_uuid"]).copy(); F["fdt"] = pd.to_datetime(F["announced_on"], errors="coerce"); F = F.dropna(subset=["fdt"]).sort_values("fdt")
+fb = {k: g_["fdt"].to_numpy() for k, g_ in F.groupby("entity_uuid")}
+fa = []
+for inv, t in zip(Mc["investor_uuid"], Mc["rdt"]):
+    if inv in fb:
+        k = np.searchsorted(fb[inv], np.datetime64(t), side="right")
+        fa.append((np.datetime64(t) - fb[inv][k - 1]) / np.timedelta64(365, "D") if k > 0 else np.nan)
+    else:
+        fa.append(np.nan)
+Mc["fund_age"] = np.array(fa, dtype=float)
+Mc["fund_age_m"] = Mc["fund_age"].isna().astype(float); Mc["fund_age_f"] = Mc["fund_age"].fillna(0)
+Mc["fo"] = ((Mc["fp"] == 1) & (Mc["fp_min"] == 1)).astype(float)   # female-only attribution
+Mc["mx"] = ((Mc["fp"] == 1) & (Mc["fp_min"] == 0)).astype(float)   # mixed attribution
+FF = Mc[Mc["ff"] == 1].copy()
+PRE_CTRL = ["pre_ff_share_f", "pre_early_share_f", "pre_any", "ln_pre_n", "firm_age_f", "firm_age_m", "fund_age_f", "fund_age_m"]
+log(f"[구성] 혼성 라운드 {len(mixed):,} · 조건 행 {len(Mc):,} · FF 조건 라운드 {FF['funding_round_uuid'].nunique():,} / 행 {len(FF):,} / 기업 {FF['org_uuid'].nunique():,} · "
+    f"fp=1 행 {int((FF['fp']==1).sum())} 중 혼합 귀속 {int(FF['mx'].sum())} · 펀드 나이 커버 {1-FF['fund_age_m'].mean():.3f} · 운용사 나이 커버 {1-FF['firm_age_m'].mean():.3f}")
+
+
+def band(r, key="fp", pm=0.05):
+    if not r:
+        return None
+    v = dict(r[key]); v["within_pm0.05"] = bool(v["ci95"][0] >= -pm and v["ci95"][1] <= pm)
+    v["margin_lo_pp"] = round((v["ci95"][0] + pm) * 100, 2); v["margin_hi_pp"] = round((pm - v["ci95"][1]) * 100, 2)
+    return v
+
+
+def ffreg(df, extra, cluster="firm", nb=NB):
+    """FF 라운드만: y1 ~ fp + extra, 라운드 내 demean. 반환: fp 계수(밴드 판정 포함) + n."""
+    r = boot(df, "y1", ["fp"] + list(extra), ["fp"], rng, nb=nb, demean="funding_round_uuid", cluster=cluster, min_n=50)
+    return None if not r else {"fp": band(r), "n": r["n"], "n_clusters": r["n_firms"], "controls": list(extra)}
+
+
+def show(tag, r):
+    if not r:
+        log(f"  {tag}: 표본 부족"); return
+    v = r["fp"]
+    log(f"  {tag:<52} b {v['coef']*100:+.2f}pp [{v['ci95'][0]*100:+.2f},{v['ci95'][1]*100:+.2f}] MDE {v['mde80']*100:.2f} ±5 {v['within_pm0.05']} (여유 {v['margin_lo_pp']:+.2f}/{v['margin_hi_pp']:+.2f}) n={r['n']:,}/{r['n_clusters']:,}")
+
+
+# ── A 기준 재현 (P001-42 B 의 b_FF 와 동치: FF 라운드만 fp 회귀) ───────────────
+log("\n" + "=" * 100 + "\n[A] 기준 재현 — any-female, ln_exp, 기업 군집\n" + "=" * 100)
+A = ffreg(FF, ["ln_exp"]); show("A any-female (기준)", A)
+p42 = json.load(open(os.path.join(os.environ.get("P001_ARTIFACTS", os.path.join(HERE, "..", "..", "artifacts")), "P00142.json"), encoding="utf-8"))["estimates"]["B_reup_conditional"]["reg"]["b_FF"]
+A["p42_b_FF"] = p42["coef"]; A["reproduces_p42_4dp"] = bool(round(A["fp"]["coef"], 4) == round(p42["coef"], 4))
+log(f"  P001-42 b_FF {p42['coef']:+.5f} · 재현 {A['reproduces_p42_4dp']}")
+OUT["A_baseline"] = A
+
+# ── B 처치 정의 ────────────────────────────────────────────────────────────────
+log("\n" + "=" * 100 + "\n[B] 처치 정의 — female-only · 3범주 · 투자자 군집\n" + "=" * 100)
+fo = FF[~((FF["fp"] == 1) & (FF["fp_min"] == 0))].copy()
+gr = fo.groupby("funding_round_uuid")["fp"].agg(["mean", "size"]); mix_fo = gr.index[(gr["mean"] > 0) & (gr["mean"] < 1) & (gr["size"] >= 2)]
+fo = fo[fo["funding_round_uuid"].isin(mix_fo)].copy()
+B = {"n_mixed_attr_rows_dropped": int(FF["mx"].sum()), "female_only": ffreg(fo, ["ln_exp"])}
+B["female_only"].update({"n_rounds": int(fo["funding_round_uuid"].nunique()), "n_companies": int(fo["org_uuid"].nunique())})
+show("B2 female-only (혼합 귀속 행 제거)", B["female_only"])
+r3 = boot(FF, "y1", ["fo", "mx", "ln_exp"], ["fo", "mx"], rng, nb=NB, demean="funding_round_uuid", cluster="firm", min_n=50)
+B["three_category"] = {"female_only_vs_male_only": band(r3, "fo"), "mixed_vs_male_only": band(r3, "mx"), "n": r3["n"], "n_mixed_rows": int(FF["mx"].sum())}
+log(f"  B3 3범주: female-only {r3['fo']['coef']*100:+.2f}pp [{r3['fo']['ci95'][0]*100:+.2f},{r3['fo']['ci95'][1]*100:+.2f}] · mixed {r3['mx']['coef']*100:+.2f}pp [{r3['mx']['ci95'][0]*100:+.2f},{r3['mx']['ci95'][1]*100:+.2f}] n={r3['n']:,}")
+B["any_female_investor_cluster"] = ffreg(FF, ["ln_exp"], cluster="investor_uuid"); show("B4 any-female, 투자자 군집", B["any_female_investor_cluster"])
+B["female_only_investor_cluster"] = ffreg(fo, ["ln_exp"], cluster="investor_uuid"); show("B4 female-only, 투자자 군집", B["female_only_investor_cluster"])
+OUT["B_treatment_definition"] = B
+
+# ── C 사전 투자자 통제 ──────────────────────────────────────────────────────────
+log("\n" + "=" * 100 + "\n[C] 사전(라운드 이전) 투자자 통제 — any-female · female-only\n" + "=" * 100)
+C = {}
+for lab, extra in [("pre_ff_share", ["pre_ff_share_f", "pre_any"]), ("pre_early_share", ["pre_early_share_f", "pre_any"]), ("ln_pre_n", ["ln_pre_n"]),
+                   ("firm_age", ["firm_age_f", "firm_age_m"]), ("fund_age", ["fund_age_f", "fund_age_m"]), ("all_pre_round", PRE_CTRL)]:
+    C[lab] = {"any_female": ffreg(FF, ["ln_exp"] + extra), "female_only": ffreg(fo, ["ln_exp"] + extra)}
+    show(f"C +{lab} any-female", C[lab]["any_female"]); show(f"C +{lab} female-only", C[lab]["female_only"])
+    C[lab]["shift_vs_baseline_pp"] = round((C[lab]["any_female"]["fp"]["coef"] - A["fp"]["coef"]) * 100, 3)
+OUT["C_pre_round_controls"] = C
+
+# ── D 투자자 수준 균형(라운드 내) ────────────────────────────────────────────────
+log("\n" + "=" * 100 + "\n[D] 라운드 내 투자자 특성의 fp 차 (여성 귀속 − 남성 귀속)\n" + "=" * 100)
+D = {}
+for c in ["pre_ff_share", "pre_early_share", "ln_pre_n", "firm_age", "fund_age", "ln_exp", "lead", "y0", "n_p"]:
+    dd = FF.dropna(subset=[c]).copy()
+    r = boot(dd, c, ["fp"], ["fp"], rng, nb=NB, demean="funding_round_uuid", cluster="firm", min_n=50)
+    if r:
+        sd = float(dd[c].std()); r["fp"]["std_diff"] = round(r["fp"]["coef"] / sd, 4) if sd > 0 else None; r["fp"]["mean_male_attr"] = round(float(dd.loc[dd["fp"] == 0, c].mean()), 4)
+        D[c] = {"fp": r["fp"], "n": r["n"], "coverage": round(float(FF[c].notna().mean()), 3)}
+        log(f"  {c:<18} Δ {r['fp']['coef']:+.4f} [{r['fp']['ci95'][0]:+.4f},{r['fp']['ci95'][1]:+.4f}] d {r['fp']['std_diff']} · 남성 귀속 평균 {r['fp']['mean_male_attr']} · 커버 {D[c]['coverage']} n={r['n']:,}")
+OUT["D_investor_balance"] = D
+
+# ── E 양성 대조: 투자자 특성 → 재참여 (라운드 내) ───────────────────────────────
+log("\n" + "=" * 100 + "\n[E] 양성 대조 — 투자자 특성이 라운드 내 재참여를 예측하는가 (FF 라운드)\n" + "=" * 100)
+E = {}
+for c in ["ln_exp", "lead", "pre_early_share", "fund_age", "y0", "ln_pre_n"]:
+    dd = FF.dropna(subset=[c]).copy()
+    r = boot(dd, "y1", [c], [c], rng, nb=NB, demean="funding_round_uuid", cluster="firm", min_n=50)
+    if r:
+        E[c] = {"coef": r[c], "n": r["n"]}
+        log(f"  y1 ← {c:<16} b {r[c]['coef']:+.4f} [{r[c]['ci95'][0]:+.4f},{r[c]['ci95'][1]:+.4f}] sig {r[c]['sig']} n={r['n']:,}")
+E["n_detected"] = int(sum(1 for c in ["ln_exp", "lead", "pre_early_share", "fund_age"] if c in E and E[c]["coef"]["sig"]))
+OUT["E_positive_controls"] = E
+
+
+# ── F 두-방향 FE (라운드 + 투자자), 풀 표본 ───────────────────────────────────
+def twoway_demean(df, cols, k1, k2, iters=ITERS):
+    out = df.copy()
+    for c in cols:
+        v = out[c].to_numpy(float).copy()
+        g1 = out[k1].to_numpy(); g2 = out[k2].to_numpy()
+        for _ in range(iters):
+            v = v - pd.Series(v).groupby(g1).transform("mean").to_numpy()
+            v = v - pd.Series(v).groupby(g2).transform("mean").to_numpy()
+        out[c] = v
+    return out
+
+
+log("\n" + "=" * 100 + "\n[F] 두-방향 FE (라운드 + 투자자), fp·fp×ff, 풀 표본 — 기업 군집 부트 200\n" + "=" * 100)
+cols = ["y1", "fp", "fpff", "ln_exp"]
+dd = Mc.dropna(subset=cols).copy(); dd = dd[dd.groupby("funding_round_uuid")["fp"].transform("size") >= 2]
+vary = dd.groupby("investor_uuid")["fp"].agg(["min", "max"]); n_vary = int(((vary["min"] == 0) & (vary["max"] == 1)).sum())
+tw = twoway_demean(dd, cols, "funding_round_uuid", "investor_uuid"); b0 = fit(tw, "y1", ["fp", "fpff", "ln_exp"])
+grp_c = {c: g_.index.to_numpy() for c, g_ in dd.groupby("firm")}; kl = list(grp_c); bs = []
+for _ in range(NB_TW):
+    pick = rng.integers(0, len(kl), len(kl)); s = dd.loc[np.concatenate([grp_c[kl[i]] for i in pick])].reset_index(drop=True)
+    s = s[s.groupby("funding_round_uuid")["fp"].transform("size") >= 2]
+    try:
+        bs.append(fit(twoway_demean(s, cols, "funding_round_uuid", "investor_uuid"), "y1", ["fp", "fpff", "ln_exp"]))
+    except Exception:
+        pass
+bs = np.array(bs); dr = bs[:, 0] + bs[:, 1]; lo, hi = qci(dr); se = float(np.std(dr, ddof=1))
+Fo = {"b_FF": {"coef": round(float(b0[0] + b0[1]), 5), "ci95": [round(lo, 5), round(hi, 5)], "sig": bool(lo > 0 or hi < 0), "se_boot": round(se, 5), "mde80": round(2.8 * se, 4),
+               "within_pm0.05": bool(lo >= -0.05 and hi <= 0.05)},
+      "b_other": {"coef": round(float(b0[0]), 5), "ci95": [round(float(x), 5) for x in qci(bs[:, 0])]}, "n": int(len(dd)), "n_investors": int(dd["investor_uuid"].nunique()),
+      "n_investors_fp_varying": n_vary, "nb": int(len(bs)), "iters": ITERS}
+log(f"  두-방향 FE b_FF {Fo['b_FF']['coef']*100:+.2f}pp [{lo*100:+.2f},{hi*100:+.2f}] MDE {Fo['b_FF']['mde80']*100:.2f} · 비FF {Fo['b_other']['coef']*100:+.2f} · n={Fo['n']:,} 투자자 {Fo['n_investors']:,} (fp 변동 {n_vary})")
+OUT["F_twoway_FE_pooled"] = Fo
+
+# ── G 추정 대상 기술 ──────────────────────────────────────────────────────────
+log("\n" + "=" * 100 + "\n[G] 추정 대상 기술 — 표본 특성·귀속 커버리지·비귀속 공동투자자 재참여\n" + "=" * 100)
+rounds_ff = FF["funding_round_uuid"].unique()
+allI = I[I["funding_round_uuid"].isin(rounds_ff)].merge(R0[["uuid", "next_uuid"]], left_on="funding_round_uuid", right_on="uuid")
+allI["y1"] = [1.0 if (isinstance(nu, str) and inv in next_inv.get(nu, set())) else 0.0 for nu, inv in zip(allI["next_uuid"], allI["investor_uuid"])]
+attr_keys = set(zip(FF["funding_round_uuid"], FF["investor_uuid"]))
+allI["attributed"] = [1.0 if (r_, i_) in attr_keys else 0.0 for r_, i_ in zip(allI["funding_round_uuid"], allI["investor_uuid"])]
+allI["firm"] = allI["funding_round_uuid"].map(R0.set_index("uuid")["org_uuid"])
+ra = boot(allI, "y1", ["attributed"], ["attributed"], rng, nb=NB, demean="funding_round_uuid", cluster="firm", min_n=50)
+allFF = R0[R0["ff"] == 1]; rFF = R0[R0["uuid"].isin(rounds_ff)]
+early = lambda s: s.isin(["pre_seed", "seed", "angel", "series_a", "convertible_note"]).mean()
+G = {"n_ff_cond_rounds": int(len(rounds_ff)), "n_companies": int(FF["org_uuid"].nunique()), "n_investor_firms": int(FF["investor_uuid"].nunique()),
+     "attribution_coverage_rows": round(float(len(FF) / len(allI)), 4), "n_all_investor_rows": int(len(allI)),
+     "median_amt_usd_cond_rounds": float(rFF["amt"].median()), "median_amt_usd_all_ff_rounds": float(allFF["amt"].median()),
+     "early_share_cond_rounds": round(float(early(rFF["investment_type"])), 4), "early_share_all_ff_rounds": round(float(early(allFF["investment_type"])), 4),
+     "reup_attributed_minus_unattributed_within_round": ra["attributed"] if ra else None, "base_reup_cond_ff": round(float(FF["y1"].mean()), 4)}
+log(f"  기업 {G['n_companies']} · 운용사 {G['n_investor_firms']} · 귀속 커버 {G['attribution_coverage_rows']:.3f} ({len(FF):,}/{len(allI):,}) · 중위 금액 ${G['median_amt_usd_cond_rounds']/1e6:.1f}M vs 전체 FF ${G['median_amt_usd_all_ff_rounds']/1e6:.1f}M · "
+    f"초기단계 {G['early_share_cond_rounds']:.2f} vs {G['early_share_all_ff_rounds']:.2f} · 귀속−비귀속 재참여 {ra['attributed']['coef']*100:+.2f}pp [{ra['attributed']['ci95'][0]*100:+.2f},{ra['attributed']['ci95'][1]*100:+.2f}]")
+OUT["G_estimand"] = G
+
+# ── H 밴드의 경제적 기준점(참고 산식; 투입값은 P001-49 산출물에서 읽음) ───────────
+try:
+    e49 = json.load(open(os.path.join(os.environ.get("P001_ARTIFACTS", os.path.join(HERE, "..", "..", "artifacts")), "P00149.json"), encoding="utf-8"))["estimates"]
+    H = {"base_reup": G["base_reup_cond_ff"]}
+    for lab, node in (("NAEU_cat", e49["NAEU"]["cell_cat"]), ("GLOBAL_cat", e49["GLOBAL"]["cell_cat"])):
+        bfull = node.get("beta_full_exit_ever_pp"); bexit = node.get("base_exit_ever") or node.get("base_exit")
+        if bfull is not None and bexit:
+            rel = abs(bfull) / (bexit * 100); H[lab] = {"peer_gap_pp": bfull, "exit_base": bexit, "relative": round(rel, 4), "reup_analogue_pp": round(rel * G["base_reup_cond_ff"] * 100, 2),
+                                                      "excluded_by_any_female_CI": bool(A["fp"]["ci95"][0] * 100 > -rel * G["base_reup_cond_ff"] * 100),
+                                                      "excluded_by_female_only_CI": bool(B["female_only"]["fp"]["ci95"][0] * 100 > -rel * G["base_reup_cond_ff"] * 100)}
+    OUT["H_band_anchor"] = H
+    log(f"  [H] {H}")
+except Exception as ex:  # 참고 산식 — 실패해도 본 결과와 무관
+    log(f"  [H] 생략: {type(ex).__name__}")
+
+# ── 판정 ────────────────────────────────────────────────────────────────────
+a, f_ = A["fp"], B["female_only"]["fp"]
+shifts = [abs(C[k]["shift_vs_baseline_pp"]) for k in C]
+if a["within_pm0.05"] and f_["within_pm0.05"]:
+    status, call = "GO", "any-female·female-only 둘 다 ±5pp 안 — 정의 불변 등가"
+elif f_["ci95"][1] < 0:
+    status, call = "GO", "female-only 재참여 결손 검출 — 호의 정합 (§4 판정 재검)"
+else:
+    status, call = "PARTIAL", f"밴드 판정이 정의에 의존(any-female {a['within_pm0.05']}, female-only {f_['within_pm0.05']}) — 미검출형 서술 + MDE 병기"
+pred = {"A_reproduces_p42": A["reproduces_p42_4dp"], "B2_fo_coef_in_[-0.04,0.01]": -0.04 <= f_["coef"] <= 0.01, "B2_fo_mde_5.5_7.5pp": 0.055 <= f_["mde80"] <= 0.075,
+        "B2_fo_band_fails": not f_["within_pm0.05"], "B2_fo_band_margin_lt_1.5pp": abs(min(f_["margin_lo_pp"], f_["margin_hi_pp"])) < 1.5 if not f_["within_pm0.05"] else False,
+        "B3_mixed_in_[-0.03,0.06]_incl0": -0.03 <= r3["mx"]["coef"] <= 0.06 and not r3["mx"]["sig"],
+        "B4_inv_cluster_width_pm30pct": abs((B["any_female_investor_cluster"]["fp"]["ci95"][1] - B["any_female_investor_cluster"]["fp"]["ci95"][0]) / (a["ci95"][1] - a["ci95"][0]) - 1) <= 0.30,
+        "C_shifts_lt_0.6pp_each": all(s < 0.6 for k, s in zip(C, shifts) if k != "all_pre_round"), "C_all_shift_lt_0.8pp": abs(C["all_pre_round"]["shift_vs_baseline_pp"]) < 0.8,
+        "D_early_share_detected": bool(D.get("pre_early_share") and D["pre_early_share"]["fp"]["sig"]), "D_fund_age_detected": bool(D.get("fund_age") and D["fund_age"]["fp"]["sig"]),
+        "E_ge3_positive_controls": E["n_detected"] >= 3, "F_bFF_in_[-0.04,0.02]_incl0": -0.04 <= Fo["b_FF"]["coef"] <= 0.02 and not Fo["b_FF"]["sig"], "F_mde_6_10pp": 0.06 <= Fo["b_FF"]["mde80"] <= 0.10,
+        "G_companies_380_400": 380 <= G["n_companies"] <= 400, "G_attr_cov_0.40_0.50": 0.40 <= G["attribution_coverage_rows"] <= 0.50}
+pred = {k: bool(v) for k, v in pred.items()}
+OUT["prediction_check"] = pred
+verdict = (f"any-female b {a['coef']*100:+.2f}pp [{a['ci95'][0]*100:+.2f},{a['ci95'][1]*100:+.2f}] ±5 {a['within_pm0.05']} | female-only({B['female_only']['n_rounds']} 라운드/{B['female_only']['n']} 행) "
+           f"b {f_['coef']*100:+.2f}pp [{f_['ci95'][0]*100:+.2f},{f_['ci95'][1]*100:+.2f}] MDE {f_['mde80']*100:.2f} ±5 {f_['within_pm0.05']} | mixed 계수 {r3['mx']['coef']*100:+.2f}pp | "
+           f"사전 통제 전부 투입 Δ {C['all_pre_round']['shift_vs_baseline_pp']:+.2f}pp | 투자자 군집 CI [{B['any_female_investor_cluster']['fp']['ci95'][0]*100:+.2f},{B['any_female_investor_cluster']['fp']['ci95'][1]*100:+.2f}] | "
+           f"양성 대조 검출 {E['n_detected']}/4 | 두-방향 FE b_FF {Fo['b_FF']['coef']*100:+.2f}pp MDE {Fo['b_FF']['mde80']*100:.1f} | 기업 {G['n_companies']} · 귀속 커버 {G['attribution_coverage_rows']:.2f} — {call} (예측 적중 {sum(pred.values())}/{len(pred)})")
+emit("P001-51", "R5 A-1: 라운드 내 재참여 설계의 변형 배터리 — 처치 정의·사전 투자자 통제·두-방향 FE·투자자 군집·양성 대조·추정 대상", status, OUT,
+     prediction="female-only b∈[−0.04,+0.01] MDE 5.5–7.5 밴드 실패(여유<1.5); mixed∈[−0.03,+0.06]; 사전 통제 Δ<0.6; 양성 대조 ≥3/4; 두-방향 FE MDE 6–10; 기업 380–400; 귀속 커버 0.40–0.50",
+     verdict=verdict, kill_met=False, n=int(len(FF)),
+     extra={"stage": 7, "feeds": "R5 ident A-1/F-1/F-2/F-3 → §4 ¶3 · Table 10 A · 초록/§1/§8 밴드 문장", "slug": "within_round_variants", "builds_on": "P001-42",
+            "common_sha256_16": RESCUE_SHA, "v6_common_sha256_16": V6_SHA})
+log("done")

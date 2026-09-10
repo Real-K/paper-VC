@@ -1,0 +1,59 @@
+{
+  "id": "I-80",
+  "title": "스테이지 구성 교란 점검 — exit-ever 열위 판별 (K-3 판별 최종)",
+  "status": "GO",
+  "n": 8058,
+  "estimates": {
+    "fp_early_assoc": [
+      0.0384,
+      [
+        0.026,
+        0.05
+      ]
+    ],
+    "exit_ever_stagecell": [
+      -0.0175,
+      [
+        -0.0537,
+        0.0149
+      ],
+      8058
+    ],
+    "ipo6_stagecell": [
+      -0.0083,
+      [
+        -0.0289,
+        0.0107
+      ]
+    ],
+    "fon_stagecell": [
+      0.0084,
+      [
+        -0.0166,
+        0.0334
+      ],
+      15479
+    ],
+    "i78_exit_ever_ref": [
+      -0.0625,
+      [
+        -0.115,
+        -0.0138
+      ]
+    ],
+    "stage_explains": true,
+    "deficit_real": false,
+    "p3_fon": true
+  },
+  "prediction": "fp 시드 비중 +2~+8pp; 스테이지 셀 후 exit_ever 축소(−2~−4pp)·유의성 소멸 가능; fon 하한 > −5pp 유지",
+  "verdict": "fp-초기단계 연관=+0.0384 [0.026, 0.05]; 스테이지 셀 exit_ever gap_ff=-0.0175 [-0.0537, 0.0149] (I-78 −0.0625 [−0.115,−0.0138] 대비); ipo6=-0.0083 [-0.0289, 0.0107]; fon=+0.0084 [-0.0166, 0.0334] — 스테이지 구성이 설명: 출구 판별 미결(MDE 병기)로 확정, fon 판별로 성립",
+  "kill_met": false,
+  "code": "i80_stage_control.py",
+  "sha256_16": "88dabccfbba4fe36",
+  "seed": 42,
+  "runtime_s": 28.7,
+  "date": "2026-09-03",
+  "stage": 2,
+  "feeds": "RESULTS_LEDGER_K3.md §4 판별",
+  "slug": "stage_control"
+}

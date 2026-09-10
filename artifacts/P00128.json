@@ -1,0 +1,93 @@
+{
+  "id": "P001-28",
+  "title": "리뷰어 선제 검정 — 사후기 관측 선택(IPW) · 무조건 terrain · 레벨 항등",
+  "status": "PARTIAL",
+  "n": 2661,
+  "estimates": {
+    "S1_selection_on_wedge": {
+      "coef": -0.42471,
+      "ci95": [
+        -0.5354,
+        -0.3071
+      ],
+      "n": 2661,
+      "n_firms": 1152,
+      "sig": true
+    },
+    "S1b_selection_on_adj": {
+      "coef": 0.02888,
+      "ci95": [
+        -0.0223,
+        0.0884
+      ],
+      "n": 2661,
+      "n_firms": 1152,
+      "sig": false
+    },
+    "S2_unweighted": {
+      "coef": 0.10272,
+      "ci95": [
+        0.0327,
+        0.1667
+      ],
+      "n": 2164,
+      "n_firms": 990,
+      "sig": true
+    },
+    "S2_ipw": {
+      "coef": 0.0929,
+      "ci95": [
+        0.0277,
+        0.1618
+      ],
+      "n": 2164,
+      "n_firms": 990,
+      "sig": true,
+      "pct_change_vs_unweighted": -9.6,
+      "phat_min": 0.519,
+      "phat_max": 1.0
+    },
+    "S3_terrain_unconditional_level": {
+      "coef": 0.14604,
+      "ci95": [
+        0.0791,
+        0.2154
+      ],
+      "n": 2164,
+      "n_firms": 990,
+      "sig": true
+    },
+    "S4_raw_given_adj_level": {
+      "coef": 0.09772,
+      "ci95": [
+        0.0284,
+        0.1573
+      ],
+      "n": 2164,
+      "n_firms": 990,
+      "sig": true
+    },
+    "S4b_terrain_given_adj_level": {
+      "coef": 0.09772,
+      "ci95": [
+        0.0307,
+        0.1803
+      ],
+      "n": 2164,
+      "n_firms": 990,
+      "sig": true
+    }
+  },
+  "prediction": "S1 |β|<0.05 · S2 변화<30% · S3 0 근처/음 · S4 양 유의",
+  "verdict": "S1 has_post←wedge -0.4247 [-0.5354,-0.3071] | S2 비가중 +0.1027 → IPW +0.0929 (-9.6%) | S3 무조건 terrain +0.1460 [+0.0791,+0.2154] | S4 level raw|adj +0.0977 [+0.0284,+0.1573] — **선택 게이트 실패 — IPW 변화 -9.6% 또는 관측선택 β -0.4247 유의. §6 에 선택 한계 명시 + IPW 병기 필요**",
+  "kill_met": false,
+  "code": "p001_28_selection_terrain.py",
+  "sha256_16": "291efc947075e163",
+  "seed": 42,
+  "runtime_s": 22.0,
+  "date": "2026-09-08",
+  "stage": 7,
+  "feeds": "P001 §6 서술·Table 9",
+  "slug": "selection_terrain",
+  "builds_on": "P001-27"
+}

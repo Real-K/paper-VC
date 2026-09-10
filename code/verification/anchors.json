@@ -1,0 +1,87 @@
+{
+ "tol": 0.0005,
+ "anchors": [
+  {
+   "claim": "C154 신생사 펀드조성 ← terrain (wedge)",
+   "values": [
+    0.494,
+    0.143,
+    0.862
+   ],
+   "source": "P00125.json"
+  },
+  {
+   "claim": "C155 신생사 log 조성액 ← terrain",
+   "values": [
+    2.501,
+    0.996,
+    4.194
+   ],
+   "source": "P00125.json"
+  },
+  {
+   "claim": "C156 수용 회사 품질 ← terrain",
+   "values": [
+    1.201,
+    0.362,
+    2.244
+   ],
+   "source": "P00125.json"
+  },
+  {
+   "claim": "C158 사후기 조정성과 ← raw_pct (adj_pct 통제)",
+   "values": [
+    0.0973,
+    0.0389,
+    0.1604
+   ],
+   "source": "P00125.json"
+  },
+  {
+   "claim": "C159 동일 계수 (leave-one-out 셀평균)",
+   "values": [
+    0.1027,
+    0.0339,
+    0.1761
+   ],
+   "source": "P00127.json"
+  },
+  {
+   "claim": "C160 (대조) 사후기 조정성과 ← adj_pct",
+   "values": [
+    0.2458,
+    0.208,
+    0.2787
+   ],
+   "source": "P00125.json"
+  },
+  {
+   "claim": "C161 여성 파트너의 terrain (fp → wedge)",
+   "values": [
+    -0.048,
+    -0.075,
+    -0.0254
+   ],
+   "source": "P00126.json"
+  },
+  {
+   "claim": "C162 여성 파트너의 사후기 조정성과 (fp → post_adj)",
+   "values": [
+    -0.0066,
+    -0.0482,
+    0.0337
+   ],
+   "source": "P00126.json"
+  },
+  {
+   "claim": "C164 S&S 교정 재실행 (전원여성 리드; Cox HR)",
+   "values": [
+    0.99,
+    -0.831,
+    0.466
+   ],
+   "source": "P00124.json"
+  }
+ ],
+ "retired": {}
+}

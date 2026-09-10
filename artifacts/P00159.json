@@ -1,0 +1,556 @@
+{
+  "id": "P001-59",
+  "title": "R6 ident 후속: 파트너 내 검정 확장(빈티지×지평·이탈 상태·회사 군집·LOO·IPO/인수·Holm·국가 벤치마크·선택) + 라운드 내 밴드 2,000회",
+  "status": "OK",
+  "n": 28556,
+  "estimates": {
+    "A_vintage_horizon": {
+      "exit_ever_2017": {
+        "all": {
+          "n": 28556,
+          "n_firms": 1994,
+          "ff": {
+            "coef": -0.01878,
+            "ci95": [
+              -0.037,
+              -0.0007
+            ],
+            "sig": true,
+            "se_boot": 0.00931,
+            "mde80": 0.0261
+          },
+          "ffp": {
+            "coef": -0.06507,
+            "ci95": [
+              -0.1197,
+              -0.0087
+            ],
+            "sig": true,
+            "se_boot": 0.02822,
+            "mde80": 0.079,
+            "beta_std": -0.1438,
+            "within_pm0.05": false,
+            "p_boot_two": 0.022
+          },
+          "n_partners": 1987,
+          "n_female_partners": 205,
+          "n_partners_all": 1998,
+          "n_female_partners_all": 206,
+          "sd_r": 0.45235
+        },
+        "2010-14": {
+          "n": 15203,
+          "n_firms": 1477,
+          "ff": {
+            "coef": -0.00751,
+            "ci95": [
+              -0.0342,
+              0.0165
+            ],
+            "sig": false,
+            "se_boot": 0.0132,
+            "mde80": 0.037
+          },
+          "ffp": {
+            "coef": -0.10539,
+            "ci95": [
+              -0.1793,
+              -0.0271
+            ],
+            "sig": true,
+            "se_boot": 0.03888,
+            "mde80": 0.1089,
+            "beta_std": -0.2338,
+            "within_pm0.05": false,
+            "p_boot_two": 0.005
+          },
+          "n_partners": 1146,
+          "n_female_partners": 89,
+          "n_partners_all": 1669,
+          "n_female_partners_all": 149,
+          "sd_r": 0.45074
+        },
+        "2015-17": {
+          "n": 12930,
+          "n_firms": 1597,
+          "ff": {
+            "coef": -0.0278,
+            "ci95": [
+              -0.0516,
+              -0.004
+            ],
+            "sig": true,
+            "se_boot": 0.012,
+            "mde80": 0.0336
+          },
+          "ffp": {
+            "coef": -0.03217,
+            "ci95": [
+              -0.0996,
+              0.0354
+            ],
+            "sig": false,
+            "se_boot": 0.03574,
+            "mde80": 0.1001,
+            "beta_std": -0.0708,
+            "within_pm0.05": false,
+            "p_boot_two": 0.39
+          },
+          "n_partners": 1291,
+          "n_female_partners": 147,
+          "n_partners_all": 1832,
+          "n_female_partners_all": 195,
+          "sd_r": 0.45407
+        }
+      },
+      "exit3_2020": {
+        "all": {
+          "n": 49835,
+          "n_firms": 3436,
+          "ff": {
+            "coef": -0.02551,
+            "ci95": [
+              -0.0341,
+              -0.0169
+            ],
+            "sig": true,
+            "se_boot": 0.00442,
+            "mde80": 0.0124
+          },
+          "ffp": {
+            "coef": 0.00482,
+            "ci95": [
+              -0.0193,
+              0.0279
+            ],
+            "sig": false,
+            "se_boot": 0.0123,
+            "mde80": 0.0345,
+            "beta_std": 0.0142,
+            "within_pm0.05": true,
+            "p_boot_two": 0.708
+          },
+          "n_partners": 3425,
+          "n_female_partners": 415,
+          "n_partners_all": 3448,
+          "n_female_partners_all": 418,
+          "sd_r": 0.33902
+        },
+        "2010-14": {
+          "n": 16389,
+          "n_firms": 1677,
+          "ff": {
+            "coef": -0.03225,
+            "ci95": [
+              -0.0504,
+              -0.014
+            ],
+            "sig": true,
+            "se_boot": 0.00922,
+            "mde80": 0.0258
+          },
+          "ffp": {
+            "coef": -0.03235,
+            "ci95": [
+              -0.0951,
+              0.0412
+            ],
+            "sig": false,
+            "se_boot": 0.03584,
+            "mde80": 0.1003,
+            "beta_std": -0.0876,
+            "within_pm0.05": false,
+            "p_boot_two": 0.435
+          },
+          "n_partners": 1146,
+          "n_female_partners": 89,
+          "n_partners_all": 1993,
+          "n_female_partners_all": 181,
+          "sd_r": 0.36947
+        },
+        "2015-17": {
+          "n": 15289,
+          "n_firms": 2017,
+          "ff": {
+            "coef": -0.0298,
+            "ci95": [
+              -0.0441,
+              -0.0142
+            ],
+            "sig": true,
+            "se_boot": 0.00796,
+            "mde80": 0.0223
+          },
+          "ffp": {
+            "coef": 0.00083,
+            "ci95": [
+              -0.045,
+              0.0486
+            ],
+            "sig": false,
+            "se_boot": 0.02333,
+            "mde80": 0.0653,
+            "beta_std": 0.0026,
+            "within_pm0.05": true,
+            "p_boot_two": 0.935
+          },
+          "n_partners": 1374,
+          "n_female_partners": 161,
+          "n_partners_all": 2599,
+          "n_female_partners_all": 311,
+          "sd_r": 0.32206
+        },
+        "2018-20": {
+          "n": 16831,
+          "n_firms": 2481,
+          "ff": {
+            "coef": -0.02375,
+            "ci95": [
+              -0.0374,
+              -0.0105
+            ],
+            "sig": true,
+            "se_boot": 0.00688,
+            "mde80": 0.0193
+          },
+          "ffp": {
+            "coef": 0.0291,
+            "ci95": [
+              -0.0015,
+              0.0595
+            ],
+            "sig": false,
+            "se_boot": 0.01536,
+            "mde80": 0.043,
+            "beta_std": 0.0901,
+            "within_pm0.05": false,
+            "p_boot_two": 0.07
+          },
+          "n_partners": 1926,
+          "n_female_partners": 264,
+          "n_partners_all": 2921,
+          "n_female_partners_all": 368,
+          "sd_r": 0.32301
+        }
+      },
+      "exit_ever_2017_active_partners": {
+        "n": 23710,
+        "n_firms": 1432,
+        "ff": {
+          "coef": -0.01612,
+          "ci95": [
+            -0.0396,
+            0.0058
+          ],
+          "sig": false,
+          "se_boot": 0.01106,
+          "mde80": 0.031
+        },
+        "ffp": {
+          "coef": -0.06634,
+          "ci95": [
+            -0.1248,
+            -0.0033
+          ],
+          "sig": true,
+          "se_boot": 0.03128,
+          "mde80": 0.0876,
+          "beta_std": -0.147,
+          "within_pm0.05": false,
+          "p_boot_two": 0.04
+        },
+        "n_partners": 1428,
+        "n_female_partners": 146,
+        "n_partners_all": 1432,
+        "n_female_partners_all": 146,
+        "sd_r": 0.45127
+      },
+      "exit_ever_2017_inactive_partners": {
+        "n": 4846,
+        "n_firms": 562,
+        "ff": {
+          "coef": -0.03036,
+          "ci95": [
+            -0.07,
+            0.0094
+          ],
+          "sig": false,
+          "se_boot": 0.02009,
+          "mde80": 0.0562
+        },
+        "ffp": {
+          "coef": -0.06222,
+          "ci95": [
+            -0.1806,
+            0.0557
+          ],
+          "sig": false,
+          "se_boot": 0.0638,
+          "mde80": 0.1786,
+          "beta_std": -0.1365,
+          "within_pm0.05": false,
+          "p_boot_two": 0.36
+        },
+        "n_partners": 559,
+        "n_female_partners": 59,
+        "n_partners_all": 566,
+        "n_female_partners_all": 60,
+        "sd_r": 0.45596
+      }
+    },
+    "B_clusters_benchmark": {
+      "exit3_company_cluster": {
+        "n": 49835,
+        "n_firms": 16820,
+        "ff": {
+          "coef": -0.02551,
+          "ci95": [
+            -0.037,
+            -0.0138
+          ],
+          "sig": true,
+          "se_boot": 0.00624,
+          "mde80": 0.0175
+        },
+        "ffp": {
+          "coef": 0.00482,
+          "ci95": [
+            -0.0209,
+            0.0275
+          ],
+          "sig": false,
+          "se_boot": 0.01309,
+          "mde80": 0.0367,
+          "beta_std": 0.0142,
+          "within_pm0.05": true,
+          "p_boot_two": 0.77
+        },
+        "n_partners": 3425,
+        "n_female_partners": 415,
+        "n_partners_all": 3448,
+        "n_female_partners_all": 418,
+        "sd_r": 0.33902
+      },
+      "exit_ever_company_cluster": {
+        "n": 28556,
+        "n_firms": 10071,
+        "ff": {
+          "coef": -0.01878,
+          "ci95": [
+            -0.0444,
+            0.0087
+          ],
+          "sig": false,
+          "se_boot": 0.01321,
+          "mde80": 0.037
+        },
+        "ffp": {
+          "coef": -0.06507,
+          "ci95": [
+            -0.1228,
+            -0.0091
+          ],
+          "sig": true,
+          "se_boot": 0.02895,
+          "mde80": 0.081,
+          "beta_std": -0.1438,
+          "within_pm0.05": false,
+          "p_boot_two": 0.015
+        },
+        "n_partners": 1987,
+        "n_female_partners": 205,
+        "n_partners_all": 1998,
+        "n_female_partners_all": 206,
+        "sd_r": 0.45235
+      },
+      "exit3_country_benchmark": {
+        "n": 48367,
+        "n_firms": 3386,
+        "ff": {
+          "coef": -0.02672,
+          "ci95": [
+            -0.0353,
+            -0.0178
+          ],
+          "sig": true,
+          "se_boot": 0.00434,
+          "mde80": 0.0121
+        },
+        "ffp": {
+          "coef": 0.00904,
+          "ci95": [
+            -0.0176,
+            0.0348
+          ],
+          "sig": false,
+          "se_boot": 0.01282,
+          "mde80": 0.0359,
+          "beta_std": 0.0274,
+          "within_pm0.05": true,
+          "p_boot_two": 0.445
+        },
+        "n_partners": 3319,
+        "n_female_partners": 402,
+        "n_partners_all": 3438,
+        "n_female_partners_all": 417,
+        "sd_r": 0.33021
+      }
+    },
+    "C_influence_decomposition_multiplicity": {
+      "exit_ever_loo_female": {
+        "base_coef": -0.06507,
+        "n_female": 206,
+        "max_abs_shift": 0.00881,
+        "shift_toward_zero_max": 0.00881
+      },
+      "ipo_ever": {
+        "n": 28556,
+        "n_firms": 1994,
+        "ff": {
+          "coef": 0.01275,
+          "ci95": [
+            0.0016,
+            0.0255
+          ],
+          "sig": true,
+          "se_boot": 0.00629,
+          "mde80": 0.0176
+        },
+        "ffp": {
+          "coef": -0.03019,
+          "ci95": [
+            -0.0658,
+            0.0044
+          ],
+          "sig": false,
+          "se_boot": 0.01795,
+          "mde80": 0.0503,
+          "beta_std": -0.1101,
+          "within_pm0.05": false,
+          "p_boot_two": 0.105
+        },
+        "n_partners": 1987,
+        "n_female_partners": 205,
+        "n_partners_all": 1998,
+        "n_female_partners_all": 206,
+        "sd_r": 0.27414
+      },
+      "acq_ever": {
+        "n": 28556,
+        "n_firms": 1994,
+        "ff": {
+          "coef": -0.03153,
+          "ci95": [
+            -0.052,
+            -0.0129
+          ],
+          "sig": true,
+          "se_boot": 0.01036,
+          "mde80": 0.029
+        },
+        "ffp": {
+          "coef": -0.03487,
+          "ci95": [
+            -0.0979,
+            0.0266
+          ],
+          "sig": false,
+          "se_boot": 0.03104,
+          "mde80": 0.0869,
+          "beta_std": -0.0753,
+          "within_pm0.05": false,
+          "p_boot_two": 0.265
+        },
+        "n_partners": 1987,
+        "n_female_partners": 205,
+        "n_partners_all": 1998,
+        "n_female_partners_all": 206,
+        "sd_r": 0.463
+      },
+      "holm_adjusted_p": {
+        "raw": {
+          "exit3": 0.708,
+          "fon": 0.424,
+          "exit_ever": 0.022
+        },
+        "holm": {
+          "exit_ever": 0.066,
+          "fon": 0.848,
+          "exit3": 0.848
+        }
+      }
+    },
+    "D_selection": {
+      "female_partner_ff_deals_2020": 1988,
+      "share_outside_within_partner_sample": 0.2339,
+      "female_partners_ff_only": 291
+    },
+    "E_within_round_2000": {
+      "any_female": {
+        "fp": {
+          "coef": -0.00379,
+          "ci95": [
+            -0.043,
+            0.0312
+          ],
+          "sig": false,
+          "se_boot": 0.019,
+          "mde80": 0.0532,
+          "within_pm0.05": true,
+          "margin_lo_pp": 0.7
+        },
+        "n": 1623,
+        "n_clusters": 390,
+        "nb": 2000
+      },
+      "female_only": {
+        "fp": {
+          "coef": -0.01536,
+          "ci95": [
+            -0.0588,
+            0.0321
+          ],
+          "sig": false,
+          "se_boot": 0.0229,
+          "mde80": 0.0641,
+          "within_pm0.05": false,
+          "margin_lo_pp": -0.88
+        },
+        "n": 1296,
+        "n_clusters": 324,
+        "nb": 2000
+      }
+    },
+    "prediction_check": {
+      "A_ev_2010_14_in_[-14,-6]_upper_lt0": true,
+      "A_ev_2015_17_in_[-7,1]_incl0": true,
+      "A_e3_2018_20_in_[1,6]": true,
+      "A_e3_2010_14_in_[-6,0]": true,
+      "A_active_in_[-9,-3]_upper_lt0": true,
+      "B_company_cluster_width_pm25pct": true,
+      "B_country_bench_within_1pp": true,
+      "C_loo_max_shift_lt_1.5pp": true,
+      "C_acq_larger_than_ipo": true,
+      "C_holm_ev_in_[0.03,0.15]": true,
+      "D_outside_share_lt_0.10": false,
+      "E_any_inside": true,
+      "E_fo_lower_in_[-7.5,-5.5]_outside": true
+    }
+  },
+  "prediction": "ev 2010–14 ∈[−14,−6] 상단<0; 2015–17 ∈[−7,+1] 0 포함; e3 2018–20 ∈[+1,+6]; 활동 파트너 ∈[−9,−3]; 회사 군집 ±25%; LOO<1.5; acq>ipo; Holm ev ∈[0.03,0.15]; 표본 밖<0.10; 2000회 any 안·fo 하단 ∈[−7.5,−5.5]",
+  "verdict": "exit_ever ≤2017: 2010–14 -10.54 [-17.93,-2.71] · 2015–17 -3.22 [-9.96,+3.54] · 활동 파트너 -6.63 [-12.48,-0.33] | exit3 ≤2020: 2010–14 -3.23 · 2015–17 +0.08 · 2018–20 +2.91 [-0.15,+5.95] | 회사 군집 exit3 [-2.09,+2.75] · 국가 벤치마크 +0.90 | LOO 최대 이동 0.88pp · ipo -3.02 · acq -3.49 · Holm p {'exit_ever': 0.066, 'fon': 0.848, 'exit3': 0.848} | 표본 밖 여성 FF 딜 0.234 | 2000회: any -0.38 [-4.30,+3.12] · fo -1.54 [-5.88,+3.21] ±5 False — 결손은 2010–14 빈티지 (예측 적중 12/13)",
+  "kill_met": false,
+  "code": "p001_59_within_partner_extensions.py",
+  "sha256_16": "3b26084abfec8048",
+  "seed": 42,
+  "runtime_s": 347.5,
+  "date": "2026-09-10",
+  "stage": 7,
+  "feeds": "R6 ident A/F → §4 ¶F 빈티지 문장 · Table 4 B 행 · Table 10 A 부트 2000",
+  "slug": "within_partner_extensions",
+  "builds_on": "P001-54/57/51",
+  "common_sha256_16": "a63e7b62854b47c6",
+  "v6_common_sha256_16": "0e382e764d14fdc8",
+  "rng_seed": 20260959,
+  "version": "v2 (code review 59 applied)"
+}

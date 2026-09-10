@@ -1,0 +1,296 @@
+{
+  "id": "P001-45",
+  "title": "P5: 금융 사다리 파이프라인 — 기업 소모 · 회사 후속 참여 · 파트너 재귀속 · 신규 진입 구성 (기술 통계)",
+  "status": "OK",
+  "n": 56930,
+  "estimates": {
+    "M1_attrition": {
+      "n_companies": 19434,
+      "n_ff": 3749,
+      "raw_reach_a": {
+        "ff": 0.5257,
+        "other": 0.6181
+      },
+      "raw_reach_b": {
+        "ff": 0.2993,
+        "other": 0.3774
+      },
+      "reach_a_cell": {
+        "n": 18178,
+        "n_firms": 18178,
+        "ff": {
+          "coef": -0.07241,
+          "ci95": [
+            -0.0895,
+            -0.054
+          ],
+          "sig": true,
+          "se_boot": 0.00906,
+          "mde80": 0.0254
+        }
+      },
+      "reach_b_cell": {
+        "n": 18178,
+        "n_firms": 18178,
+        "ff": {
+          "coef": -0.06339,
+          "ci95": [
+            -0.0811,
+            -0.0464
+          ],
+          "sig": true,
+          "se_boot": 0.00882,
+          "mde80": 0.0247
+        }
+      },
+      "reach_b_cell_excl_exit": {
+        "n": 14991,
+        "n_firms": 14991,
+        "ff": {
+          "coef": -0.08119,
+          "ci95": [
+            -0.0993,
+            -0.0622
+          ],
+          "sig": true,
+          "se_boot": 0.00975,
+          "mde80": 0.0273
+        }
+      },
+      "share_exit_before_b": {
+        "ff": 0.143,
+        "other": 0.1741
+      }
+    },
+    "M2_firm_followon": {
+      "n_deals_cond": 56930,
+      "four_cell_firm_followon": {
+        "fp0_ff0": 0.5233,
+        "fp0_ff1": 0.4887,
+        "fp1_ff0": 0.5029,
+        "fp1_ff1": 0.4284
+      },
+      "cond_balance": {
+        "n": 31390,
+        "n_firms": 2054,
+        "fp": {
+          "coef": -0.00342,
+          "ci95": [
+            -0.0225,
+            0.0148
+          ],
+          "sig": false,
+          "se_boot": 0.01004,
+          "mde80": 0.0281
+        },
+        "fpff": {
+          "coef": -0.00982,
+          "ci95": [
+            -0.0634,
+            0.0447
+          ],
+          "sig": false,
+          "se_boot": 0.02685,
+          "mde80": 0.0752
+        }
+      },
+      "firm_followon": {
+        "n": 20854,
+        "n_firms": 1575,
+        "fp": {
+          "coef": -0.00242,
+          "ci95": [
+            -0.0199,
+            0.0202
+          ],
+          "sig": false,
+          "se_boot": 0.00989,
+          "mde80": 0.0277
+        },
+        "fpff": {
+          "coef": -0.01223,
+          "ci95": [
+            -0.0667,
+            0.0324
+          ],
+          "sig": false,
+          "se_boot": 0.02644,
+          "mde80": 0.074
+        }
+      },
+      "coverage_next_investors": {
+        "n": 20854,
+        "n_firms": 1575,
+        "fp": {
+          "coef": 0.00717,
+          "ci95": [
+            -0.0039,
+            0.0194
+          ],
+          "sig": false,
+          "se_boot": 0.00622,
+          "mde80": 0.0174
+        },
+        "fpff": {
+          "coef": -0.00077,
+          "ci95": [
+            -0.0237,
+            0.0207
+          ],
+          "sig": false,
+          "se_boot": 0.01137,
+          "mde80": 0.0318
+        }
+      }
+    },
+    "M3_partner_reattribution": {
+      "n_deals_cond_firm": 29308,
+      "four_cell_repartner": {
+        "fp0_ff0": 0.896,
+        "fp0_ff1": 0.8694,
+        "fp1_ff0": 0.8494,
+        "fp1_ff1": 0.8487
+      },
+      "partner_reattr": {
+        "n": 10337,
+        "n_firms": 999,
+        "fp": {
+          "coef": -0.02679,
+          "ci95": [
+            -0.0694,
+            0.0072
+          ],
+          "sig": false,
+          "se_boot": 0.02043,
+          "mde80": 0.0572
+        },
+        "fpff": {
+          "coef": -0.00852,
+          "ci95": [
+            -0.0747,
+            0.0572
+          ],
+          "sig": false,
+          "se_boot": 0.03336,
+          "mde80": 0.0934
+        }
+      },
+      "coverage_next_partner": {
+        "n": 10337,
+        "n_firms": 999,
+        "fp": {
+          "coef": 0.00646,
+          "ci95": [
+            -0.0178,
+            0.032
+          ],
+          "sig": false,
+          "se_boot": 0.01342,
+          "mde80": 0.0376
+        },
+        "fpff": {
+          "coef": -0.04483,
+          "ci95": [
+            -0.1053,
+            0.014
+          ],
+          "sig": false,
+          "se_boot": 0.02987,
+          "mde80": 0.0836
+        }
+      }
+    },
+    "M4_entrants": {
+      "n_entrant_rows": 14879,
+      "fp_share_entrants": {
+        "late0_ff0": {
+          "share": 0.0831,
+          "n": 7782
+        },
+        "late0_ff1": {
+          "share": 0.1566,
+          "n": 1469
+        },
+        "late1_ff0": {
+          "share": 0.0802,
+          "n": 4898
+        },
+        "late1_ff1": {
+          "share": 0.1233,
+          "n": 730
+        }
+      },
+      "fp_share_incumbents": {
+        "late0_ff0": {
+          "share": 0.0783,
+          "n": 5940
+        },
+        "late0_ff1": {
+          "share": 0.1114,
+          "n": 987
+        },
+        "late1_ff0": {
+          "share": 0.0633,
+          "n": 9421
+        },
+        "late1_ff1": {
+          "share": 0.106,
+          "n": 1236
+        }
+      },
+      "entrant_fp_on_late": {
+        "n": 14879,
+        "n_firms": 8155,
+        "late": {
+          "coef": -0.0029,
+          "ci95": [
+            -0.0123,
+            0.0071
+          ],
+          "sig": false,
+          "se_boot": 0.00512,
+          "mde80": 0.0143
+        },
+        "lateff": {
+          "coef": -0.03038,
+          "ci95": [
+            -0.0681,
+            0.0055
+          ],
+          "sig": false,
+          "se_boot": 0.01839,
+          "mde80": 0.0515
+        }
+      }
+    },
+    "M5_late_ff_incumbent_share": {
+      "fp1": 0.5928,
+      "fp0": 0.6332,
+      "n_fp1": 221,
+      "n_fp0": 1745
+    },
+    "prediction_check": {
+      "M1_reach_b_in_[-0.07,-0.03]": true,
+      "M1_excl_exit_neg": true,
+      "M2_dd_in_[-0.06,0]_incl0": true,
+      "M3_dd_in_[-0.06,0]": true,
+      "M4_entrant_fp_lower_late": true,
+      "cond_balance_lt_0.02": true,
+      "coverage_dd_lt_0.02": false
+    }
+  },
+  "prediction": "series_b+ FF−기타 ∈[−0.07,−0.03]; 이중차 (2)(3) ∈[−0.06,0] CI 0 포함; 신규 진입 fp 후기<초기; 조건화 균형·커버리지 DD |b|<0.02",
+  "verdict": "(1) series_b+ 도달 FF−기타 셀 내 -0.0634 [-0.081,-0.046] (출구 제외 -0.0812) | (2) 회사 후속 fp×ff -0.0122 [-0.067,+0.032] MDE 0.074 | (3) 재귀속 fp×ff -0.0085 [-0.075,+0.057] | (4) 신규 진입 fp ← late -0.0029 · late×ff -0.0304 | 조건화 균형 fp×ff -0.0098 · 커버리지 DD -0.0008/-0.0448 — 이중차 미검출(MDE 병기) (예측 적중 6/7)",
+  "kill_met": false,
+  "code": "p001_45_ladder_pipeline.py",
+  "sha256_16": "ec197e08a1d57bbe",
+  "seed": 42,
+  "runtime_s": 169.0,
+  "date": "2026-09-09",
+  "stage": 7,
+  "feeds": "v6 설계 제안 P5 → §6 사다리 문단",
+  "slug": "ladder_pipeline",
+  "builds_on": "P001-06/17",
+  "common_sha256_16": "a63e7b62854b47c6",
+  "v6_common_sha256_16": "0e382e764d14fdc8"
+}

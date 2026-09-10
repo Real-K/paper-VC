@@ -1,0 +1,1006 @@
+{
+  "id": "P001-58",
+  "title": "공개 소스 변수 투입: 라운드 내 펀드 통제(CB funds·Form D T1) · §6 between 분해 · 특허 균형/통제(PatentsView v2)",
+  "status": "OK",
+  "n": 1623,
+  "estimates": {
+    "P1_within_round_fund_controls": {
+      "coverage": {
+        "n_rows": 1623,
+        "n_rounds": 535,
+        "cb_has_prior_fund": 0.7492,
+        "fd_any": 0.2298
+      },
+      "baseline": {
+        "any_female": {
+          "fp": {
+            "coef": -0.00379,
+            "ci95": [
+              -0.0427,
+              0.0332
+            ],
+            "sig": false,
+            "se_boot": 0.01915,
+            "mde80": 0.0536,
+            "within_pm0.05": true
+          },
+          "n": 1623,
+          "n_clusters": 390,
+          "controls": [
+            "ln_exp"
+          ]
+        },
+        "female_only": {
+          "fp": {
+            "coef": -0.01536,
+            "ci95": [
+              -0.0585,
+              0.0301
+            ],
+            "sig": false,
+            "se_boot": 0.02307,
+            "mde80": 0.0646,
+            "within_pm0.05": false
+          },
+          "n": 1296,
+          "n_clusters": 324,
+          "controls": [
+            "ln_exp"
+          ]
+        }
+      },
+      "cb_funds": {
+        "any_female": {
+          "fp": {
+            "coef": -0.00199,
+            "ci95": [
+              -0.0444,
+              0.0347
+            ],
+            "sig": false,
+            "se_boot": 0.02053,
+            "mde80": 0.0575,
+            "within_pm0.05": true
+          },
+          "n": 1623,
+          "n_clusters": 390,
+          "controls": [
+            "ln_exp",
+            "fund_age_f",
+            "ln_fund_size_f",
+            "fund_size_m",
+            "fund_seq",
+            "has_prior_fund"
+          ]
+        },
+        "female_only": {
+          "fp": {
+            "coef": -0.01367,
+            "ci95": [
+              -0.0588,
+              0.0381
+            ],
+            "sig": false,
+            "se_boot": 0.0239,
+            "mde80": 0.0669,
+            "within_pm0.05": false
+          },
+          "n": 1296,
+          "n_clusters": 324,
+          "controls": [
+            "ln_exp",
+            "fund_age_f",
+            "ln_fund_size_f",
+            "fund_size_m",
+            "fund_seq",
+            "has_prior_fund"
+          ]
+        },
+        "shift_any_pp": 0.18,
+        "shift_fo_pp": 0.169
+      },
+      "formd": {
+        "any_female": {
+          "fp": {
+            "coef": -0.0073,
+            "ci95": [
+              -0.0493,
+              0.0343
+            ],
+            "sig": false,
+            "se_boot": 0.02013,
+            "mde80": 0.0564,
+            "within_pm0.05": true
+          },
+          "n": 1623,
+          "n_clusters": 390,
+          "controls": [
+            "ln_exp",
+            "fd_n_before",
+            "fd_age_f",
+            "ln_fd_amount",
+            "fd_any"
+          ]
+        },
+        "female_only": {
+          "fp": {
+            "coef": -0.02139,
+            "ci95": [
+              -0.0638,
+              0.0249
+            ],
+            "sig": false,
+            "se_boot": 0.0231,
+            "mde80": 0.0647,
+            "within_pm0.05": false
+          },
+          "n": 1296,
+          "n_clusters": 324,
+          "controls": [
+            "ln_exp",
+            "fd_n_before",
+            "fd_age_f",
+            "ln_fd_amount",
+            "fd_any"
+          ]
+        },
+        "shift_any_pp": -0.351,
+        "shift_fo_pp": -0.603
+      },
+      "both": {
+        "any_female": {
+          "fp": {
+            "coef": -0.00422,
+            "ci95": [
+              -0.0441,
+              0.0325
+            ],
+            "sig": false,
+            "se_boot": 0.01982,
+            "mde80": 0.0555,
+            "within_pm0.05": true
+          },
+          "n": 1623,
+          "n_clusters": 390,
+          "controls": [
+            "ln_exp",
+            "fund_age_f",
+            "ln_fund_size_f",
+            "fund_size_m",
+            "fund_seq",
+            "has_prior_fund",
+            "fd_n_before",
+            "fd_age_f",
+            "ln_fd_amount",
+            "fd_any"
+          ]
+        },
+        "female_only": {
+          "fp": {
+            "coef": -0.01722,
+            "ci95": [
+              -0.0606,
+              0.0238
+            ],
+            "sig": false,
+            "se_boot": 0.0217,
+            "mde80": 0.0608,
+            "within_pm0.05": false
+          },
+          "n": 1296,
+          "n_clusters": 324,
+          "controls": [
+            "ln_exp",
+            "fund_age_f",
+            "ln_fund_size_f",
+            "fund_size_m",
+            "fund_seq",
+            "has_prior_fund",
+            "fd_n_before",
+            "fd_age_f",
+            "ln_fd_amount",
+            "fd_any"
+          ]
+        },
+        "shift_any_pp": -0.043,
+        "shift_fo_pp": -0.186
+      },
+      "balance": {
+        "fund_age": {
+          "fp": {
+            "coef": -0.3392,
+            "ci95": [
+              -0.5944,
+              -0.1082
+            ],
+            "sig": true,
+            "se_boot": 0.12227,
+            "mde80": 0.3424,
+            "std_diff": -0.1814
+          },
+          "n": 1106
+        },
+        "ln_fund_size": {
+          "fp": {
+            "coef": -0.37325,
+            "ci95": [
+              -0.6088,
+              -0.162
+            ],
+            "sig": true,
+            "se_boot": 0.11185,
+            "mde80": 0.3132,
+            "std_diff": -0.2355
+          },
+          "n": 972
+        },
+        "fund_seq": {
+          "fp": {
+            "coef": 0.32476,
+            "ci95": [
+              -0.2994,
+              0.9823
+            ],
+            "sig": false,
+            "se_boot": 0.34352,
+            "mde80": 0.9619,
+            "std_diff": 0.0595
+          },
+          "n": 1623
+        },
+        "has_prior_fund": {
+          "fp": {
+            "coef": -0.02134,
+            "ci95": [
+              -0.0657,
+              0.027
+            ],
+            "sig": false,
+            "se_boot": 0.02337,
+            "mde80": 0.0654,
+            "std_diff": -0.0492
+          },
+          "n": 1623
+        },
+        "fd_n_before": {
+          "fp": {
+            "coef": 0.01433,
+            "ci95": [
+              -0.2404,
+              0.2485
+            ],
+            "sig": false,
+            "se_boot": 0.12357,
+            "mde80": 0.346,
+            "std_diff": 0.0065
+          },
+          "n": 1623
+        },
+        "fd_any": {
+          "fp": {
+            "coef": 0.04552,
+            "ci95": [
+              -0.0128,
+              0.0981
+            ],
+            "sig": false,
+            "se_boot": 0.02783,
+            "mde80": 0.0779,
+            "std_diff": 0.1082
+          },
+          "n": 1623
+        },
+        "ln_fd_amount": {
+          "fp": {
+            "coef": 0.95382,
+            "ci95": [
+              -0.0827,
+              2.0331
+            ],
+            "sig": false,
+            "se_boot": 0.536,
+            "mde80": 1.5008,
+            "std_diff": 0.1266
+          },
+          "n": 1623
+        }
+      },
+      "positive_controls": {
+        "fund_age": {
+          "coef": {
+            "coef": -0.02108,
+            "ci95": [
+              -0.0349,
+              -0.0082
+            ],
+            "sig": true,
+            "se_boot": 0.00679,
+            "mde80": 0.019
+          },
+          "n": 1106
+        },
+        "ln_fund_size": {
+          "coef": {
+            "coef": 0.03472,
+            "ci95": [
+              0.0165,
+              0.0532
+            ],
+            "sig": true,
+            "se_boot": 0.00978,
+            "mde80": 0.0274
+          },
+          "n": 972
+        },
+        "fund_seq": {
+          "coef": {
+            "coef": 0.00663,
+            "ci95": [
+              0.0023,
+              0.0139
+            ],
+            "sig": true,
+            "se_boot": 0.0029,
+            "mde80": 0.0081
+          },
+          "n": 1623
+        },
+        "has_prior_fund": {
+          "coef": {
+            "coef": 0.06285,
+            "ci95": [
+              0.0073,
+              0.119
+            ],
+            "sig": true,
+            "se_boot": 0.02949,
+            "mde80": 0.0826
+          },
+          "n": 1623
+        },
+        "fd_n_before": {
+          "coef": {
+            "coef": 0.01671,
+            "ci95": [
+              0.006,
+              0.0271
+            ],
+            "sig": true,
+            "se_boot": 0.00548,
+            "mde80": 0.0153
+          },
+          "n": 1623
+        },
+        "fd_any": {
+          "coef": {
+            "coef": 0.0262,
+            "ci95": [
+              -0.0245,
+              0.0737
+            ],
+            "sig": false,
+            "se_boot": 0.02531,
+            "mde80": 0.0709
+          },
+          "n": 1623
+        },
+        "ln_fd_amount": {
+          "coef": {
+            "coef": 0.00228,
+            "ci95": [
+              -0.0003,
+              0.0049
+            ],
+            "sig": false,
+            "se_boot": 0.00135,
+            "mde80": 0.0038
+          },
+          "n": 1623
+        }
+      }
+    },
+    "P2_between_firm_decomposition": {
+      "n_partners": 2661,
+      "n_firms": 1152,
+      "firm_cb_any_fund": 0.8561,
+      "firm_fd_any": 0.2078,
+      "baseline": {
+        "n": 2017,
+        "n_firms": 945,
+        "dev_terrain": {
+          "coef": -0.01837,
+          "ci95": [
+            -0.2729,
+            0.2245
+          ],
+          "sig": false,
+          "se_boot": 0.12579,
+          "mde80": 0.3522
+        },
+        "fm_terrain": {
+          "coef": 0.43452,
+          "ci95": [
+            0.1997,
+            0.6542
+          ],
+          "sig": true,
+          "se_boot": 0.11929,
+          "mde80": 0.334
+        },
+        "contrast_within_minus_between": {
+          "coef": -0.4529,
+          "ci95": [
+            -0.8274,
+            -0.1477
+          ],
+          "sig": true
+        }
+      },
+      "firm_cb": {
+        "n": 2017,
+        "n_firms": 945,
+        "dev_terrain": {
+          "coef": -0.01979,
+          "ci95": [
+            -0.2904,
+            0.2473
+          ],
+          "sig": false,
+          "se_boot": 0.13827,
+          "mde80": 0.3872
+        },
+        "fm_terrain": {
+          "coef": 0.43423,
+          "ci95": [
+            0.1604,
+            0.704
+          ],
+          "sig": true,
+          "se_boot": 0.13723,
+          "mde80": 0.3842
+        },
+        "fund_seq_cut": {
+          "coef": -0.00111,
+          "ci95": [
+            -0.0046,
+            0.0018
+          ],
+          "sig": false,
+          "se_boot": 0.0016,
+          "mde80": 0.0045
+        },
+        "ln_cum_usd_cut": {
+          "coef": 0.00167,
+          "ci95": [
+            -0.0005,
+            0.0039
+          ],
+          "sig": false,
+          "se_boot": 0.00121,
+          "mde80": 0.0034
+        },
+        "fund_age_cut_f": {
+          "coef": -0.00138,
+          "ci95": [
+            -0.0063,
+            0.004
+          ],
+          "sig": false,
+          "se_boot": 0.00269,
+          "mde80": 0.0075
+        },
+        "any_fund_cut": {
+          "coef": -0.0415,
+          "ci95": [
+            -0.0951,
+            0.0129
+          ],
+          "sig": false,
+          "se_boot": 0.02732,
+          "mde80": 0.0765
+        },
+        "contrast_within_minus_between": {
+          "coef": -0.45402,
+          "ci95": [
+            -0.8316,
+            -0.0969
+          ],
+          "sig": true
+        }
+      },
+      "firm_formd": {
+        "n": 2017,
+        "n_firms": 945,
+        "dev_terrain": {
+          "coef": -0.01978,
+          "ci95": [
+            -0.2456,
+            0.2259
+          ],
+          "sig": false,
+          "se_boot": 0.12953,
+          "mde80": 0.3627
+        },
+        "fm_terrain": {
+          "coef": 0.43025,
+          "ci95": [
+            0.1727,
+            0.6896
+          ],
+          "sig": true,
+          "se_boot": 0.12578,
+          "mde80": 0.3522
+        },
+        "fd_n_cut": {
+          "coef": -0.00478,
+          "ci95": [
+            -0.0151,
+            0.001
+          ],
+          "sig": false,
+          "se_boot": 0.00389,
+          "mde80": 0.0109
+        },
+        "ln_fd_amount_cut": {
+          "coef": 0.00048,
+          "ci95": [
+            -0.0038,
+            0.0044
+          ],
+          "sig": false,
+          "se_boot": 0.00214,
+          "mde80": 0.006
+        },
+        "fd_any_cut": {
+          "coef": 0.01955,
+          "ci95": [
+            -0.0532,
+            0.0905
+          ],
+          "sig": false,
+          "se_boot": 0.03874,
+          "mde80": 0.1085
+        },
+        "contrast_within_minus_between": {
+          "coef": -0.45004,
+          "ci95": [
+            -0.7901,
+            -0.1443
+          ],
+          "sig": true
+        }
+      },
+      "firm_both": {
+        "n": 2017,
+        "n_firms": 945,
+        "dev_terrain": {
+          "coef": -0.01876,
+          "ci95": [
+            -0.2882,
+            0.2566
+          ],
+          "sig": false,
+          "se_boot": 0.13791,
+          "mde80": 0.3861
+        },
+        "fm_terrain": {
+          "coef": 0.42784,
+          "ci95": [
+            0.1544,
+            0.6641
+          ],
+          "sig": true,
+          "se_boot": 0.13309,
+          "mde80": 0.3727
+        },
+        "fund_seq_cut": {
+          "coef": -0.00045,
+          "ci95": [
+            -0.0048,
+            0.0024
+          ],
+          "sig": false,
+          "se_boot": 0.00172,
+          "mde80": 0.0048
+        },
+        "ln_cum_usd_cut": {
+          "coef": 0.00161,
+          "ci95": [
+            -0.0007,
+            0.0042
+          ],
+          "sig": false,
+          "se_boot": 0.0013,
+          "mde80": 0.0036
+        },
+        "fund_age_cut_f": {
+          "coef": -0.00107,
+          "ci95": [
+            -0.0063,
+            0.0044
+          ],
+          "sig": false,
+          "se_boot": 0.00267,
+          "mde80": 0.0075
+        },
+        "any_fund_cut": {
+          "coef": -0.04599,
+          "ci95": [
+            -0.103,
+            0.0094
+          ],
+          "sig": false,
+          "se_boot": 0.02959,
+          "mde80": 0.0828
+        },
+        "fd_n_cut": {
+          "coef": -0.00502,
+          "ci95": [
+            -0.0137,
+            0.0015
+          ],
+          "sig": false,
+          "se_boot": 0.00374,
+          "mde80": 0.0105
+        },
+        "ln_fd_amount_cut": {
+          "coef": 0.00033,
+          "ci95": [
+            -0.0044,
+            0.0043
+          ],
+          "sig": false,
+          "se_boot": 0.00224,
+          "mde80": 0.0063
+        },
+        "fd_any_cut": {
+          "coef": 0.02381,
+          "ci95": [
+            -0.0516,
+            0.1079
+          ],
+          "sig": false,
+          "se_boot": 0.04133,
+          "mde80": 0.1157
+        },
+        "contrast_within_minus_between": {
+          "coef": -0.4466,
+          "ci95": [
+            -0.7601,
+            -0.0489
+          ],
+          "sig": true
+        }
+      },
+      "fm_terrain_on_firm_vars": {
+        "r2": 0.0596,
+        "n_firms": 1152,
+        "coefs": {
+          "fund_seq_cut": {
+            "coef": 0.00273,
+            "ci95": [
+              0.0011,
+              0.0045
+            ],
+            "sig": true,
+            "se_boot": 0.0009,
+            "mde80": 0.0025
+          },
+          "ln_cum_usd_cut": {
+            "coef": 0.00152,
+            "ci95": [
+              0.0006,
+              0.0024
+            ],
+            "sig": true,
+            "se_boot": 0.00045,
+            "mde80": 0.0013
+          },
+          "fund_age_cut_f": {
+            "coef": 0.00374,
+            "ci95": [
+              0.0025,
+              0.0052
+            ],
+            "sig": true,
+            "se_boot": 0.00068,
+            "mde80": 0.0019
+          },
+          "any_fund_cut": {
+            "coef": -0.02806,
+            "ci95": [
+              -0.0475,
+              -0.0102
+            ],
+            "sig": true,
+            "se_boot": 0.00939,
+            "mde80": 0.0263
+          },
+          "fd_n_cut": {
+            "coef": 0.00081,
+            "ci95": [
+              -0.0025,
+              0.004
+            ],
+            "sig": false,
+            "se_boot": 0.00177,
+            "mde80": 0.0049
+          },
+          "ln_fd_amount_cut": {
+            "coef": 0.00064,
+            "ci95": [
+              -0.0005,
+              0.0019
+            ],
+            "sig": false,
+            "se_boot": 0.00059,
+            "mde80": 0.0016
+          },
+          "fd_any_cut": {
+            "coef": -0.01028,
+            "ci95": [
+              -0.0306,
+              0.0135
+            ],
+            "sig": false,
+            "se_boot": 0.01072,
+            "mde80": 0.03
+          }
+        }
+      },
+      "fm_terrain_drop_share_both": 0.0154
+    },
+    "P3_patents": {
+      "balance_identifying_cells": {
+        "n_cells": 61,
+        "n_deals": 195,
+        "covs": {
+          "any_patent_before": {
+            "fp": {
+              "coef": -0.11876,
+              "ci95": [
+                -0.2085,
+                -0.0516
+              ],
+              "sig": true,
+              "se_boot": 0.04066,
+              "mde80": 0.1139,
+              "std_diff": -0.2695,
+              "ci95_sd": [
+                -0.4732,
+                -0.1171
+              ],
+              "mde80_sd": 0.2585
+            },
+            "n": 195,
+            "mean_male": 0.3304
+          },
+          "ln_app_before": {
+            "fp": {
+              "coef": -0.26554,
+              "ci95": [
+                -0.4297,
+                -0.1008
+              ],
+              "sig": true,
+              "se_boot": 0.08285,
+              "mde80": 0.232,
+              "std_diff": -0.3237,
+              "ci95_sd": [
+                -0.5238,
+                -0.1229
+              ],
+              "mde80_sd": 0.2828
+            },
+            "n": 195,
+            "mean_male": 0.5764
+          },
+          "matched_assignee": {
+            "fp": {
+              "coef": -0.09798,
+              "ci95": [
+                -0.2292,
+                0.0421
+              ],
+              "sig": false,
+              "se_boot": 0.0708,
+              "mde80": 0.1982,
+              "std_diff": -0.1962,
+              "ci95_sd": [
+                -0.459,
+                0.0843
+              ],
+              "mde80_sd": 0.3969
+            },
+            "n": 195,
+            "mean_male": 0.5
+          }
+        }
+      },
+      "balance_all_mixed_cells": {
+        "n_cells": 174,
+        "n_deals": 430,
+        "covs": {
+          "any_patent_before": {
+            "fp": {
+              "coef": -0.05045,
+              "ci95": [
+                -0.0904,
+                -0.0203
+              ],
+              "sig": true,
+              "se_boot": 0.01752,
+              "mde80": 0.049,
+              "std_diff": -0.1185,
+              "ci95_sd": [
+                -0.2123,
+                -0.0477
+              ],
+              "mde80_sd": 0.1151
+            },
+            "n": 430,
+            "mean_male": 0.2672
+          },
+          "ln_app_before": {
+            "fp": {
+              "coef": -0.11281,
+              "ci95": [
+                -0.191,
+                -0.0501
+              ],
+              "sig": true,
+              "se_boot": 0.03771,
+              "mde80": 0.1056,
+              "std_diff": -0.1487,
+              "ci95_sd": [
+                -0.2518,
+                -0.066
+              ],
+              "mde80_sd": 0.1392
+            },
+            "n": 430,
+            "mean_male": 0.4386
+          },
+          "matched_assignee": {
+            "fp": {
+              "coef": -0.04163,
+              "ci95": [
+                -0.1021,
+                0.0136
+              ],
+              "sig": false,
+              "se_boot": 0.03001,
+              "mde80": 0.084,
+              "std_diff": -0.0848,
+              "ci95_sd": [
+                -0.208,
+                0.0277
+              ],
+              "mde80_sd": 0.1711
+            },
+            "n": 430,
+            "mean_male": 0.4181
+          }
+        }
+      },
+      "within_partner_exit3": {
+        "baseline": {
+          "n": 49835,
+          "n_firms": 3436,
+          "ff": {
+            "coef": -0.02551,
+            "ci95": [
+              -0.0338,
+              -0.0158
+            ],
+            "sig": true,
+            "se_boot": 0.00446,
+            "mde80": 0.0125
+          },
+          "ffp": {
+            "coef": 0.00482,
+            "ci95": [
+              -0.019,
+              0.0275
+            ],
+            "sig": false,
+            "se_boot": 0.01217,
+            "mde80": 0.0341,
+            "beta_std": 0.0142,
+            "within_pm0.05": true
+          }
+        },
+        "patents": {
+          "n": 49835,
+          "n_firms": 3436,
+          "ff": {
+            "coef": -0.02509,
+            "ci95": [
+              -0.0331,
+              -0.0163
+            ],
+            "sig": true,
+            "se_boot": 0.00427,
+            "mde80": 0.012
+          },
+          "ffp": {
+            "coef": 0.00532,
+            "ci95": [
+              -0.0178,
+              0.0283
+            ],
+            "sig": false,
+            "se_boot": 0.01237,
+            "mde80": 0.0346,
+            "beta_std": 0.0157,
+            "within_pm0.05": true
+          },
+          "any_patent_before": {
+            "coef": 0.03988,
+            "ci95": [
+              0.0236,
+              0.0566
+            ],
+            "sig": true,
+            "se_boot": 0.00899,
+            "mde80": 0.0252
+          },
+          "ln_app_before": {
+            "coef": 0.01522,
+            "ci95": [
+              0.0059,
+              0.0255
+            ],
+            "sig": true,
+            "se_boot": 0.00496,
+            "mde80": 0.0139
+          },
+          "matched_assignee": {
+            "coef": -0.08402,
+            "ci95": [
+              -0.0959,
+              -0.0732
+            ],
+            "sig": true,
+            "se_boot": 0.0055,
+            "mde80": 0.0154
+          }
+        },
+        "shift_pp": 0.05,
+        "deal_coverage": {
+          "matched_assignee": 0.3625,
+          "any_patent_before": 0.2214
+        }
+      }
+    },
+    "prediction_check": {
+      "P1_cb_shift_any_lt_0.6": true,
+      "P1_cb_shift_fo_lt_0.8": true,
+      "P1_fd_shift_any_lt_0.6": true,
+      "P1_fd_cov_0.25_0.45": false,
+      "P1_fund_age_neg_detected": true,
+      "P1_fund_seq_size_not_detected": false,
+      "P2_baseline_reproduces_0.435": true,
+      "P2_fm_both_in_[0.30,0.50]": true,
+      "P2_contrast_still_sig": true,
+      "P2_r2_lt_0.10": true,
+      "P3a_any_patent_diff_in_pm0.10_ns": false,
+      "P3b_shift_lt_0.3pp": true,
+      "P3b_any_patent_pos_detected": true
+    }
+  },
+  "prediction": "P1 이동<0.6/0.8pp, fd 커버 0.25–0.45, fund_age 음 검출; P2 fm 0.435 재현, 회사 변수 후 [0.30,0.50], 대비 유지, R²<0.10; P3 any_patent 차 ±0.10 미검출, β_int 이동<0.3, any_patent→r +2~6pp",
+  "verdict": "P1: any-female -0.38 → CB -0.20 · FormD -0.73 · both -0.42; female-only -1.54 → both -1.72 (밴드 False); Form D 커버 0.23 | P2: fm_terrain +0.435 → 회사 변수 투입 +0.428 [+0.154,+0.664] (감소 0.0154), 대비 -0.447 sig True, R² 0.060 | P3: 식별 셀 any_patent fp 차 -0.119 (d -0.2695); β_int +0.48 → +0.53 · any_patent → r +3.99pp (예측 적중 10/13)",
+  "kill_met": false,
+  "code": "p001_58_public_sources_controls.py",
+  "sha256_16": "f1d27e1917f02afb",
+  "seed": 42,
+  "runtime_s": 445.4,
+  "date": "2026-09-09",
+  "stage": 7,
+  "feeds": "R5 F-3/R5-4/R5-1 후속 · §4 ¶3 · §6 · Table 10 A/B · Table 4 B",
+  "slug": "public_sources_controls",
+  "builds_on": "P001-51/56/38/52/54; cb_funds_v1; formd_v1 T1; patents_v1 v2",
+  "common_sha256_16": "a63e7b62854b47c6",
+  "v6_common_sha256_16": "0e382e764d14fdc8"
+}

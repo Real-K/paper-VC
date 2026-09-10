@@ -1,0 +1,728 @@
+{
+  "id": "P001-51",
+  "title": "R5 A-1: 라운드 내 재참여 설계의 변형 배터리 — 처치 정의·사전 투자자 통제·두-방향 FE·투자자 군집·양성 대조·추정 대상",
+  "status": "PARTIAL",
+  "n": 1623,
+  "estimates": {
+    "A_baseline": {
+      "fp": {
+        "coef": -0.00379,
+        "ci95": [
+          -0.0396,
+          0.0315
+        ],
+        "sig": false,
+        "se_boot": 0.01861,
+        "mde80": 0.0521,
+        "within_pm0.05": true,
+        "margin_lo_pp": 1.04,
+        "margin_hi_pp": 1.85
+      },
+      "n": 1623,
+      "n_clusters": 390,
+      "controls": [
+        "ln_exp"
+      ],
+      "p42_b_FF": -0.00385,
+      "reproduces_p42_4dp": false
+    },
+    "B_treatment_definition": {
+      "n_mixed_attr_rows_dropped": 127,
+      "female_only": {
+        "fp": {
+          "coef": -0.01536,
+          "ci95": [
+            -0.0694,
+            0.0275
+          ],
+          "sig": false,
+          "se_boot": 0.02315,
+          "mde80": 0.0648,
+          "within_pm0.05": false,
+          "margin_lo_pp": -1.94,
+          "margin_hi_pp": 2.25
+        },
+        "n": 1296,
+        "n_clusters": 324,
+        "controls": [
+          "ln_exp"
+        ],
+        "n_rounds": 436,
+        "n_companies": 324
+      },
+      "three_category": {
+        "female_only_vs_male_only": {
+          "coef": -0.01381,
+          "ci95": [
+            -0.0573,
+            0.0265
+          ],
+          "sig": false,
+          "se_boot": 0.02171,
+          "mde80": 0.0608,
+          "within_pm0.05": false,
+          "margin_lo_pp": -0.73,
+          "margin_hi_pp": 2.35
+        },
+        "mixed_vs_male_only": {
+          "coef": 0.03566,
+          "ci95": [
+            -0.0418,
+            0.1026
+          ],
+          "sig": false,
+          "se_boot": 0.03628,
+          "mde80": 0.1016,
+          "within_pm0.05": false,
+          "margin_lo_pp": 0.82,
+          "margin_hi_pp": -5.26
+        },
+        "n": 1623,
+        "n_mixed_rows": 127
+      },
+      "any_female_investor_cluster": {
+        "fp": {
+          "coef": -0.00379,
+          "ci95": [
+            -0.0346,
+            0.0278
+          ],
+          "sig": false,
+          "se_boot": 0.01602,
+          "mde80": 0.0449,
+          "within_pm0.05": true,
+          "margin_lo_pp": 1.54,
+          "margin_hi_pp": 2.22
+        },
+        "n": 1623,
+        "n_clusters": 760,
+        "controls": [
+          "ln_exp"
+        ]
+      },
+      "female_only_investor_cluster": {
+        "fp": {
+          "coef": -0.01536,
+          "ci95": [
+            -0.0491,
+            0.0213
+          ],
+          "sig": false,
+          "se_boot": 0.01729,
+          "mde80": 0.0484,
+          "within_pm0.05": true,
+          "margin_lo_pp": 0.09,
+          "margin_hi_pp": 2.87
+        },
+        "n": 1296,
+        "n_clusters": 672,
+        "controls": [
+          "ln_exp"
+        ]
+      }
+    },
+    "C_pre_round_controls": {
+      "pre_ff_share": {
+        "any_female": {
+          "fp": {
+            "coef": -0.00309,
+            "ci95": [
+              -0.0422,
+              0.0331
+            ],
+            "sig": false,
+            "se_boot": 0.02,
+            "mde80": 0.056,
+            "within_pm0.05": true,
+            "margin_lo_pp": 0.78,
+            "margin_hi_pp": 1.69
+          },
+          "n": 1623,
+          "n_clusters": 390,
+          "controls": [
+            "ln_exp",
+            "pre_ff_share_f",
+            "pre_any"
+          ]
+        },
+        "female_only": {
+          "fp": {
+            "coef": -0.01392,
+            "ci95": [
+              -0.0558,
+              0.0308
+            ],
+            "sig": false,
+            "se_boot": 0.02218,
+            "mde80": 0.0621,
+            "within_pm0.05": false,
+            "margin_lo_pp": -0.58,
+            "margin_hi_pp": 1.92
+          },
+          "n": 1296,
+          "n_clusters": 324,
+          "controls": [
+            "ln_exp",
+            "pre_ff_share_f",
+            "pre_any"
+          ]
+        },
+        "shift_vs_baseline_pp": 0.07
+      },
+      "pre_early_share": {
+        "any_female": {
+          "fp": {
+            "coef": 0.00078,
+            "ci95": [
+              -0.039,
+              0.0389
+            ],
+            "sig": false,
+            "se_boot": 0.01898,
+            "mde80": 0.0532,
+            "within_pm0.05": true,
+            "margin_lo_pp": 1.1,
+            "margin_hi_pp": 1.11
+          },
+          "n": 1623,
+          "n_clusters": 390,
+          "controls": [
+            "ln_exp",
+            "pre_early_share_f",
+            "pre_any"
+          ]
+        },
+        "female_only": {
+          "fp": {
+            "coef": -0.01173,
+            "ci95": [
+              -0.0547,
+              0.0296
+            ],
+            "sig": false,
+            "se_boot": 0.02225,
+            "mde80": 0.0623,
+            "within_pm0.05": false,
+            "margin_lo_pp": -0.47,
+            "margin_hi_pp": 2.04
+          },
+          "n": 1296,
+          "n_clusters": 324,
+          "controls": [
+            "ln_exp",
+            "pre_early_share_f",
+            "pre_any"
+          ]
+        },
+        "shift_vs_baseline_pp": 0.457
+      },
+      "ln_pre_n": {
+        "any_female": {
+          "fp": {
+            "coef": -0.00432,
+            "ci95": [
+              -0.0425,
+              0.0352
+            ],
+            "sig": false,
+            "se_boot": 0.01905,
+            "mde80": 0.0534,
+            "within_pm0.05": true,
+            "margin_lo_pp": 0.75,
+            "margin_hi_pp": 1.48
+          },
+          "n": 1623,
+          "n_clusters": 390,
+          "controls": [
+            "ln_exp",
+            "ln_pre_n"
+          ]
+        },
+        "female_only": {
+          "fp": {
+            "coef": -0.01536,
+            "ci95": [
+              -0.0555,
+              0.0296
+            ],
+            "sig": false,
+            "se_boot": 0.02231,
+            "mde80": 0.0625,
+            "within_pm0.05": false,
+            "margin_lo_pp": -0.55,
+            "margin_hi_pp": 2.04
+          },
+          "n": 1296,
+          "n_clusters": 324,
+          "controls": [
+            "ln_exp",
+            "ln_pre_n"
+          ]
+        },
+        "shift_vs_baseline_pp": -0.053
+      },
+      "firm_age": {
+        "any_female": {
+          "fp": {
+            "coef": -0.00314,
+            "ci95": [
+              -0.0406,
+              0.0407
+            ],
+            "sig": false,
+            "se_boot": 0.02068,
+            "mde80": 0.0579,
+            "within_pm0.05": true,
+            "margin_lo_pp": 0.94,
+            "margin_hi_pp": 0.93
+          },
+          "n": 1623,
+          "n_clusters": 390,
+          "controls": [
+            "ln_exp",
+            "firm_age_f",
+            "firm_age_m"
+          ]
+        },
+        "female_only": {
+          "fp": {
+            "coef": -0.01339,
+            "ci95": [
+              -0.0547,
+              0.0333
+            ],
+            "sig": false,
+            "se_boot": 0.02272,
+            "mde80": 0.0636,
+            "within_pm0.05": false,
+            "margin_lo_pp": -0.47,
+            "margin_hi_pp": 1.67
+          },
+          "n": 1296,
+          "n_clusters": 324,
+          "controls": [
+            "ln_exp",
+            "firm_age_f",
+            "firm_age_m"
+          ]
+        },
+        "shift_vs_baseline_pp": 0.065
+      },
+      "fund_age": {
+        "any_female": {
+          "fp": {
+            "coef": -0.00708,
+            "ci95": [
+              -0.0461,
+              0.0263
+            ],
+            "sig": false,
+            "se_boot": 0.01872,
+            "mde80": 0.0524,
+            "within_pm0.05": true,
+            "margin_lo_pp": 0.39,
+            "margin_hi_pp": 2.37
+          },
+          "n": 1623,
+          "n_clusters": 390,
+          "controls": [
+            "ln_exp",
+            "fund_age_f",
+            "fund_age_m"
+          ]
+        },
+        "female_only": {
+          "fp": {
+            "coef": -0.01867,
+            "ci95": [
+              -0.0601,
+              0.028
+            ],
+            "sig": false,
+            "se_boot": 0.02225,
+            "mde80": 0.0623,
+            "within_pm0.05": false,
+            "margin_lo_pp": -1.01,
+            "margin_hi_pp": 2.2
+          },
+          "n": 1296,
+          "n_clusters": 324,
+          "controls": [
+            "ln_exp",
+            "fund_age_f",
+            "fund_age_m"
+          ]
+        },
+        "shift_vs_baseline_pp": -0.329
+      },
+      "all_pre_round": {
+        "any_female": {
+          "fp": {
+            "coef": -0.00671,
+            "ci95": [
+              -0.0414,
+              0.0283
+            ],
+            "sig": false,
+            "se_boot": 0.01842,
+            "mde80": 0.0516,
+            "within_pm0.05": true,
+            "margin_lo_pp": 0.86,
+            "margin_hi_pp": 2.17
+          },
+          "n": 1623,
+          "n_clusters": 390,
+          "controls": [
+            "ln_exp",
+            "pre_ff_share_f",
+            "pre_early_share_f",
+            "pre_any",
+            "ln_pre_n",
+            "firm_age_f",
+            "firm_age_m",
+            "fund_age_f",
+            "fund_age_m"
+          ]
+        },
+        "female_only": {
+          "fp": {
+            "coef": -0.01587,
+            "ci95": [
+              -0.0609,
+              0.0277
+            ],
+            "sig": false,
+            "se_boot": 0.02263,
+            "mde80": 0.0634,
+            "within_pm0.05": false,
+            "margin_lo_pp": -1.09,
+            "margin_hi_pp": 2.23
+          },
+          "n": 1296,
+          "n_clusters": 324,
+          "controls": [
+            "ln_exp",
+            "pre_ff_share_f",
+            "pre_early_share_f",
+            "pre_any",
+            "ln_pre_n",
+            "firm_age_f",
+            "firm_age_m",
+            "fund_age_f",
+            "fund_age_m"
+          ]
+        },
+        "shift_vs_baseline_pp": -0.292
+      }
+    },
+    "D_investor_balance": {
+      "pre_ff_share": {
+        "fp": {
+          "coef": 0.07123,
+          "ci95": [
+            0.0436,
+            0.1008
+          ],
+          "sig": true,
+          "se_boot": 0.01441,
+          "mde80": 0.0403,
+          "std_diff": 0.302,
+          "mean_male_attr": 0.2008
+        },
+        "n": 1444,
+        "coverage": 0.911
+      },
+      "pre_early_share": {
+        "fp": {
+          "coef": 0.041,
+          "ci95": [
+            0.0079,
+            0.0794
+          ],
+          "sig": true,
+          "se_boot": 0.01734,
+          "mde80": 0.0485,
+          "std_diff": 0.1303,
+          "mean_male_attr": 0.524
+        },
+        "n": 1444,
+        "coverage": 0.911
+      },
+      "ln_pre_n": {
+        "fp": {
+          "coef": -0.06971,
+          "ci95": [
+            -0.2532,
+            0.117
+          ],
+          "sig": false,
+          "se_boot": 0.09756,
+          "mde80": 0.2732,
+          "std_diff": -0.0403,
+          "mean_male_attr": 3.0834
+        },
+        "n": 1623,
+        "coverage": 1.0
+      },
+      "firm_age": {
+        "fp": {
+          "coef": -3.68415,
+          "ci95": [
+            -5.8353,
+            -1.5914
+          ],
+          "sig": true,
+          "se_boot": 1.11173,
+          "mde80": 3.1128,
+          "std_diff": -0.1806,
+          "mean_male_attr": 16.7366
+        },
+        "n": 1603,
+        "coverage": 0.99
+      },
+      "fund_age": {
+        "fp": {
+          "coef": -0.3392,
+          "ci95": [
+            -0.5764,
+            -0.1091
+          ],
+          "sig": true,
+          "se_boot": 0.12205,
+          "mde80": 0.3417,
+          "std_diff": -0.1814,
+          "mean_male_attr": 1.8864
+        },
+        "n": 1106,
+        "coverage": 0.749
+      },
+      "ln_exp": {
+        "fp": {
+          "coef": -0.17199,
+          "ci95": [
+            -0.4136,
+            0.0384
+          ],
+          "sig": false,
+          "se_boot": 0.10865,
+          "mde80": 0.3042,
+          "std_diff": -0.1008,
+          "mean_male_attr": 4.2356
+        },
+        "n": 1623,
+        "coverage": 1.0
+      },
+      "lead": {
+        "fp": {
+          "coef": -0.04408,
+          "ci95": [
+            -0.1173,
+            0.026
+          ],
+          "sig": false,
+          "se_boot": 0.03671,
+          "mde80": 0.1028,
+          "std_diff": -0.0881,
+          "mean_male_attr": 0.49
+        },
+        "n": 734,
+        "coverage": 0.57
+      },
+      "y0": {
+        "fp": {
+          "coef": -0.02143,
+          "ci95": [
+            -0.06,
+            0.0183
+          ],
+          "sig": false,
+          "se_boot": 0.0212,
+          "mde80": 0.0594,
+          "std_diff": -0.047,
+          "mean_male_attr": 0.3061
+        },
+        "n": 1623,
+        "coverage": 1.0
+      },
+      "n_p": {
+        "fp": {
+          "coef": 0.16318,
+          "ci95": [
+            0.1077,
+            0.2334
+          ],
+          "sig": true,
+          "se_boot": 0.03245,
+          "mde80": 0.0908,
+          "std_diff": 0.3287,
+          "mean_male_attr": 1.1069
+        },
+        "n": 1623,
+        "coverage": 1.0
+      }
+    },
+    "E_positive_controls": {
+      "ln_exp": {
+        "coef": {
+          "coef": 0.03238,
+          "ci95": [
+            0.0202,
+            0.0454
+          ],
+          "sig": true,
+          "se_boot": 0.00652,
+          "mde80": 0.0183
+        },
+        "n": 1623
+      },
+      "lead": {
+        "coef": {
+          "coef": 0.10626,
+          "ci95": [
+            0.0406,
+            0.1709
+          ],
+          "sig": true,
+          "se_boot": 0.03337,
+          "mde80": 0.0934
+        },
+        "n": 734
+      },
+      "pre_early_share": {
+        "coef": {
+          "coef": -0.20954,
+          "ci95": [
+            -0.3081,
+            -0.1173
+          ],
+          "sig": true,
+          "se_boot": 0.04911,
+          "mde80": 0.1375
+        },
+        "n": 1444
+      },
+      "fund_age": {
+        "coef": {
+          "coef": -0.02108,
+          "ci95": [
+            -0.0343,
+            -0.0073
+          ],
+          "sig": true,
+          "se_boot": 0.00699,
+          "mde80": 0.0196
+        },
+        "n": 1106
+      },
+      "y0": {
+        "coef": {
+          "coef": 0.00841,
+          "ci95": [
+            -0.0536,
+            0.0678
+          ],
+          "sig": false,
+          "se_boot": 0.03126,
+          "mde80": 0.0875
+        },
+        "n": 1623
+      },
+      "ln_pre_n": {
+        "coef": {
+          "coef": 0.03021,
+          "ci95": [
+            0.0174,
+            0.0434
+          ],
+          "sig": true,
+          "se_boot": 0.00685,
+          "mde80": 0.0192
+        },
+        "n": 1623
+      },
+      "n_detected": 4
+    },
+    "F_twoway_FE_pooled": {
+      "b_FF": {
+        "coef": -0.00939,
+        "ci95": [
+          -0.0831,
+          0.0591
+        ],
+        "sig": false,
+        "se_boot": 0.03735,
+        "mde80": 0.1046,
+        "within_pm0.05": false
+      },
+      "b_other": {
+        "coef": 0.03165,
+        "ci95": [
+          -0.0029,
+          0.0696
+        ]
+      },
+      "n": 7734,
+      "n_investors": 2061,
+      "n_investors_fp_varying": 291,
+      "nb": 200,
+      "iters": 80
+    },
+    "G_estimand": {
+      "n_ff_cond_rounds": 535,
+      "n_companies": 390,
+      "n_investor_firms": 760,
+      "attribution_coverage_rows": 0.4487,
+      "n_all_investor_rows": 3617,
+      "median_amt_usd_cond_rounds": 8224999.5,
+      "median_amt_usd_all_ff_rounds": 2500000.0,
+      "early_share_cond_rounds": 0.6206,
+      "early_share_all_ff_rounds": 0.6946,
+      "reup_attributed_minus_unattributed_within_round": {
+        "coef": 0.1885,
+        "ci95": [
+          0.1557,
+          0.2209
+        ],
+        "sig": true,
+        "se_boot": 0.01631,
+        "mde80": 0.0457
+      },
+      "base_reup_cond_ff": 0.4627
+    },
+    "H_band_anchor": {
+      "base_reup": 0.4627
+    },
+    "prediction_check": {
+      "A_reproduces_p42": false,
+      "B2_fo_coef_in_[-0.04,0.01]": true,
+      "B2_fo_mde_5.5_7.5pp": true,
+      "B2_fo_band_fails": true,
+      "B2_fo_band_margin_lt_1.5pp": false,
+      "B3_mixed_in_[-0.03,0.06]_incl0": true,
+      "B4_inv_cluster_width_pm30pct": true,
+      "C_shifts_lt_0.6pp_each": true,
+      "C_all_shift_lt_0.8pp": true,
+      "D_early_share_detected": true,
+      "D_fund_age_detected": true,
+      "E_ge3_positive_controls": true,
+      "F_bFF_in_[-0.04,0.02]_incl0": true,
+      "F_mde_6_10pp": false,
+      "G_companies_380_400": true,
+      "G_attr_cov_0.40_0.50": true
+    }
+  },
+  "prediction": "female-only b∈[−0.04,+0.01] MDE 5.5–7.5 밴드 실패(여유<1.5); mixed∈[−0.03,+0.06]; 사전 통제 Δ<0.6; 양성 대조 ≥3/4; 두-방향 FE MDE 6–10; 기업 380–400; 귀속 커버 0.40–0.50",
+  "verdict": "any-female b -0.38pp [-3.96,+3.15] ±5 True | female-only(436 라운드/1296 행) b -1.54pp [-6.94,+2.75] MDE 6.48 ±5 False | mixed 계수 +3.57pp | 사전 통제 전부 투입 Δ -0.29pp | 투자자 군집 CI [-3.46,+2.78] | 양성 대조 검출 4/4 | 두-방향 FE b_FF -0.94pp MDE 10.5 | 기업 390 · 귀속 커버 0.45 — 밴드 판정이 정의에 의존(any-female True, female-only False) — 미검출형 서술 + MDE 병기 (예측 적중 13/16)",
+  "kill_met": false,
+  "code": "p001_51_within_round_variants.py",
+  "sha256_16": "c207763194f2c3b4",
+  "seed": 42,
+  "runtime_s": 791.0,
+  "date": "2026-09-09",
+  "stage": 7,
+  "feeds": "R5 ident A-1/F-1/F-2/F-3 → §4 ¶3 · Table 10 A · 초록/§1/§8 밴드 문장",
+  "slug": "within_round_variants",
+  "builds_on": "P001-42",
+  "common_sha256_16": "a63e7b62854b47c6",
+  "v6_common_sha256_16": "0e382e764d14fdc8"
+}

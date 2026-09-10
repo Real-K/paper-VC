@@ -1,6 +1,6 @@
 # Artifact manifest
 
-74 aggregate result files in `artifacts/`. `sha256_16` is the first 16 hex digits of the file's SHA-256; `ledger_rows` counts the rows of `CLAIMS_LEDGER.csv` that cite the file; `read_by_exhibit_generator` marks the files `code/build/p001_09_exhibits.py` reads. Titles are in Korean (the project's working language); the paper's exhibits are in English.
+75 aggregate result files in `artifacts/`. `sha256_16` is the first 16 hex digits of the file's SHA-256; `ledger_rows` counts the rows of `CLAIMS_LEDGER.csv` that cite the file; `read_by_exhibit_generator` marks the files `code/build/p001_09_exhibits.py` reads. Titles are in Korean (the project's working language); the paper's exhibits are in English.
 
 | file | sha256_16 | bytes | id | status | generating script | ledger rows | exhibits | title |
 |---|---|---|---|---|---|---|---|---|
@@ -78,5 +78,6 @@
 | I80.json | `7274b607ab9eef28` | 1,510 | I-80 | GO | `i80_stage_control.py` | 3 |  | 스테이지 구성 교란 점검 — exit-ever 열위 판별 (K-3 판별 최종) |
 | I81.json | `8757f43b5457031e` | 2,151 | I-81 | GO | `i81_stage_mechanism.py` | 2 |  | 스테이지 skew 메커니즘 배터리 — 창업자 경로·연차·동학·Becker (P001 2막) |
 | I82.json | `651c511d39ebf22f` | 1,429 | I-82 | PARTIAL | `i82_e3_repairs.py` | 1 |  | E3 심판 수리 — 추세 조정 결합 CI + 동료-딜 분해 (P001 동결 전) |
+| fund_match_summary_v2.json | `6ed921600502676c` | 562 |  |  | `` | 1 |  |  |
 
 Also in `artifacts/`: `CLAIMS_LEDGER.csv` (the claim-level ledger, 594 rows), `run_log.csv` (one row per harness run: script, sha256_16 of the script, inputs, output, verdict), `sample_manifest.yaml` (row count and SHA-256 of the frozen analysis file, which is not redistributed).

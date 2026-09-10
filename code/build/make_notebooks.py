@@ -60,7 +60,7 @@ a = open("../figures/tables.md", encoding="utf-8").read(); b = open("../paper_ex
 ok = a == b; fails += (not ok); print(f"{'tables.md':<16} {'IDENTICAL' if ok else 'DIFFERS'}  ({len(a):,} chars; {a.count(chr(10) + '### ')} exhibits)")
 assert len(mine) == len(glob.glob(os.path.join(ref_dir, "table*.md"))) == 13, "table count"
 assert fails == 0, f"{fails} file(s) differ from the paper's exhibits"
-print("\\nAll 11 generated table files and the assembled tables.md are byte-identical to the exhibits attached to the manuscript.")'''
+print("\\nAll 13 generated table files and the assembled tables.md are byte-identical to the exhibits attached to the manuscript.")'''
 cells.append((["## Consistency check — regenerated tables versus the paper's exhibits",
                "Byte-for-byte comparison of every generated table file and of the assembled `tables.md` with `../paper_exhibits/`. The cell raises if anything differs."], CHECK_T))
 build("notebooks/01_tables.ipynb", "# Tables 1–10 and Appendix Tables IA.1–IA.3", COMMON, cells)

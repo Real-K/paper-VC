@@ -1,0 +1,20 @@
+{
+ "built_utc": "2026-09-09T09:11:06+00:00",
+ "review_basis": "review_sample_200_reviewed_v1.csv (PI, 2026-09-09): exact 0.833 / multi 0.325 / fuzzy 0.825; rule B 0.973 (n=75)",
+ "by_tier_new_notices": {
+  "none": 89793,
+  "T6_multi": 6406,
+  "T1_use": 5051,
+  "T3_hold_generic": 1628,
+  "T2_hold_loc": 1041,
+  "T5_nonus_unverified": 1018,
+  "T4_country_mismatch": 757,
+  "T7_fuzzy": 137
+ },
+ "T1_filings": 5051,
+ "T1_vc_filings": 3154,
+ "T1_cb_firms": 1368,
+ "T1_cb_firms_vc": 988,
+ "T1_amount_sold_known": 1.0,
+ "T1_sale_date_known": 0.397
+}

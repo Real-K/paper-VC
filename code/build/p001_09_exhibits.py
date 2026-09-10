@@ -800,7 +800,7 @@ for k_, xi in zip(keys61, x):
     dg = e61["A_diagnostics_by_cell"][k_]
     ax.text(xi, max(hi_o[xi], hi_c[xi]) + 0.35, f"d = {dg['d_share_sxx_single_round']:.2f}\n{dg['n_unique_rounds_mixed']:,} rounds", ha="center", va="bottom", fontsize=7)
 ax.axhline(0, color="grey", lw=0.8); ax.set_xticks(x, names); ax.set_ylabel("Female-partner coefficient on female-founded (pp)")
-ax.set_ylim(top=max(hi_o + hi_c) + 2.2); ax.set_title("Figure 1. Matching ladder and cross-deal information (NA+EU)"); ax.legend(fontsize=7, loc="upper right")
+ax.set_ylim(top=max(hi_o + hi_c) + 2.2); ax.set_title("Figure 1. Matching ladder and cross-deal information (NA+EU)", fontsize=9); ax.legend(fontsize=7, loc="upper right")
 fig.tight_layout(); fig.savefig(os.path.join(OUT_F, "figure1_ladder.png"))
 
 # Figure 2: rank change — mean percentile by gender, raw vs adjusted, at three benchmark levels (sample end) and at the fixed horizons
@@ -812,9 +812,9 @@ fr = [v["female_raw_pct"]["coef"] for _, v in levels]; fa = [v["female_adj_pct"]
 ax.plot(x, fr, "o", color="#C44E52", label="Women, raw rank"); ax.plot(x, fa, "s", color="#C44E52", mfc="white", label="Women, adjusted rank")
 ax.plot(x, mr, "o", color="#4C72B0", label="Men, raw rank"); ax.plot(x, ma, "s", color="#4C72B0", mfc="white", label="Men, adjusted rank")
 for xi in x: ax.annotate("", xy=(xi, fa[xi]), xytext=(xi, fr[xi]), arrowprops=dict(arrowstyle="->", color="#C44E52", lw=1))
-for xi, (_, v) in enumerate(levels): ax.text(xi + 0.08, (fr[xi] + fa[xi]) / 2, f"{v['female_shift']['coef']:+.1f}\n[{v['female_shift']['ci95'][0]:+.1f}, {v['female_shift']['ci95'][1]:+.1f}]", fontsize=7, va="center")
-ax.set_xticks(x, [l for l, _ in levels], fontsize=7); ax.set_ylabel("Mean percentile rank"); ax.axhline(50, color="grey", lw=0.8, ls=":")
-ax.set_title("Figure 2. Benchmark adjustment and mean percentile ranks, by gender"); ax.legend(fontsize=7, ncol=2, loc="lower left")
+for xi, (_, v) in enumerate(levels): ax.text(xi + (-0.08 if xi == len(levels) - 1 else 0.08), (fr[xi] + fa[xi]) / 2, f"{v['female_shift']['coef']:+.1f}\n[{v['female_shift']['ci95'][0]:+.1f}, {v['female_shift']['ci95'][1]:+.1f}]", fontsize=7, va="center", ha=("right" if xi == len(levels) - 1 else "left"))
+ax.set_xticks(x, [l for l, _ in levels], fontsize=7); ax.set_xlim(-0.45, len(levels) - 0.4); ax.set_ylabel("Mean percentile rank"); ax.axhline(50, color="grey", lw=0.8, ls=":")
+ax.set_title("Figure 2. Benchmark adjustment and mean percentile ranks, by gender", fontsize=9); ax.legend(fontsize=7, ncol=2, loc="lower left")
 fig.tight_layout(); fig.savefig(os.path.join(OUT_F, "figure2_rank_change.png"))
 
 # Figure 3: horizon dependence on one sample (deals through 2017-10), with differences from the same draws
@@ -826,9 +826,9 @@ v20 = e57["B_2020"]["exit3"]["ffp"]; ax.errorbar([0], [v20["coef"] * 100], yerr=
 ax.axhline(0, color="grey", lw=0.8); ax.axhspan(-5, 5, color="grey", alpha=0.07, label="±5-point reference band")
 _H = e57["A_horizon_differences_same_draws"]
 for xi, (_, k) in enumerate(hz[1:], start=1):
-    dk = _H[f"{k}_minus_exit3"]; ax.text(xi, hi[xi] + 0.6, f"Δ vs 36m {dk['coef']*100:+.1f}\n[{dk['ci95'][0]*100:+.1f}, {dk['ci95'][1]*100:+.1f}]", ha="center", fontsize=7)
-ax.set_xticks(x, [f"{h} months" if h != "eventual" else "exit by\nsample end" for h, _ in hz], fontsize=8); ax.set_ylabel("Percentage points"); ax.set_ylim(top=max(hi) + 4)
-ax.set_title("Figure 3. Within-partner differential across exit horizons (deals to 2017-10)"); ax.legend(fontsize=7, loc="lower left")
+    dk = _H[f"{k}_minus_exit3"]; ax.text(xi, hi[xi] + 0.6, f"Δ vs 36m {dk['coef']*100:+.1f}\n[{dk['ci95'][0]*100:+.1f}, {dk['ci95'][1]*100:+.1f}]", ha=("right" if xi == len(hz) - 1 else "center"), fontsize=7)
+ax.set_xticks(x, [f"{h} months" if h != "eventual" else "exit by\nsample end" for h, _ in hz], fontsize=8); ax.set_ylabel("Percentage points"); ax.set_ylim(top=max(hi) + 4); ax.set_xlim(-0.45, len(hz) - 0.25)
+ax.set_title("Figure 3. Within-partner differential across exit horizons", fontsize=9); ax.legend(fontsize=7, loc="lower left")
 fig.tight_layout(); fig.savefig(os.path.join(OUT_F, "figure3_horizon.png"))
 
 # Supplementary figures (Internet Appendix): event study (former Figure 2) and the financing-ladder channel (former Figure 3)
